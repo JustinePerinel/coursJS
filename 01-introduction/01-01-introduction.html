@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - I. 01 du JS dans l'en-tête</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script js dans l'en-tête -->
+    <!-- ce code récupère l'heure actuelle et l'actualise toutes les secondes d'une part et nous permet de cacher , d'afficher l'heure via un bouton  -->
+    <!-- la console F12 de mon navigateur permet de voir les erreurs dans mon navigateur -->
+    <script>
+        window.addEventListener('load',horloge);
+            function horloge(){
+                let d = new Date();
+                document.getElementById('heure').innerHTML = d.toLocaleTimeString();
+                setTimeout(horloge, 1000);
+            }
+            document.addEventListener('DOMContentLoaded', function(){
+                const cache = document.getElementById('bouton');
+                cache.addEventListener('click',cacheHorloge);
+                document.getElementById('tog').style.display = 'block';
+                function cacheHorloge(){
+                    let para = document.getElementById('tog');
+                    if(para.style.display == 'block'){
+                        para.style.display = 'none';
+                    }else{
+                        para.style.display = 'block';
+                    }
+                }
+            });
+    </script>
+</head>
+<body>
+    <main>
+        <h1>JS - I. Du JS dans l'en-tête</h1>
+        <p id="tog" class="stabilo">Il est actuellement <span id="heure"></span></p>
+        <button id="bouton">Cacher / Afficher l'heure</button>
+        <br><br><br>
+        <p>UN LIEN VERS<a href="../index.html"> L'INDEX</a></p>
+        <p>UN LIEN VERS LA PAGE <a href="01-02-introduction.html">I. 02 Du JS dans une balise ouvrante</a></p>
+
+    </main>
+</body>
+</html>
