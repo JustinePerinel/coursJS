@@ -105,6 +105,19 @@ h1 a {
     text-transform: uppercase;
 }
 
+.nav-gras {
+    font-weight: bold;
+}
+
+.nav-gras a {
+    text-decoration: none;
+    color: var(--noir);
+}
+
+.nav-gras a:hover {
+    color: var(--rose-vif);
+}
+
 h2 {
     text-indent: 5px;
     padding: 15px;
@@ -178,6 +191,14 @@ dt {
 ol li {
     list-style-type: none;
     padding-left: 15px;
+}
+
+.p-40 {
+    padding-left: 40px;
+}
+
+.p-40 li {
+    list-style-type: decimal;
 }
 
 #ol-2 li {

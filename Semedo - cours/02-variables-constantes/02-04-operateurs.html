@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>II. 04 Les opérateurs</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- ma feuille de style en externe -->
+    <link rel="stylesheet" href="../css/javascript.css">
+    <!-- du js en feuille externe -->
+    <script src="operateurs.js" async></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>JS - II 04 Les opérateurs arithmétiques</h1>
+            <nav>
+                <ul id="Menu">
+                    <li class="li1">Introduction JavaScript &ensp;
+                        <ul class="SousMenu">
+                            <li><a href="../01-introduction/01-01-introduction.html">01-01 Introduction</a></li>
+                            <li><a href="../01-introduction/01-02-introduction.html">01-02 Introduction</a></li>
+                            <li><a href="../01-introduction/01-03-introduction.html">01-03 Introduction</a></li>
+                            <li><a href="../01-introduction/01-04-introduction.html">01-04 Introduction</a></li>
+                        </ul>
+                    </li>
+                    <li class="li1">Variables et constantes &ensp;
+                        <ul class="SousMenu">
+                            <li><a href="02-01-introduction.html">02-01 Introduction</a></li>
+                            <li><a href="02-02-afficher.html">02-02 Afficher</a></li>
+                            <li><a href="02-03-types.html">02-03 Types</a></li>
+                            <li><a href="02-04-operateurs.html">02-04 Opérateurs</a></li>
+                        </ul>
+                    </li>
+                </ul>          
+            </nav>
+        </header>
+        <div id="banniere"></div>
+
+        <div id="wrapper5">
+            <h2>Qu'est-ce qu'un opérateur ?</h2>
+            <p>Un symbole qui va effectuer certaines opérations sur les variables et les valeurs</p>
+            <p>Par ex. l'opérateur * va nous permettre de multiplier les valeurs de deux variables</p>
+
+            <br>
+            <table>
+                <caption>Tableau des opérateurs arithmétiques</caption>
+                <thead>
+                    <tr>
+                        <th>Opérateurs</th>
+                        <th>Nom de l'opération</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>+</td>
+                    <td>Addition</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Soustraction</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Multiplication</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>Division</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Modulo</td>
+                </tr>
+                <tr>
+                    <td>**</td>
+                    <td>Exponentielle</td>
+                </tr>
+            </table>
+
+            <h3>Le modulo et l'exponentielle ... Késako ?</h3>
+            <br>
+            <dl>
+                <dt>Modulo</dt>
+                <dd>Le reste entier d'une division euclidienne. On divise 5 par 3 le résultat est 1 et il reste 2 : le reste est le modulo</dd>
+                <dt>Exponentielle</dt>
+                <dd>L'exponentielle correspond à l'élévation à la puissance d'un nombre par un autre nombre : ex. 2 <sup>3</sup></dd>
+            </dl>
+
+            <h3>Priorité des calculs et utilisation des parenthèses</h3>
+            <p>Si on écrit <code>let h = 1 - 2 - 3;</code> le résultat est -4, les opérations se font de gauche à droite</p>
+            <p class="notice">À l'exception de l'élévation à la puissance qui sera calculée en partant de la fin. cf. la variable j (operateur.js)</p>
+            <p>Nous allons finalement, comme en maths, pouvoir forcer l'ordre de priorité en utilisant des couples de parenthèses pour indiquer qu'une opération doit se faire avant toutes les autres cf. la variable <code>let l = 1 - (2 - 10)</code></p>
+        </div>
+
+        <p class="encadre"><a href="../index.html">Retour Index</a></p>
+
+        <footer>
+            COURS JS &copy; KSEMEDO
+        </footer>
+        
+    </main> 
+</body>
+</html>
