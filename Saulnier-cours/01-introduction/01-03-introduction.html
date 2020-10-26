@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - I. 03 Du JS dans body</title>
+    <!-- mon reset en externe -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- mon style en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- du js dans l'en-tête -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            let bonjour = document.getElementById('b1');
+            bonjour.addEventListener('click', coucou);
+
+            function coucou(){
+                alert('Coucou, c\'est encore moi !') //le caractère d'échappement pour avoir dans la chaîne de caractères l'apostrophe
+            }
+
+        });
+
+    </script>
+</head>
+<body>
+    <main>
+        <h1>JS - I. 03 Du JS dans body</h1>
+        <button id="b1">Cliquez sur moi !</button>
+        <button id="b2">Ajoutez un paragraphe !</button>
+        <p>On va pouvoir placer n'importe où dans notre code, aussi bien dans la balise <code>head</code> qu'au sein de l'émémént <code>body</code>. On place également plusieurs bouts de code JS à différents endroits de la page.</p>
+        <script>
+            let ajouter = document.getElementById('b2');
+            ajouter.addEventListener('click', ajout)
+
+            function ajout(){
+                let para = document.createElement('p');
+                para.textContent = 'La grand-mère de Patrick fait du vélo !'
+                document.body.append(para);
+            }
+        </script>
+        <br><br>
+        <p>UN LIEN VERS<a href="../index.html"> L'INDEX</a></p>
+        <p>UN LIEN VERS LA PAGE <a href="01-04-introduction.html">I. 04 JS en feuille externe</a></p>
+
+    </main>
+</body>
+</html>

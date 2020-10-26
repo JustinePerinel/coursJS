@@ -1,0 +1,182 @@
+/* les styles du cours et des exos - jperinel */
+
+:root {
+    --rose : rgb(255, 214, 221);
+    --rose-vif : hotpink;
+    --noir : #000;
+    --blanc : #fff;
+    --jaune : yellow;
+    --rouge : red;
+}
+
+body {
+    background-color: var(--rose);
+    font-size: 18px;
+    line-height: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main {
+    width: 1220px;
+    margin: auto;
+    background-color: var(--blanc);
+    padding: 25px;
+}
+
+h1 {
+    text-transform: uppercase;
+    padding: 15px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 900;
+    color: var(--rose-vif);
+}
+
+.nav-gras {
+    font-weight: bold;
+}
+
+.nav-gras a {
+    text-decoration: none;
+    color: var(--noir);
+}
+
+.nav-gras a:hover {
+    color: var(--rose-vif);
+}
+
+h2 {
+    text-indent: 5px;
+    padding: 15px;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    color: var(--rose-vif);
+}
+
+h3 {
+    margin: 30px 0 10px 40px;
+    color: var(--rose-vif);
+    border-bottom: 2px solid var(--rose-vif);
+    padding-bottom: 5px;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: var(--rose-vif);
+}
+
+#boutons {
+    display: flex;
+    justify-content: center;
+}
+
+ol li {
+    list-style-type: upper-roman;
+    padding-left: 15px;
+}
+
+.p-40 {
+    padding-left: 40px;
+}
+
+.p-40 li {
+    list-style-type: decimal;
+}
+
+#ol-2 li {
+    list-style-type: lower-latin;
+}
+
+.ul-h3 li {
+    list-style-type: none;
+}
+
+ul li {
+    list-style-type: square;
+    padding-left: 15px;
+}
+
+p {
+    padding-left: 15px;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.stabilo {
+    background-color: var(--jaune);
+}
+
+.notice {
+    color: var(--rouge);
+    width: 900px;
+    margin: 30px auto 10px auto;
+    font-weight: 800;
+    border: 2px solid var(--rouge);
+    padding: 15px;
+}
+
+button {
+    margin: 20px;
+    padding: 5px;
+}
+
+code {
+    font-family: monospace;
+    color: var(--rouge);
+    font-weight: 700;
+}
+
+table {
+    /* border: 2px solid var(--rose); */
+    width: 600px;
+    margin: 0 auto;
+}
+table th {
+    background-color: var(--rose-vif);
+    color: var(--blanc);
+    padding: 10px 0;
+}
+
+table, th, td {
+    border: 1px solid var(--noir);
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+}
+
+table tr:nth-of-type(even) {
+    background-color: var(--rose);
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#liens {
+    background-color: lavenderblush;
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px 0 20px 0;
+}
+
+footer {
+    margin-top: 25px;
+    height: 80px;
+    text-align: center;
+}
