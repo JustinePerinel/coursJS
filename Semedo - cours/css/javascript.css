@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --blanc : #fff;
+    --noir : #333;
+    --vert : #9ACD32;
+    --body : #d6d4d4b7;
+    --bleu : #87CEEB; 
+    --encadre : #FAFAD2; 
+    --violet : #9400D3; 
+    --vert-clair : #F5FFFA;
+      
+}
+
+body {
+    background-color: var(--body);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 70%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--blanc);
+}
+
+/* style du header  */
+
+header {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: serif;
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--noir);
+}
+
+nav {
+    width: 100%;
+}
+
+#Menu {
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    text-transform: uppercase;
+}
+
+#Menu a {
+    text-decoration: none;
+    color: var(--noir);
+}
+
+ul#Menu > li {
+    position: relative;
+    color: var(--bleu);
+}
+
+#Menu ul li:first-child {
+    padding-top: 30px;
+}
+
+.SousMenu {
+    display: none;
+    background-color: var(--blanc);
+    box-shadow: 2px 2px 10px var(--body);
+    width: 230px;
+    position: absolute;
+    /* width: 100%; */
+    z-index: 1000;
+}
+
+.SousMenu li {
+    padding: 10px 20px;
+}
+
+nav > ul li:hover .SousMenu {
+    display: block;
+    font-size: 0.8em;
+}
+
+#Menu a:hover {
+    color: #87CEEB;
+    /* font-weight: bold; */
+}
+
+
+/* style de la bannière  */
+
+#banniere {
+    background: url(../img/technology-1283624_1280.jpg) no-repeat;
+    background-position: center;
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* style du wrapper  */
+
+h2 {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    font-family: serif;
+    padding-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#wrapper li {
+    list-style-type: disc;
+    list-style-position: inside;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: var(--bleu);
+    padding: 20px 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.notice h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.notice {
+    background-color: var(--encadre);
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.encadre {
+    background-color: var(--encadre);
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    margin: 40px auto;
+}
+
+footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 0.8em;
+}
+
+/* page 01-01-introduction  */
+
+#wrapper1 {
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 30px 0;
+    border: 2px solid var(--bleu);
+}
+
+#bouton {
+    background-color: var(--encadre);
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 8px var(--noir);
+    cursor: pointer;
+}
+
+/* page 01-02-introduction  */
+
+#wrapper2 {
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 30px 0;
+    border: 2px solid var(--bleu);
+}
+
+button {
+    background-color: var(--encadre);
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px var(--noir);
+    cursor: pointer;
+}
+
+/* page 01-03-introduction  */
+
+#wrapper3 {
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 30px 0;
+    border: 2px solid var(--bleu);
+}
+
+#b1, #b2 {
+    margin-bottom: 20px;
+}
+
+code {
+    color: var(--violet);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* page 01-04-introduction  */
+
+#wrapper4 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#boutons {
+    width: 50%;
+    text-align: center;
+    padding: 30px 0;
+    border: 2px solid var(--bleu);
+}
+
+/* page 02-01-introduction  */
+
+#wrapper5 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#wrapper5 h2 {
+    margin-top: 30px;
+}
+
+/* page 02-04-operateurs  */
+
+table {
+    width: 50%;
+    margin: 20px auto;
+}
+
+caption, th {
+    background-color: var(--vert);
+    border: 1px solid var(--blanc);
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+tr, td {
+    border: 1px solid var(--vert);
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+tr:nth-of-type(even) {
+    background-color: var(--vert-clair);
+}
+
+dt {
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
