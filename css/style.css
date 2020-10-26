@@ -1,14 +1,21 @@
 /* les styles du cours et des exos - jperinel */
 
+* {
+    box-sizing: border-box;
+}
+
+/* des couleurs génériques avec root  */
 :root {
-    --rose : rgb(255, 214, 221);
+    --rose : rgb(255, 197, 226);
     --rose-vif : hotpink;
     --noir : #000;
     --blanc : #fff;
     --jaune : yellow;
     --rouge : red;
+    --gris : rgb(223, 223, 223);
 }
 
+/* typo, background et taille dans body  */
 body {
     background-color: var(--rose);
     font-size: 18px;
@@ -16,45 +23,156 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* largeur du contenant principal, fond, padding et minimmum de hauteur */
 main {
     width: 1220px;
     margin: auto;
     background-color: var(--blanc);
     padding: 25px;
+    min-height: 745px;
 }
 
-h1 {
+                            /* STYLE DE LA NAV  */
+
+nav {
+    height: 50px;
+    background-color: var(--rose);
+    line-height: 50px;
+    padding: 0;
+    margin: 0 0 20px 0;
+
+    /* permet de garder toujours la navigation en haut de la page */
+    position: sticky;
+    top: 0;
+}
+
+/* du style pour le niveau 1 de la navigation, les onglets principaux */
+nav .onglet {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+    text-align: center;
     text-transform: uppercase;
+    border-right: 1px solid var(--rose-vif);
+}
+/* style lors du survol des onglets principaux  */
+nav .onglet:hover {
+    box-shadow: 0px 8px 16px 0px var(--rose-vif);
+}
+
+/* pour le menu déroulant / SANS SURVOLEMENT*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 50px;
+    background-color: var(--blanc);
+    min-width: 280px;
+    box-shadow: 0px 8px 16px 0px var(--rose-vif);
+    text-transform: none;
+}
+
+/* pour le menu déroulant / AVEC SURVOLEMENT */
+.onglet:hover .dropdown-content {
+    display: block;
+}
+/* style sur le lien des onglets inférieurs / SANS SURVOLEMENT */
+.dropdown-content a {
+    color: var(--noir);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* style sur le lien des onglets inférieurs / AVEC SURVOLEMENT */
+.dropdown-content a:hover {
+    background: var(--gris);
+    font-weight: 700;
+}
+
+                                /* LES TITRES  */
+
+/* style du titre et du lien du titre  */
+h1 {
     padding: 15px;
     text-align: center;
     font-size: 3em;
     font-weight: 900;
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--rose-vif);
+    text-transform: uppercase;
+}
+
+.nav-gras {
+    font-weight: bold;
+}
+
+.nav-gras a {
+    text-decoration: none;
+    color: var(--noir);
+}
+
+.nav-gras a:hover {
     color: var(--rose-vif);
 }
 
 h2 {
     text-indent: 5px;
     padding: 15px;
-    font-size: 1.8em;
-    text-transform: uppercase;
+    font-size: 1.9em;
     margin-bottom: 5px;
     margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
     color: var(--rose-vif);
+    font-weight: 700;
+}
+
+h2 a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--rose-vif);
+    font-weight: 700;
+}
+
+h2 a:hover {
+    text-decoration: underline;
 }
 
 h3 {
     margin: 30px 0 10px 40px;
     color: var(--rose-vif);
-    border-bottom: 2px solid var(--rose-vif);
     padding-bottom: 5px;
-    font-size: 1.2em;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 500;
+}
+
+
+h4 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    padding: 0 0 15px 0;
     font-style: italic;
 }
 
-h4 {
-    text-align: center;
-    margin-top: 10px;
-    text-transform: uppercase;
+h5 {
+    margin: 10px 0;
+    padding: 0 0 0 20px;
+    font-variant: small-caps;
+    font-weight: 700;
+    color: var(--rose-vif);
+}
+
+                            /* STYLE POUR LES DÉFINITIONS  */
+
+dt {
+    color: var(--rose-vif);
+    font-style: italic;
+    padding-top: 10px;
 }
 
 #boutons {
@@ -62,19 +180,39 @@ h4 {
     justify-content: center;
 }
 
+                            /* UNE CLASSE POUR UN PADDING DE 40px */
+
+.p-40 {
+    padding-left: 40px;
+}
+
+                            /* DU STYLE POUR LES LISTES ORDONNÉES */
+
 ol li {
-    list-style-type: upper-roman;
+    list-style-type: none;
     padding-left: 15px;
+}
+
+.p-40 {
+    padding-left: 40px;
+}
+
+.p-40 li {
+    list-style-type: decimal;
 }
 
 #ol-2 li {
-    list-style-type: lower-latin;
+    list-style-type: none;
 }
 
+                            /* DU STYLES POUR LES LISTES NON-ORDONNÉES  */
+
 ul li {
-    list-style-type: square;
+    list-style-type: none;
     padding-left: 15px;
 }
+
+                            /* DU STYLE POUR LES PARAGRAPHES  */
 
 p {
     padding-left: 15px;
@@ -83,32 +221,134 @@ p {
     margin-bottom: 25px;
 }
 
+                            /* DU STYLE POUR UN EFFET STABILO  */
+
 .stabilo {
     background-color: var(--jaune);
 }
 
+                            /* DU STYLE POUR UN EFFET ATTENTION  */
+
 .notice {
     color: var(--rouge);
     width: 900px;
-    margin: 30px auto 10px auto;
+    margin: 10px auto 30px auto;
     font-weight: 800;
     border: 2px solid var(--rouge);
     padding: 15px;
+    text-align: center;
 }
+
+                            /* DU STYLE SUR LES BOUTONS JS */
 
 button {
     margin: 20px;
     padding: 5px;
 }
 
+                            /* DY STYLE POUR LA BALISE CODE */
+
 code {
     font-family: monospace;
-    color: var(--rouge);
-    font-weight: 700;
+    font-weight: 800;
 }
+
+                            /* DU STYLE POUR LE TABLEAU */
+
+table {
+    width: 1000px;
+    margin: auto;
+}
+
+/* style pour les bordures du tableau  */
+table, td, th {
+    border: 1px solid var(--rose-vif);
+    border-collapse: collapse;
+}
+
+th {
+    text-transform: uppercase;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background: var(--rose-vif);
+    color: var(--blanc);
+}
+
+/* du style pour faire une ligne sur 2 en couleur */
+table tr:nth-child(even) {
+    background-color: var(--rose);
+}
+
+td {
+    padding-left: 10px;
+    height: 40px;
+    line-height: 45px;
+}
+
+
+                            /* STYLE DU FOOTER */
 
 footer {
     margin-top: 25px;
     height: 80px;
     text-align: center;
+}
+
+                            /* STYLES POUR LES COLONNES + CLASSE ROW */
+
+/* La classe pour créer une rangée */
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Les colonnes*/
+.col-1 {
+    width: 6.333333%;
+    margin: 1%;
+}
+.col-2 {
+    width: 14.6666%;
+    margin: 1%;
+}
+.col-3 {
+    width: 23%;
+    margin: 1%;
+}
+.col-4 {
+    width: 33.333333%;
+}
+.col-5 {
+    width: 39.6666666%;
+    margin: 1%;
+}
+.col-6 {
+    width: 48%;
+    margin: 1%;
+}
+.col-7 {
+    width: 56.333333%; 
+    margin: 1%;
+}
+.col-8 {
+    width: 64.666666%;
+    margin: 1%; 
+}
+.col-9 {
+    width: 73%;
+    margin: 1%;  
+}
+.col-10 {
+    width: 81.333333%;
+    margin: 1%;  
+}
+.col-11 {
+    width: 89.666666%;
+    margin: 1%;   
+}
+.col-12 {
+    width: 98%;
+    margin: 1%;   
 }

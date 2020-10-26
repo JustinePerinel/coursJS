@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>II. 03 Les types de données</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- ma feuille de style en externe -->
+    <link rel="stylesheet" href="../css/javascript.css">
+    <!-- du js en feuille externe -->
+    <script src="types.js" async></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>JS - II 03 Les types de données JavaScript</h1>
+            <nav>
+                <ul id="Menu">
+                    <li class="li1">Introduction JavaScript &ensp;
+                        <ul class="SousMenu">
+                            <li><a href="../01-introduction/01-01-introduction.html">01-01 Introduction</a></li>
+                            <li><a href="../01-introduction/01-02-introduction.html">01-02 Introduction</a></li>
+                            <li><a href="../01-introduction/01-03-introduction.html">01-03 Introduction</a></li>
+                            <li><a href="../01-introduction/01-04-introduction.html">01-04 Introduction</a></li>
+                        </ul>
+                    </li>
+                    <li class="li1">Variables et constantes &ensp;
+                        <ul class="SousMenu">
+                            <li><a href="02-01-introduction.html">02-01 Introduction</a></li>
+                            <li><a href="02-02-afficher.html">02-02 Afficher</a></li>
+                            <li><a href="02-03-types.html">02-03 Types</a></li>
+                            <li><a href="02-04-operateurs.html">02-04 Opérateurs</a></li>
+                        </ul>
+                    </li>
+                </ul>          
+            </nav>
+        </header>
+        <div id="banniere"></div>
+
+        <div id="wrapper5">
+            <h2>1 - Sept types de données JavaScript</h2>
+            <ol class="p-40">
+                <li><span class="nav-gras"><a href="#string">String</a></span> ou "chaîne de caractères"</li>
+                <li><span class="nav-gras"><a href="#number">Number</a></span> ou nombres</li>
+                <li><span class="nav-gras"><a href="#boolean">Boolean</a></span> ou "Booléen"</li>
+                <li><span class="nav-gras"><a href="#null-undefined">Null</a></span> ou "vide</li> 
+                <li><span class="nav-gras"><a href="#undefined">Undefined</a></span> ou indéfini</li>                   
+                <li><span class="nav-gras"><a href="#symbol-object">Symbol</a></span> ou "symbole"</li>
+                <li><span class="nav-gras"><a href="#symbol-object">Object</a></span> ou "objet"</li>
+            </ol>
+            <br>
+            <p>Pour voir les types de données on utilise la fonction <code>typeof()</code></p>
+
+            <h3 id="string">1 - String</h3>
+            <!-- p#p$*3  -->
+            <p id="p1"></p>
+            <p id="p2"></p>
+            <p id="p3"></p>
+
+            <p id="p4"></p>
+
+            <h4>Sur les guillemets et apostrophes droits et sur l'échappement</h4>
+            <br>
+            <p>En JavaScript, on va pouvoir utiliser indifféremment des guillemets droits ou des apostrophes pour entourer une chaine de caractères et ces deux méthodes vont être strictement équivalentes à la différence d'autres langages comme le PHP par exemple.</p>
+            <p class="notice">Faites attention cependant à un point : si votre chaine contient un caractère qui est le même que le délimiteur de chaine choisi, il faudra neutraliser ce caractère en l'échappant au moyen d'un antislash ou changer de délimiteur.</p>
+
+            <h3 id="number">2 - Number</h3>
+            <p>Les variables en JavaScript vont également pouvoir stocker des nombres. Des nombres entiers positifs ou négatifs ou à virgule (décimaux)</p>
+
+            <h3 id="boolean">3 - Booleen (boolean en anglais)</h3>
+            <p>Ce type de données sera utile pour vérifier si ce test est vrai ou faux</p>
+
+            <h3 id="null-undefined">4 et 5 - Null</h3>
+            <p>Null et Undefined sont des types un peu particuliers</p>
+
+            <ul>
+                <li><code>null</code> : absence de valeur connue.</li>
+                <li><code>undefined</code> : variable non définie.</li>
+            </ul>
+            <br>
+            <p id="p5"></p>
+
+            <h3 id="undefined">5 - Undefined</h3>
+            <p>Si on déclare une variable sans lui attribuer de valeur, alors son type sera <code>Undefined</code></p>
+
+            <h3 id="symbol-object">6 - Symbol et 7- Object</h3>
+            <p>Les objets sont des structures complexes qui vont pouvoir stocker plusieurs valeurs en même temps et que nous étudierons plus tard car il s'agit là d'un sujet complexe à appréhender pour un débutant</p>
+            <p>Si on déclare une variable et qu'on lui passe null, alors son type sera <code>Object</code></p>
+
+            <p id="p6"></p>
+        </div>
+
+        <p class="encadre"><a href="../index.html">Retour Index</a></p>
+        
+        <footer>
+            COURS JS &copy; KSEMEDO
+        </footer>
+        
+    </main> 
+</body>
+</html>

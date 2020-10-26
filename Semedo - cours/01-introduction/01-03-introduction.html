@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - I. 03 Du JS dans body</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- ma feuille de style en externe -->
+    <link rel="stylesheet" href="../css/javascript.css">
+    <!-- du js dans l'en-tête -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            let bonjour = document.getElementById('b1');
+            bonjour.addEventListener('click', coucou);
+
+            function coucou(){
+                alert('Coucou, c\'est encore moi !') //le caractère d'échappement pour avoir dans la chaîne de caractères l'apostrophe
+            }
+
+        });
+
+    </script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>JS - I. 03 Du JS dans body</h1>
+            <nav>
+                <ul id="Menu">
+                    <li class="li1">Introduction JavaScript &ensp;
+                        <ul class="SousMenu">
+                            <li><a href="01-01-introduction.html">01-01 Introduction</a></li>
+                            <li><a href="01-02-introduction.html">01-02 Introduction</a></li>
+                            <li><a href="01-03-introduction.html">01-03 Introduction</a></li>
+                            <li><a href="01-04-introduction.html">01-04 Introduction</a></li>
+                        </ul>
+                    </li>
+                    <li class="li1">Variables et constantes &ensp;
+                        <ul class="SousMenu">
+                            <li><a href="../02-variables-constantes/02-01-introduction.html">02-01 Introduction</a></li>
+                            <li><a href="../02-variables-constantes/02-02-afficher.html">02-02 Afficher</a></li>
+                            <li><a href="../02-variables-constantes/02-03-types.html">02-03 Types</a></li>
+                            <li><a href="../02-variables-constantes/02-04-operateurs.html">02-04 Opérateurs</a></li>
+                        </ul>
+                    </li>
+                </ul>          
+            </nav>
+        </header>
+        <div id="banniere"></div>
+
+        <div id="wrapper3">
+            <button id="b1">Cliquez sur moi !</button>
+            <button id="b2">Ajoutez un paragraphe !</button>
+            <p>On va pouvoir placer n'importe où dans notre code, aussi bien dans la balise <code>head</code> qu'au sein de l'émémént <code>body</code>. On place également plusieurs bouts de code JS à différents endroits de la page.</p>
+            <script>
+                let ajouter = document.getElementById('b2');
+                ajouter.addEventListener('click', ajout)
+
+                function ajout(){
+                    let para = document.createElement('p');
+                    para.textContent = 'La grand-mère de Patrick fait du vélo !'
+                    document.body.append(para);
+                }
+            </script>
+        </div>
+
+        <p class="encadre"><a href="../index.html">Retour Index</a></p>
+
+        <footer>
+            COURS JS &copy; KSEMEDO
+        </footer>
+        
+    </main> 
+</body>
+</html>

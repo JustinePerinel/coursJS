@@ -38,19 +38,18 @@ ville = 'Suresnes';
 
 console.log(ville);
 
-// avec prompt() on a une fenêtre avec un champ de saisie. 
-// prompt()
+// avec prompt() on a une fenêtre avec un champ de saisie 
+// prompt();
 
+// redéclaration des variables 
 
-// REDÉCLARATION DES VARIABLES
+// ceci fonctionne 
+var chien = 'Médor';
+var chien = 'Max';
 
+console.log(chien);
 
-// Ceci fonctionne 
-var chien = 'Medor'
-var chien = 'Max'
+// ceci ne fonctionnera pas 
 
-console.log(chien)
-
-// Ceci ne fonctionne pas 
-// let chat = 'Minou'
-// let chat = 'Obi-Wan'
+// let chat = 'Minou';
+// let chat = 'Obi-wan';

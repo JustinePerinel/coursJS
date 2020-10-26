@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS - I. 03 Du JS dans body</title>
+    <title>Cours de JavaScript I. 03</title>
     <!-- mon reset en externe -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- mon style en externe -->
@@ -24,10 +24,43 @@
 </head>
 <body>
     <main>
-        <h1>JS - I. 03 Du JS dans body</h1>
+        
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+
+        <nav>
+            <ul class="row">
+                <li class="onglet col-4">Introduction
+                    <div class="dropdown-content">
+                        <a href="01-01-introduction.html" class="sous-onglet">Du JS dans l'en-tête</a>
+                        <a href="01-02-introduction.html" class="sous-onglet">Du JS dans la balise ouvrante</a>
+                        <a href="01-03-introduction.html" class="sous-onglet">Du JS dans body</a>
+                        <a href="01-04-introduction.html" class="sous-onglet">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet col-4">Variantes et constantes
+                    <div class="dropdown-content">
+                        <a href="../02-variables-constantes/02-01-introduction.html" class="sous-onglet">Les variables</a>
+                        <a href="../02-variables-constantes/02-02-afficher.html" class="sous-onglet">Exemples de variables</a>
+                        <a href="../02-variables-constantes/02-03-type.html" class="sous-onglet">Les types de données</a>
+                        <a href="../02-variables-constantes/02-04-operateurs.html" class="sous-onglet">Les opérateurs arithmétiques</a>
+                    </div>
+                </li>
+                <li class="onglet col-4"> Un autre onglet
+                    <div class="dropdown-content">
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        
+        <h2><a href="01-03-introduction.html">I. 03 - Du JS dans l'en-tête et dans body</a> </h2>
+
         <button id="b1">Cliquez sur moi !</button>
         <button id="b2">Ajoutez un paragraphe !</button>
-        <p>On va pouvoir placer n'importe où dans notre code, aussi bien dans la balise <code>head</code> qu'au sein de l'émémént <code>body</code>. On place également plusieurs bouts de code JS à différents endroits de la page.</p>
+        <p>On va pouvoir placer n'importe où dans notre code, aussi bien dans la balise <code>head</code> qu'au sein de l'émémént <code>body</code> mais, contrairement à la page précedente, le code est icic placé dans une balise <code>&lt;script></code>. On place également plusieurs bouts de code JS à différents endroits de la page.</p>
         <script>
             let ajouter = document.getElementById('b2');
             ajouter.addEventListener('click', ajout)
@@ -38,10 +71,15 @@
                 document.body.append(para);
             }
         </script>
-        <br><br>
-        <p>UN LIEN VERS<a href="../index.html"> L'INDEX</a></p>
-        <p>UN LIEN VERS LA PAGE <a href="01-04-introduction.html">I. 04 JS en feuille externe</a></p>
+        
+        <h3>Placement et action du JS</h3>
+
+        <p>Ici, le JS permet de, sur le premier bouton, déclancher une alerte: <cite>"Coucou c'est encore moi !"</cite> et sur le deuxième de créer un paragraphe dans body <cite>"La grand-mère de Patrick fait du vélo"</cite>. Le code pour l'alerte d=est dans la partie <code>head</code> tandis que le code pour le deuxième bouton se trouve dans <code>body</code> dans une balise <code>script</code>, en-dessous des boutons.</p>
 
     </main>
+
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
 </body>
 </html>
