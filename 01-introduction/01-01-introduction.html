@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS - I. 01 du JS dans l'en-tête</title>
+    <title>Cours de JavaScript I. 01</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <!-- script js dans l'en-tête -->
@@ -16,30 +16,69 @@
                 document.getElementById('heure').innerHTML = d.toLocaleTimeString();
                 setTimeout(horloge, 1000);
             }
-            document.addEventListener('DOMContentLoaded', function(){
-                const cache = document.getElementById('bouton');
-                cache.addEventListener('click',cacheHorloge);
-                document.getElementById('tog').style.display = 'block';
-                function cacheHorloge(){
-                    let para = document.getElementById('tog');
-                    if(para.style.display == 'block'){
-                        para.style.display = 'none';
-                    }else{
-                        para.style.display = 'block';
-                    }
+        document.addEventListener('DOMContentLoaded', function(){
+            const cache = document.getElementById('bouton');
+            cache.addEventListener('click',cacheHorloge);
+            document.getElementById('tog').style.display = 'block';
+            function cacheHorloge(){
+                let para = document.getElementById('tog');
+                if(para.style.display == 'block'){
+                    para.style.display = 'none';
+                }else{
+                    para.style.display = 'block';
                 }
-            });
+            }
+        });
     </script>
 </head>
 <body>
     <main>
-        <h1>JS - I. Du JS dans l'en-tête</h1>
+       
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a></h1>
+
+        <!-- débur de la nav -->
+        <nav>
+            <ul class="row">
+                <li class="onglet col-4">Introduction
+                    <div class="dropdown-content">
+                        <a href="01-01-introduction.html" class="sous-onglet">Du JS dans l'en-tête</a>
+                        <a href="01-02-introduction.html" class="sous-onglet">Du JS dans la balise ouvrante</a>
+                        <a href="01-03-introduction.html" class="sous-onglet">Du JS dans body</a>
+                        <a href="01-04-introduction.html" class="sous-onglet">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet col-4">Variantes et constantes
+                    <div class="dropdown-content">
+                        <a href="../02-variables-constantes/02-01-introduction.html" class="sous-onglet">Les variables</a>
+                        <a href="../02-variables-constantes/02-02-afficher.html" class="sous-onglet">Exemples de variables</a>
+                        <a href="../02-variables-constantes/02-03-type.html" class="sous-onglet">Les types de données</a>
+                        <a href="../02-variables-constantes/02-04-operateurs.html" class="sous-onglet">Les opérateurs arithmétiques</a>
+                    </div>
+                </li>
+                <li class="onglet col-4"> Un autre onglet
+                    <div class="dropdown-content">
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- fin de la nav  -->
+
+        <h2> <a href="01-01-introduction.html">I. 01 - Du JS dans l'en-tête</a> </h2>
+
         <p id="tog" class="stabilo">Il est actuellement <span id="heure"></span></p>
         <button id="bouton">Cacher / Afficher l'heure</button>
-        <br><br><br>
-        <p>UN LIEN VERS<a href="../index.html"> L'INDEX</a></p>
-        <p>UN LIEN VERS LA PAGE <a href="01-02-introduction.html">I. 02 Du JS dans une balise ouvrante</a></p>
+        <br>
 
+        <h3>Placement et action du JS</h3>
+
+
+        <p>Sur cette page, on voit du JavaScript dans la partie <code>&lt;head></code> de notre code HTML et se place normalement après les liens des feuilles de style. Il se trouve dans une balise <code>&lt;script></code>. Ici, le langage permet d'afficher une horloge qui reste à la bonne heure et un bouton permettant d'afficher ou de cacher l'horloge.</p>
     </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
 </body>
 </html>

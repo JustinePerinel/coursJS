@@ -1,12 +1,18 @@
-// .js pour la page afficher
+let ville;
+ville = 'Suresnes';
 
-// Initialisation d'une variable : déclaration - affectation - console log
-let prenom;
-prenom = 'Katia';
+console.log(ville);
+
+// un autre exemple
+
+// déclaration et affectation d'une variable
+let prenom = 'Justine';
+
+// console log pour afficher le contenun de la variable dans le navigateur 
 console.log(prenom);
 
-// Une alerte pour afficher le contenu d'une variable
-alert(prenom);
+// une alerte pour afficher le contenu de la variable dans une boîte d'alerte
+alert(ville);
 
-// Une alerte pour afficher le contenu d'une chaine de caractère 
-alert('Bienvenue chez les ch\'tis');
+// une alerte pour afficher le contenu d'une chaîne de caractères
+alert('Bienvenue chez les Ch\'tis !')

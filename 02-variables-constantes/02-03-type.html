@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>II. 03 Les types de données</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="type.js" async></script>
+</head>
+<body>
+    <main>
+        <h1><a href="../index.html">Java script - Index - du cours et des exos</a></h1>
+        
+        <nav>
+            <ul class="row">
+                <li class="onglet col-4">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html" class="sous-onglet">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html" class="sous-onglet">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html" class="sous-onglet">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html" class="sous-onglet">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet col-4">Variantes et constantes
+                    <div class="dropdown-content">
+                        <a href="02-01-introduction.html" class="sous-onglet">Les variables</a>
+                        <a href="02-02-afficher.html" class="sous-onglet">Exemples de variables</a>
+                        <a href="02-03-type.html" class="sous-onglet">Les types de données</a>
+                        <a href="02-04-operateurs.html" class="sous-onglet">Les opérateurs arithmétiques</a>
+                    </div>
+                </li>
+                <li class="onglet col-4"> Un autre onglet
+                    <div class="dropdown-content">
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <h2><a href="02-03-type.html">II. 03 Les types de données JavaScript</a></h2>
+
+        <h3>7 types de données JavaScript</h3>
+        <ol class="p-40">
+            <li>
+                <h4>1 - <span class="stabilo">String</span> ou"chaîne de caractères"</h4>
+                <h5>Guillements, apostrophe droit et échappement</h5>
+                <p>En JavaScript, on va pouvoir utiliser indifférement des guillemets doubles ou des quotes pour entourer une chaîne de caractères et ces méthodes vont être strictement équivalentes, à la différence d'autres langages comme le PHP, par exemple.</p>
+                <p class="notice">Faites attention cependant à un point : si votre chaîne contient un caractère qui est le même que le délimiteur de chaîne choisi, il faudra neutraliser ce caaractère en l'échappant au moyen d'un antislash, ou changer de délimiteur.</p>
+                <h5>Exemples, voir : type.js, ligne 15</h5>
+                <!-- p#p$*3 -->
+                <p id="p1"></p>
+                
+            </li>
+            <li>
+                <h4>2 - <span class="stabilo">Number</span> ou nombres</h4>
+                <p>Les variables en JavaScript vont également pouvoir stocker des nombres. Des nombres entiers positifs ou négatifs ou a virgule (décimaux).</p>
+                <h5>Exemples, voir : type.js, ligne 32</h5>
+                <p id="p2"></p>
+                <p id="p3"></p>
+            </li>
+            <li>
+                <h4>3 - <span class="stabilo">Boolean</span> ou booléen</h4>
+                <p>Ce type de données sera utile poour vérifier si un test est vrai ou faux. </p>
+                <p>Un booléen, en algèbre, est une valeur binaire (soit 0, soit 1). En informatique, le type booléen est un type qui ne contient que deux valeurs : les valeurs true (vrai) et false (faux).</p>
+                <h5>Exemples, voir : type.js, ligne 41</h5>
+            </li>
+            <li>
+                <h4>4 - <span class="stabilo">Null</span> ou vide.</h4>
+                <p>Ce sont des types un peu particuliers.</p>
+                <h5>Des exemples</h5>
+                <p id="p4"></p>
+            </li>
+            <li>
+                <h4>5 - <span class="stabilo">Undefined</span> ou indéfinies</h4>
+                <p>Si on déclare une variable sans lui attribuer une valeur, alors son type sera undefined.</p>
+                <h5>Des exemples</h5>
+                <p id="p5"></p>
+            </li>
+            <li>
+                <h4>6/7 - <span class="stabilo">Symboles</span> et <span class="stabilo">object</span></h4>
+                <p>Les objets sont des structures complexes qui vont pouvoir stocker plusieurs valeurs en  même temps et que nous étudierons plus tard car il s'agit là d'un sujet  complexe à appréhender pour un débutant.</p>
+                <p>Si on déclare une variable et qu'on lui passe null, alors son type sera <code>Object</code>.</p>
+            </li>
+        </ol>
+        <br><br><br>
+        <p>Pour voir les types de données on utilise la fonction <code>typeof</code>. cf. type.js</p>
+
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>
