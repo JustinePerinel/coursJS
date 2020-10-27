@@ -2,7 +2,7 @@
 
 // Initialisation d'une variable : déclaration - affectation - console log
 let prenom;
-prenom = 'Katia';
+prenom = 'Audrey';
 console.log(prenom);
 
 // Une alerte pour afficher le contenu d'une variable

@@ -30,7 +30,7 @@ h1 {
     text-align: center;
     font-size: 3em;
     font-weight: 900;
-    color: var(--violet);
+    color: var(--rose-vif);
 }
 
 .nav-gras {
@@ -175,6 +175,7 @@ dt {
 
 #liens {
     background-color: lavenderblush;
+    margin: 0 auto;
     width: 300px;
     padding: 10px;
     border-radius: 20px 0 20px 0;
@@ -183,5 +184,5 @@ dt {
 footer {
     margin-top: 25px;
     height: 80px;
-    text-align: center;
+    text-align: right;
 }
