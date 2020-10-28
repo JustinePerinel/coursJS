@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index JS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Les styles du repo des cours et des exos JS-Christelle-Colombbus  */
+body {
+    background-color: rgb(219, 217, 217);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1 {
+    border: grey 2px solid;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
+    margin: 0 auto;
+    color: grey;
+    width: 800px;
+    margin-left: 50pxpx;
+}
+#menu {
+    width: 1000px;
+    height: 50px;
+    padding-left: 80px;
+    padding-top: 20px;
+    justify-content: space-evenly;
+    display: flex;
+    border: grey 2px solid;
+    border-radius: 10px;
+    background-color: rgb(221, 210, 210);
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
+    margin-left: 200px;
+    text-align: center;
+}
+.sous-menu {
+    display: none;
+    background-color: rgb(221, 210, 210);
+    position: absolute;
+    z-index: 1000;
+    border-radius: 50px;
+
+}
+nav ul li:hover .sous-menu {
+    display: block;
+}
+ul {
+    width: 300px;
+}
+hr {
+    width: 600px;
+    margin: 5px auto;
+}
+#wrapper {
+    background-color: rgb(221, 210, 210);
+    width: 800px;
+    padding: 15px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
+}
+#b1, #b2 {
+    text-align: center;
+    border: grey 2px solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
+}
+code {
+    color: rgb(199, 11, 11);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/* pour surligner les textes en rose */
+.stabilo {
+    background-color: pink;
+}
+h2 {
+    border: grey 2px solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 10px;
+    color: grey;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
+    margin-top: 80px;
+}
+h3 {
+    border: grey 2px solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 10px;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
+    margin-top: 80px;
+}
+p {
+    font-family: cursive;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+li {
+    color: grey;
+}
+h3 {
+    color: grey;
+    margin-left: 20px;
+}
+dt {
+    margin-left: 20px;
+}
+dd {
+    margin-left: 70px;
+}
+/* tableau  */
+table {
+    border: grey 3px solid;
+    border-radius: 5px;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
+    border-collapse: collapse; 
+    width: 600px;
+    margin-left: 70px;
+}
+thead {
+    border-spacing: 50px; 
+    text-align: center;
+}
+tr {
+    border: grey 2px solid; 
+    width: 600px;
+} 
+tr:nth-of-type(even){
+    background: grey;
+    color: ivory;
+}
+td {
+    border: grey 2px solid;
+}
+    </style>
+</head>
+<header>
+    <nav>
+        <ul id="menu">
+            <li>Introduction
+                <ul class="sous-menu">
+                    <li><a href="01-introduction/01-01-introduction.html">Introduction 01</a></li>
+                    <li><a href="01-introduction/01-02-introduction.html">Introduction 02</a></li>
+                    <li><a href="01-introduction/01-03-introduction.html">Introduction 03</a></li>
+                    <li><a href="01-introduction/01-04-introduction.html">Introduction 04</a></li>
+                </ul>
+            </li>
+            <li>Variables et constantes
+                <ul class="sous-menu">
+                    <li><a href="02-01-introduction.html">Introduction</a></li>
+                    <li><a href="02-02-afficher.html">Afficher</a></li>
+                    <li><a href="02-03-types.html">Types</a></li>
+                    <li><a href="02-04-operateurs.html">Opérateurs</a></li>
+                    <li><a href="02-05-concatenation.html">Concaténation</a></li>
+                    <li><a href="02-06-constantes.html">Constantes</a></li>
+                </ul>
+            </li>
+            <li>Structures et contrôle
+                <ul class="sous-menu">
+                    <li><a href="03-01-introduction.html">Structures et controle</a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div id="wrapper">
+    <h1>Java-Script - Index du cours et des exos</h1><br>
+    <hr><hr>
+    <h2>Introduction</h2>
+    <ul>
+        <li>Le Java Script est un langage dynamique</li>
+        <li>Le Java Script est un langage principalement côté client </li>
+        <li>Le Java Script est un langage interprété </li>
+        <li>Le Java Script est un langage orienté objet</li>
+    </ul>
+    <h2>Le Java Script est un langage dynamique</h2>
+    <p>Ce langage va nous permettre de manipuler des
+    contenus HTML ou des styles CSS et de les modifier en fonction de divers évènements
+    ou variables. Un évènement peut être par exemple un clic d’un utilisateur à un certain
+    endroit de la page tandis qu’une variable peut être l’heure de la journée.</p>
+    <h2>Le Java Script est un langage principalement côté client</h2>
+    <p>La chose importante à retenir ici est que le JavaScript est un langage principalement utilisé
+    côté client, mais qui va également pouvoir s’utiliser côté serveur à condition qu’on mette
+    en place un environnement favorable (en utilisant Node.js par exemple).</p>
+    <h2>Le Java Script est un langage interprété</h2>
+    <p>Le JavaScript est un langage interprété. Cela signifie qu'il va pouvoir être exécuté directement sous réserve qu'on possède le logiciel interpréteur. Pas de panique ici : tous les navigateurs connus possèdent leur interpréteur JavaScript.</p>
+    <h2>JavaScript versus Java !!!!! Attention</h2>
+    <p>Encore aujourd’hui, certaines personnes ont tendance à confondre les deux langages «Java » et « JavaScript ».
+    Retenez ici que ces deux langages, bien que syntaxiquement assez proches à la base,
+    reposent sur des concepts fondamentaux complètement différents et servent à effectuer
+    des tâches totalement différentes.</p>
+</div>
+</body>
+</html>
