@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>II. 02 Afficher</title>
+    <title>II. 02 - Des exemples de variables</title>
     <!-- reset  -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- mes styles en externe -->
@@ -13,17 +13,68 @@
 </head>
 <body>
     <main>
-        <h1>JS - II 02 afficher</h1>
-        <p>cf. afficher.js</p>
 
-        <br><br>
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
 
-        <div id="liens">
-            <p>UN LIEN VERS<a href="../index.html"> L'INDEX</a></p>
-            <p>UN LIEN VERS <a href="02-01-introduction.html">02-01-introduction</a></p>
-            <p>UN LIEN VERS <a href="02-03-types.html">TYPES</a></p>
-            <p>Un lien vers<a href="02-04-operateurs.html">Types</a></p>
-        </div>
+        <!-- début de la nav -->
+        <nav>
+            <ul class="row">
+                <li class="onglet col-4">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html" class="sous-onglet">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html" class="sous-onglet">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html" class="sous-onglet">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html" class="sous-onglet">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet col-4">Variantes et constantes
+                    <div class="dropdown-content">
+                        <a href="02-01-introduction.html" class="sous-onglet">Les variables</a>
+                        <a href="02-02-afficher.html" class="sous-onglet">Exemples de variables</a>
+                        <a href="02-03-type.html" class="sous-onglet">Les types de données</a>
+                        <a href="02-04-operateurs.html" class="sous-onglet">Les opérateurs arithmétiques</a>
+                    </div>
+                </li>
+                <li class="onglet col-4"> Un autre onglet
+                    <div class="dropdown-content">
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2> <a href="02-02-afficher.html"> II. 02 - Des exemples de variables</a></h2>
+
+        <h3>1. Deux exemples de variables</h3>
+
+        <p>Sur cette page, nous avons vu deux types de variables et la façon dont elles s'écrivent.</p>
+
+        <h4>A - Let, sur une ligne ou deux</h4>
+        <p><code>let</code> permet de déclarer une variable sur le bloc auquel il appratient. On peut déclarer la variable de deux façons : </p>
+        <ul>
+            <li>a. let variable <br>
+            variable = ''(chaîne de caractères ou nombre)</li>
+            <li>b. let variable = ''<br></li>
+            <li><h5>Exemple</h5></li>
+            <li>let ville = 'Suresnes'</li>
+        </ul>
+        <br>
+        <h4>B - Alert, faire apparaître une fenêtre d'alerte</h4>
+        <p>Lorsque l'on a déclaré une variable ou que l'on veut faire apparaître une alerte sur la page web, il est possible de la déclarer en JavaScript. 2 solutions existent alors:</p>
+            <ul>
+                <li>a. alert(prenom), lorsque l'on a déclaré auparavant une variable comme suit : let prenom = 'Justine', l'alerte affichera à ce moment là le contenu de la variable prenom, c'est-à-dire Justine.</li>
+                <li>b. alert('Bienvenue chez les Ch\'tis'), les apostrophes autour de la phrase permettent d'indiquer au navigateur que l'on veut qu'ill afficher ce qui se trouve dans les parebthèses. </li>
+            </ul>
+        
+
+        <h3>2. Console log, afficher le contenu des variables dans l'inspecteur</h3>
+        <p>Dans une page de JS, console.log(prenom) va permettre d'afficher le contenu de la variable indiquée entre parenthèse dans la partie console de l'inspecteur. On peut indiquer plusieurs variables dans le console.log en les séparant pas une virgule et un espace. </p>
+        
     </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
 </body>
 </html>

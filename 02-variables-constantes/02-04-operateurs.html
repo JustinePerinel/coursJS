@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>II. 04 Les opérateurs</title>
+    <title>II. 03 Les types de données</title>
     <!-- reset  -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- mes styles en externe -->
@@ -13,15 +13,65 @@
 </head>
 <body>
     <main>
-        <h1>JS - II 04 Les opérateurs arithmétiques</h1>
-        
-        <h2>Qu'est-ce qu'un opérateur ?</h2>
-        <p>Un symbole qui va effectuer certaines opérations sur les variables et les valeurs</p>
-        <p>Par ex. l'opérateur * va nous permettre de multiplier les valeurs de deux variables</p>
 
-        <br>
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+        <nav>
+            <ul class="row">
+                <li class="onglet col-4">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html" class="sous-onglet">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html" class="sous-onglet">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html" class="sous-onglet">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html" class="sous-onglet">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet col-4">Variantes et constantes
+                    <div class="dropdown-content">
+                        <a href="02-01-introduction.html" class="sous-onglet">Les variables</a>
+                        <a href="02-02-afficher.html" class="sous-onglet">Exemples de variables</a>
+                        <a href="02-03-type.html" class="sous-onglet">Les types de données</a>
+                        <a href="02-04-operateurs.html" class="sous-onglet">Les opérateurs arithmétiques</a>
+                    </div>
+                </li>
+                <li class="onglet col-4"> Un autre onglet
+                    <div class="dropdown-content">
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <h2> <a href="02-04-operateurs.html">II. 04 Les opérateurs arithmétiques</a></h2>
+
+        <h3>1 - Qu'est ce qu'un opérateur ?</h3>
+        <p>C'est un symbole qui va vous permettre d'effectuer certaines opérations sur les variables et leurs valeurs. Par ex. l'opérateur * va nous permettre de multiplier les valeurs de deux variables.</p>
+
+        <ul>
+            <li>
+                <h4>Les opérateurs arithmétiques</h4>
+                <p>cf. le tableau et operateurs.js, ligne 3.</p>
+            </li>
+            <li>
+                <h4>Le modulo et l'exponentielle ... Qui sont-ils ?</h4>
+                <dl>
+                    <dt>Modulo</dt>
+                    <dd>Le reste entier d'une division euclidienne. On divise 5 par 3 , les résultat est 1 et il reste 2, c'est le modulo.</dd>
+                    <dt>Exponentielle</dt>
+                    <dd>L'exponentielle correspond à l'élévation à la puissance d'un nombre par un autre nombre : ex 2<sup>3</sup>.</dd>
+                </dl>
+            <br>
+            </li>
+            <li><h4>Priorité des calculs et utilisation des parenthèses</h4>
+            <p>Si on écrit <code>let j = 1 - 2 - 3;</code> le résultat ssera -4, les opérations se font de gauche à droite. </p>
+            <p class="notice">A l'exception de l'élévation à la puissance qui sera calculée en partant de la fin. Voir operateurs.js, ligne 50.</p>
+            <p>Nous allons, finalement, comme en maths, pouvoir forcer l'ordre de priorité en utilisant des couples de parenthèses pour indiquer qu'une opération doit se faire avant toutes les autres: cf. la variable <code>let m = 1 - (2 * 3)</code>.</p></li>
+        </ul>
+
+        <h4>Tableau des opérateurs arithmétiques</h4>
         <table>
-            <caption>Tableau des opérateurs arithmétiques</caption>
             <thead>
                 <tr>
                     <th>Opérateurs</th>
@@ -53,29 +103,9 @@
                 <td>Exponentielle</td>
             </tr>
         </table>
-
-        <h3>Le modulo et l'exponentielle ... Késako ?</h3>
-        <br>
-        <dl>
-            <dt>Modulo</dt>
-            <dd>Le reste entier d'une division euclidienne. On divise 5 par 3 le résultat est 1 et il reste 2 : le reste est le modulo</dd>
-            <dt>Exponentielle</dt>
-            <dd>L'exponentielle correspond à l'élévation à la puissance d'un nombre par un autre nombre : ex. 2 <sup>3</sup></dd>
-        </dl>
-
-        <h3>Priorité des calculs et utilisation des parenthèses</h3>
-        <p>Si on écrit <code>let h = 1 - 2 - 3;</code> le résultat est -4, les opérations se font de gauche à droite</p>
-        <p class="notice">À l'exception de l'élévation à la puissance qui sera calculée en partant de la fin. cf. la variable j (operateur.js)</p>
-        <p>Nous allons finalement, comme en maths, pouvoir forcer l'ordre de priorité en utilisant des couples de parenthèses pour indiquer qu'une opération doit se faire avant toutes les autres cf. la variable <code>let l = 1 - (2 - 10)</code></p>
-
-        <br><br>
-
-        <div id="liens">
-            <p>Un lien vers<a href="../index.html"> Index</a></p>
-            <p>Un lien vers<a href="02-01-introduction.html"> Introduction</a></p>
-            <p>Un lien vers<a href="02-02-afficher.html"> Afficher</a></p>
-            <p>Un lien vers<a href="02-03-types.html"> Types</a></p>
-        </div>
     </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
 </body>
 </html>

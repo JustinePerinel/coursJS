@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>II. 01 Introduction</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="introduction.js" async></script>
+</head>
+<body>
+    <main>
+        <h1>II. 01 Variables </h1>
+
+        <h2>1 - Qu'est ce qu'une variable ?</h2>
+        <p>Une variable est un conteneur servant à stocker des informations de manière temporaire, du texte (une chaîne de caractères) ou un nombre. La variable varie ! Elle stocke différentes valeurs au fil du temps.</p>
+        <p>Une variable est la valeur sont deux choses différentes</p>
+
+        <h2>2 - Règles de déclaration</h2>
+        <p>On dit (comme en php) que l'on "déclare" une variable. On déclarer une variable avec des mots-clefs.</p>
+
+        <h3>Les mots-clefs</h3>
+        <ul>
+            <li><code>let</code></li>
+            <li><code>var</code></li>
+        </ul>
+        <br><br>
+        <h3>Quelques règles</h3>
+        <ul>
+            <li>Le nom d'une variable doit obligatoirement commencer par une lettre ou un underscore _</li>
+            <li>Le nom d'une variable ne doit contenir que des lettres, des chiffres et des underscores, pas de caractères spéciaux</li>
+            <li>Il n'y a pas d'espaces</li>
+            <li>cf. introduction.js</li>
+        </ul>
+
+        <h2>3 - Initialiser une variable</h2>
+        <p>Quand on assigne une valeur à une variable vide, on dit que l'on stocke une valeur ou qu'on initialise une variable</p>
+
+        <h2>4 - Différences entre "var" et "let"</h2>
+        <p><code>let</code> est plus récent que <code>var</code>. On utilisera par défaut <code>let</code>.</p>
+
+        <ul class="ul-h3">
+            <li>
+                <h3>A - La remontée ou hoisting des variables</h3>
+                <p>Avec <code>var</code> on est pas obligé de déclarer la variable avant de la manipuler ou de l'affecter. cf. introduction.js ligne 26</p>
+            </li>
+
+            <li>
+                <h3>B - La redéclaration des variables</h3>
+                <p>Avec var on avait le droit de déclarer plusieurs fois une même variable en utilisant à chaque fois var (ce qui avait pour effet de modifier la valeur stockée). On ne peut pas le faire avec <code>let</code> cf. introduction.js ligne 44</p>
+            </li>
+
+            <li>
+                <h3>C - La portée des variables</h3>
+                <p>La "portée" d'une variable désigne l'endroit où cette variable va pouvoir être utilisée dans un script</p>
+                <p>Nous reparlerons donc de cette portée des variables lorsque nous aborderons les fonctions en JavaScript.</p>
+            </li>
+
+            <li>
+                <h3>Conclusion - let ou var ?</h3>
+                <p>La syntaxe de déclaration des variables avec let correspond à la nouvelle syntaxe. La syntaxe avec var est l'ancienne syntaxe qui est vouée à disparaitre.</p>
+                <p class="stabilo">Vous devriez donc aujourd'hui toujours utiliser le mot clef let pour déclarer vos variables</p>
+            </li>
+        
+        </ul>
+
+        <h2>5 - Quelle utilité pour les variables ?</h2>
+        <p>Il sera pratique de stocker différents types de données ou d'informations dans une variable</p>
+        <p>Exemple : avec la fonction <code>prompt()</code> on récupèrera une donnée envoyée par un utilisateur, on fera un script qui contiendra une variable qui stockera la donnée quand elle sera envoyée.</p>
+
+        <h2>6 - Comment afficher le contenu d'une variable ?</h2>
+        <p>cf. <a href="02-02-afficher.html">une page avec des exemples</a></p>
+
+        <br><br>
+        <div  id="liens">
+            <p><a href="../index.html">INDEX</a></p>
+            <p><a href="02-02-afficher.html">II. 02 Variables et constantes</a></p>
+        </div>
+    </main>
+    <footer>
+        COURS JS &copy; ASL
+    </footer>
+</body>
+</html>
