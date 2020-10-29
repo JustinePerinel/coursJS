@@ -11,7 +11,7 @@
     --encadre : #FAFAD2; 
     --violet : #9400D3; 
     --vert-clair : #F5FFFA;
-      
+    --deepink: #FF1493 ;       
 }
 
 body {
@@ -58,7 +58,7 @@ nav {
     display: flex;
     justify-content: space-between;
 
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 #Menu a {
@@ -150,6 +150,7 @@ p {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+
 }
 
 .notice {
@@ -157,6 +158,7 @@ p {
     padding: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
+    color: var(--deepink);
 }
 
 .encadre {
@@ -263,25 +265,25 @@ code {
 
 /* page 02-04-operateurs  */
 
-table {
+table#op-arithmetiques {
     width: 50%;
     margin: 20px auto;
 }
 
-caption, th {
+#op-arithmetiques caption, th {
     background-color: var(--vert);
     border: 1px solid var(--blanc);
     border-collapse: collapse;
     padding: 10px;
 }
 
-tr, td {
+#op-arithmetiques tr, td {
     border: 1px solid var(--vert);
     border-collapse: collapse;
     padding: 10px;
 }
 
-tr:nth-of-type(even) {
+#op-arithmetiques tr:nth-of-type(even) {
     background-color: var(--vert-clair);
 }
 
@@ -290,4 +292,36 @@ dt {
     padding-top: 20px;
     padding-bottom: 10px;
 }
+
+/* page 02-04 opérateurs d'affectation  */
+
+table#op-affectation {
+    width: 60%;
+    margin: 20px auto;
+}
+
+#op-affectation caption, th {
+    background-color: var(--vert);
+    border: 1px solid var(--blanc);
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+#op-affectation tr, td {
+    border: 1px solid var(--vert);
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+#op-affectation tr:nth-of-type(even) {
+    background-color: var(--vert-clair);
+}
+
+/* page 02 - 06 constantes  */
+
+.stabilo {
+    background-color: var(--vert);
+}
+
+
 

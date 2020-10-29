@@ -49,3 +49,28 @@ alert('h contient le résultat : ' + h +
 '\nk contient : ' + k +
 '\nl contient : ' + l
 );
+
+// Opérateurs d'affectation 
+
+let chiffre1 = 5;
+let chiffre2 = 18;
+
+let somme = chiffre1 + chiffre2;
+
+console.log(somme);
+
+let prenom = 'Audrey';
+
+// console.log(chiffre1);
+// console.log(typeof chiffre1);
+
+let m = 20;
+let o = 50;
+
+m += 15; /* On ajoute 15 à la valeur stockée. Permet de faire rapidement un calcul + mise à jour de la variable */
+
+o *= 5;
+
+console.log(m);
+console.log(o);
+

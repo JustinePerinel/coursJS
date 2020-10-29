@@ -31,6 +31,8 @@
                             <li><a href="02-02-afficher.html">02-02 Afficher</a></li>
                             <li><a href="02-03-types.html">02-03 Types</a></li>
                             <li><a href="02-04-operateurs.html">02-04 Opérateurs</a></li>
+                            <li><a href="02-05-concatenation.html">02-05 Concaténation</a></li>
+                            <li><a href="02-06-constantes.html">02-06 Constantes</a></li>
                         </ul>
                     </li>
                 </ul>          
@@ -44,7 +46,7 @@
             <p>Par ex. l'opérateur * va nous permettre de multiplier les valeurs de deux variables</p>
 
             <br>
-            <table>
+            <table id="op-arithmetiques">
                 <caption>Tableau des opérateurs arithmétiques</caption>
                 <thead>
                     <tr>
@@ -91,7 +93,48 @@
             <p>Si on écrit <code>let h = 1 - 2 - 3;</code> le résultat est -4, les opérations se font de gauche à droite</p>
             <p class="notice">À l'exception de l'élévation à la puissance qui sera calculée en partant de la fin. cf. la variable j (operateur.js)</p>
             <p>Nous allons finalement, comme en maths, pouvoir forcer l'ordre de priorité en utilisant des couples de parenthèses pour indiquer qu'une opération doit se faire avant toutes les autres cf. la variable <code>let l = 1 - (2 - 10)</code></p>
-        </div>
+
+            <h2>Les opérateurs d'affectation</h2>
+            <p>Les opérateurs d'affectation vont nous permettre d'affecter une certaine valeur à une variable</p>
+            <p>= est l'opérateur le plus utilisé</p>
+
+            <table id="op-affectation">
+                <caption>Opérateurs d'affectation</caption>
+                <thead>
+                    <tr>
+                        <th>Opérateurs</th>
+                        <th>Définitions</th>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td>+=</td>
+                    <td>Additionne puis affecte le résultat</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>Soustrait puis affecte le résultat</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>Multiplie puis affecte le résultat</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>Divise puis affecte le résultat</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>Calcule le modulo puis affecte le résultat</td>
+                </tr>
+            </table>
+
+            <p>Les opérateurs d'affectation combinés nous permettent d'effectuer deux types d'opérations à la suite. On réalise des opérations arithmétiques puis d'affectation. </p>
+
+
+        </div> <!-- fin du wrapper -->
+
+        
 
         <p class="encadre"><a href="../index.html">Retour Index</a></p>
 
