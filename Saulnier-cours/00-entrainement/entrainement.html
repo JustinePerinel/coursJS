@@ -13,15 +13,64 @@
     <script>
         document.write('<h1 style="text-transform: uppercase;">01 Entrainement JS</h1>');
 
-        document.write('<h2 style="background: black;width: 75%; color: #fff; margin:30px; padding: 10px;">1- Affichage</h2>');
+        document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">1- Affichage</h2>');
 
         var maBoite;
         maBoite = 10;
 
+        let monAge = 12;
+
         document.write('<p>Dans la variable maBoite il y a ' + maBoite + '</p>');
+
+        console.log(maBoite);
+        console.log(monAge);
+
+        console.log('Un message dans le log');
+        console.info('Une information à envoyer dans la console');
+
+        // boîte alert()
+        // alert('Ceci est un message d\'alerte');
+
+        // Boîte confirm()
+        // confirm('Confirmez-vous?');
+
+        // boîte prompt()
+
+        var humeur = prompt('Comment ça va ?');
+
+        document.write('Mon humeur est' + ' ' + humeur);
+
+        document.write(' ');
+
+        var sonChien = prompt('Quel est le nom de votre chien ?');
+
+        document.write('Votre chien s\'apelle ' + sonChien);
+
+        // portée locale ou globale de la variable !!!
+
+        // if(true){
+        //     let nombre = 9;
+        // }
+
+        // console.log(nombre);
+
+        // let nombre2;
+
+        // if(true){
+        //     nombre2 = 18;
+        // }
+
+        // console.log(nombre2);
+
+
     </script>
+
+     <!-- script en externe -->
+
+     <!-- <script src="entrainement.js" async></script> -->
+
 </head>
 <body>
-    
+    <h2>Les baleines</h2>
 </body>
 </html>

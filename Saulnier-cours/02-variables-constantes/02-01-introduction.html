@@ -40,6 +40,7 @@
         <p>Quand on assigne une valeur à une variable vide, on dit que l'on stocke une valeur ou qu'on initialise une variable</p>
 
         <h2>4 - Différences entre "var" et "let"</h2>
+       
         <p><code>let</code> est plus récent que <code>var</code>. On utilisera par défaut <code>let</code>.</p>
 
         <ul class="ul-h3">
@@ -50,19 +51,21 @@
 
             <li>
                 <h3>B - La redéclaration des variables</h3>
-                <p>Avec var on avait le droit de déclarer plusieurs fois une même variable en utilisant à chaque fois var (ce qui avait pour effet de modifier la valeur stockée). On ne peut pas le faire avec <code>let</code> cf. introduction.js ligne 44</p>
+                <p>Avec <code>var</code> on avait le droit de déclarer plusieurs fois une même variable en utilisant à chaque fois <code>var</code>  (ce qui avait pour effet de modifier la valeur stockée). On ne peut pas le faire avec <code>let</code> cf. introduction.js ligne 44</p>
             </li>
 
             <li>
                 <h3>C - La portée des variables</h3>
-                <p>La "portée" d'une variable désigne l'endroit où cette variable va pouvoir être utilisée dans un script</p>
-                <p>Nous reparlerons donc de cette portée des variables lorsque nous aborderons les fonctions en JavaScript.</p>
+                <p>La "portée" d'une variable désigne l'endroit où cette variable va pouvoir être utilisée dans un script.</p>
+                <p>Nous reparlerons donc de cette portée des variables lorsque nous aborderons les fonctions en JavaScript.</p> 
+                <p><code>let</code> a une portée locale, alors que <code>var</code> a une portée globale.</p>
+
             </li>
 
             <li>
                 <h3>Conclusion - let ou var ?</h3>
-                <p>La syntaxe de déclaration des variables avec let correspond à la nouvelle syntaxe. La syntaxe avec var est l'ancienne syntaxe qui est vouée à disparaitre.</p>
-                <p class="stabilo">Vous devriez donc aujourd'hui toujours utiliser le mot clef let pour déclarer vos variables</p>
+                <p>La syntaxe de déclaration des variables avec <code>let</code>  correspond à la nouvelle syntaxe. La syntaxe avec <code>var </code>est l'ancienne syntaxe qui est vouée à disparaitre.</p>
+                <p class="stabilo">Vous devriez donc aujourd'hui toujours utiliser le mot clef let pour déclarer vos variables, sachant que c'est un peu plus contraingnant.</p>
             </li>
         
         </ul>
