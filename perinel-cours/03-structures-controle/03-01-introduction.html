@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>III. 01 Les structures de contrôle</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="introduction.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+        <nav>
+            <ul class="row">
+                <li class="onglet col-4">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html" class="sous-onglet">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html" class="sous-onglet">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html" class="sous-onglet">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html" class="sous-onglet">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet col-4">Variantes et constantes
+                    <div class="dropdown-content">
+                        <a href="../02-variables-constantes/02-01-introduction.html" class="sous-onglet">Les variables</a>
+                        <a href="../02-variables-constantes/02-02-afficher.html" class="sous-onglet">Exemples de variables</a>
+                        <a href="../02-variables-constantes/02-03-type.html" class="sous-onglet">Les types de données</a>
+                        <a href="../02-variables-constantes/02-04-operateurs.html" class="sous-onglet">Les opérateurs arithmétiques</a>
+                        <a href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a>
+                        <a href="../02-variables-constantes/02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet col-4"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="03-01-introduction.html" class="sous-onglet">Introduction</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="#" class="sous-onglet">Un lien</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <h2> <a href="03-01-introductiuion.html">III. 01 - Structures de contrôle</a></h2>
+
+        <h3>1 - Les condititons et les boucles</h3>
+        <p>Il existe deux types de contrôle de structures de base (que l'on retrouve dans tous les langages de porgrammation) et donc en JS. Ces deux types de structures de base sont :</p>
+        <ul>
+            <li>a) Les structures de contrôle conditionnelles, aussi appellées <span class="stabilo">les conditions</span>.</li>
+            <li>b) Les structures de contrôle de boucles, aussi appelées <span class="stabilo">les boucles</span>.</li>
+        </ul>
+        <br>
+        <p>Les conditions vont nous permettre d'exécuter un certain nombre d'instructions, si et seulement si, une certaine condition est vérifiée. Les boucles vont nous permettre d'exécuter un bloc de code en boucle tant qu'une condition donnée est vérifiée. </p>
+
+        <h4>A - Présentation des conditions </h4>
+        <ul>
+            <li>a) La condition <em>if</em> ;</li>
+            <li>b) La consition <em>if</em>... <em>else</em> ;</li>
+            <li>c) La condition <em>if</em>... <em>elseif</em>... <em>else</em> ;</li>
+        </ul>
+        <br>
+        <h4>Les opérateurs de comparaison</h4>
+        <p>Comment vérifier les conditions ?</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Les opérateurs</th>
+                    <th>Définition</th>
+                </tr>
+            </thead>
+            <!-- tr*3>td*2>p*3 -->
+            <tr>
+                <td>
+                    <p>==</p>
+                    <p>===</p>
+                    <p>!=</p>
+                </td>
+                <td>
+                    <p>Teste l'égalité sur les valeurs</p>
+                    <p>Teste l'égalité en terme de valeurs et de types</p>
+                    <p>Teste la différence des valeurs</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>&lt;> (A ÉVITER)</p>
+                    <p>!==</p>
+                </td>
+                <td>
+                    <p>Teste également la différence en valeur</p>
+                    <p>Teste la différence en valeur ou en type</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>></p>
+                    <p>&lt;</p>
+                    <p>>=</p>
+                    <p>&lt;=</p>
+                </td>
+                <td>
+                    <p>Teste si une valeur est strictement inféreure à une autre</p>
+                    <p>Teste si une valeur est strictement supérieure à une autre</p>
+                    <p>Teste si une valeur est strictement inféreieure à une autre</p>
+                    <p>Teste si une valeur est strictement supérieure à une autre</p>
+                </td>
+            </tr>
+        </table>
+        
+        <p class="notice">Dans le cas où la coomparaison est vérifiée, le JavaScript renvoie le booléen <code>true</code>. Dans le cas contraire, le booléen <code>false</code> est renvoyé.</p>
+
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

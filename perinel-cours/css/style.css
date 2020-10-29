@@ -287,6 +287,11 @@ td {
     min-width: 50%;
 }
 
+iframe {
+    display: block;
+    margin: auto;
+}
+
 
                             /* STYLE DU FOOTER */
 

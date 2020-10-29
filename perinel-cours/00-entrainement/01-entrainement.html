@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background-color: rgb(255, 222, 202);
+        }
+    </style>
+    <script>
+        document.write('<h1 style="color: orange;text-align: center;text-transform: uppercase;"> 01 Entraînement JS </h1>');
+
+        document.write('<h2 style="background: orange;width: 75%;color: #fff;margin: auto;text-align: center;">1 - Affichage</h2>');
+
+        var maBoite;
+        maBoite = 10;
+
+        let monAge= 12;
+
+        document.write(maBoite);
+
+        document.write('<p>Dans la variable maBoite, il y a ' + maBoite + '</p>');
+
+        console.log(maBoite, monAge);
+        console.log('Ceci est une chaîne de caractère dans le log.');
+
+        // ceci est une info, un petit pictogramme est placé devant le string dans la console 
+        console.info('une info envoyée dans la console.');
+
+        // alert() message d'alerte 
+        // alert('Cesi est un message d\'alerte');
+
+        // nouvelle boîte ; permet de confirmer au niveau du client
+        // confirm('Confirmez-vous ?');
+
+        // let sonChien = prompt('Quel est le prénom de votre chien ? '); 
+        // let humeur = prompt('Comment ça va ?');
+
+        // document.write('<p>Le nom de votre chien est ' + sonChien + '.</p>')
+        // document.write('<p>Alors, ça va ?' + humeur +'.</p>')
+
+        // portée locale ou globale de la variable 
+        // var a une portée globale et pas locale, contrairement à let
+
+        /*avec var on pourra déclarer la variable dans le bloc de code  */
+        if(true){
+            var nombre = 9;
+        }
+        console.log(nombre);
+
+        /* avec let on devra déclarer la variable avant le bloc de code  */
+        let nombre2;
+
+        if(true){
+            nombre2 = 18;
+        }
+        console.log(nombre2)
+
+        // addition de valeurs 
+        var fruits = 'pommes ';
+        fruits += '- fraises ';
+        fruits += '- mangues';
+        console.info(fruits); /* les fruits sont maintenant pommes - fraises - mangues */ 
+        document.write('<p> Mes fruits préférés sont ' + fruits + '</p>')
+
+        // avec une valeur numérique (number)
+        var noteEval = 12
+        noteEval += 2;
+        console.log(noteEval); /* la note est maintenant 14 */
+        document.write('<p>Ma note d\'évaluation est ' + noteEval + '.</p>')
+
+        document.write('<h2 style="background: orange;width: 75%;color: #fff;margin: auto;text-align: center;">2 - Type de données</h2>');
+    
+        var monTexte = 'Voici une phrase pour Audrey, avec l\'apostrophe.';
+        console.info(typeof monTexte);
+
+        document.write(typeof (noteEval) + '<br>')
+        document.write(typeof (monTexte) + '<br>')
+
+        document.write('<h2 style="background: orange;width: 75%;color: #fff;margin: auto;text-align: center;">3 - Constantes</h2>');
+
+        const BOUGE_PAS = 'Ma constante impossible à modifier';
+        document.write('<p style="background-color: lightgray;">Dans ma constante est écrit : "' + BOUGE_PAS + '". Je ne pourrai pas changer la valeur de cette constante.<p>')
+
+        document.write('<h2 style="background: orange;width: 75%;color: #fff;margin: auto;text-align: center;">4 - Concaténer</h2>');
+
+        let prenom = 'Bruce', nom = 'Willis';
+        document.write('<p> Qui va nous sauver ? ' + prenom + ' ' + nom + '.</p>')
+        
+        document.write('<h2 style="background: orange;width: 75%;color: #fff;margin: auto;text-align: center;">5 - </h2>');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
