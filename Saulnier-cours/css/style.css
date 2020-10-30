@@ -21,7 +21,7 @@ main {
     width: 1200px;
     margin: auto;
     background-color: var(--blanc);
-    padding: 25px;
+    padding: 45px;
 }
 
 h1 {
@@ -144,6 +144,7 @@ table {
     width: 800px;
     margin: 0 auto;
 }
+
 table th {
     background-color: var(--rose-vif);
     color: var(--blanc);
@@ -168,7 +169,7 @@ caption {
     margin-bottom: 10px;
 }
 
-dt {
+td {
     font-weight: bold;
     margin-bottom: 5px;
     margin-top: 10px;

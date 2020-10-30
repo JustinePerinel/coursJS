@@ -36,11 +36,12 @@
 
         // boîte prompt()
 
-        var humeur = prompt('Comment ça va ?');
+        var humeur = prompt('Comment va ton humeur ?');
 
-        document.write('Mon humeur est' + ' ' + humeur);
+        document.write('<p>Mon humeur est' + ' ' + humeur + '</p>');
 
-        document.write(' ');
+        // document.write('<br>');
+        // document.write('<br>');
 
         var sonChien = prompt('Quel est le nom de votre chien ?');
 
@@ -56,12 +57,79 @@
 
         // let nombre2;
 
-        // if(true){
-        //     nombre2 = 18;
-        // }
+        if(true){
+            nombre2 = 18;
+        }
 
         // console.log(nombre2);
 
+        // addition de valeurs (strings)
+        var fruits ='pommes';
+        console.info(fruits);
+
+        fruits += ' - fraises';
+        console.info(fruits);
+
+        fruits += ' - mangues';
+        console.info(fruits);
+
+        // addition d'une valeur numérique (number)
+        var noteEval = 12;
+        console.info(noteEval);
+
+        noteEval += 2;
+        console.info(noteEval);
+
+        var monTexte = 'Voici une phrase avec l\'apostrophe';
+        console.info(typeof nombre2);
+
+        // Type de données
+        document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">2- Type de données</h2>');
+
+        document.write(typeof(noteEval) + '<br>');
+        document.write(typeof(monTexte) + '<br>');
+
+        // les constantes
+        document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">3- Constantes</h2>');
+
+        const BOUGE_PAS = "Ma constante impossible à modifier !";
+
+        document.write('<p style="background: #fff; text-align: center;">' + BOUGE_PAS + '<\p>');
+
+        // Concaténer
+        document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">4- Concaténer</h2>');
+            
+        let prenom = 'Bruce', nom = 'Willis';
+        document.write(prenom + ' ' + nom);
+
+        // Opérateurs numériques
+        document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">5- Opérateurs numériques</h2>');
+
+        // addition
+        let addition = 10 + 15;
+
+        document.write('Une addition : ' + addition + '<br>');
+
+        // multiplication
+        let multiplication = 10 * 15;
+        document.write('<p>Une multiplication : ' + addition + '</p>');
+
+        //  soustraction
+        let soustraction = 10 - 5;
+        document.write('<p>Une soustraction : ' + soustraction + '</p>')
+
+        //  division
+        let division = 10 / 3;
+        document.write('<p>Une division : ' + division + '</p>');
+
+        // modulo
+        let modulo = 10 % 3;
+        console.log(modulo);
+        document.write('<p>Un modulo : ' + modulo + '</p>');
+
+        // EXO
+
+        document.write('<h3>Un petit exercice dans un prompt() et une alerte.</h3>');
 
     </script>
 
@@ -71,6 +139,6 @@
 
 </head>
 <body>
-    <h2>Les baleines</h2>
+    
 </body>
 </html>
