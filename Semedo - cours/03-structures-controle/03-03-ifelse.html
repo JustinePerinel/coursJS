@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>II. 05 Concatenation</title>
+    <title>III. 03 If else</title>
     <!-- reset  -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- ma feuille de style en externe -->
     <link rel="stylesheet" href="../css/javascript.css">
     <!-- du js en feuille externe -->
-    <script src="concatenation.js" async></script>
+    <script src="ifelse.js" async></script>
 </head>
 <body>
     <main>
         <header>
-            <h1>JS - II 05 La concatenation et les littéraux de gabarits</h1>
+            <h1>JS - III 03 If else</h1>
             <nav>
                 <ul id="Menu">
                     <li class="li1">Introduction JavaScript &ensp;
@@ -35,25 +35,33 @@
                             <li><a href="02-06-constantes.html">02-06 Constantes</a></li>
                         </ul>
                     </li>
-                    <li class="li1">Structure et controle
+                    <li>Structure et controle
                         <ul class="SousMenu">
-                            <li><a href="../03-structures-controle/03-01-introduction.html">01 introduction</a></li>
+                            <li><a href="03-01-introduction.html">01 introduction</a></li>
+                            <li><a href="03-02-if.html">La condition If</a></li>
                         </ul>
                     </li>
                 </ul>          
             </nav>
         </header>
         <div id="banniere"></div>
-
+            
         <div id="wrapper5">
-            <h2>La concaténation en JS</h2>
-            <p>Concaténer signifie littéralement "mettre bout à bout".</p>
-            <p>L'opérateur de concaténation est le <code>+</code> : <br><br><span class="notice">ATTENTION !! utilisé avec deux chiffres il sert à additionner</span></p>
+            <h2>1 - if... else... en JS</h2>
+            <p>La structure conditionnelle if... else (en français si... sinon) sera plus complète car on va exécuter un bloc de code si un test renvoie <code>true</code> ou un autre dans le cas contraire.</p>
 
-            <h2>Les littéraux de gabarits</h2>
-            <p>Il faut toujours entourer nos chaînes de caractères (nos textes) avec des apostrophes (des quotes) ou des guillemets doubles.</p>
-            <p>Il existe une troisième manière introduite récemment et qui utilise les accents graves <code>``</code> : <kbd>Alt Gr + 7</kbd></p>
-
+            <h3>If...else...</h3>
+            <ul>
+                <li>
+                    <code>
+                        if(x>1){ <br><br>
+                        alert('x contient une valeur supérieure à 1'); <br><br>
+                        }else{ <br><br>
+                        alert('x contient une valeur inférieure à 1'); <br><br>
+                        }
+                    </code>
+                </li>
+            </ul>
 
         </div> <!-- fin du wrapper -->
 

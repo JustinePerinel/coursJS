@@ -14,6 +14,9 @@ let testDifferentValeurType = x !== 4;
 let testInferieurOuEgal = x < 8;
 console.log(testInferieurOuEgal);
 
+let testInferieur = x == 2;
+console.log(testInferieur);
+
 alert('Valeur dans x égale à 4 (en valeur) ? : ' + testEgalValeur +
     '\nValeur dans x égale à 4 (en valeur et en type) ? : ' + testEgalValeurType + ' ' +
     '\nValeur dans x différent de 4 (en valeur) ? : ' + testDifferenceValeur + ' ' +

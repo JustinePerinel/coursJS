@@ -14,12 +14,205 @@
     <script>
         document.write('<h1>01 Entrainement JS</h1>');
 
-        document.write('<h2 style="background: orange;width: 75%; color: #fff;"> Affichage</h2>');
+        document.write('<main style="width: 80%; height: auto; margin: 0 auto; box-sizing: border-box; padding: 20px; border-radius: 10px; background-color: #fff; font-family: sans-serif;"><h2 style="text-align: center; text-transform: uppercase; color: purple;">Un main en Javascript</h2><h3 style="text-transform: uppercase; color: yellowgreen;">Un titre de niveau 3</h3><p style="font-weight: bold;">Bonjour je m\'appelle Katia</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod in optio nam ratione, nisi alias, deserunt velit consequatur totam error voluptates id odit, sit molestiae. Officia fuga distinctio excepturi nobis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod in optio nam ratione, nisi alias, deserunt velit consequatur totam error voluptates id odit, sit molestiae. Officia fuga distinctio excepturi nobis?</p><figure style="width: 300px; height: 200px; margin: 50px auto;"><img src="../img/technology-1283624_1280.jpg" alt="Code" style="max-width: 100%"><figcaption style="text-align: center; font-size: 0.8em;background-color: lavenderblush; padding: 10px 0; position: relative; bottom: 5px;">Code en JavaScript</figcaption></figure><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod in optio nam ratione, nisi alias, deserunt velit consequatur totam error voluptates id odit, sit molestiae. Officia fuga distinctio excepturi nobis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod in optio nam ratione, nisi alias, deserunt velit consequatur totam error voluptates id odit, sit molestiae. Officia fuga distinctio excepturi nobis?</p></main>');
+
+
+        // titre 1
+
+        document.write('<h2 style="background: orange;width: 75%; color: #fff;">1 - Affichage</h2>');
 
         var maBoite;
         maBoite = 10;
 
+        let monAge = 12;
+
         document.write('<p>Dans la variable maBoite il y a ' + maBoite + '</p>');
+
+        console.log(maBoite);
+        console.log(monAge);
+
+        console.log('Un message dans le log.')
+        console.info('Une information à envoyer dans la console');
+
+        // boîte alert()
+        // alert('Alerte ! Ceci est un message d\'alerte');
+
+        // Boîte confirmation confirm()
+        // confirm('Confirmez-vous ?');
+
+        // boîte prompt()
+        // prompt('Comment ça va ?');
+
+        // let sonChien = prompt('Quel est le prénom de votre chien ?');
+
+        // document.write('<p>Votre chien s\'appelle ' + sonChien + '.</p>');
+
+        // let humeur = prompt('Comment te sens-tu aujourd\'hui ?');
+        // document.write(humeur);
+
+        // portée locale ou globale de la variable !!!
+
+        // var a une portée globale, donc peut être utilisée en dehors d'un bloc de code (ici, le bloc if())
+        if(true){
+            var nombre = 9;
+        }
+
+        console.log(nombre);
+
+        // let a une portée locale, si la variable est déclarée dans un bloc de code, on ne pourra "l'appeler" en dehors.
+        // if(true){
+        //     let nombre = 9;
+        // }
+
+        // console.log(nombre);
+
+        // ici, la variable a été déclaré en amont, elle est donc utilisable en dehors du bloc de code
+        let nombre2;
+
+        if(true){
+            nombre2 = 18;
+        }
+
+        console.log(nombre2);
+
+        // addition de valeurs (string)
+
+        var fruits = 'pommes';
+        console.info(fruits);
+
+        fruits += ' - fraises';
+        console.info(fruits);
+        fruits += ' - mangues';
+        console.info(fruits);
+
+        // Addition d'une valeur numérique (number)
+
+        var noteEval = 15;
+        console.info(noteEval);
+
+        noteEval += 4;
+        console.info(noteEval);
+
+        // titre 2      
+        document.write('<h2 style="background: orange;width: 75%; color: #fff;">2 - Type de données</h2>');
+
+        var monTexte = 'Voici une phrase pour Audrey, avec l\'apostrophe';
+        console.log(typeof monTexte, noteEval);
+
+        // Les parenthèses typeof() sont falcutatives 
+        document.write(typeof(noteEval) + '<br>');
+        document.write(typeof(monTexte) + '<br>');
+
+        // titre 3
+        document.write('<h2 style="background: orange;width: 75%; color: #fff;">3 - Constantes</h2>');
+
+        const BOUGE_PAS = 'Ma constante impossible à modifier !';
+        
+        document.write('<p style="background-color: honeydew;">' + BOUGE_PAS + '</p>');
+        // pas le droit de redéfinir const !!
+        
+        // titre 4 
+        document.write('<h2 style="background: orange;width: 75%; color: #fff;">4 - Concaténer</h2>');
+
+        let prenom = 'Bruce', nom = 'Willis';
+        document.write(prenom + ' ' + nom);
+
+        // titre 5 
+        document.write('<h2 style="background: orange;width: 75%; color: #fff;">5 - Opérateurs numériques</h2>');
+
+        // addition 
+        let addition = 10 + 5;
+        document.write('<p>Une addition : ' + addition + '</p>');
+
+        // multiplication 
+        let multiplication = 8 * 2;
+        document.write('<p>Une multiplication : ' + multiplication + '</p>');
+
+        // soustraction 
+        let soustraction = 20 - 2;
+        document.write('<p>Une soustraction : ' + soustraction + '</p>');
+
+        // division 
+        let division = 46 / 2;
+        document.write('<p>Une division : ' + division + '</p>');
+
+        // modulo 
+        let modulo = 12 % 5;
+        document.write('<p>Un modulo : ' + modulo + '</p>');
+
+        console.log(addition, multiplication, soustraction, division, modulo);
+
+        // CONSIGNE réaliser un prompt( demandant son âge à un utilisateur, récupérer cette donnée et l'utiliser pour afficher "Vous avez xx ans")
+        document.write('<h3 style="color: yellowgreen; text-transform: uppercase;">Un petit exercice dans une prompt() et une alerte().</h3>');
+
+        // var votreAge = prompt('Quel âge avez-vous ?');
+        // document.write('<p>Vous avez ' + votreAge + ' ans.</p>');
+
+
+        // docuement.write('<h3 style="color: yellowgreen; text-transform: uppercase">Exo une valeur au cube et au carré</h3>');
+
+        // récupérer dans un prompt() une valeur donnée par un utilisateur
+        // envoyer ensuite une alert() indiquant le résultat de cette valeur d'abord au cube puis au carré
+        // puis on fera un document write
+
+        // var unChiffre = prompt('Donnez moi un chiffre entre 1 et 10');
+
+        // var puissance2 = unChiffre ** 2;
+
+        // var puissance3 = unChiffre ** 3;
+
+        // alert('Le cube de ' + unChiffre + ' donne ' + puissance3 +
+        //     '\nLe carré de ' + unChiffre + ' donne ' + puissance2 
+        // );
+
+        // document.write('<p>Vous avez choisi le chiffre ' + unChiffre + '.</p>' +
+        
+        // '<p>Le cube de ' + unChiffre + ' donne ' + puissance3 + '.</p>' + 
+
+        // '<p>Le carré de ' + unChiffre + ' donne ' + puissance2 + '.</p>'
+        // );
+
+        // correction Patrick 
+
+        // let votreChiffre = prompt('Faisons un calcul, rentrez un chiffre'); /* 1 - invitation avec le prompt() à saisir une valeur numérique dans la pop-up */
+
+        /* console.log('Son chiffre' + ' ' + votreChiffre); */ /* je vérifie via la console que la variable fonctionne */
+        
+        // let auCarre = votreChiffre * votreChiffre; /* 2- je calcule le contenu de la variable * 2 */
+        // let auCube = votreChiffre * votreChiffre * votreChiffre; /* 3- je calcule le contenu de la variable au cube */
+        // console.log(auCarre, auCube); /* vérification des calculs */
+
+        // alert('Vous avez saisi le chiffre ' + votreChiffre + 
+        //     '\nCe chiffre au carré est égal à ' + auCarre + '.'
+        // ); /* 4- j'affiche dans deux alert() les resultats des opérations */
+
+        // alert('Vous avez saisi le chiffre ' + votreChiffre + 
+        //     '\nCe chiffre au cube est égal à ' + auCube + '.'
+        // );
+
+        // TITRE 6
+
+        document.write('<h2 style="background: orange;width: 75%; color: #fff;">6 - Les conditions</h2>');
+
+        let a = 2, b = 5, c = 2;
+        // si a est supérieur à b
+        // j'écris "a est supérieur à b"
+        // sinon j'écris "a n'est pas supérieur à b"
+
+        if((a>b)){
+            document.write('<p>a est supérieur à b</p>');
+        }else{
+            document.write('<p>a n\'est pas supérieur à b</p>');
+        }
+
+        // tester l'égalité de a et b
+
+        if((a == b)){
+            document.write('<p>a = ' + a + 'et b = ' + b + ' donc a est égal à b</p>');
+        }else{
+            document.write('<p>a = ' + a + ' et b = ' + b + ' donc a n\'est pas égal à b</p>');
+        }
+
     </script>
 </head>
 <body>
