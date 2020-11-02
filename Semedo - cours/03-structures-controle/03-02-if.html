@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>III. 02 If</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- ma feuille de style en externe -->
+    <link rel="stylesheet" href="../css/javascript.css">
+    <!-- du js en feuille externe -->
+    <script src="if.js" async></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>JS - III 02 IF</h1>
+            <nav>
+                <ul id="Menu">
+                    <li class="li1">Introduction JavaScript &ensp;
+                        <ul class="SousMenu">
+                            <li><a href="../01-introduction/01-01-introduction.html">01-01 Introduction</a></li>
+                            <li><a href="../01-introduction/01-02-introduction.html">01-02 Introduction</a></li>
+                            <li><a href="../01-introduction/01-03-introduction.html">01-03 Introduction</a></li>
+                            <li><a href="../01-introduction/01-04-introduction.html">01-04 Introduction</a></li>
+                        </ul>
+                    </li>
+                    <li class="li1">Variables et constantes &ensp;
+                        <ul class="SousMenu">
+                            <li><a href="02-01-introduction.html">02-01 Introduction</a></li>
+                            <li><a href="02-02-afficher.html">02-02 Afficher</a></li>
+                            <li><a href="02-03-types.html">02-03 Types</a></li>
+                            <li><a href="02-04-operateurs.html">02-04 Opérateurs</a></li>
+                            <li><a href="02-05-concatenation.html">02-05 Concaténation</a></li>
+                            <li><a href="02-06-constantes.html">02-06 Constantes</a></li>
+                        </ul>
+                    </li>
+                    <li>Structure et controle
+                        <ul class="SousMenu">
+                            <li><a href="03-01-introduction.html">01 introduction</a></li>
+                            <li><a href="03-02-if.html">La condition If</a></li>
+                        </ul>
+                    </li>
+                </ul>          
+            </nav>
+        </header>
+        <div id="banniere"></div>
+            
+        <div id="wrapper5">
+            <h2>1 - If...</h2>
+            <p>La condition <code>if</code> est l'une des plus utilisées et est également la plus simple à appréhender puisqu'elle va nous permettre 
+            <br>
+            <span class="stabilo">d'exécuter un bloc de code SI et SEULEMENT SI le résultat vaut <code>true</code>.</span></p>
+
+            <h3>Des if exécutés dans le if.js</h3>
+            <ul>
+                <li>
+                    <code>if(x>1){ <br><br>
+                    alert('x contient une valuer supérieure à 1'); <br><br>
+                    }
+                    </code>
+                </li>
+
+                <br>
+
+                <li>
+                    <code>if(x == y){ <br><br>
+                    alert('x et y contiennent la même valeur'); <br><br>
+                    }
+                    </code>
+                </li>
+
+                <br> 
+
+                <li>
+                    <code>
+                        if(y){ <br><br> 
+                            alert('la valeur de y est évaluée à true'); <br><br>
+                        }
+                    </code>
+                </li>
+            </ul>
+
+            <p class="notice">!! Dans ce 3è if : tout test d'une condition va être évalué dans un contexte boléen ; donc à <code>true</code>, à l'excéption des valeurs suivantes qui vont être évaluées à <code>false</code>.</p>
+
+            <ul>
+                <li>Le booléen <code>false</code></li>
+                <li>La valeur <code>0</code></li>
+                <li>Une chaîne de caractère vide</li>
+                <li>La valeur  <code>null</code></li>
+                <li>La valeur <code>undefined</code></li>
+                <li>La valeur <code>NaN</code> (Not a Number)</li>
+            </ul>
+
+            <h2>2 - Inverser la valeur logique d'un test</h2>
+            <p>Dans un if, le code placé dans le if n'est exécuté que si le résultat de la comparaison est <code>false</code>.</p>
+            <p>Dans certaines situations, on préfère vérifier si la comparaison est <code>false</code>.</p>
+            <p>On peut vérifier que c'est faux en comparant explicitement le résultat de la comparaison à <code>false</code>.</p>
+
+        </div> <!-- fin du wrapper -->
+
+        
+
+        <p class="encadre"><a href="../index.html">Retour Index</a></p>
+
+        <footer>
+            COURS JS &copy; KSEMEDO
+        </footer>
+        
+    </main> 
+</body>
+</html>
