@@ -317,10 +317,35 @@ table#op-affectation {
     background-color: var(--vert-clair);
 }
 
+
 /* page 02 - 06 constantes  */
 
 .stabilo {
     background-color: var(--vert);
+}
+
+/* page 03-05 opérateurs logiques */
+
+table#op-logiques {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#op-logiques caption, th {
+    background-color: var(--vert);
+    border: 1px solid var(--blanc);
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+#op-logiques tr, td {
+    border: 1px solid var(--vert);
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+#op-logiques tr:nth-of-type(even) {
+    background-color: var(--vert-clair);
 }
 
 

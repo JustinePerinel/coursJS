@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBS - Listing vidéos JS</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blanc : #fff;
+            --noir : #333;
+            --vert : #9ACD32;
+            --body : #d6d4d4b7;
+            --bleu : #87CEEB; 
+            --encadre : #FAFAD2; 
+            --violet : #9400D3; 
+            --vert-clair : #F5FFFA;
+            --deepink: #FF1493 ;       
+        }
+
+        body {
+            background-color: var(--body);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            width: 70%;
+            min-height: 100vh;
+            margin: 0 auto;
+            background-color: var(--blanc);
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 60px;
+            font-size: 2em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: serif;
+        }
+
+          /* bouton liste vidéos */
+
+        button {
+            background-color: var(--violet);
+            color: var(--blanc);
+            padding: 8px;
+            margin: 15px auto;
+        }
+
+        #display-none {
+            display: none;
+            text-align: left;
+            width: 100%;
+            background-color: var(--blanc);
+            color: var(--noir);
+        }
+
+        #display-none li {
+            padding: 5px 5px;
+        }
+
+        button:hover #display-none {
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+       
+        <h1>Liste des vidéos JS - Colombbus</h1>
+       
+        <p>La page qui liste les vidéos se trouve là <a href="https://www.youtube.com/playlist?list=PL8kL0Dz1-IbgAkqZf8ioWJeLlgTNPys7L">cliquez sur ce lien !</a></p>
+        
+        <button><strong>Liste des vidéos</strong>
+            <ol id="display-none">
+                <li><a href="https://www.youtube.com/watch?v=6h6iWsJUpes&feature=youtu.be">vidéo n°1</a> - desc. : Utilisation</li>
+                <li><a href="https://www.youtube.com/watch?v=R8CeZFkLYvk&feature=youtu.be">vidéo n°2</a> - desc. : Mise en place</li>
+                <li><a href="https://www.youtube.com/watch?v=02qM-D1UVA0&feature=youtu.be">vidéo n°3</a> - desc. : Balise script, commentaires et console</li>
+                <li><a href="https://www.youtube.com/watch?v=PIKHOTbpm9w&feature=youtu.be">vidéo n°4</a> - desc. : </li>
+                <li><a href="">vidéo n°5</a> - desc. : </li>
+                <li><a href="">vidéo n°6</a> - desc. : </li>
+                <li><a href="">vidéo n°7</a> - desc. : </li>
+                <li><a href="">vidéo n°8</a> - desc. : </li>
+                <li><a href="">vidéo n°9</a> - desc. : </li>
+                <li><a href="">vidéo n°10</a> - desc. :</li>
+                <li><a href="">vidéo n°11</a> - desc. :</li>
+                <li><a href="">vidéo n°12</a> - desc. :</li>
+                <li><a href="">vidéo n°13</a> - desc. :</li>
+                <li><a href="">vidéo n°14</a> - desc. :</li>
+                <li><a href="">vidéo n°15</a> - desc. :</li>
+                <li><a href="">vidéo n°16</a> - desc. :</li>
+                <li><a href="">vidéo n°17</a> - desc. :</li>
+                <li><a href="">vidéo n°18</a> - desc. :</li>
+                <li><a href="">vidéo n°19</a> - desc. :</li>
+                <li><a href="">vidéo n°20</a> - desc. :</li>
+            </ol>
+        </button>
+        
+    </main>
+</body>
+</html>
