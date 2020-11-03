@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entraînement</title>
+    <title>00 Entraînement</title>
     <style>
         body {
             background-color: pink;
@@ -11,8 +11,24 @@
     </style>
     <!-- script dans l'en-tête -->
     <script>
+
+        /* (commentaire multi ligne à ouvrir et fermer )
+
+            PAGE ENTRAINEMENT
+            1 - AFFICHAGE
+            2 - TYPE DE DONNEE
+            3 - CONSTANTE
+            4 - CONCATENER
+            5 - OPERATEURS NUMERIQUES
+                A - PROMPT
+                B - VALEUR AU CARRE ET CUBE
+            6 - CONDITIONS
+
+        */
+
         document.write('<h1 style="text-transform: uppercase;">01 Entrainement JS</h1>');
 
+        //  1 - AFFICHAGE
         document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">1- Affichage</h2>');
 
         var maBoite;
@@ -28,24 +44,24 @@
         console.log('Un message dans le log');
         console.info('Une information à envoyer dans la console');
 
-        // boîte alert()
+        // Boîte alert()
         // alert('Ceci est un message d\'alerte');
 
         // Boîte confirm()
         // confirm('Confirmez-vous?');
 
-        // boîte prompt()
+        // Boîte prompt()
 
-        var humeur = prompt('Comment va ton humeur ?');
+        var humeur = prompt('De quelle humeur es-tu ?');
 
-        document.write('<p>Mon humeur est' + ' ' + humeur + '</p>');
+        document.write('<p>Je suis de' + ' ' + humeur + ' humeur</p>');
 
         // document.write('<br>');
         // document.write('<br>');
 
-        var sonChien = prompt('Quel est le nom de votre chien ?');
+        var sonChien = prompt('Quel est le nom de ton chien ?');
 
-        document.write('Votre chien s\'apelle ' + sonChien);
+        document.write('Ton chien s\'apelle ' + sonChien);
 
         // portée locale ou globale de la variable !!!
 
@@ -83,26 +99,26 @@
         var monTexte = 'Voici une phrase avec l\'apostrophe';
         console.info(typeof nombre2);
 
-        // Type de données
+        // 02 - TYPES DE DONNEES
         document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">2- Type de données</h2>');
 
         document.write(typeof(noteEval) + '<br>');
         document.write(typeof(monTexte) + '<br>');
 
-        // les constantes
+        // 03 - LES CONSTANTES
         document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">3- Constantes</h2>');
 
         const BOUGE_PAS = "Ma constante impossible à modifier !";
 
         document.write('<p style="background: #fff; text-align: center;">' + BOUGE_PAS + '<\p>');
 
-        // Concaténer
+        // 04 - CONCATENER
         document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">4- Concaténer</h2>');
             
         let prenom = 'Bruce', nom = 'Willis';
         document.write( prenom + ' ' + nom );
 
-        // Opérateurs numériques
+        // 05 - OPERATEURS NUMERIQUES
         document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">5- Opérateurs numériques</h2>');
 
         // addition
@@ -151,7 +167,7 @@
 
         console.log(auCarre, auCube);
 
-
+        // 06 - CONDITIONS
         let a = 2, b = 5, c = 2;
         // si a est supérieur à b
         // j'écris "a est supérieur à b"
@@ -182,7 +198,7 @@
 
         // EXO a est il supérieur à b ET b est il supérieur à c if... else...
         if(  a > b && b > c ) {
-            document.write('<p>Pour a qui vaut (' + a + '), b qui vaut (' + b + ') et c qui vaut (' + c + ') a est supérieur à b ET b est supérieur à c ');
+            document.write('<p>Pour a qui vaut (' + a + '), b qui vaut (' + b + ') c qui vaut (' + c + ') a est supérieur à b ET b est supérieur à c ');
         } else {
             document.write('<p>Ici on teste si a (' + a + ') est supérieur à b (' + b + ') et si b est supérieur à c (' + c + '), mais dans ce cas une des deux conditions n\'est pas remplie</p>');
         }
@@ -194,9 +210,29 @@
             document.write('<p>Ici on teste si a (' + a + ') est supérieur à b (' + b + ') ou si b est supérieur à c (' + c + '), mais dans ce cas une des deux conditions n\'est pas remplie</p>');
         }
 
-        //EXO isNan ...
-        
+        //EXO isNan ... IS NOT A NUMBER
 
+        var chiffre1 = 50, chiffre2 = '100', chiffre3 = 'vingt';
+
+        // faire le typeof() des var ci-dessus dans une console.info
+
+        console.info(typeof chiffre1, typeof chiffre2, typeof chiffre3);
+        
+        if (isNaN(chiffre3) ) { // 1-si la variable testée  n'est pas un nombre, on exécute ce code( dans le cas de chiffre2 qui est string contenant des chiffres, le code ne sera pas executé)
+            document.write('<p>Voyons ! chiffre3 qui vaut ' + chiffre3 + ' ce n\'est pas un nombre ! </p>');//2- on execute ce bloc de code
+        }
+
+        // inversons les conditions avec "is Not a Number"  isNaN avec le symbole !
+
+        // si (if) chiffre1 est un nombre (est ce bien un nombre?), execute le code, sinon (else) execute le suivant
+
+        if ( !isNaN(chiffre1)) { //exécute le bloc de code suivant
+            document.write('<p>' + chiffre1 + ' est bien un nombre</p>');
+        } else { //sinon exécute celui-ci
+            document.write('<p>Au contraire : ' + chiffre1 + ' n\'est pas un nombre, mais une chaîne de caratcère<p/>');
+        }
+        
+    
     </script>
 
      <!-- script en externe -->
