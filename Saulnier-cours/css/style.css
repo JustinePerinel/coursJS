@@ -119,6 +119,11 @@ strong {
     text-align: center;
 }
 
+.exemple {
+    color: orange;
+    width: 300px;
+    border-bottom:4px solid orange;}
+
 .notice {
     color: var(--rouge);
     width: 900px;
