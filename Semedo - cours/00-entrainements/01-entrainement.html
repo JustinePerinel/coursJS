@@ -6,18 +6,15 @@
     <title>01 Entrainement</title>
     <!-- style pour cette page  -->
     <style>
-        body {
-            background-color: lavender;
-        }
+        
+           
     </style>
     <!-- script en en-tête -->
     <script>
         document.write('<h1>01 Entrainement JS</h1>');
 
-        document.write('<main style="width: 80%; height: auto; margin: 0 auto; box-sizing: border-box; padding: 20px; border-radius: 10px; background-color: #fff; font-family: sans-serif;"><h2 style="text-align: center; text-transform: uppercase; color: purple;">Un main en Javascript</h2><h3 style="text-transform: uppercase; color: yellowgreen;">Un titre de niveau 3</h3><p style="font-weight: bold;">Bonjour je m\'appelle Katia</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod in optio nam ratione, nisi alias, deserunt velit consequatur totam error voluptates id odit, sit molestiae. Officia fuga distinctio excepturi nobis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod in optio nam ratione, nisi alias, deserunt velit consequatur totam error voluptates id odit, sit molestiae. Officia fuga distinctio excepturi nobis?</p><figure style="width: 300px; height: 200px; margin: 50px auto;"><img src="../img/technology-1283624_1280.jpg" alt="Code" style="max-width: 100%"><figcaption style="text-align: center; font-size: 0.8em;background-color: lavenderblush; padding: 10px 0; position: relative; bottom: 5px;">Code en JavaScript</figcaption></figure><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod in optio nam ratione, nisi alias, deserunt velit consequatur totam error voluptates id odit, sit molestiae. Officia fuga distinctio excepturi nobis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod in optio nam ratione, nisi alias, deserunt velit consequatur totam error voluptates id odit, sit molestiae. Officia fuga distinctio excepturi nobis?</p></main>');
 
-
-        // titre 1
+        // titre 1 AFFICHAGE
 
         document.write('<h2 style="background: orange;width: 75%; color: #fff;">1 - Affichage</h2>');
 
@@ -93,7 +90,7 @@
         noteEval += 4;
         console.info(noteEval);
 
-        // titre 2      
+        // titre 2 TYPES DE DONNEES
         document.write('<h2 style="background: orange;width: 75%; color: #fff;">2 - Type de données</h2>');
 
         var monTexte = 'Voici une phrase pour Audrey, avec l\'apostrophe';
@@ -103,21 +100,21 @@
         document.write(typeof(noteEval) + '<br>');
         document.write(typeof(monTexte) + '<br>');
 
-        // titre 3
+        // titre 3 CONSTANTES
         document.write('<h2 style="background: orange;width: 75%; color: #fff;">3 - Constantes</h2>');
 
         const BOUGE_PAS = 'Ma constante impossible à modifier !';
         
         document.write('<p style="background-color: honeydew;">' + BOUGE_PAS + '</p>');
         // pas le droit de redéfinir const !!
-        
-        // titre 4 
+         
+        // titre 4 CONCATENER
         document.write('<h2 style="background: orange;width: 75%; color: #fff;">4 - Concaténer</h2>');
 
         let prenom = 'Bruce', nom = 'Willis';
         document.write(prenom + ' ' + nom);
 
-        // titre 5 
+        // titre 5 OPERATEURS
         document.write('<h2 style="background: orange;width: 75%; color: #fff;">5 - Opérateurs numériques</h2>');
 
         // addition 
@@ -190,7 +187,7 @@
         //     '\nCe chiffre au cube est égal à ' + auCube + '.'
         // );
 
-        // TITRE 6
+        // TITRE 6 CONDITIONS
 
         document.write('<h2 style="background: orange;width: 75%; color: #fff;">6 - Les conditions</h2>');
 
@@ -213,9 +210,48 @@
             document.write('<p>a = ' + a + ' et b = ' + b + ' donc a n\'est pas égal à b</p>');
         }
 
+        // tester si la condition est remplie : a et b sont ils égaux en conteu et en valeur
+
+        if((a === b)){
+            document.write('<p>a est égal à ' + a + ' et b est égal à ' + b + ' donc a et b sont égaux en valeur et en type');
+        }else{
+            document.write('<p>a est égal à ' + a + ' et b est égal à ' + b + ' donc a et b ne sont pas égaux en valeur et/ou en type');
+        }
+
+        // EXO : tester a par rapport à 5 : inférieur ? Egal ? Supérieur ? Ou alors ce n'est pas un nombre ? Dans une condition multiple
+
+
+        if(a < 5){
+            document.write('<p>a contient une valeur strictement inférieure à 5</p>');
+        }else if(a == 5){
+            document.write('<p>a contient la valeur 5</p>');
+        }else if(a > 5){
+            document.write('<p>a contient une valeur strictement supérieure à 5</p>');
+        }else{
+            document.write('<p>la valeur de a n\'a pas pu être comparée à un nombre</p>')
+        }
+
+        // EXO : a est-il supérieur à b ET b est-il supérieur à c
+
+        if(a > b && b > c){
+            document.write('<p>a vaut ' + a + ' b vaut ' + b + ' et c vaut ' + c + ', donc a est supérieur à b et b est supérieur à c.</p>');
+        }else{
+            document.write('<p>Ici, on teste si a (' + a + ') est supérieur à b ET si b (' + b + ') est supérieur à c (' + c + ') ; mais dans ce cas au moins une des deux conditions n\'est pas remplie.</p>');
+        }
+
+        // EXO : a est supérieur à b ou b est supérieur à c
+
+        if(a > b || b > c){
+            document.write('<p>a vaut ' + a + ' b vaut ' + b + ' et c vaut ' + c + ': ici, au moins une des deux conditions est vraie.</p>');
+        }else{
+            document.write('<p>Ici, on teste si a (' + a + ') est supérieur à b OU si b (' + b + ') est supérieur à c (' + c + ') ; dans ce cas, aucune des deux conditions n\'est remplie.</p>');
+        }
+
+        // EXO : 
+
     </script>
 </head>
 <body>
-    
+   
 </body>
 </html>
