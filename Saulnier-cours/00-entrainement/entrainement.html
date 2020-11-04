@@ -232,6 +232,51 @@
             document.write('<p>Au contraire : ' + chiffre1 + ' n\'est pas un nombre, mais une chaîne de caratcère<p/>');
         }
         
+
+        //  EXO 1 - récupérer dans une variable la réponse à la question suivante : " Parmis ces couleurs, le vert, le bleu, le rouge, le orange, quelle est votre couleur préférée?"
+
+        var saCouleur = prompt('Entre le vert, le bleu, le rouge et le orange, quelle est votre couleur préférée ?');
+
+        // console.log(saCouleur);
+
+        // document.write('<p>Ma couleur préférée est le ' + saCouleur + '. </p>');
+
+        // suite 2 - Ensuite faite une condition pour afficher selon la reponse votre couleur préférée est le vert ou le bleu ou le orange
+
+        if ( saCouleur == 'vert' ) {
+            document.write('<p>Ta couleur préférée est le vert.</p>');
+        } else if ( saCouleur == 'bleu' ) {
+            document.write('<p>Ta couleur préférée est le bleu.</p>');
+        } else if ( saCouleur == 'orange' ) {
+            document.write('<p>Ta couleur préférée est le orange.</p>');
+        } else {
+            document.write('<p>Ta couleur préférée est le ' + saCouleur + '.</p>');
+
+            // alert('Veux tu choisir une couleur proposée entre le vert, le bleu, le rouge!');
+            // let saCouleur = prompt('Entre le vert, le bleu, le rouge et le orange, quelle est votre couleur préférée ?');
+        }
+
+        // suite 3 - la même chose en switch
+
+        switch( saCouleur ) {
+            case 'vert':
+                document.write('Le vert, la couleur de l\'espoir');
+                break;
+            case 'bleu':
+                document.write('Bleu, la couleur de ses yeux');
+                break;
+            case 'rouge':
+                document.write('Ta couleur est celle de la vie, le rouge');
+                break;
+            case 'orange':
+                document.write('Ta couleur est un fruit, le orange');
+                break;
+            default:
+                document.write('Tu n\'as pas choisis une couleur proposée, tu aimes la couleur ' + saCouleur) + ('.</p>');
+                break
+
+        }
+        
     
     </script>
 
