@@ -19,10 +19,25 @@
 
         <p>La boucle <code> for</code> "pour" en français, est différente structurellement de while... et de do... while, puisqu'on initialise la variable à l'intérieur de la boucle :</p>
         <p class="exemple">Exemple</p>
+        <p><code>for (let i = 0; i < 10 ; i++) { <br>
+            document.getElementById('p1').innerHTML += ' i contient la valeur de ' + i + ' qui est incrémenter à chaque passage de la boucle grâce i++ <!-- <br> -->'; <br>
+        }</code></p>
+
         <p id="p1"></p>
 
         <p class="stabilo">Notez qu'on utilise généralement la lettre « i » (pour « iterator ») dans les boucles en général et particulièrement au sein des boucles <code>for</code> pour les reconnaitre plus rapidement dans un script. Cependant, ce n'est pas obligatoire et vous pouvez utiliser n'importe quel autre nom de variable.</p>
+        <!-- tableau en appel de js -->
         <table id="tr1"></table>
+
+        <h3>L'instruction "break"</h3>
+        <p>Dans les paragraphes créés ci-dessous à l'aide d'une boucle for nous insérons un <code>if...</code> à  l'intérieur de la boucle ; le <code>if</code> teste une condition et contient une "instruction", break stoppe la boucle quand la condition est vraie.</p>
+
+        <p id="p2"></p>
+
+        <h3>L'instruction "continue"</h3>
+        <p>Avec cette instruction on peut "sauter" une "itération" : dans notre exemple on n'affiche que les itérations qui sont paires. cf. les commentaires le  <a href="for.js">for.js</a></p>
+
+        <p id="p3"></p>
 
         
     </main> <!-- fin de wrapper -->

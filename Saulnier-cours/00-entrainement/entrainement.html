@@ -23,10 +23,11 @@
                 A - PROMPT
                 B - VALEUR AU CARRE ET CUBE
             6 - CONDITIONS
+            7 - BOUCLE
 
         */
 
-        document.write('<h1 style="text-transform: uppercase;">01 Entrainement JS</h1>');
+        document.write('<h1 style="text-transform: uppercase; text-align: center;">01 Entrainement JS</h1>');
 
         //  1 - AFFICHAGE
         document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">1- Affichage</h2>');
@@ -168,6 +169,7 @@
         console.log(auCarre, auCube);
 
         // 06 - CONDITIONS
+        document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">6- Conditions</h2>');
         let a = 2, b = 5, c = 2;
         // si a est supérieur à b
         // j'écris "a est supérieur à b"
@@ -276,7 +278,41 @@
                 break
 
         }
+
+     // 7 - BOUCLES
+        document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">7- Boucles</h2>');
+
+     
+        // EXO boucle while tant la var. w1 = 0 est inférieur ou égale à 15 écrivez "w1 = x puis wi = x + 1 etc..."
+        let w1 = 1;
+
+        while ( w1 <= 15 ){          
+            document.write (' w1 contient la valeur de ' + w1 + '. Puis on incrémente la valeur w1 de 1. Et maintenant ...<br>');   
+            w1++;
+        }
+        document.write('<br>');
+        // EXO FOR var for1 <= 10
+
+        for (let for1 = 0; for1 <= 10 ; for1++) {
+            // je declare la variable let que je nomme for1 avec une valeur qui démarre à 0 ; je declare que for1 est inférieur ou égale à 10 ; j'incrémente donc ajoute une valeur de 1 à ma varibale for1 { ecris moi la phrase avec l'évolution de la valeur de ma variable}
+            document.write ( ' for1 contient la valeur de ' + for1 + ' qui est incrémenter à chaque passage de la boucle grâce au code <code> for1++ </code> puis for contient la valeur de ' + ( for1 + 1 ) + '<br>');
+        }
+
+        document.write('<br>');
+
+        // EXO 1- une boucle for2 = 0 for 2<=10 
+        // 2  avec if else rajouter à la fin de la oucle et la boucle se termine là
+        for (let for2 = 0; for2 <= 10 ; for2++) {
+
+            if(for2==10) {
+                document.write(' et la boucle se termine là.');
+            } else {
+                document.write ( ' La variable "for2" contient ' + for2 + ' et à chaque passage de la boucle elle s\'incrémente et sa valeur devient ' + ( for2 + 1 ) + '<br>');
+            }
+        } 
         
+        document.write('<br>');
+     
     
     </script>
 
