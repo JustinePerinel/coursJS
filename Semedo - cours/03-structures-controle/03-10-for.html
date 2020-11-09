@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>III. 05 Opérateurs logiques</title>
+    <title>III. 10 For</title>
     <!-- reset  -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- ma feuille de style en externe -->
     <link rel="stylesheet" href="../css/javascript.css">
     <!-- du js en feuille externe -->
-    <script src="operateurs.js" async></script>
+    <script src="for.js" async></script>
 </head>
 <body>
     <main>
         <header>
-            <h1>JS - III 05 Opérateurs logiques</h1>
+            <h1>JS - III 10 For</h1>
             <nav>
                 <ul id="Menu">
                     <li class="li1">Introduction JavaScript &ensp;
@@ -33,14 +33,20 @@
                             <li><a href="02-04-operateurs.html">02-04 Opérateurs</a></li>
                             <li><a href="02-05-concatenation.html">02-05 Concaténation</a></li>
                             <li><a href="02-06-constantes.html">02-06 Constantes</a></li>
+                            
                         </ul>
                     </li>
                     <li>Structure et controle
                         <ul class="SousMenu">
-                            <li><a href="03-01-introduction.html">01 introduction</a></li>
-                            <li><a href="03-02-if.html">La condition If</a></li>
-                            <li><a href="03-04-if-else-if.html">If...else...if</a></li>
-                            <li><a href="03-05-operateurs-logiques.html">Opérateurs logiques</a></li>
+                            <li><a href="03-01-introduction.html">03-01 introduction</a></li>
+                            <li><a href="03-02-if.html">03-02 La condition If</a></li>
+                            <li><a href="03-03-ifelse.html">03-03 If else</a></li>
+                            <li><a href="03-04-if-else-if.html">03-04 If...else...if</a></li>
+                            <li><a href="03-05-operateurs-logiques.html">03-05 Opérateurs logiques</a></li>
+                            <li><a href="03-06-precedence.html">03-06 Précédence</a></li>
+                            <li><a href="03-07-ternaire.html">03-07 Opérateur ternaire</a></li>
+                            <li><a href="03-08-switch.html">03-08 Switch</a></li>
+                            <li><a href="03-09-boucles.html">03-09 Boucles</a></li>
                         </ul>
                     </li>
                 </ul>          
@@ -49,43 +55,26 @@
         <div id="banniere"></div>
             
         <div id="wrapper5">
-            <p>Ce type d'opérateurs va nous permettre d'effectuer plusieurs comparaisons dans nos tests ou d'inverser la valeur logique du résultat du test.</p>
-
-            <h2>1 - Présentation et utilisation des opérateurs logiques</h2>
-            <p>Le JS supporte 3 opérateurs logiques : l'opérateur logique "ET", "OU" et "NON".</p>
-
-            <table id="op-logiques">
-                <caption>Opérateurs logiques</caption>
-                <thead>
-                    <tr>
-                        <th>Opérateurs, nom</th>
-                        <th>Opérateurs, symbole</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>AND (ET)</td>
-                    <td>&&</td>
-                    <td>Renvoie true si toutes les comparaisons sont évaluées à true, ou false sinon</td>
-                </tr>
-                <tr>
-                    <td>OR (OU)</td>
-                    <td>||</td> <!-- alt gr + touche 6 -->
-                    <td>Renvoie true si au moins l'une des comparaisons est évaluée à true, ou false sinon</td>
-                </tr>
-                <tr>
-                    <td>NO (NON)</td>
-                    <td>!</td>
-                    <td>Renvoie false si une comparaison est évaluée à true ou renvoie true dans le cas contraire</td>
-                </tr>
-            </table>
-
-            <h3>Exemples</h3>
-            <!-- p#p$*3 -->
+            <h2>1 - For</h2>
+            <p>La boucle for "pour" en français est différente structurellement de while... et do...while, puisqu'on initialise la variable à l'intérieur de la boucle.</p>
+            <br>
             <p id="p1"></p>
+            <br>
+            <p class="notice">Notez qu'on utilise généralement la lettre « i » (pour « iterator ») dans les boucles en général et particulièrement au sein des boucles for pour les reconnaitre plus rapidement dans un script. Cependant, ce n'est pas obligatoire et vous pouvez utiliser n'importe quel autre nom de variable.</p>
+
+            <table id="tr1"></table>
+
+            <h3>L'instruction "Break"</h3>
+            <p>Dans les paragraphes qui sont créés ci-dessous, à l'aide d'une boucle for, nous insérons un <code>if...</code> à l'intérieur de la boucle : if teste une condition et contient une "instruction", break qui stoppe la boucle quand la condition est vraie.</p>
+            <br>
             <p id="p2"></p>
+
+            <h3>L'instruction "continue"</h3>
+            <p>Avec cette instruction on peut "sauter" une "itération" : dans notre exemple on n'affiche que les itérations qui sont paires. cf. les commentaires dans le for.js</p>
+            <br>
             <p id="p3"></p>
 
+            
         </div> <!-- fin du wrapper -->
 
         

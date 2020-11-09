@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>III. 06 Précédence et règles d'associativité des opérateurs</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- ma feuille de style en externe -->
+    <link rel="stylesheet" href="../css/javascript.css">
+    <!-- du js en feuille externe -->
+    <script src="precedence.js" async></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>JS - III 06 Précédence et règles d'associativité des opérateurs</h1>
+            <nav>
+                <ul id="Menu">
+                    <li class="li1">Introduction JavaScript &ensp;
+                        <ul class="SousMenu">
+                            <li><a href="../01-introduction/01-01-introduction.html">01-01 Introduction</a></li>
+                            <li><a href="../01-introduction/01-02-introduction.html">01-02 Introduction</a></li>
+                            <li><a href="../01-introduction/01-03-introduction.html">01-03 Introduction</a></li>
+                            <li><a href="../01-introduction/01-04-introduction.html">01-04 Introduction</a></li>
+                        </ul>
+                    </li>
+                    <li class="li1">Variables et constantes &ensp;
+                        <ul class="SousMenu">
+                            <li><a href="02-01-introduction.html">02-01 Introduction</a></li>
+                            <li><a href="02-02-afficher.html">02-02 Afficher</a></li>
+                            <li><a href="02-03-types.html">02-03 Types</a></li>
+                            <li><a href="02-04-operateurs.html">02-04 Opérateurs</a></li>
+                            <li><a href="02-05-concatenation.html">02-05 Concaténation</a></li>
+                            <li><a href="02-06-constantes.html">02-06 Constantes</a></li>
+                        </ul>
+                    </li>
+                    <li>Structure et controle
+                        <ul class="SousMenu">
+                            <li><a href="03-01-introduction.html">01 introduction</a></li>
+                            <li><a href="03-02-if.html">La condition If</a></li>
+                            <li><a href="03-04-if-else-if.html">If...else...if</a></li>
+                            <li><a href="03-05-operateurs-logiques.html">Opérateurs logiques</a></li>
+                            <li><a href="03-06-precedence.html">Précédence</a></li>
+                        </ul>
+                    </li>
+                </ul>          
+            </nav>
+        </header>
+        <div id="banniere"></div>
+            
+        <div id="wrapper5">
+            <code>if( ! (x <= 2) ) {<br>
+                document.getElementById('p3').innerHTML = 'x contient une valeur strictement supérieure à 2';<br>
+                }
+            </code>
+            <br><br>
+            <p>Noter que dans cette condition on utilise un deuxième couple de parenthèses pour être sûr que l'opérateur ! porte bien sur le résultat de la comparaison x <= 2 et non pas seulement sur x, ce qui produirait un résultat différent.</p>
+            <br>
+            <p>En fait JS va d'abord traiter tel opérateur, puis tel autre. Dans cette exmple il traite d'abord ce qui est à droite dans la parenthèse ...</p>
+            <br>
+            <p>Cet ordre de priorité est appelé « précédence ». En plus de cela, vous devez également savoir que les opérateurs vont avoir différents sens d'associativité. <br>L'associativité détermine l'ordre dans lequel des opérateurs de même précédence sont évalués et va pouvoir se faire par la droite ou par la gauche. Une associativité par la gauche signifie qu'on va commencer réaliser les opérations en partant de la gauche et vers la droite tandis qu'une associativité par la droite signifie qu'on va commencer par la droite.</p>
+            <br>
+            <p>Avant cela, voici un tableau classant les différents opérateurs vus jusqu'à présent (et quelques autres que nous allons voir très  vite) de la plus haute (0) à la plus basse précédence (10), c'est-à-dire selon leur ordre de traitement par le JavaScript.</p>
+            <br>
+            <table id="op-logiques">
+                <caption>Précédence</caption>
+                <thead>
+                    <tr>
+                        <td>Précédence</td>
+                        <td>Opérateur (nom)</td>
+                        <td>Opérateur (symbole)</td>
+                        <td>Associativité</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>Groupement</td>
+                        <td>(...)</td>
+                        <td>Non applicable</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Post-incrémentation </td>
+                        <td>... ++</td>
+                        <td>Non applicable</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Post-décrémentation</td>
+                        <td>... —</td>
+                        <td>Non applicable</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>NON (logique)</td>
+                        <td>! ...</td>
+                        <td>Droite</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pré-incrémentation</td>
+                        <td>++ ...</td>
+                        <td>Droite</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pré-décrémentation</td>
+                        <td>- ...</td>
+                        <td>Droite</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Exponentiel</td>
+                        <td>... ** ...</td>
+                        <td>Droite</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Multiplication</td>
+                        <td>... * ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Division</td>
+                        <td>... / ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Modulo</td>
+                        <td>... % ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Addition</td>
+                        <td>... + ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Soustraction</td>
+                        <td>... - ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Inférieur strict</td>
+                        <td>... < ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Inférieur ou égal</td>
+                        <td>... <= ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Supérieur stric</td>
+                        <td>... > ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Supérieur ou égal</td>
+                        <td>... >= ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Egalité (en valeur)</td>
+                        <td>... == ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Inégalité (en valeur)</td>
+                        <td>... != ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Egalité (en valeur et en type)</td>
+                        <td>... === ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Inégalité (valeur ou type)</td>
+                        <td>... !== ...</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>ET (logique)</td>
+                        <td>&&</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>OU (logique)</td>
+                        <td>||</td>
+                        <td>Gauche</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Ternaire</td>
+                        <td>... ? ... : ...</td>
+                        <td>Droite</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Affectation (simple ou combiné)</td>
+                        <td>... = ..., ... += ..., ...-=..., etc,</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table> 
+            <br>
+            <p class="stabilo">L'important ici est de de souvenir qu'il existe une précédente et des règles d'associativité lorsqu'on utilise des opérateurs et d'aller  vérifier l'ordre et le sens de traitement des opérateurs en cas de doute. Dans tous les cas, vous finirez par connaitre ce tableau à force de pratique.</p>
+            <br>
+            <p>Exemples</p>
+            <ul>
+                <li id="v1"></li>
+                <li id="v2"></li>
+                <li id="v3"></li>
+            </ul>
+            <br>
+            <code>if ( x >=20 + y && x <= 10 || y < 0){<br>
+                document.getElementById('p1').innerHTML = 'Soit x = ' + x + ' compris entre 0 et 10, soit y strictement positif, soit les deux';<br>
+            }</code>
+            <br><br>
+            <p id="p1"></p><br>
+
+            <p>Ce premier if utilise les opérateurs suivants </p><br>
+            <ul>
+                <li>-- supérieur ou égal ;</li>
+                <li>-- addition ;</li>
+                <li>-- ET logique ;</li>
+                <li>-- inférieur ou égal ;</li>
+                <li>-- OU logique ;</li>
+                <li>-- inférieur strict.</li>
+            </ul>
+            <br>
+            <p>En utilisant la précédence, on sait que l'opérateur d'addition va être traité en premier, puis ensuite ce sera le tour des opérateurs d'infériorité et de supériorité (strict ou égal), puis celui du ET logique et enfin du OU logique.</p>
+            <br>
+            <p>Ici, le JavaScript va donc commencer par traiter le bloc   qui est égal à 20 + (-20) = 20 – 20 = 0. Ensuite, le JavaScript traite les trois comparaisons x >= 0, x <= 10 et y < 0 et renvoie true ou false à chaque fois.</p>
+            <br>
+            <p>Dans le cas présent, le JavaScript va renvoyer true (let x contient bien une valeur supérieure ou égale à 0), false (la valeur de let x n'est pas inférieure ou égale à 10) et true (let y contient bien une valeur strictement négative).
+                <br>L'opérateur && va être traité à son tour. Cet opérateur renvoie true si les deux opérandes renvoient true et false dans le cas contraire. Dans le cas présent, on a true && false. Le bloc   va donc être évalué à false.
+                20 + y
+                x >= 20 + y && x <= 10
+                <br>Finalement, l'opérateur || va être analysé. Pour que cet opérateur renvoie true, il suffit que l'un des deux opérandes renvoie true. Ici, on a false || true en se basant sur les résultats trouvés précédemment et c'est donc la valeur true qui est finalement renvoyée pour l'entièreté du test et le code dans notre condition est bien exécuté.</p>
+                <br>
+                <hr>
+            <p id="p2"></p>
+            <p id="p3"></p>
+        </div> <!-- fin du wrapper -->
+
+        
+
+        <p class="encadre"><a href="../index.html">Retour Index</a></p>
+
+        <footer>
+            COURS JS &copy; KSEMEDO
+        </footer>
+        
+    </main> 
+</body>
+</html>
