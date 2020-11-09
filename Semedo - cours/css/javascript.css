@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+.clear {
+    clear: both;
+}
+
 :root {
     --blanc : #fff;
     --noir : #333;
@@ -331,7 +335,7 @@ table#op-logiques {
     margin: 20px auto;
 }
 
-#op-logiques caption, th {
+#op-logiques caption, th, thead {
     background-color: var(--vert);
     border: 1px solid var(--blanc);
     border-collapse: collapse;
