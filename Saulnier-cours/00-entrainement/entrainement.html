@@ -8,6 +8,11 @@
         body {
             background-color: pink;
         }
+
+        .stabilo {
+            background-color: yellow;
+            color: black;
+        }
     </style>
     <!-- script dans l'en-tête -->
     <script>
@@ -24,6 +29,7 @@
                 B - VALEUR AU CARRE ET CUBE
             6 - CONDITIONS
             7 - BOUCLE
+            8 - FONCTIONS PREDEFINIES
 
         */
 
@@ -312,8 +318,101 @@
         } 
         
         document.write('<br>');
-     
-    
+
+        // 8 - FONCTIONS PREDEFINIES ET UTILISATEUR
+        document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">8 - Les fonctions</h2>')
+
+        var phrase1 = 'Ne criez pas s\'il vous plait !';
+        document.write('<br>');
+        var phrase2 = 'JE MANGE TROP'
+        // toUpperCase4
+        console.log(phrase1.toUpperCase());
+        document.write(phrase1.toUpperCase());
+        // document.write('<br>');
+        // document.write(phrase2.toLowerCase());
+        document.write('<br>');
+        document.write('<br>' + phrase2.toLowerCase());
+        document.write('<br>');
+        // LENGTH
+        var phrase3 = 'My name is Bond, James Bond !';
+        console.log(phrase3.length);
+        document.write('<br>');
+        document.write('Dans la phrase suivante : <span class="stabilo"> ' + phrase3 + '</span> il y a ' + (phrase3.length) + ' caractères.');
+        document.write('<br>');
+
+        // CREATION D'UNE FONCTION
+
+        function maFonction() {
+            return document.write('<p>Il fait beau ! </p>');
+        }
+
+        maFonction();//ceci appelle la fonction, pour afficher le document.write précédent
+
+        // function uneAlert() {
+        //     return alert('Coucou les petits loups ! ');
+        // }
+
+        // uneAlert();
+
+        function direBonjour(prenom) {
+            var message = document.write('<p> Bonjour ' + prenom + '. Comment vas tu ?</p>');
+            return message;
+        }
+       
+        direBonjour('Audrey');
+
+        var prenom2 = prompt('Quel est ton prénom ?'); //on passe en variable le resultat du prompt ()
+
+        function faireCoucou(prenom2) { //une fonction qui demande un argument
+            var coucou = document.write('<p>Coucou ' + prenom2 + '. Comme ça se passe dans l\'espace ?</p>');
+            return coucou;//envoie la variable
+        }
+
+        faireCoucou(prenom2);//appel de fonction dans l'argument
+        
+
+        // EXO Demandez "quelle est la saison? et "quelle est la temperature? et faites une fonction meteo() qui renvoie les reponses a ces questions
+
+        var saison = prompt('Quelle est la saison ?');
+        var temperature = prompt('Quelle est la température ?');
+
+        function meteo2(saison, temperature){
+            if (saison == 'été') {
+                alert('Sors ton maillot');
+                document.write('Prends le maillot et les palmes !');
+            } else {
+                alert('Attends l\'été');
+                document.write('Ranges ton maillot de bain et patientes...')
+            }
+            var phrase4 = document.write('<p> Nous sommes en ' + saison  + ' et il fait ' + temperature + ' degrés celsius.');
+                return phrase4;
+        }
+        
+        meteo2(saison, temperature);
+
+        function meteo3(saison,temperature) {
+            var article ; // la variable article est vide et attends une condition
+            if (saison == 'printemps') {
+                article = 'au';
+            }else{
+                article = 'en';
+            }//fin de if else
+        return document.write('<p>Nous sommes ' + article + ' ' + saison + ' et la température est de ' + temperature + '°.</p>');
+        }
+        
+        meteo3(saison, temperature);
+       
+
+        // function meteoIf(saison, temperature) {// notre fonction avec 2 arguments qui viennent des var ci-dessus
+        //         if (saison == 'printemps') {// si la variable contient bien 'printemps'
+        //             var phraseIf = document.write('<p>Nous sommes au ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute ce bloc de code
+        //         } else {//sinon (c'est faux il n'y a pas printemps)
+        //             var phraseIf = document.write('<p>Nous sommes en ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute cet autre bloc
+        //         } // fin if else
+        //     return phraseIf;
+        // }//fin fonction meteoIf
+
+
     </script>
 
      <!-- script en externe -->
