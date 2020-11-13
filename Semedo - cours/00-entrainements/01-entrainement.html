@@ -289,7 +289,7 @@
 
         // prompt('Parmi ces couleurs, le vert, le bleu, le rouge, le orange, quelle est votre couleur préférée ?');
 
-        let couleur = prompt('Parmi ces couleurs, le vert, le bleu, le rouge, le orange, quelle est votre couleur préférée ?');
+        // let couleur = prompt('Parmi ces couleurs, le vert, le bleu, le rouge, le orange, quelle est votre couleur préférée ?');
         // console.log(couleur);
         // document.write('<p>Votre couleur préférée est :' + ' ' + couleur + '.</p>');
 
@@ -309,22 +309,22 @@
 
         // 3 - en switch
 
-        switch(couleur){
-            case ('vert' || 'Vert'):
-                document.write('<p>Votre couleur préférée est : le vert</p>');
-                break;
-            case ('bleu' || 'Bleu'):
-                document.write('<p>Votre couleur préférée est : le bleu</p>');
-                break;
-            case ('rouge' || 'Rouge'): 
-                document.write('<p>Votre couleur préférée est : le rouge</p>');
-                break;
-            case ('orange' || 'Orange'): 
-                document.write('<p>Votre couleur préférée est : le orange</p>');
-                break;
-            default: 
-                document.write('<p>Vous avez saisi une autre couleur préférée, le : ' + couleur + '.</p>');
-        }
+        // switch(couleur){
+        //     case ('vert' || 'Vert'):
+        //         document.write('<p>Votre couleur préférée est : le vert</p>');
+        //         break;
+        //     case ('bleu' || 'Bleu'):
+        //         document.write('<p>Votre couleur préférée est : le bleu</p>');
+        //         break;
+        //     case ('rouge' || 'Rouge'): 
+        //         document.write('<p>Votre couleur préférée est : le rouge</p>');
+        //         break;
+        //     case ('orange' || 'Orange'): 
+        //         document.write('<p>Votre couleur préférée est : le orange</p>');
+        //         break;
+        //     default: 
+        //         document.write('<p>Vous avez saisi une autre couleur préférée, le : ' + couleur + '.</p>');
+        // }
 
         // 7 - BOUCLES
 
@@ -443,9 +443,11 @@
             return bulletinMeteo;
         } //fin fonction meteoIf
 
+        meteo2(saison, temperature);
+
         // VERSION 3  avec une variable "article"
 
-        meteo2(saison, temperature);
+        
 
         function meteoIf2 (saison, temperature){
             var article; // la variable article est vide et attend une condition
@@ -454,14 +456,196 @@
             }else{
                 article = 'en ';
             } // fin du if else
-            return document.write('<p>Bonjour, nous sommes ' + article + saison + ' et il fait ' + temperature + ' degrés.</p>')
+            return document.write('<p>Bonjour, nous sommes ' + article + saison + ' et il fait ' + temperature + ' degrés.</p>');
         } // fin de la fontion meteoIf2
 
         meteoIf2(saison, temperature);
 
-        // VERSION 4 avec replace()
+        // VERSION 4 if else
+
+        // if(saison == 'hiver' || saison == 'été' || saison == 'automne' || saison == 'printemps'){
+        //     document.write('<p style="background-color: deeppink;">Vous avez choisi la saison suivante : ' + saison + '.</p>');
+        // }else{
+        //     document.write('<p style="background-color: deeppink;">Vous avez choisi n\'importe quoi !</p>');
+        // }
+
+        // if(saison == 'hiver'){
+        //     document.write('<p style="background-color: deeppink;">Vous avez choisi la saison suivante : ' + saison + '.</p>');
+        // }else if (saison == 'automne') {
+        //     document.write('<p style="background-color: deeppink;">Vous avez choisi la saison suivante : ' + saison + '.</p>');
+        // }else if (saison == 'été'){
+        //     document.write('<p style="background-color: deeppink;">Vous avez choisi la saison suivante : ' + saison + '.</p>');
+        // }else if (saison == 'printemps'){
+        //     document.write('<p style="background-color: deeppink;">Vous avez choisi la saison suivante : ' + saison + '.</p>');
+        // }else{
+        //     document.write('<p>La saison ' + saison +  ' n\'existe pas !</p>');
+        // }
+
+        // function lesSaisons (saison){
+        //     if(saison == 'hiver'){
+        //         var phraseNew = document.write('<p style="background-color: deeppink;">Vous avez choisi la saison suivante : ' + saison + '.</p>');
+        //     }else if (saison == 'automne') {
+        //         var phraseNew = document.write('<p style="background-color: deeppink;">Vous avez choisi la saison suivante : ' + saison + '.</p>');
+        //     }else if (saison == 'été'){
+        //         var phraseNew = document.write('<p style="background-color: deeppink;">Vous avez choisi la saison suivante : ' + saison + '.</p>');
+        //     }else if (saison == 'printemps'){
+        //         var phraseNew = document.write('<p style="background-color: deeppink;">Vous avez choisi la saison suivante : ' + saison + '.</p>');
+        //     }else{
+        //         var phraseNew = document.write('<p>La saison ' + saison +  ' n\'existe pas !</p>');
+        //     }
+
+        //     return phraseNew;
+        // }
+
+        // lesSaisons(saison);
+
+        // A CONFIRMER 
+
+        // function lesSaisons (saison){
+        //     if(saison == 'hiver'){
+        //        var article = 'en';
+        //     }else if (saison == 'automne') {
+        //        var article = 'en';
+        //     }else if (saison == 'été'){
+        //        var article = 'en';
+        //     }else if (saison == 'printemps'){
+        //        var article = 'au';
+        //     }else{
+        //         var phraseNew = document.write('<p>La saison ' + saison +  ' n\'existe pas !</p>');
+        //         return phraseNew;
+        //     }
+
+        //     return document.write('<p style="background-color: deeppink;">Nous sommes ' + article + ' ' + saison + '.</p>');
+        // }
+
+        // lesSaisons(saison);
+
+        // 6 et 11 --> primaire
+        // 11 et 15 --> collège
+        // 15 et 18 --> lycée
+        // 18 ou + --> chômage
+
+        // var age = prompt('Quel âge avez-vous ?');
+        
+        // if(age >= 6 && age < 11){
+        //     var classe = 'primaire';
+        //     document.write('<p>Vous devriez être au ' + classe + '.</p>');
+        // }else if (age >= 11 && age < 15){
+        //     var classe = 'collège';
+        //     document.write('<p>Vous devriez être au ' + classe + '.</p>');
+        // }else if(age >= 15 && age < 18){
+        //     var classe = 'lycée';
+        //     document.write('<p>Vous devriez être au ' + classe + '.</p>');
+        // }else if(age == 18){
+        //     var classe = 'chômage';
+        //     document.write('<p>Vous devriez être au ' + classe + '.</p>');
+        // }else{
+        //     document.write('<p>Vous n\'avez pas saisi de nombre valide.</p>');
+        // }
 
         
+        // function lesClasses(age){
+        //     if(age >= 6 && age < 11){
+        //         var classe = 'primaire';
+        //     }else if(age >= 11 && age < 15){
+        //         var classe = 'collège';
+        //     }else if(age >= 15 && age < 18){
+        //         var classe = 'lycée';
+        //     }else if(age == 18){
+        //         var classe = 'chômage';
+        //     }else{
+        //         var classe = document.write('<p>Vous n\'avez pas saisi de nombre valide.</p>');
+        //         return classe;
+        //     }
+
+        //     return document.write('<p>Vous devriez être au ' + classe + '.</p>');
+        // }
+
+        // lesClasses(age);
+
+        var sonAge = prompt('Quel âge a votre enfant ?');
+
+        function quelleEcole (sonAge) {
+                if (sonAge < 6 ) {
+                        var ecole = document.write('Ton enfant a ' + sonAge + ' an(s), il doit patienter pour aller à l\'école');
+                    } else if (sonAge >= 6 && sonAge < 11) {
+                        var ecole = document.write('Ton enfant a ' + sonAge + ' ans, il doit s\'inscrire en primaire');
+                    } else if (sonAge >= 11 && sonAge < 15) {
+                        var ecole = document.write('Ton enfant a ' + sonAge + ' ans, il doit s\'inscrire au collège');
+                    } else if (sonAge >= 15 && sonAge < 18) {
+                        var ecole = document.write('Ton enfant a ' + sonAge + ' ans, il doit s\'inscrire au lycée');
+                    } else {
+                        var ecole = document.write('Ton enfant a ' + sonAge + ' ans,il n\'est pas en âge scolaire ! ');
+                    }//fin condition multiple
+            return ecole;
+        }//fin function
+        quelleEcole (sonAge);//appel de fonction
+        
+
+        // VERSION 4 avec replace()
+        
+
+        // function meteoReplace(saison, temperature) { 
+        //     if(saison == 'printemps'){ 
+        //         var bulletinMeteo2 = document.write('<pVous>Bonjour, nous sommes <span style="background-color: yellowgreen;">au</span> ' + saison + ' et il fait ' + temperature + ' degrés.</pVous>');
+        //     }else{
+        //         var bulletinMeteo3 = bulletinMeteo2.replace('au', 'en');
+                
+        //     }
+        //     return bulletinMeteo2, bulletinMeteo3;
+        // }
+
+        // meteoReplace(saison, temperature);
+
+        document.write('<hr>');
+
+        // TEST AVEC REPLACE
+        
+
+        // if(saison == 'printemps'){
+        //     document.write('<p>Nous sommes ' + saison + '.</p>');
+        // }else {
+        //     saison2 = saison.replace('au', 'en');
+        //     document.write(saison2);
+        // }
+        
+        var lesFruits = prompt('Parmi les fruits suivants, lequel préférez-vous : fraise, mangue, framboise, melon ?');
+
+        // CA FONCTIONNE !!!!
+
+        // function les4Fruits(lesFruits){
+        //     var articleLe = 'le';
+        //     var resultat = '<p>Votre fruit préféré est ' + articleLe + ' '+ lesFruits + '.</p>';
+        //     if(lesFruits == 'melon'){ 
+        //        document.write(resultat);
+        //     }else{ 
+        //         var resultat2 = resultat.replace('le', 'la');
+        //         // document.write('Nous sommes en ' + saison); 
+        //         document.write(resultat2);
+
+        //     }
+        //     return resultat, resultat2; 
+        // } // fin de fonction 
+
+        // NOUVEL ESSAI !!!! 
+
+        function les4Fruits(lesFruits){
+            var resultat = '<p>Votre fruit préféré est le ' + lesFruits + '.</p>';
+            if(lesFruits == 'melon'){ 
+               document.write(resultat);
+            }else{ 
+                var resultat2 = resultat.replace('le', 'la');
+                // document.write('Nous sommes en ' + saison); 
+                document.write(resultat2);
+
+            }
+            return resultat, resultat2; 
+        } // fin de fonction 
+
+        les4Fruits(lesFruits);
+
+
+
     
 
         

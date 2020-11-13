@@ -352,5 +352,9 @@ table#op-logiques {
     background-color: var(--vert-clair);
 }
 
+.bullet {
+    list-style-type: disc;
+}
+
 
 

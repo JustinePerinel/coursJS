@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS - I. 02 Introduction</title>
+    <title>IV. 02 Var et Let</title>
     <!-- reset  -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- ma feuille de style en externe -->
     <link rel="stylesheet" href="../css/javascript.css">
-    <!-- on peut mettre du JS directement dans la balise ouvrante d'un élément HTML. -->
-    <!-- Le premier script affichge une alert(), une fenêtre d'alerte avec son message -->
-    <!-- le second script ajoute un élément p dans la page -->
-    <!-- les scripts sont dans l'attribut onclick="" et le code placé là va s'exécuter dès que l'on clique -->
-    <!-- Bien que ce soit possible, il est déconseillé d'utiliser cette façon de faire (le script dans les éléments) (comme du style en ligne (directement dans le HTML)). -->
+    <!-- du js en feuille externe -->
+    <script src="var-let.js" async></script>
 </head>
 <body>
     <main>
         <header>
-            <h1>JS - I. 02 Du JS dans la balise ouvrante</h1>
+            <h1>JS - IV. 02 Var et Let : différences de portée</h1>
             <nav>
                 <ul id="Menu">
                     <li class="li1">Introduction JavaScript &ensp;
                         <ul class="SousMenu">
-                            <li><a href="01-01-introduction.html">01-01 Introduction</a></li>
-                            <li><a href="01-02-introduction.html">01-02 Introduction</a></li>
-                            <li><a href="01-03-introduction.html">01-03 Introduction</a></li>
-                            <li><a href="01-04-introduction.html">01-04 Introduction</a></li>
+                            <li><a href="../01-introduction/01-01-introduction.html">01-01 Introduction</a></li>
+                            <li><a href="../01-introduction/01-02-introduction.html">01-02 Introduction</a></li>
+                            <li><a href="../01-introduction/01-03-introduction.html">01-03 Introduction</a></li>
+                            <li><a href="../01-introduction/01-04-introduction.html">01-04 Introduction</a></li>
                         </ul>
                     </li>
                     <li class="li1">Variables et constantes &ensp;
@@ -54,24 +51,34 @@
                     </li>
                     <li> Les fonctions
                         <ul class="SousMenu">
-                            <li><a href="../04-fonctions/04-01-introduction.html">04-01-Introduction</a></li>
+                            <li><a href="04-01-introduction.html">04-01-Introduction</a></li>
+                            <li><a href="04-02-portee.html">Portée</a></li>
+                            <li><a href="04-03-var-let.html">04-03 var et let</a></li>
                         </ul>
                     </li>
                 </ul>          
             </nav>
         </header>
         <div id="banniere"></div>
+            
+        <div id="wrapper5">
+            
+            <h2>1 - var et let</h2>
+            <ul>
+                <li><code>let</code> aura une portée de bloc</li>
+                <li><code>var</code> aura une portée élargie</li>
+            </ul>
 
-        <div id="wrapper2">
-            <button onclick="alert('Bonjour les ami.e.s')">Cliquez sur moi !</button>
-            <button onclick="(function(){
-                let para = document.createElement('p');
-                para.textContent = 'Hop un paragraphe de plus';
-                document.body.appendChild(para);
-                })();">
-                Ajouter un paragraphe, allez !
-            </button>
-        </div>
+            <h3>Exemple :</h3>
+            <p id="p1"></p>
+            <p id="p2"></p>
+            <p id="p3"></p>
+            <p id="p4"></p>
+            <p id="p5"></p>
+            
+        </div> <!-- fin du wrapper -->
+
+        
 
         <p class="encadre"><a href="../index.html">Retour Index</a></p>
 
