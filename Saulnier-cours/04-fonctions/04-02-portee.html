@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IV - 02 Portée des variables</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="portee.js" async></script> <!--async permet de charger le html en premier et adapter le script, ce qui permet de trouver les identifiants du html p1,p2,.. et lancer le script JS une fois le html lu-->
+</head>
+<body>
+    <main>
+        <h1>JS - IV 02 Portée des variables</h1>   
+
+        <h2>1 - Définition</h2>
+        <p>En JS, il existe deux espaces de portée différente.</p>
+        <ul>
+            <li>L'espace global désigne l'entièreté du script à m'exception de l'intérieur des fonctions. </li>
+            <li>L'espace local désigne, à l'inverse, l'espace dans une fonction.</li>
+        </ul>
+
+        <h3 class="exemple">Exemples</h3>
+        <!-- p#p$*5 -->
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+     
+    
+        
+    </main> <!-- fin de wrapper -->
+
+    <br><br>
+
+    <div id="liens">
+        <p><a href="../index.html">INDEX</a></p>
+    </div>
+    <br>
+</body>
+</html>     

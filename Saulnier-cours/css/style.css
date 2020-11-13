@@ -13,7 +13,7 @@
 body {
     background-color: var(--rose);
     font-size: 18px;
-    line-height: normal;
+    line-height: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 

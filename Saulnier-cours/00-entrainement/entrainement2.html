@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrainement 2</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+    </style>
+    <!-- fin de style -->
+    <!-- début du JS dans l'en-tête -->
+    <script>
+    // EXO - 
+
+    var sonAge = prompt ('Quel âge a votre enfant ?');
+    console.log(sonAge);
+
+    // if (sonAge < 6 ) {
+    //     document.write(' Ton enfant à ' + sonAge + ' an(s). Il doit patienter pour l\'école');
+    // } else if (sonAge >= 6 && sonAge < 11) {
+    //     document.write(' Ton enfant à ' + sonAge + ' ans. Il doit s\'inscrire en école primaire');
+    // } else if (sonAge >= 12 && sonAge < 15) {
+    //     document.write(' Ton enfant à ' + sonAge + ' ans. Il doit s\'inscrire au collège');
+    // } else if (sonAge >= 16 && sonAge < 18) {
+    //     document.write (' Ton enfant à ' + sonAge + ' ans. Il doit s\'inscrire au Lycée');
+    // } else {
+    //     document.write(' Trop tard, ton enfant est bon pour le chômage !');
+    // }
+
+    function quelleEcole (sonAge) {
+        if (sonAge < 6 ) {
+        var ecole = document.write(' Ton enfant à ' + sonAge + ' an(s). Il doit patienter pour l\'école');
+    } else if (sonAge >= 6 && sonAge < 11) {
+        var ecole = document.write(' Ton enfant à ' + sonAge + ' ans. Il doit s\'inscrire en école primaire');
+    } else if (sonAge >= 12 && sonAge < 15) {
+        var ecole = document.write(' Ton enfant à ' + sonAge + ' ans. Il doit s\'inscrire au collège');
+    } else if (sonAge >= 16 && sonAge < 18) {
+        var ecole = document.write (' Ton enfant à ' + sonAge + ' ans. Il doit s\'inscrire au Lycée');
+    } else {
+        var ecole = document.write(' Trop tard, ton enfant est bon pour le chômage !');
+    }
+    return ecole;
+    }
+
+    quelleEcole (sonAge);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -27,7 +27,7 @@ document.getElementById('p3').innerHTML = randomX100();
 
 // 2 - une simple multiplication
 
-function multiplier(nbr1,nbr2) {
+function multiplier(nbr1,nbr2) {//les paramètres de notre fonction
     // return (nbr1 * nbr2);
     return ('Multiplions ' + nbr1 + ' x ' + nbr2 + ' = ' + (nbr1 * nbr2) );
 }
