@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS - I. 02 Introduction</title>
+    <title>IV. 05 Conclusion sur les fonctions</title>
     <!-- reset  -->
     <link rel="stylesheet" href="../css/reset.css">
     <!-- ma feuille de style en externe -->
     <link rel="stylesheet" href="../css/javascript.css">
-    <!-- on peut mettre du JS directement dans la balise ouvrante d'un élément HTML. -->
-    <!-- Le premier script affichge une alert(), une fenêtre d'alerte avec son message -->
-    <!-- le second script ajoute un élément p dans la page -->
-    <!-- les scripts sont dans l'attribut onclick="" et le code placé là va s'exécuter dès que l'on clique -->
-    <!-- Bien que ce soit possible, il est déconseillé d'utiliser cette façon de faire (le script dans les éléments) (comme du style en ligne (directement dans le HTML)). -->
+    <!-- du js en feuille externe -->
+    <script src="conclusion.js" async></script>
 </head>
 <body>
     <main>
         <header>
-            <h1>JS - I. 02 Du JS dans la balise ouvrante</h1>
+            <h1>JS - IV. 05 Conclusion sur les fonctions</h1>
             <nav>
                 <ul id="Menu">
                     <li class="li1">Introduction JavaScript &ensp;
                         <ul class="SousMenu">
-                            <li><a href="01-01-introduction.html">01-01 Introduction</a></li>
-                            <li><a href="01-02-introduction.html">01-02 Introduction</a></li>
-                            <li><a href="01-03-introduction.html">01-03 Introduction</a></li>
-                            <li><a href="01-04-introduction.html">01-04 Introduction</a></li>
+                            <li><a href="../01-introduction/01-01-introduction.html">01-01 Introduction</a></li>
+                            <li><a href="../01-introduction/01-02-introduction.html">01-02 Introduction</a></li>
+                            <li><a href="../01-introduction/01-03-introduction.html">01-03 Introduction</a></li>
+                            <li><a href="../01-introduction/01-04-introduction.html">01-04 Introduction</a></li>
                         </ul>
                     </li>
                     <li class="li1">Variables et constantes &ensp;
@@ -54,24 +51,40 @@
                     </li>
                     <li> Les fonctions
                         <ul class="SousMenu">
-                            <li><a href="../04-fonctions/04-01-introduction.html">04-01-Introduction</a></li>
+                            <li><a href="04-01-introduction.html">04-01-Introduction</a></li>
+                            <li><a href="04-02-portee.html">04-02 Portée</a></li>
+                            <li><a href="04-03-var-let.html">04-03 var et let</a></li>
+                            <li><a href="04-04-retour.html">04-04 Retour</a></li>
+                            <li><a href="04-05-conclusion.html">04-05 Conclusion</a></li>
                         </ul>
                     </li>
                 </ul>          
             </nav>
         </header>
         <div id="banniere"></div>
+            
+        <div id="wrapper5">
+            
+            <h2>1 - Les fonctions anonymes</h2>
+            <p>Les fonctions anonymes sont, comme son nom l'indique, des fonctions qui ne vont pas posséder de nom.</p><br>
+            <p>Généralement, on utilisera les fonctions anonymes quans on a pas besoin d'appeler notre fonction par son nom c'est à dire lorsque le code de notre fonction n'est appelé qu'à un seul endroit et n'est pas réutilisé.</p><br>
+            <p>Il est possible d'auto-invoquer une fonction anonyme.</p>
 
-        <div id="wrapper2">
-            <button onclick="alert('Bonjour les ami.e.s')">Cliquez sur moi !</button>
-            <button onclick="(function(){
-                let para = document.createElement('p');
-                para.textContent = 'Hop un paragraphe de plus';
-                document.body.appendChild(para);
-                })();">
-                Ajouter un paragraphe, allez !
-            </button>
-        </div>
+            <h2>2 - Fonction anonyme au déclenchement d'un événement.</h2>
+            
+            <h3>Exemples :</h3>
+            <p id="p1" class="stabilo">Clique sur le paragraphe</p>
+            <p id="p2">Et clique aussi sur celui-là, allez !!</p>
+
+            <h2>3 - Les fonctions récursives</h2>
+            <p>Une fonction qui se répète, un peu comme une boucle jusqu'à ce qu'une certaine condition de sortie soit vérifiée.</p>
+
+            <p id="p3"></p>
+            
+            
+        </div> <!-- fin du wrapper -->
+
+        
 
         <p class="encadre"><a href="../index.html">Retour Index</a></p>
 
