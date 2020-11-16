@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Exo Valeur</title>
+    <style>
+
+        body {
+            background-color:  rgb(219, 185, 230);
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        main {
+            background-color:#fff;
+            width: 1200px;
+            min-width: auto;
+            border-radius: 20px;
+            padding: 5px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        h1 {
+            width: 800px;
+            height: 50pX;
+            background-color: lightblue;
+            padding: 20px;
+            font-size: 3em;
+            text-align: center;
+            min-width: auto;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            line-height: 20px;
+            font-weight: bold; 
+            padding: 10px;                  
+        }
+
+        table {
+            width: 800px;
+            height: 50pX;
+            margin-left: auto;
+            margin-right: auto;
+            border: solid 2px lightblue;
+        }
+
+        tr{
+        border: 5px solid purple;
+        
+        }
+
+        tr:nth-child(even) {
+        background-color: rgb(130, 134, 218);
+        }
+        
+        td {
+            border-bottom-style: solid 2px lightblue;
+            padding: 5px;
+        }
+
+        .orange {
+            background-color: rgb(221, 162, 53);
+            border-radius: 20px;
+            text-align: center;
+        }
+      
+    </style>
+    <script src="02-valeur.js" async></script>
+</head>
+<body>
+    <main>
+        <h1>Valeurs</h1>
+        <p>Observer le code ci-dessous et tentez de prévoir les valeurs finales de chaque variable à la fin de chaque ligne (par exemple après la ligne 'var a = 2;' si je faisais un consoe.log de a j'aurai 2 comme résultat. cf. <a href="img/02-valeurs.png">capture d'écran</a></p>
+        <hr>
+        <p>L'idée est de faire les calculs vous-même sur une feuille, par exemple AVANT de regarder le console.log !</p>
+
+        <table>
+            <tr>
+            <td>  var a = 2;</td>
+            </tr>
+            <tr>
+            <td>  a = a - 1;</td>
+            </tr>
+            <tr>
+            <td>  a++;</td>
+            </tr> 
+            <tr>
+            <td>  var b = 8;</td>
+            </tr>       
+            <tr>
+            <td>  b += 2;</td>
+            </tr>           
+            <tr>
+            <td>  var c = a + b * b;</td>
+            </tr>
+            <tr>
+            <td>  var d = a * b + b;</td>
+            </tr>
+            <tr>
+            <td> var e = a * ( b + b );</td>
+            </tr>
+            <tr>
+            <td>  var f = a * b/ a ;</td>
+            </tr> 
+            <tr>
+            <td>  var g = b / a * a;</td>
+            </tr>               
+        </table>
+        <br>
+        <p>Voici <a href="02-valeur.js">un lien vers la page JS</a></p>
+        <p class="orange">Vérifier vos prévisions en créant ce programme puis en le déboguant pour observer les valeurs des variables.</p>
+    </main>
+</body>
+
+</html>
