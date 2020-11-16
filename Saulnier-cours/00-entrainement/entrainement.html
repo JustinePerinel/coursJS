@@ -30,6 +30,7 @@
             6 - CONDITIONS
             7 - BOUCLE
             8 - FONCTIONS PREDEFINIES
+            9 - SUPPLEMENT
 
         */
 
@@ -376,31 +377,54 @@
         var saison = prompt('Quelle est la saison ?');
         var temperature = prompt('Quelle est la température ?');
 
-        function meteo2(saison, temperature){
-            if (saison == 'été') {
-                alert('Sors ton maillot');
-                document.write('Prends le maillot et les palmes !');
-            } else {
-                alert('Attends l\'été');
-                document.write('Ranges ton maillot de bain et patientes...')
-            }
-            var phrase4 = document.write('<p> Nous sommes en ' + saison  + ' et il fait ' + temperature + ' degrés celsius.');
-                return phrase4;
-        }
+        // function meteo2(saison, temperature){
+        //     var article;
+        //     if (saison == 'été') {
+        //         // alert('Prends le maillot et les palmes !');
+        //         var salut = document.write('Sors ton maillot ! C\'est  !' + saison);
+        //     } else if (saison == 'printemps') {
+        //         // alert('Attends l\'été');
+        //         var salut = document.write('Nous sommes au ' + saison + ' et il fait ' + temperature + '°.');
+        //     } else {
+        //         // alert('Tu as choisis automne ou hiver');
+        //         var salut = document.write('Nous en sommes en ' + saison + ' et il faut ' + temperature + '°.');
+        //     }
+        //     // var phrase4 = document.write('<p> Nous sommes en ' + saison  + ' et il fait ' + temperature + ' degrés celsius.');
+        //      return salut;
+        // }
         
-        meteo2(saison, temperature);
+        // meteo2(saison, temperature);
 
-        function meteo3(saison,temperature) {
-            var article ; // la variable article est vide et attends une condition
-            if (saison == 'printemps') {
-                article = 'au';
-            }else{
-                article = 'en';
-            }//fin de if else
-        return document.write('<p>Nous sommes ' + article + ' ' + saison + ' et la température est de ' + temperature + '°.</p>');
-        }
-        
-        meteo3(saison, temperature);
+            // 1er façon
+    //     function meteo3(saison,temperature) {
+    //         var article ; // la variable article est vide et attends une condition
+    //         if (saison == 'printemps') {
+    //             article = 'au';
+    //         }else{
+    //             article = 'en';
+    //         }//fin de if else
+    //     return document.write('<p>Nous sommes ' + article + ' ' + saison + ' et la température est de ' + temperature + '°.</p>');
+    //     }
+    // v
+    //     meteo3(saison, temperature);
+
+        // 2 avec replace
+
+        // function meteoReplace(saison, temperature) {
+        //     if(saison == 'printemps') {
+        //         var phrase4 = document.write('<p> Nous sommes au' + saison + ' et il fait ' + temperature + '°</p>');
+                
+        //     } else {
+        //         var phrase5 = printemps.replace(' au ',' en ');
+                
+        //     }
+        //     return phrase5;
+
+        // }
+
+
+
+        // meteoReplace(saison, temperature);
        
 
         // function meteoIf(saison, temperature) {// notre fonction avec 2 arguments qui viennent des var ci-dessus
@@ -412,6 +436,87 @@
         //     return phraseIf;
         // }//fin fonction meteoIf
 
+        // function meteoVar(saison , temperature) {
+        //     if (saison == 'été' || saison == 'automne' || saison == 'printemps' || saison == 'hiver') {
+        //         // alert('Prends le maillot et les palmes !');
+        //         var plop = document.write('Tu as choisi la saison ' + saison + '.');
+        //     }  else {
+        //         // alert('Tu as choisis automne ou hiver');
+        //        var plop = document.write('La saison ' + saison + ' n\'est pas une saison valide');
+        //     }
+        //     // var phrase4 = document.write('<p> Nous sommes en ' + saison  + ' et il fait ' + temperature + ' degrés celsius.');
+        //     return plop;
+        // }
+        
+        // meteoVar(saison, temperature);
+
+        function meteoFin(saison, temperature) {
+            var article;
+            if (saison == 'printemps') {
+                article = ' au ';
+                // var meteo7 = document.write(' Nous sommes ' + article + ' ' + saison + '.');
+            } else if (saison == 'automne' || saison == 'été' || saison == 'hiver') {
+                article = ' en ';
+                // var meteo7 = document.write(' Nous sommes ' + article + ' ' + saison + '.');
+            } else{
+                return document.write( saison + 'La saison"' + saison + '" n\'existe pas.');
+            } 
+            return document.write('Nous sommes' + article + ' ' + saison + ' et la température est de ' + temperature + '°.');
+        }
+
+        meteoFin(saison, temperature);
+
+        // 4eme version
+        // if (saison == 'printemps') {// si la variable contient bien 'printemps' est-ce VRAI ?
+        //     document.write('<p>2- Nous sommes au ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute ce bloc de code
+        // } else if (saison == 'hiver' || saison =='été' || saison == 'automne') {//sinon (c'est faux il n'y a pas printemps)
+        //     document.write('<p>2- Nous sommes en ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute cet autre bloc
+        // } else {
+        //     document.write('<p>La saison "' + saison + '" n\'existe pas .</p>');// exécute cet autre bloc
+        // }
+
+        // 4ème version function 
+        // function meteoIfElseIfElse(saison, temperature) {
+        //     if (saison == 'printemps') {// si la variable contient bien 'printemps' est-ce VRAI ?
+        //             var phraseNew = document.write('<p>4- Nous sommes au ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute ce bloc de code
+        //         } else if (saison == 'hiver' || saison =='été' || saison == 'automne') {//sinon (c'est faux il n'y a pas printemps)
+        //             var phraseNew = document.write('<p>- Nous sommes en ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute cet autre bloc
+        //         } else {
+        //           var phraseNew = document.write('<p>4- La saison "' + saison + '" n\'existe pas .</p>');// exécute cet autre bloc
+        //         }//fin if else if else
+        //     return phraseNew;
+        // }//fin fonction
+        // // meteoIfElseIfElse(saison, temperature);
+
+        // 9 - SUPPLEMENT
+        document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">9 -Supplément</h2>')
+
+        //parseInt()
+        // parseInt() est une fonction qui permet de transformer un string en number
+
+        var chiffreNew = '100';//une string
+
+        console.log(typeof(chiffreNew)); //confirmation que nous avons une string
+
+        var parse = parseInt(chiffreNew);//pour changer le type de la variable string à number
+        
+        console.log(typeof(parse)); // confirmation du type de parse qui est devenu un number
+
+        console.log( parseInt (chiffreNew));// confrmmation 
+
+        var chiffreNew2 = 50;
+
+        console.log( parseInt (chiffreNew) + chiffreNew2); //içi on additionne
+
+
+        var chiffreNew3 = 182.7526;
+        console.log(parseInt (chiffreNew3));
+
+        // parseFloat transforme une string en number avec les décimales, les chiffres après la virgule
+
+        var chiffreNew4 = '10.2365487';
+        console.log(parseFloat (chiffreNew4));
+    
 
     </script>
 

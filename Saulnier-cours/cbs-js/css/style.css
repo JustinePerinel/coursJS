@@ -99,3 +99,26 @@ dd + dd {
   font-size: 0.8em;
   color: grey;
 }
+
+/* Entrainement */
+.number {
+  color: #86de74
+}
+details{
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  color: #fff;
+  background-color: #423c0b;
+}
+
+details .fa-info-circle {
+  color: #8383ff;
+}
+
+details .fa-graduatio.cap{
+  color: #c0c000;
+}
+
+ul li {
+  margin-bottom: 0.125rem;
+}
