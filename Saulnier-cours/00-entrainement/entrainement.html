@@ -30,6 +30,7 @@
             6 - CONDITIONS
             7 - BOUCLE
             8 - FONCTIONS PREDEFINIES
+            9 - SUPPLEMENT
 
         */
 
@@ -457,7 +458,7 @@
             } else if (saison == 'automne' || saison == 'été' || saison == 'hiver') {
                 article = ' en ';
                 // var meteo7 = document.write(' Nous sommes ' + article + ' ' + saison + '.');
-            } else {
+            } else{
                 return document.write( saison + 'La saison"' + saison + '" n\'existe pas.');
             } 
             return document.write('Nous sommes' + article + ' ' + saison + ' et la température est de ' + temperature + '°.');
@@ -487,7 +488,35 @@
         // }//fin fonction
         // // meteoIfElseIfElse(saison, temperature);
 
+        // 9 - SUPPLEMENT
+        document.write('<h2 style="background: black; width: 75%; color: #fff; margin:30px; padding: 10px;">9 -Supplément</h2>')
 
+        //parseInt()
+        // parseInt() est une fonction qui permet de transformer un string en number
+
+        var chiffreNew = '100';//une string
+
+        console.log(typeof(chiffreNew)); //confirmation que nous avons une string
+
+        var parse = parseInt(chiffreNew);//pour changer le type de la variable string à number
+        
+        console.log(typeof(parse)); // confirmation du type de parse qui est devenu un number
+
+        console.log( parseInt (chiffreNew));// confrmmation 
+
+        var chiffreNew2 = 50;
+
+        console.log( parseInt (chiffreNew) + chiffreNew2); //içi on additionne
+
+
+        var chiffreNew3 = 182.7526;
+        console.log(parseInt (chiffreNew3));
+
+        // parseFloat transforme une string en number avec les décimales, les chiffres après la virgule
+
+        var chiffreNew4 = '10.2365487';
+        console.log(parseFloat (chiffreNew4));
+    
 
     </script>
 

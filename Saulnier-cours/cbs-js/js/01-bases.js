@@ -199,3 +199,21 @@ let score = 350
 console.log('consultation de score avant décrémentation par valeur de 7', score)
 score -= 7
 console.log('consultation de score après décrémentation par valeur de 7', score)
+
+// POINT VIRGULE
+// point virgule permet de clore une instruction en cours pour en commencer une autre
+// let a ; a = 1 ; a++; console.log('incrémentation sur la même ligne',a)
+
+// BOOLEEN
+// En programmation informatique, un booléen est un trype de variable à deux états (généralement notés vrai ou faux), destiné à représenter les 2 valeurs : 
+//  active ou inactive dans nos programmes
+// En JS :  Boolean 
+
+// Le nom est tiré de George Boole (1815-1864)
+let estVivant = true
+console.log("Affichage d\'un booléen", estVivant)
+
+// EGALITE
+// On utilise le double égale ou == pour tester l'égalité d'une variable
+console.log('test de la variable nbDeVie sur la valeur 5 ', nbDeVie == 5)// apparait false
+console.log('test de la variable nbDeVie sur la valeur 6 ', nbDeVie == 6)// apparait true
