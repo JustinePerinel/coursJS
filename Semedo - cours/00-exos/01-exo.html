@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 Exo</title>
+    <script>
+        // EXERCICE 1 - Déclaration des variables
+        // num qui contient le nombre 255
+        // txt qui contient la chaine de caractères 255
+        // bin (pour binaire) qui contient la valeur booléenne vraie
+        // flt (pour float) qui contient la valeur 7,23
+
+        // affichez les varables dans des console.log()
+        
+        let num = 255;
+        let txt = '255';
+        let bin = true;
+        let flt = 7.23;
+
+        // peut s'écrire de la manière suivante :
+        // var num = 255, txt = '255', bin = true, flt = 7.23;
+
+        // ou console.log(num, txt, bin, flt);
+        // console.log(num);
+        // console.log(txt);
+        // console.log(bin);
+        // console.log(flt);
+
+        // EXERCICE 2 - 
+        // Appliquer à num l'opérateur d'incrémentation
+        // Concaténer à la chaine de caractères txt la chaine suivante : "est ici une chaîne de caractères"
+        // Inversez la valeur logique de bin
+        // Ajoutez à flt la valeur contenue dans num
+
+        num = ++num;
+        // ou num++,
+        console.log(num);
+
+        // 2 méthodes pour la concaténation txt
+        console.log(txt + ' est une chaîne de caractères');
+        // ou
+        // let txt2 = txt + ' est ici une chaîne de caractères';
+        // console.log(txt2);
+
+        bin = false;
+        console.log(bin);
+        // autre méthode
+        bin2 = true;
+        bin2 = !bin2;
+        console.log(bin2);
+
+        flt += num;
+        console.log(flt);
+
+        // EXERCICE 3 -
+
+        // num2 qui contient le nombre 23
+        // txt2 qui contient la chaine de caractères 33
+        // affichez le résultat de txt2 + num2 avec console.log
+        // affichez le resultat de num2 + txt2
+
+        let num2 = 23; txt2 = '33';
+
+        console.log(txt2 + num2);
+        // on ne peut pas additionner une string et un number !
+        
+        // on convertit le type string de txt2 en number
+        // Number(txt2) + num2;
+        console.log(Number(txt2) + num2);
+
+        // 1 - Il ne faut pas faire des opérations avec des variables de types différents
+        // 2 - Si on veut la faire il faut écrire les conversions dans le programme
+        // 3 - JS est un langage typé, très précis
+
+        // EXERCICE 4
+        // avec num2 et txt2 
+        // on ajoute une variable tmp qui contient 0
+        // convertir la chaine contenue dans txt2 en nombre avec parseInt et mettre le résultat dans tmp
+        // ajouter à num2 le contenu de tmp
+
+        let tmp = 0; // cette variable est de type number, je lui affecte la valeur à zéro car après elle me sert à changer un string en number
+        tmp = parseInt(txt2); // INT = integer (entier)
+        num2 += tmp;
+
+        console.log(num2);
+        
+
+    </script>
+</head>
+<body>
+    <h1>Exercice 1 et 2</h1>
+</body>
+</html>

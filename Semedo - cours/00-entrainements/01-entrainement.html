@@ -25,6 +25,7 @@
         6 - CONDITIONS
         7 - BOUCLES
         8 - FONCTIONS
+        9 - SUPPLÉMENT
 
         */
 
@@ -644,11 +645,31 @@
 
         les4Fruits(lesFruits);
 
+        // 9 - SUPPLÉMENT
 
+        document.write('<h2 style="font-family: serif; text-transform: uppercase; letter-spacing: 2px; font-weight: 400; color: goldenrod;">9 - Supplément</h2>');
 
-    
+        // fonction parseInt()
+        //parseInt permet de transformer un string en number
 
+        var chiffreNew = '100';
+        console.log(typeof chiffreNew); // confirmation que nous avons une string
+
+        var parse = parseInt(chiffreNew); // pour changer le type de la variable chiffreNew, on le passe dans une nouvelle variable dans laquelle on utilise la fonction parseInt()
+
+        console.log(typeof parse); // cette nouvelle variable est de type number
+
+        var chiffreNew2 = 50;
+        console.log(parse + chiffreNew2); // ici on additionne
         
+        // console.log(typeof parseInt(chiffreNew));
+
+        var chiffreNew3 = '182.8635';
+        console.log(parseInt(chiffreNew3)); // enlève les chiffres après la virgule
+        
+        // fonction parseFloat transforme une string en number avec les chiffres après la virgule
+        var chiffreNew4 = '10.26554';
+        console.log(parseFloat(chiffreNew4));
 
     </script>
 </head>

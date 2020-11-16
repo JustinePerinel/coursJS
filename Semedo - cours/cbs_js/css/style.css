@@ -99,3 +99,29 @@ body {
     font-size: 0.8em;
     color: grey;
   }
+
+  ul li {
+    margin-bottom: 0.125rem;
+  }
+
+/* ENTRAINEMENT */
+
+.number{
+  color: #86DE74
+}
+
+details{
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: #423C0B;
+}
+
+details .fa-info-circle {
+  color: #8383FF;
+}
+
+details .fa-graduation-cap {
+  color: #C0C000;
+}
+

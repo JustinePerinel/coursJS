@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 02 Valeurs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lavender;
+        }
+        main {
+            background-color: #fff;
+            width: 70%;
+            height: 1000px;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 10px 15px;
+            overflow: hidden;
+        }
+
+        .titre {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: rebeccapurple;
+
+            position: relative;
+            top: -60px;
+            left: -50px;
+        }
+
+        h1 {
+            color: white;
+            font-family: serif;
+            font-weight: 300;
+            letter-spacing: 2px;
+            
+            line-height: 240px;
+            text-align: center;
+            padding-left: 30px;
+        }
+
+        .bulle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(230, 230, 250, 0.7);
+
+            position: relative;
+            left: 780px;
+            bottom: 100px;
+
+        }
+
+        .consignes {
+            /* width: 90%;
+            margin: 0 auto; */
+
+            position: relative;
+            z-index: 5;
+            bottom: 300px;
+            left: 50px;
+        }
+
+        ul {
+            width: 70%;
+        }
+
+        ul > li {
+            list-style-type: none;
+            padding: 10px 10px;
+            border: 1px solid rebeccapurple;
+
+            position: relative;
+            bottom: 250px;
+            left: 15px;
+        }
+
+        ul > li:nth-of-type(even) {
+            background-color: ghostwhite;
+        }
+
+        .encadre {
+            background-color: rebeccapurple;
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+            width: 75%;
+            position: relative;
+            bottom: 200px;
+            left: 55px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="titre">
+            <h1>Valeurs</h1>
+        </div>
+
+        <div class="bulle"></div>
+
+        <div class="consignes">
+            <p>Observez le code ci-dessous et tentez de prévoir les valeurs finales de chaque variable à la fin de chaque ligne <br> (par exemple après la ligne 'var a = 2;' si je faisais un console.log() de a j'aurai 2 comme résultat. cf.<a href="img/01-bonjour.png" target="blank">la capture d'écran)</a></p>
+            
+            <p>L'idée est de faire des calculs vous-mêmes, sur une feuille par exemple AVANT de regarder dans la console !</p>
+        </div>
+
+        <ul>
+            <li>var a = 2; // résultat : a = 2</li>
+            <li>a = a - 1; // résultat : 2 - 1 = 1</li>
+            <li>a++; // résultat : 1 + 1 = 2</li>
+            <li>var b = 8; // résultat : b = 8</li>
+            <li>b += 2; // résultat : 8 + 2 = 10</li>
+            <li>var c = a + b * b; // résultat : 2 + (10*10) = 102</li>
+            <li>var d = a * b + b; // résultat : 2 * 10 + 10 = 30</li>
+            <li>var e = a * (b + b); // résultat : 2 * (10+10) = 40</li>
+            <li>var f = a * b / a; // résultat : 20 / 2 = 10</li>
+            <li>var g = b / a * a; // résultat : (10/2) * 2 = 10</li>
+        </ul>
+
+        <div class="encadre">
+            <p>Vérifiez vos prévisions en crant ce programme puis en déboguant pour observer les valeurs des variables.</p>
+        </div>
+    </main>
+    <script src="02-valeurs.js"></script>
+</body>
+</html>

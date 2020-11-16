@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 01 Bonjour</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lavender;
+        }
+        main {
+            background-color: #fff;
+            width: 70%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 10px 15px;
+            overflow: hidden;
+        }
+
+        .titre {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: rebeccapurple;
+
+            position: relative;
+            top: -60px;
+            left: -50px;
+        }
+
+        h1 {
+            color: white;
+            font-family: serif;
+            font-weight: 300;
+            letter-spacing: 2px;
+            
+            line-height: 240px;
+            text-align: center;
+            padding-left: 30px;
+        }
+
+        .bulle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(230, 230, 250, 0.7);
+
+            position: relative;
+            left: 780px;
+            bottom: 100px;
+
+        }
+
+        ul {
+            /* width: 90%;
+            margin: 0 auto; */
+
+            position: absolute;
+            z-index: 5;
+            top: 250px;
+            left: 250px;
+        }
+
+        ul > li {
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="titre">
+            <h1>Bonjour !</h1>
+        </div>
+
+        <div class="bulle"></div>
+
+        <ul>
+            <li>Créez un fichier 01-bonjour.html et faites-le pointer vers un fichier 01-bonjour.js,</li>
+            <li>Vous pouvez placer cet énoncé dans ce fichier (cf.<a href="img/02-valeurs.png" target="blank">la capture d'écran)</a>,</li>
+            <li>Écrire le code invitant l'utilisateur à saisir d'abord son nom ensuite son prénom dans 2 boîtes de dialogue successives,</li>
+            <li>Afficher ensuite dans une autre boîte de dialogue le nom et le prénom de l'utilisateur,</li>
+            <li>Attention à bien respecter les espaces entre les mots dans le message.</li>
+        </ul>
+    </main>
+    <script src="01-bonjour.js"></script>
+</body>
+</html>
