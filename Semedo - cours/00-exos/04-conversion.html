@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 04 CONVERSION</title>
+    <!-- html de Katia -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lavender;
+        }
+        main {
+            background-color: #fff;
+            width: 70%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 10px 15px;
+            overflow: hidden;
+        }
+
+        .titre {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: rebeccapurple;
+
+            position: relative;
+            top: -60px;
+            left: -50px;
+        }
+
+        h1 {
+            color: white;
+            /* font-family: serif; */
+            font-weight: 300;
+            letter-spacing: 2px;
+            
+            line-height: 240px;
+            text-align: center;
+            padding-left: 30px;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+
+        .bulle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(230, 230, 250, 0.7);
+
+            float: left;
+
+            position: relative;
+            right: -120px;
+            top: -50px;
+
+        }
+
+        #p1 {
+            color: purple;
+            text-align: center;
+            position: relative;
+            top: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 40px;
+        }
+
+        .consignes {
+            float: left;
+            width: 65%;
+            padding-left: 20px;
+        }
+
+        .encadre {
+            background-color: lavenderblush;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .conversion {
+            padding-left: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="titre">
+            <h1>Conversion</h1>
+        </div>
+
+        <div class="consignes">
+            <h3>Consignes</h3>
+            <p>Écrivez un programme qui fait saisir une température en degrés celsius, puis qui affiche le résultat de sa conversion en degrés fahrenheit.</p>
+            
+            <p class="encadre">C'est au physicien allemand Daniel Gabriel Fahrenheit que l'on doit l'invention des thermomètres en graduation Fahrenheit. <br><br>
+            Au début, ses thermomètres sont à l'alcool (1709), mais il remplace rapidement l'alcool par du mercure (1715), permettant à ses outils de mesure de fournir des données comparables. <br><br>
+            En 1742, un autre physicien, le suédois, Anders Celsius, propose une nouvelle graduation au thermomètre. <br><br>
+            <strong style="color: deeppink;">la conversion entre les échelles est données par [°F] = [°C] x 9/5 + 32</strong> </p>
+        </div>
+
+        <div class="bulle">
+            <p id="p1"></p>
+        </div>
+
+        <div class="clear"></div>
+
+        
+        <div class="conversion">
+            <h3>Résultats programme de conversion</h3>
+            <ul>
+                <li id="f1"></li>
+                <li id="f2"></li>
+                <li id="c1"></li>
+                <li id="c2"></li>
+            </ul>
+        </div>
+        
+    </main>
+    <script src="04-conversion.js"></script>
+</body>
+</html>
