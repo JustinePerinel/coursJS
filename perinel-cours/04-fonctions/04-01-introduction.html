@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript III. 08</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="introduction.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+        <!-- début de la nav -->
+        <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="../02-variables-constantes/02-01-introduction.html">Les variables</a>
+                        <a href="../02-variables-constantes/02-02-afficher.html">Exemples de variables</a>
+                        <a href="../02-variables-constantes/02-03-type.html">Les types de données</a>
+                        <a href="../02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                        <a href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a>
+                        <a href="../02-variables-constantes/02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="../03-structures-controle/03-01-introduction.html">Introduction</a>
+                        <a href="../03-structures-controle/03-02-if.html">If...</a>
+                        <a href="../03-structures-controle/03-03-if-else.html">If... else...</a>
+                        <a href="../03-structures-controle/03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="../03-structures-controle/03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="../03-structures-controle/03-06-precedence.html">Précédence</a>
+                        <a href="../03-structures-controle/03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="../03-structures-controle/03-08-switch.html">Switch</a>
+                        <a href="../03-structures-controle/03-09-boucles.html">Les boucles</a>
+                        <a href="../03-structures-controle/03-10-for.html">La boucle for</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="04-01-introduction.html" class="active">Introduction</a>
+                        <a href="04-02-portee.html">La portée des variables</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2> <a href="04-01-introduction.html">IV. 01 Les fonctions</a></h2>
+        <p>Les fonctions en js sont incontournables ! En voici deux exemples et une définition.</p>
+        <h3>1 - Les fonctions prédéfinies</h3>
+        <p>Une fonction est un bloc de code nommé et réutilisable, et dont le but est d'effectuer une tâche précise ; les fonctions possèdent de nombreux atouts. </p>
+        <h5>Exemple random()</h5>
+        <p>Il existe des fonctions prédéfinies, telle que <code>random()</code> qui est une fonction mathématique. Ici, un code qui permet de générer un nombre compris entre 0 et 100.</p>
+        <p id="p1a" class="js-integre"></p>
+        <p>Un code qui permet de mettre un nombre, ici un nombre contenu entre 0 et 10.</p>
+        <p id="p1b" class="js-integre"></p>
+        <p>Un code qui permet de mettre un nombre, ici un nombre décimal contenu entre 0 et 1.</p>
+        <p id="p1c" class="js-integre"></p>
+        <h5>Exemple replace()</h5>
+        <p>Ici, on utilise la fonction <code>replace()</code>, une fonction "string", qui appartient à l'objet string et qui va permettre de remplacer une partie d'une variable. Le premier argument de replace() estr la chaîne de caractères que l'on cherche et le second est celle qui va la remplacer.</p>
+        <p id="p2" class="js-integre"></p>
+        <p id="p2a"></p>
+
+        <h3>2 - Les fonctions personnalisées </h3>
+        <p>Exemples :</p>
+        <p><code>function randomX100() {<br>
+            return Math.random() * 100;<br>
+        } <br><br>
+        document.getElementById('p3').innerHTML = 'Je génère un nombre compris entre 0 et 100 : ' + randomX100();</code></p>
+        <p id="p3" class="js-integre"></p>
+
+        <h5>Petit exercice</h5>
+        <ul class="avec-puces p-40">
+            <li>
+                <code>function multiplier(nbr1,nbr2){<br>
+                    return ('Multiplions : ' + nbr1 + ' x ' +  nbr2 + ' = ' + (nbr1*nbr2));<br>
+                }</code>
+                <p id="p4" class="js-integre"></p>
+            </li>       
+            <li>
+                <code>function addition(nbr1,nbr2){<br>
+                    return ('Additionnons : ' + nbr1 + ' + ' + nbr2 + ' = ' + (nbr1+nbr2)); <br>
+                }</code>
+                <p id="p5" class="js-integre"></p>
+            </li>
+            <li><br>
+                <code>function soustraction(nbr1,nbr2){
+                    return ('Soustrayions : ' + nbr1 + ' - ' + nbr2 + ' = ' + (nbr1-nbr2));<br>
+                }</code>
+                <p id="p6" class="js-integre"></p>
+            </li>
+            <li>
+                <code>function division(nbr1,nbr2){ <br>
+                    return ('Divisons : ' + nbr1 + ' / ' + nbr2 + ' = ' + (nbr1/nbr2));<br>
+                }</code>
+                <p id="p7" class="js-integre"></p>
+            </li>
+            <li>
+                <code>function modulo(nbr1,nbr2){ <br>
+                    return ('Modulons : ' + nbr1 + ' % ' + nbr2 + ' = ' + (nbr1%nbr2)); <br>
+                }</code>
+                <p id="p8" class="js-integre"></p>   
+
+                <h3>3 - Récapitulatif sur les fonctions </h3>
+                <ul class="avec-puces p-40">
+                    <p>Les fonctions sont des blocs de code nommés et réutilisables et dont le but est d'effectuer une tâche précise. </p>
+                    <li>Il existe deux types de fonctions, les fonctions natives ou prédéfinies (ou des méthodes) que l'on aura qu'a appeler et les fonctions personnalisées que l'on va créer.</li>
+                    <li>¨Pour exécuter le code d'une dfonction il faut l'appeler. Pour cela, il suffit d'écrire son nom suivi de parenthèses, en y passant éventuellement des arguments. </li>
+                    <li>On crée une fonction personnalisée grâce au mot-clef 'function': 
+                        <br>Si une fonction a besoin qu'on lui passe des valeurs pour fonctionner, alors on définira des paramètres lors de sa définition.
+                        <br>Lors de son appel, on lui passera des arguments qui prendront la place des paramètres. </li>
+                </ul>
+
+
+            </li>       
+        </ul>
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

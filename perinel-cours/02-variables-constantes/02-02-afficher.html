@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript II. 02</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="afficher.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+
+        <!-- début de la nav -->
+        <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="02-01-introduction.html">Les variables</a>
+                        <a href="02-02-afficher.html" class="active">Exemples de variables</a>
+                        <a href="02-03-type.html">Les types de données</a>
+                        <a href="02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                        <a href="02-05-concatenation.html">La concaténation</a>
+                        <a href="02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="../03-structures-controle/03-01-introduction.html">Introduction</a>
+                        <a href="../03-structures-controle/03-02-if.html">If...</a>
+                        <a href="../03-structures-controle/03-03-if-else.html">If... else...</a>
+                        <a href="../03-structures-controle/03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="../03-structures-controle/03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="../03-structures-controle/03-06-precedence.html">Précédence</a>
+                        <a href="../03-structures-controle/03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="../03-structures-controle/03-08-switch.html">Switch</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2> <a href="02-02-afficher.html"> II. 02 - Des exemples de variables</a></h2>
+
+        <h3>1. Deux exemples de variables</h3>
+
+        <p>Sur cette page, nous avons vu deux types de variables et la façon dont elles s'écrivent.</p>
+
+        <h4>A - Let, sur une ligne ou deux</h4>
+        <p><code>let</code> permet de déclarer une variable sur le bloc auquel il appratient. On peut déclarer la variable de deux façons : </p>
+        <ul class="avec-puces p-40">
+            <li>En 2 lignes, en déclarant d'abaord la variable et en lui assignant ensuite un contenu <br>
+                let variable;<br>
+            variable = ''; EXEMPLE <br>
+                <code>let monAge; <br>
+                    monAge = 27;
+                </code></li>
+            <li>En une ligne <br>
+                let variable = ''; EXEMPLE<br>
+                <code>let ville = 'Suresnes';</code>
+            </li>
+        </ul>
+        <br>
+        <h4>B - Alert, faire apparaître une fenêtre d'alerte</h4>
+        <p>Lorsque l'on a déclaré une variable ou que l'on veut faire apparaître une alerte sur la page web, il est possible de la déclarer en JavaScript. 2 solutions existent alors:</p>
+            <ul class="avec-puces p-40">
+                <li>Lorsque l'on a déclaré une variable comme suit :<br> 
+                    <code>let prenom = 'Justine';</code><br> 
+                    et que l'on déclare ensuite <br>
+                    <code>alert(prenom);</code><br>
+                     l'alerte affichera à ce moment là le contenu de la variable prenom, c'est-à-dire Justine.</li>
+                <li>On peut aussi déclarer directement ce que l'on veut entre les parenthèses de l'alerte : <br>
+                    <code>alert('Bienvenue chez les Ch\'tis');</code><br> 
+                    les apostrophes autour de la phrase permettent d'indiquer au navigateur que l'on veut qu'il affiche ce qui se trouve dans les parenthèses. </li>
+            </ul>
+        
+
+        <h3>2. console.log ou console.info : afficher le contenu des variables dans l'inspecteur</h3>
+        <p>Dans du JS (dans la balise script ou dans une page externe), <code>console.log(prenom)</code> ou <code>console.info(prenom)</code> vont permettre d'afficher le contenu de la variable indiquée entre parenthèses dans la partie console de l'inspecteur(F12 sur PC). On peut indiquer plusieurs variables dans le console.log en les séparant pas une virgule et un espace. </p>
+        
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript II. 03</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="type.js" async></script>
+</head>
+<body>
+    <main>
+        <h1><a href="../index.html">Java script - Index - du cours et des exos</a></h1>
+        
+         <!-- début de la nav -->
+         <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="02-01-introduction.html">Les variables</a>
+                        <a href="02-02-afficher.html">Exemples de variables</a>
+                        <a href="02-03-type.html" class="active">Les types de données</a>
+                        <a href="02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                        <a href="02-05-concatenation.html">La concaténation</a>
+                        <a href="02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="../03-structures-controle/03-01-introduction.html">Introduction</a>
+                        <a href="../03-structures-controle/03-02-if.html">If...</a>
+                        <a href="../03-structures-controle/03-03-if-else.html">If... else...</a>
+                        <a href="../03-structures-controle/03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="../03-structures-controle/03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="../03-structures-controle/03-06-precedence.html">Précédence</a>
+                        <a href="../03-structures-controle/03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="../03-structures-controle/03-08-switch.html">Switch</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2><a href="02-03-type.html">II. 03 Les types de données JavaScript</a></h2>
+
+        <h3>7 types de données JavaScript</h3>
+        <ol class="p-40">
+            <li>
+                <h4>1 - <span class="stabilo">String</span> ou"chaîne de caractères"</h4>
+                <p>En JavaScript, on va pouvoir utiliser indifférement des guillemets doubles ou des quotes pour entourer une chaîne de caractères. Ces méthodes vont être strictement équivalentes, à la différence d'autres langages comme le PHP, par exemple.</p>
+                <p class="notice">Faites attention cependant à un point : si votre chaîne contient un caractère qui est le même que le délimiteur de chaîne choisi, il faudra neutraliser ce caaractère en l'échappant au moyen d'un antislash, ou changer de délimiteur.</p>
+                 <br>
+                <p>Grâce à ce code JS qui se trouve dans la page type.js, le résultat suivant va s'afficher. On demande au navigateur d'afficher <em>Type de données pour la variable présentation</em> puis d'indiquer quel est le type de cette variable : ici <em class="stabilo">string</em> car la variable contient une chaine de caractère <code>"Je m'appelle Michaël"</code>.</p>
+                <code>document.getElementById('p1').innerHTML = 'Type de données pour la variable présentation : ' + typeof presentation;</code>
+                <!-- p#p$*3 -->
+                <p id="p1"class="js-integre"></p>
+                
+            </li>
+            <li>
+                <h4>2 - <span class="stabilo">Number</span> ou nombres</h4>
+                <p>Les variables en JavaScript vont également pouvoir stocker des nombres. Des nombres entiers positifs ou négatifs ou a virgule (décimaux).</p>
+                <p>Grâce à ce code JS qui se trouve dans la page type.js, le résultat suivant va s'afficher. On demande au navigateur d'afficher <em>Type de données pour la variable age</em> puis pour la vaiable <em>code postal</em> puis d'indiquer quel est le type de cette variable : ici <em class="stabilo">Number</em> car ces variables contiennent des nombres : <code>25</code> et <code>92150</code>.</p>
+                <code>document.getElementById('p2').innerHTML = 'Type de données pour la variable age : ' + typeof age; <br>
+                    document.getElementById('p3').innerHTML = 'Type de données pour la variable code postale : ' + typeof codePostal; </code>
+                <p id="p2"class="js-integre"></p>
+                <p id="p3"class="js-integre"></p>
+            </li>
+            <li>
+                <h4>3 - <span class="stabilo">Boolean</span> ou booléen</h4>
+                <p>Ce type de données sera utile poour vérifier si un test est vrai ou faux. </p>
+                <p>Un booléen, en algèbre, est une valeur binaire (soit 0, soit 1). En informatique, le type booléen est un type qui ne contient que deux valeurs : les valeurs true (vrai) et false (faux).</p>
+                <code>let test = 8 > 4; <br>
+                document.getElementById('b').innerHTML = 'Type de données pour la variable test : ' + typeof test; </code>
+                <p id="b"class="js-integre"></p>
+            </li>
+            <li>
+                <h4>4 - <span class="stabilo">Null</span> ou vide.</h4>
+                <p>Ce sont des types un peu particuliers.</p>
+            </li>
+            <li>
+                <h4>5 - <span class="stabilo">Undefined</span> ou indéfinies</h4>
+                <p>Si on déclare une variable sans lui attribuer une valeur, alors son type sera undefined.</p>
+                <code>let pomme; <br>
+                    document.getElementById('p5').innerHTML = 'Type de données pour la variable pomme : ' + typeof pomme;</code>
+                <p id="p5"class="js-integre"></p>
+                <p>Ici, le code est indéfini car la valeur de pomme n'a pas été définie. Si le code avait été <code>let pomme = 'reinette';</code>, le type aurait été string.</p>
+            </li>
+            <li>
+                <h4>6/7 - <span class="stabilo">Symboles</span> et <span class="stabilo">object</span></h4>
+                <p>Les objets sont des structures complexes qui vont pouvoir stocker plusieurs valeurs en  même temps et que nous étudierons plus tard car il s'agit là d'un sujet  complexe à appréhender pour un débutant.</p>
+                <p>Si on déclare une variable et qu'on lui passe null, alors son type sera <code>Object</code>.</p>
+                <p id="p4"class="js-integre"></p>
+            </li>
+        </ol>
+        <br><br><br>
+        <p>Pour voir les types de données on utilise la fonction <code>typeof</code>. cf. type.js</p>
+
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

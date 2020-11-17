@@ -50,7 +50,9 @@ let test2 = 12 + 25 == 46;
 // test 3 
 let test3 = 3250 * 65 == 211250;
 
-console.log(test, test2, test3);
+let calcul = 58 + 32 == 4;
+
+console.log(test, test2, test3, calcul);
 
 
                                // NULL ET UNDEFINED

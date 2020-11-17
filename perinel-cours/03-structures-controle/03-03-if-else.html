@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript III. 03</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="ifelse.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+                <!-- début de la nav -->
+                <nav>
+                    <ul class="row">
+                        <li class="onglet">Introduction
+                            <div class="dropdown-content">
+                                <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                                <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                                <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                                <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                            </div>
+                        </li>
+                        <li class="onglet">Variables et constantes
+                            <div class="dropdown-content">
+                                <a href="../02-variables-constantes/02-01-introduction.html">Les variables</a>
+                                <a href="../02-variables-constantes/02-02-afficher.html">Exemples de variables</a>
+                                <a href="../02-variables-constantes/02-03-type.html">Les types de données</a>
+                                <a href="../02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                                <a href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a>
+                                <a href="../02-variables-constantes/02-06-constantes.html">Les constantes</a>
+                            </div>
+                        </li>
+                        <li class="onglet"> Les structures de contrôle
+                            <div class="dropdown-content">
+                                <a href="03-01-introduction.html">Introduction</a>
+                                <a href="03-02-if.html">If...</a>
+                                <a href="03-03-if-else.html" class="active">If... else...</a>
+                                <a href="03-04-if-else-if-else.html">If... else if... else...</a>
+                                <a href="03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                                <a href="03-06-precedence.html">Précédence</a>
+                                <a href="03-07-ternaire.html">L'opérateur ternaire</a>
+                                <a href="03-08-switch.html">Switch</a>
+                                <a href="03-09-boucles.html">Les boucles</a>
+                                <a href="03-10-for.html">La boucle for</a>
+                            </div>
+                        </li>
+                        <li class="onglet"> Les fonctions
+                            <div class="dropdown-content">
+                                <a href="../04-fonctions/04-01-introduction.html"></a>
+                                <a href=""></a>
+                            </div>
+                        </li>
+                        <li class="onglet"> Cours de JS de Régis
+                            <div class="dropdown-content">
+                                <a href="../10-video-js/video.html">Les vidéos</a>
+                                <a href="../10-video-js/index.html">Index pour le JS</a>
+                            </div>
+                        </li>
+                    </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2> <a href="03-03-if-else.html">III. 03 - If... else...</a></h2>
+        <h3>1 - If... else... : explication</h3>
+        <p>La structure conditionnelle <code>if... else...</code> (en français : si... sinon...) sera plus complète car on va exécuter un bloc de code si un test renvoie <code>true</code> ou un autre dans le cas contraire.</p>
+
+        <h4>Des exemples</h4>
+        <ul class="avec-puces p-40">
+            <li>Ici, on demande au navigateur : "<strong>SI </strong> la variable x qui contient la valeur 500 est plus grande que 1 affiche cette première string <strong>SINON</strong> affiche cette deuxième string." <br>
+                <code>if(x > 1){ <br>
+                alert('x contient une valeur supérieure à 1');<br>
+            }else{ <br>
+                alert('x contient une valeur inférieure à 1'); <br>
+            }</code></li>
+            <li>Ici, on demande au navigateur : "<strong>SI </strong> la variable y qui contient la valeur 0.5 est plus grande que 20 affiche cette première string <strong>SINON</strong> affiche cette deuxième string." <br>
+                <code>
+                if(y > 20){ <br>
+                    alert('y contient une valeur supérieure à 1'); <br>
+                }else{ <br>
+                    alert('y contient une valeur inférieure à 1'); <br>
+                }</code></li>
+        </ul>
+        
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

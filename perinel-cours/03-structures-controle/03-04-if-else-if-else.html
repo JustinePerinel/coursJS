@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript III. 04</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="ifelseifelse.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+                
+        <!-- début de la nav -->
+        <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="../02-variables-constantes/02-01-introduction.html">Les variables</a>
+                        <a href="../02-variables-constantes/02-02-afficher.html">Exemples de variables</a>
+                        <a href="../02-variables-constantes/02-03-type.html">Les types de données</a>
+                        <a href="../02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                        <a href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a>
+                        <a href="../02-variables-constantes/02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="03-01-introduction.html">Introduction</a>
+                        <a href="03-02-if.html">If...</a>
+                        <a href="03-03-if-else.html">If... else...</a>
+                        <a href="03-04-if-else-if-else.html" class="active">If... else if... else...</a>
+                        <a href="03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="03-06-precedence.html">Précédence</a>
+                        <a href="03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="03-08-switch.html">Switch</a>
+                        <a href="03-09-boucles.html">Les boucles</a>
+                        <a href="03-10-for.html">La boucle for</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2> <a href="03-04-if-else-if.html">III. 04 - If... else if... else...</a></h2>
+        <h3>1 - If... else if... else... : explications</h3>
+        <p>La condition <code>if... else if... else ...</code> est une structure conditionnelle encore plus complexe puisqu'elle permet de générer et de prendre en charge autant de cas que l'on le souhaite.</p>
+        <p>Nous allons pouvoir écrire autant de <code>else if</code> que l'on veut dans cette condition.</p>
+
+        <p><code>let x = 0.5; <br><br>
+        if(x > 1){<br>
+            alert('x contient une valeur strictement supérieure à 1');<br>
+        }else if (x == 1){<br>
+            alert('x contient la valeur 1');<br>
+        }else{<br>
+            alert('x contient une valeur strictement inférieure à 1');<br>
+        }</code><br>
+        Ici, le code va demander au navigateur d'effectuer les choses suivantes : "<strong>SI</strong> x qui contient la valeur 0.5 est supérieur à 1 lance cette première alerte <strong>SINON SI</strong> x est égal à 1, lis cette deuxième alerte, <strong>SINON</strong> lis la dernière alerte. C'est cette dernière qui va se décclancher.</p>
+
+        <h5>Multiples conditions</h5>
+        <p>Dès qu'un test va être validé, le JS va ignoré les tests suivants : il faut donc faire bien attention à l'odre des <code>else if...</code>lors de l'écriture d'une condition pour obtenir le résultat souhaité.</p>
+        
+        <p><code>x = -10;<br><br>
+        if(x > 1){<br>
+            alert('x contient une valeur strictement supérieur à 1');<br>
+        }else if (x == 1){<br>
+            alert('x contient la valeur 1');<br>
+        }else if (x &lt; 1){<em class="stabilo"> //C'est cette alerte qui sera lue car elle est vraie //</em><br> 
+            alert('x contient une valeur strictement inférieure à 1');<br>
+        }else if (x &lt; 0){<br>
+            alert('x contient une valeur strictement inférieure à 0');<br>
+        }else if (x &lt; -2){<br>
+            alert('x contient une valeur strictement inférieure à -2');<br>
+        }else{<br>
+            alert('la valeur de x n\'a pas pu être comparée à un nombre.')<br>
+        }</code><br>
+        Ici, le code l'alerte la plus proche et donc la plus logique aurait été l'avant-dernière et c'est pourtant au deuxième else if que le code va s'interrompre.</p>
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

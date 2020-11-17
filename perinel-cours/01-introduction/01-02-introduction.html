@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript I. 02</title>
+    <!-- mon reset en externe -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mon style en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- on peut mettre du JS directement dans la balise ouvrante d'un élément HTML. -->
+    <!-- Le premier script affichge une alert(), une fenêtre d'alerte avec son message -->
+    <!-- le second script ajoute un élément p dans la page -->
+    <!-- les scripts sont dans l'attribut onclick="" et le code placé là va s'exécuter dès que l'on clique -->
+    <!-- Bien que ce soit possible, il est déconseillé d'utiliser cette façon de faire (le script dans les éléments) (comme du style en ligne (directement dans le HTML)). -->
+</head>
+<body>
+    <main>
+        
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+
+
+        <!-- début de la nav -->
+        <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="01-02-introduction.html" class="active">Du JS dans la balise ouvrante</a>
+                        <a href="01-03-introduction.html">Du JS dans body</a>
+                        <a href="01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="../02-variables-constantes/02-01-introduction.html">Les variables</a>
+                        <a href="../02-variables-constantes/02-02-afficher.html">Exemples de variables</a>
+                        <a href="../02-variables-constantes/02-03-type.html">Les types de données</a>
+                        <a href="../02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                        <a href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a>
+                        <a href="../02-variables-constantes/02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="../03-structures-controle/03-01-introduction.html">Introduction</a>
+                        <a href="../03-structures-controle/03-02-if.html">If...</a>
+                        <a href="../03-structures-controle/03-03-if-else.html">If... else...</a>
+                        <a href="../03-structures-controle/03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="../03-structures-controle/03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="../03-structures-controle/03-06-precedence.html">Précédence</a>
+                        <a href="../03-structures-controle/03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="../03-structures-controle/03-08-switch.html">Switch</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- fin de la nav  -->
+
+        
+        <h2><a href="01-02-introduction.html">I. 02 - Du JS dans body</a></h2>
+
+        <button onclick="alert('Bonjour les ami.e.s')">Cliquez sur moi !</button>
+        <button onclick="(function(){
+            let para = document.createElement('p');
+            para.textContent = 'Hop un paragraphe de plus';
+            document.body.appendChild(para);
+            })();">
+            Ajoutez un paragraphe, allez !
+        </button>
+        <br><br>
+        
+        <h3>Placement et action du JS</h3>
+
+
+        <p>Ici, le JavaScript est placé directement dans <code>&lt;body></code>, puis dans les différentes balises des éléments auxquels on veut appliquer du JS. Il va falloir après définir l'action et le résultat que l'on vzeut obtenir. Pas une méthode recommendée comme le CSS inline, rare et c'est mieux de ne pas le faire.</p>
+
+        <p>On a définit ici l'action d'alerte quand on clique sur le premier bouton. Une fenêtre apparaît avec un message choisi dans le code. Sur le deuxième bouton, un paragraphe est ajouté dans body lorsqu'il est cliqué.</p>
+
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

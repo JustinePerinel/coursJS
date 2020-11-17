@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript II. 04</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="operateurs.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+         <!-- début de la nav -->
+         <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="02-01-introduction.html">Les variables</a>
+                        <a href="02-02-afficher.html">Exemples de variables</a>
+                        <a href="02-03-type.html">Les types de données</a>
+                        <a href="02-04-operateurs.html" class="active">Les opérateurs arithmétiques</a>
+                        <a href="02-05-concatenation.html">La concaténation</a>
+                        <a href="02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="../03-structures-controle/03-01-introduction.html">Introduction</a>
+                        <a href="../03-structures-controle/03-02-if.html">If...</a>
+                        <a href="../03-structures-controle/03-03-if-else.html">If... else...</a>
+                        <a href="../03-structures-controle/03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="../03-structures-controle/03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="../03-structures-controle/03-06-precedence.html">Précédence</a>
+                        <a href="../03-structures-controle/03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="../03-structures-controle/03-08-switch.html">Switch</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2> <a href="02-04-operateurs.html">II. 04 Les opérateurs arithmétiques</a></h2>
+
+        
+
+        <ul>
+            <li>
+                <h3>1 - Qu'est ce qu'un opérateur ?</h3>
+                <p>Un opérateur arithmétique est un symbole qui va vous permettre d'effectuer certaines opérations sur les variables et leurs valeurs. Par exemple, l'opérateur * va nous permettre de multiplier les valeurs de deux variables. Un opérateur d'affectation vont permettre de donner une valeur à notre variable. Il existe aussi les <strong>opérateurs de comparaison</strong> voir onglet <em class="stabilo">les structures de contrôle</em>, sous-onglet <em class="stabilo">introduction</em>, les <strong>opérateurs logiques</strong> voir onglet <em class="stabilo">les structures de contrôle</em>, sous-onglet <em class="stabilo">les opérateurs logiques</em> et pour finir , l'<strong>opérateur ternaire</strong> voir onglet <em class="stabilo">les structures de contrôle</em>, sous-onglet <em class="stabilo">l'opérateur ternaire</em>.</p>
+            </li>
+            <li>
+                <h3><a href="#tableau1">2 - Les opérateurs arithmétiques</a></h3>
+                <p>Ces opérateurs sont ceux pour la plupart déjà vu en maths, comme le +, le -, le / pour la division, le * pour la multiplication. Deux nouveaux opérateurs sont à relever, les suivants : </p>
+            </li>
+            <li>
+                <h4>Le modulo et l'exponentielle ... Qui sont-ils ?</h4>
+                <!-- rappel : dl = defnition list (liste de définitions) | dt = definition term (mot de la définition) | dd = definition  -->
+                <dl>
+                    <dt>Modulo</dt>
+                    <dd>Le reste entier d'une division euclidienne. On divise 5 par 3 , les résultat est 1 et il reste 2, c'est le modulo.</dd>
+                    <dt>Exponentielle</dt>
+                    <dd>L'exponentielle correspond à l'élévation à la puissance d'un nombre par un autre nombre : ex 2<sup>3</sup>.</dd>
+                </dl>
+            <br>
+            </li>
+            <li>
+                <h4>Priorité des calculs et utilisation des parenthèses</h4>
+                <p>Si on écrit <code>let j = 1 - 2 - 3;</code> le résultat ssera -4, les opérations se font de gauche à droite. </p>
+                <p class="notice">A l'exception de l'élévation à la puissance qui sera calculée en partant de la fin. Voir operateurs.js, ligne 50.</p>
+                <p>Nous allons, finalement, comme en maths, pouvoir forcer l'ordre de priorité en utilisant des couples de parenthèses pour indiquer qu'une opération doit se faire avant toutes les autres: cf. la variable suivante dans laquelle le calcul entre parenthèses sera effectué en premier : <br><code>let calcul1 = 1 - (2 * 3)</code>.</p>
+                <!-- voir operateurs.js -->
+                <p id="p1" class="js-integre"></p></li>
+            <li>
+                <h3><a href="#tableau2">3 - Les opérateurs d'affectation</a></h3>
+                <p>Les opérateurs d'affectation vont nous permettre d'affecter une certaine valeur à une variable. = est l'opérateur le plus utilisé. Les opérateurs d'affectation combinés nous permettent d'effectuer deux types d'opérations à la suite. On réalise des opération arithmétiques puis d'affectation.</p>
+            </li>
+        </ul>
+
+        <hr><hr>
+
+        <h3>LES TABLEAUX </h3>
+        
+        <table id="tableau1">
+            <caption>Tableau des opérateurs arithmétiques</caption>
+            <thead>
+                <tr>
+                    <th>Opérateurs</th>
+                    <th>Nom de l'opération</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>+</td>
+                <td>Addition</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Soustraction</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Multiplication</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Division</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Modulo</td>
+            </tr>
+            <tr>
+                <td>**</td>
+                <td>Exponentielle</td>
+            </tr>
+        </table>
+
+        <hr>
+        
+        <table id="tableau2">
+            <caption>Tableau des opérateurs d'affectation combinés</caption>
+            <thead>
+                <tr>
+                    <th>Opérateurs</th>
+                    <th>Définition</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>+=</td>
+                <td>Additionne puis affecte le résultat</td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>Soustrait puis affecte le résultat</td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>Multiplie puis affecte le résultat</td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>Divise puis affecte le résultat</td>
+            </tr>
+            <tr>
+                <td>%=</td>
+                <td>Calcule le modulo puis affecte le résultat</td>
+            </tr>
+        </table>
+        <br>
+        
+
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

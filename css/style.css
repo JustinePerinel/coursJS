@@ -284,6 +284,7 @@ td {
     padding-left: 10px;
     height: 40px;
     line-height: 45px;
+    min-width: 50%;
 }
 
 

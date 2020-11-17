@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript II. 05</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="concatenation.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+         <!-- début de la nav -->
+         <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="02-01-introduction.html">Les variables</a>
+                        <a href="02-02-afficher.html">Exemples de variables</a>
+                        <a href="02-03-type.html">Les types de données</a>
+                        <a href="02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                        <a href="02-05-concatenation.html" class="active">La concaténation</a>
+                        <a href="02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="../03-structures-controle/03-01-introduction.html">Introduction</a>
+                        <a href="../03-structures-controle/03-02-if.html">If...</a>
+                        <a href="../03-structures-controle/03-03-if-else.html">If... else...</a>
+                        <a href="../03-structures-controle/03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="../03-structures-controle/03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="../03-structures-controle/03-06-precedence.html">Précédence</a>
+                        <a href="../03-structures-controle/03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="../03-structures-controle/03-08-switch.html">Switch</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2> <a href="02-05-concatenation.html">II. 05 - La concatenation et les littéraux de gabarit</a></h2>
+
+        <h3>1 - La concaténation JS</h3>
+        <p>Littéralement, concaténer signifie "mettre bout à bout". L'opérateur de concaténation est le <code>+</code>. On utilisera notamment la concaténation pour intégrer le contenu de variable dans une page en html.</p>
+        <p>On utilisera par exemple le code suivant : <br>
+        <code>let monAge = 27; <br>
+            let phrase = 'Bonjour, j\'ai '; <br>
+            document.getElementById('p1').innerHTML = phrase + monAge + ' ans';</code><br>
+        pour avoir ce résultat :</p>
+        <p id="p1" class="js-integre"></p>
+        <p>Ici, on concatène la variable <strong>phrase</strong> qui contient <em>Bonjour j'ai</em> et la variable <strong>monAge</strong> qui contient <em>27</em> et enfin la chaîne de caractère <em>'ans'</em> pour créer une phrase et l'intégrer dans le HTML. On remarque aussi dans le code le caractère d'échappement <code>\</code> pour permettre à l'apostrophe d'être considérée comme telle.</p>
+
+        <div class="notice">Atention, utilisé avec deux chiffres le signe <code>+</code> sert à additionner.</div>
+
+        <h3>2 - Les littéraux de gabarits</h3>
+        <p>IL faut toujours entourer les chaînes de caractères ou 'string' avec des apostrophes <code>' '</code> ou des guillemets doubles <code>" "</code>. Il existe une nouvelle et troisième manière de les entourer : on utilisera l'accent grave <code>``</code> : <kbd>alt gr + 7</kbd>.</p>
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>
