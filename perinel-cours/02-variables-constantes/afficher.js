@@ -12,7 +12,7 @@ let prenom = 'Justine';
 console.log(prenom);
 
 // une alerte pour afficher le contenu de la variable dans une boîte d'alerte
-alert(ville);
+alert(prenom);
 
 // une alerte pour afficher le contenu d'une chaîne de caractères
 alert('Bienvenue chez les Ch\'tis !')

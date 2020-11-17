@@ -5,6 +5,7 @@ let x = 4;
 
 let testEgalValeur = x == 4;
 console.log(testEgalValeur);
+document.getElementById('p1').innerHTML = 'La comparaison selon laquelle x = 4 est ' + testEgalValeur + '.';
 
 
 let testEgalValeurType = x === 4;
@@ -18,6 +19,7 @@ console.log(testDifferenceValeurType)
 
 let testInferieur = x < 3;
 console.log(testInferieur)
+document.getElementById('p2').innerHTML = 'La comparaison selon laquelle x < 3 est ' + testInferieur + '.';
 
 let testSuperieur = x > 2;
 console.log(testSuperieur)

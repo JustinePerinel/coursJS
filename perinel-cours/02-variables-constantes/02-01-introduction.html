@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>II. 01 Introduction</title>
+    <title>Cours de JavaScript II. 01</title>
     <!-- reset  -->
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <!-- mes styles en externe -->
     <link rel="stylesheet" href="../css/style.css">
     <!-- script en externe -->
@@ -18,29 +18,46 @@
         
         <nav>
             <ul class="row">
-                <li class="onglet col-4">Introduction
+                <li class="onglet">Introduction
                     <div class="dropdown-content">
-                        <a href="../01-introduction/01-01-introduction.html" class="sous-onglet">Du JS dans l'en-tête</a>
-                        <a href="../01-introduction/01-02-introduction.html" class="sous-onglet">Du JS dans la balise ouvrante</a>
-                        <a href="../01-introduction/01-03-introduction.html" class="sous-onglet">Du JS dans body</a>
-                        <a href="../01-introduction/01-04-introduction.html" class="sous-onglet">Du JS une feuille externe</a>
+                        <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
                     </div>
                 </li>
-                <li class="onglet col-4">Variantes et constantes
+                <li class="onglet">Variables et constantes
                     <div class="dropdown-content">
-                        <a href="02-01-introduction.html" class="sous-onglet">Les variables</a>
-                        <a href="02-02-afficher.html" class="sous-onglet">Exemples de variables</a>
-                        <a href="02-03-type.html" class="sous-onglet">Les types de données</a>
-                        <a href="02-04-operateurs.html" class="sous-onglet">Les opérateurs arithmétiques</a>
+                        <a href="02-01-introduction.html" class="active">Les variables</a>
+                        <a href="02-02-afficher.html">Exemples de variables</a>
+                        <a href="02-03-type.html">Les types de données</a>
+                        <a href="02-04-operateurs.html">Les opérateurs arithmétiques</a>
                         <a href="02-05-concatenation.html">La concaténation</a>
                         <a href="02-06-constantes.html">Les constantes</a>
                     </div>
                 </li>
-                <li class="onglet col-4"> Les structures de contrôle
+                <li class="onglet"> Les structures de contrôle
                     <div class="dropdown-content">
-                        <a href="../03-structures-controle/03-01-introduction.html" class="sous-onglet">Introduction</a>
-                        <a href="#" class="sous-onglet">Un lien</a>
-                        <a href="#" class="sous-onglet">Un lien</a>
+                        <a href="../03-structures-controle/03-01-introduction.html">Introduction</a>
+                        <a href="../03-structures-controle/03-02-if.html">If...</a>
+                        <a href="../03-structures-controle/03-03-if-else.html">If... else...</a>
+                        <a href="../03-structures-controle/03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="../03-structures-controle/03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="../03-structures-controle/03-06-precedence.html">Précédence</a>
+                        <a href="../03-structures-controle/03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="../03-structures-controle/03-08-switch.html">Switch</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
                     </div>
                 </li>
             </ul>
@@ -50,23 +67,28 @@
 
         <h3>1 - Qu'est ce qu'une variable ?</h3>
         <p>Une variable est un conteneur servant à stocker des informations de manière temporaire, du texte (une chaîne de caractères) ou un nombre. La variable varie ! Elle stocke différentes valeurs au fil du temps.</p>
-        <p>Une variable est la valeur sont deux choses différentes</p>
+        <p>Une variable et une valeur sont deux choses différentes.</p>
 
         <h3>2 - Règles de déclaration</h3>
-        <p>On dit (comme en php) que l'on "déclare" une variable. On déclarer une variable avec des mots-clefs.</p>
+        <p>On dit (comme en php) que l'on "déclare" une variable. On déclare une variable avec des mots-clefs.</p>
 
         <h4>A - Les mots-clefs</h4>
-        <ul>
-            <li><code>let</code></li>
-            <li><code>var</code></li>
+        <ul class="avec-puces p-40">
+            <li>'let' EXEMPLE <br>
+                <code>let couleur = 'rouge';</code> <br>
+                ici, le type de la valeur sera string ('bla bla'), une chaîne de caractères.
+            </li>
+            <li>'var' EXEMPLE <br>
+                <code>var monAge = 27;</code><br>
+                ici, le type de la valeur sera number (27), un nombre.
+            </li>
         </ul>
         <br><br>
         <h4>B - Quelques règles</h4>
-        <ul>
+        <ul class="avec-puces p-40">
             <li>Le nom d'une variable doit obligatoirement commencer par une lettre ou un underscore _</li>
             <li>Le nom d'une variable ne doit contenir que des lettres, des chiffres et des underscores, pas de caractères spéciaux</li>
             <li>Il n'y a pas d'espaces</li>
-            <li>cf. introduction.js</li>
         </ul>
 
         <h3>3 - Initialiser une variable</h3>
@@ -74,13 +96,30 @@
 
         <h3>4 - Différences entre "var" et "let"</h3>
         <p><code>let</code> est plus récent que <code>var</code>. On utilisera par défaut <code>let</code>. Var est l'abréviation de variable. On peut écrire le code en une ligne ou en deux (cf. introduction.js). Attention à l'ordre des données !</p>
-
-        <ul>
-            <li><h4>A. La remontée ou hoisting des variables</h4>
-            <p>Avec <code>var</code>, on n'est pas obligé de déclarer la variable avant de la manipuler ou l'affecter. cf. introduction.js : ligne 26.</p></li>
+            <ul>
+                <li><h4>A. La remontée ou hoisting des variables</h4>
+                <p>Avec <code>var</code>, on n'est pas obligé de déclarer la variable avant de la manipuler ou l'affecter. cf. introduction.js : ligne 26</p>
+                <ul class="avec-puces p-40">
+                <li>Ceci fonctionne <br>
+                    <code>nom = 'Isola';<br>
+                    var nom;</code></li>
+                <li>ceci ne fonctionne pas <br>
+                    <code>ville ='Suresnes';<br>
+                    let ville;</code></li>
+                </ul></li>
             
             <li><h4>B. La redéclaration des variables</h4>
-            <p>Avec <code>var</code> on avait le droit de déclarer une même variable en utilisant à chaque fois var, ce qui avait pour effet de modifier la valeur stockée. On ne peut pas le faaire avec <code>let</code>. cf. introduction.js : ligne 45.</p></li>
+            <p>Avec <code>var</code> on avait le droit de déclarer une même variable en utilisant à chaque fois var, ce qui avait pour effet de modifier la valeur stockée. On ne peut pas le faaire avec <code>let</code>. cf. introduction.js : ligne 45.</p>
+                <ul class="avec-puces p-40">
+                    <li>Ceci fonctionne <br>
+                        <code>var chien = 'Medor' <br>
+                        var chien = 'Max'</code></li>
+                        
+                    <li>Ceci ne fonctionne pas <br>
+                        <code>let chat = 'Minou'<br>
+                        let chat = 'Obi-Wan'</code></li>
+                </ul>
+            </li>
 
             <li><h4>C. La portée des variables</h4>
             <p>La portée d'une "variable" désigne l'endroit où cette variable va pouvoir être utilisée dans un script. Nous reparlerons donc de cette portée des variables lorsque nous aborderons les fonctions en JavaScript.</p><p><code>let</code> est plus contraignant que <code>var</code>. Le premier à une portée locale, alors que le second à une portée globale. </p>

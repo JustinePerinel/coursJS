@@ -17,7 +17,7 @@ document.getElementById('p1').innerHTML = 'Type de données pour la variable pr�
 
 document.getElementById('p2').innerHTML = 'Type de données pour la variable age : ' + typeof age; 
 
-document.getElementById('p3').innerHTML = 'Type de données pour la variable code postale : ' + typeof codePostal; 
+document.getElementById('p3').innerHTML = 'Type de données pour la variable code postal : ' + typeof codePostal; 
 
 
 // 1ere solution avec des guillemets différentes
@@ -43,6 +43,8 @@ console.log(typeof x, y, z)
 // test 1
 let test = 8 > 4;
 
+document.getElementById('b').innerHTML = 'Type de données pour la variable test : ' + typeof test; 
+
 // test 2
 // Mettre == (= *2) pour calcul 
 let test2 = 12 + 25 == 46;
@@ -60,6 +62,7 @@ let arbre;
 
 console.log(typeof arbre)
 
+let pomme
 
 let nul = null;
 // ind = indéfinie
@@ -67,4 +70,4 @@ let ind;
 
 document.getElementById('p4').innerHTML = 'Type de données pour la variable null : ' + typeof nul;
 
-document.getElementById('p5').innerHTML = 'Type de données pour la variable ind : ' + typeof ind;
+document.getElementById('p5').innerHTML = 'Type de données pour la variable pomme : ' + typeof pomme;

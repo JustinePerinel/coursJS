@@ -75,3 +75,5 @@ o *= 5;
 
 console.log(m, o)
 
+let calcul1 = 1 - (2 * 3);
+document.getElementById('p1').innerHTML = '<Le>Le résultat de calcul1 est '+calcul1+'.</p>'

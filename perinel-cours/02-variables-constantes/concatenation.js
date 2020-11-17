@@ -3,7 +3,8 @@ let phrase = 'Bonjour, j\'ai ';
 
 // console.log(monAge, phrase);
 
-// alert(phrase + monAge + ' ' + 'ans.')
+// alert(phrase + monAge + ' ans.')
+document.getElementById('p1').innerHTML = phrase + monAge + ' ans';
 
 let x = 501;
 let y = 99;

@@ -6,18 +6,19 @@
 
 /* des couleurs génériques avec root  */
 :root {
-    --rose : rgb(255, 197, 226);
-    --rose-vif : hotpink;
+    --violet : rgb(201, 197, 255);
+    --violet-vif : rgb(138, 105, 255);
+    --rose : rgb(255, 164, 180);
     --noir : #000;
     --blanc : #fff;
+    --gris : rgb(223, 223, 223);
     --jaune : yellow;
     --rouge : red;
-    --gris : rgb(223, 223, 223);
 }
 
 /* typo, background et taille dans body  */
 body {
-    background-color: var(--rose);
+    background: linear-gradient(pink, var(--violet));
     font-size: 18px;
     line-height: normal;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -32,14 +33,17 @@ main {
     min-height: 745px;
 }
 
+.p-40 {
+    padding-left: 40px;
+}
+
                             /* STYLE DE LA NAV  */
 
 nav {
-    height: 50px;
-    background-color: var(--rose);
-    line-height: 50px;
-    padding: 0;
-    margin: 0 0 20px 0;
+    height: 80px;
+    background-color: var(--violet);
+    /* padding: 5px 0 0 0;
+    margin: 0 0 20px 0; */
 
     /* permet de garder toujours la navigation en haut de la page */
     position: sticky;
@@ -47,29 +51,48 @@ nav {
 }
 
 /* du style pour le niveau 1 de la navigation, les onglets principaux */
-nav .onglet {
+nav ul {
+    display: flex;
+    flex-direction: row;
     padding: 0;
     margin: 0;
+}
+
+nav .onglet {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
     list-style-type: none;
     position: relative;
-    text-align: center;
     text-transform: uppercase;
-    border-right: 1px solid var(--rose-vif);
+    border-right: 1px solid var(--violet-vif);
+    border-left: 1px solid var(--violet-vif);
+    width: 20%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 /* style lors du survol des onglets principaux  */
 nav .onglet:hover {
-    box-shadow: 0px 8px 16px 0px var(--rose-vif);
+    box-shadow: 0px 8px 16px 0px var(--violet-vif);
 }
 
 /* pour le menu déroulant / SANS SURVOLEMENT*/
 .dropdown-content {
     display: none;
     position: absolute;
-    left: 50px;
+    top: 80px;
     background-color: var(--blanc);
-    min-width: 280px;
-    box-shadow: 0px 8px 16px 0px var(--rose-vif);
+    min-width: 290px;
+    box-shadow: 0px 8px 16px 0px var(--violet-vif);
     text-transform: none;
+
+    /* si les menus déroulants sont plus longs que 180px alors il y aura du scroll à la verticale */
+    max-height: 180px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }
 
 /* pour le menu déroulant / AVEC SURVOLEMENT */
@@ -79,15 +102,22 @@ nav .onglet:hover {
 /* style sur le lien des onglets inférieurs / SANS SURVOLEMENT */
 .dropdown-content a {
     color: var(--noir);
-    padding: 12px 16px;
+    padding: 12px 0;
     text-decoration: none;
     display: block;
 }
 /* style sur le lien des onglets inférieurs / AVEC SURVOLEMENT */
 .dropdown-content a:hover {
-    background: var(--gris);
+    background: rgba(253, 157, 173, 0.5);
     font-weight: 700;
+    text-decoration: none;
 }
+
+.active {
+    background-color:var(--rose);
+    font-weight: 800;
+}
+
 
                                 /* LES TITRES  */
 
@@ -97,25 +127,19 @@ h1 {
     text-align: center;
     font-size: 3em;
     font-weight: 900;
+    margin-top: 5px;
+    padding-top: 0;
 }
 
 h1 a {
     text-decoration: none;
-    color: var(--rose-vif);
+    color: var(--violet-vif);
     text-transform: uppercase;
 }
 
-.nav-gras {
-    font-weight: bold;
-}
-
-.nav-gras a {
+h1 a:hover{
+    color: var(--rose);
     text-decoration: none;
-    color: var(--noir);
-}
-
-.nav-gras a:hover {
-    color: var(--rose-vif);
 }
 
 h2 {
@@ -126,14 +150,14 @@ h2 {
     margin-top: 20px;
     text-align: center;
     text-transform: uppercase;
-    color: var(--rose-vif);
+    color: var(--rose);
     font-weight: 700;
 }
 
 h2 a {
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--rose-vif);
+    color: var(--rose);
     font-weight: 700;
 }
 
@@ -143,20 +167,32 @@ h2 a:hover {
 
 h3 {
     margin: 30px 0 10px 40px;
-    color: var(--rose-vif);
+    color: var(--violet-vif);
     padding-bottom: 5px;
     font-size: 1.6em;
     text-transform: uppercase;
     font-style: italic;
     font-weight: 500;
+    letter-spacing: 2px;
+}
+
+h3 a {
+    text-decoration: none;
+    color: var(--violet-vif);
+}
+
+h3 a:hover {
+    text-decoration: underline;
 }
 
 
 h4 {
+    color: var(--rose);
     font-size: 1.3em;
-    text-transform: uppercase;
-    padding: 0 0 15px 0;
+    text-transform: none;
+    font-weight: 800;
     font-style: italic;
+    margin: 5px auto;
 }
 
 h5 {
@@ -164,52 +200,47 @@ h5 {
     padding: 0 0 0 20px;
     font-variant: small-caps;
     font-weight: 700;
-    color: var(--rose-vif);
+    color: var(--violet-vif);
 }
 
                             /* STYLE POUR LES DÉFINITIONS  */
 
 dt {
-    color: var(--rose-vif);
+    color: var(--violet-vif);
     font-style: italic;
     padding-top: 10px;
 }
+
+                            /* STYLE POUR LES BOUTONS  */
 
 #boutons {
     display: flex;
     justify-content: center;
 }
 
-                            /* UNE CLASSE POUR UN PADDING DE 40px */
-
-.p-40 {
-    padding-left: 40px;
+button {
+    margin: 20px;
+    padding: 5px;
 }
 
-                            /* DU STYLE POUR LES LISTES ORDONNÉES */
+
+                            /* DU STYLE POUR LES LISTES */
 
 ol li {
     list-style-type: none;
     padding-left: 15px;
+    padding-bottom: 10px;
 }
-
-.p-40 {
-    padding-left: 40px;
-}
-
-.p-40 li {
-    list-style-type: decimal;
-}
-
-#ol-2 li {
-    list-style-type: none;
-}
-
-                            /* DU STYLES POUR LES LISTES NON-ORDONNÉES  */
 
 ul li {
     list-style-type: none;
     padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.avec-puces li {
+    list-style-type: circle;
+    list-style-type: decimal;
 }
 
                             /* DU STYLE POUR LES PARAGRAPHES  */
@@ -217,8 +248,19 @@ ul li {
 p {
     padding-left: 15px;
     padding-top: 0;
-    margin-top: 0;
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+                            /* DU STYLE POUR LES LIENS */
+
+a {
+    text-decoration: none;
+    color: var(--noir);
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
                             /* DU STYLE POUR UN EFFET STABILO  */
@@ -227,23 +269,21 @@ p {
     background-color: var(--jaune);
 }
 
+.js-integre {
+    background-color: var(--rose);
+    width: 500px;
+}
+
                             /* DU STYLE POUR UN EFFET ATTENTION  */
 
 .notice {
     color: var(--rouge);
     width: 900px;
-    margin: 10px auto 30px auto;
+    margin: 20px auto;
     font-weight: 800;
     border: 2px solid var(--rouge);
     padding: 15px;
     text-align: center;
-}
-
-                            /* DU STYLE SUR LES BOUTONS JS */
-
-button {
-    margin: 20px;
-    padding: 5px;
 }
 
                             /* DY STYLE POUR LA BALISE CODE */
@@ -257,34 +297,42 @@ code {
 
 table {
     width: 1000px;
-    margin: auto;
+    margin: 30px auto;
+
 }
 
 /* style pour les bordures du tableau  */
 table, td, th {
-    border: 1px solid var(--rose-vif);
+    border: 1px solid var(--violet-vif);
     border-collapse: collapse;
+}
+caption{
+    text-transform: uppercase;
+    background: var(--violet-vif);
+    color: var(--blanc);
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 2px solid rgb(60, 5, 105);
 }
 
 th {
     text-transform: uppercase;
     text-align: center;
-    height: 50px;
-    line-height: 50px;
-    background: var(--rose-vif);
+    height: 70px;
+    background: var(--violet-vif);
     color: var(--blanc);
+    vertical-align: middle;
 }
 
 /* du style pour faire une ligne sur 2 en couleur */
 table tr:nth-child(even) {
-    background-color: var(--rose);
+    background-color: var(--violet);
 }
 
 td {
     padding-left: 10px;
-    height: 40px;
-    line-height: 45px;
-    min-width: 50%;
+    height: 70px;
+    vertical-align: middle;
 }
 
 iframe {
@@ -301,17 +349,18 @@ footer {
     text-align: center;
 }
 
-                            /* STYLES POUR LES COLONNES + CLASSE ROW */
+                            /* STYLES POUR LES COLONNES + CLASSE ROW
 
 /* La classe pour créer une rangée */
-.row {
+/* .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
+    padding-left: 0;
+} */
 
 /* Les colonnes*/
-.col-1 {
+/* .col-1 {
     width: 6.333333%;
     margin: 1%;
 }
@@ -320,8 +369,7 @@ footer {
     margin: 1%;
 }
 .col-3 {
-    width: 23%;
-    margin: 1%;
+    width: 25%;
 }
 .col-4 {
     width: 33.333333%;
@@ -357,4 +405,4 @@ footer {
 .col-12 {
     width: 98%;
     margin: 1%;   
-}
+} */ 

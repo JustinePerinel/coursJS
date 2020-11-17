@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exo JS 01</title>
+      <script>
+            // EXERCICE 1 : déclaration des variables
+
+            // num qui contient 255
+            //txt qui contient '255'
+            //bin (binaire) qui contient le boolean vraie
+            //flt (float = décimal) qui contient la valeur 7,23
+            let num = 255; 
+            let txt = '255'; 
+            let bin = true; 
+            let flt = 7.23;
+
+            //afficher les variables dans le console log
+            console.log(num,txt,bin,flt);
+
+            // EXERCICE 2 :
+            //appliquer à num l'opérateur d'incrémentation
+            //concaténer à la chaîne txt la chaîne suivante : ' est ici une chaîne de caractères'.
+            //Inverser la valeur logique de bin
+            //Ajouter à flt la valeur contenue dans num
+
+            num++;
+            console.log('J\'incrémente 255 :',num);
+
+            console.log(txt,'est ici une chaîne de caractères')
+
+            console.log(!bin)
+
+            flt = flt+num;
+            console.log(flt)
+
+            // EXERCICE 3
+
+            //num2 qui contient 23
+            //txt2 qui contient '33'
+            //Afficher le résultat de txt2 + num2 avec la console
+            //Afficher le résultat de num2 + txt2
+
+            var num2 = 23;
+            var txt2 = '33';
+
+            console.log(txt2+num2)
+
+            document.write(num2+txt2)
+
+            // EXERCICE
+            
+            //avec num2 et txt2 
+            //on ajoute une variable tmp qui contient 0
+            // convertir la chaine contenue dans txt2 en number avec parseInt et mettre le résultat dans tmp
+            //Ajouter à num2 le contenu de tmp
+
+            var parse = parseInt(txt2);
+            console.log(typeof(parse))
+
+            var tmp = 0;
+            tmp += parse+num2;
+            console.log(tmp);
+
+
+
+      </script>
+      <style>
+            body {
+                  background-color: rgb(255, 226, 231);
+            }
+      </style>
+</head>
+<body> 
+      <h1>Une page d'exos</h1>
+      <h2>Ouvrir la console</h2>
+</body>
+</html> 

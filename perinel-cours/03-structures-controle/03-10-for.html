@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript III. 08</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="for.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+<!-- début de la nav -->
+<nav>
+    <ul class="row">
+        <li class="onglet">Introduction
+            <div class="dropdown-content">
+                <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+            </div>
+        </li>
+        <li class="onglet">Variables et constantes
+            <div class="dropdown-content">
+                <a href="../02-variables-constantes/02-01-introduction.html">Les variables</a>
+                <a href="../02-variables-constantes/02-02-afficher.html">Exemples de variables</a>
+                <a href="../02-variables-constantes/02-03-type.html">Les types de données</a>
+                <a href="../02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                <a href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a>
+                <a href="../02-variables-constantes/02-06-constantes.html">Les constantes</a>
+            </div>
+        </li>
+        <li class="onglet"> Les structures de contrôle
+            <div class="dropdown-content">
+                <a href="03-01-introduction.html">Introduction</a>
+                <a href="03-02-if.html">If...</a>
+                <a href="03-03-if-else.html">If... else...</a>
+                <a href="03-04-if-else-if-else.html">If... else if... else...</a>
+                <a href="03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                <a href="03-06-precedence.html">Précédence</a>
+                <a href="03-07-ternaire.html">L'opérateur ternaire</a>
+                <a href="03-08-switch.html">Switch</a>
+                <a href="03-09-boucles.html">Les boucles</a>
+                <a href="03-10-for.html" class="active">La boucle for</a>
+            </div>
+        </li>
+        <li class="onglet"> Les fonctions
+            <div class="dropdown-content">
+                <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                <a href="#">Un autre onglet</a>
+            </div>
+        </li>
+        <li class="onglet"> Cours de JS de Régis
+            <div class="dropdown-content">
+                <a href="../10-video-js/video.html">Les vidéos</a>
+                <a href="../10-video-js/index.html">Index pour le JS</a>
+            </div>
+        </li>
+    </ul>
+</nav> <!-- fin de la nav  -->
+
+        <h2> <a href="03-10-for.html">III. 10 La boucle for</a></h2>
+        <h3>1 - Présentation de for</h3>
+        <p>Une boucle <code>for</code>, pour en français, est différente structurellement de "while..." et "do... while", puis qu'on initialise la variable à l'intérieur de la boucle.</p>
+        <p class="js-integre" id="p1"></p>
+
+        <p class="notice">Notez qu'on utilise généralement la lettre « i » (pour « iterator ») dans les boucles en général et particulièrement au sein des boucles for pour les reconnaitre plus rapidement dans un script. Cependant, ce n'est pas obligatoire et vous pouvez utiliser n'importe quel autre nom de variable.</p>
+
+        <table id="tr1"></table>
+        
+        <h4>L'instruction "break"</h4>
+        <p>Dans les paragraphes qui sont créés ci-dessous à l'aide d'une boucle <code>for</code>, nous inserons un <code>if</code> à l'intérieur de la boucle. Le <code>if</code> contient une instruction qui stoppe la boucle quand la consition est vraie. </p>
+        <p id="p2" class="js-integre"></p>
+        
+        <h4>L'instruction "continue"</h4>
+        <p>Avec cette instruction, on peut sauter une itéération : dans notre exemple, nous n'affichons que les itérations qui sont paires. cf. les commentaires dans le for.js.</p>
+        <p id="p3" class="js-integre"></p>
+        
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>
