@@ -14,7 +14,7 @@ var tmp; // Déclaration d'une variable temporaire pour permuter les variables n
 // la variable tmp va stocker la valeur de la variable nombre1, soit 5. Donc tmp = 5
 tmp = nombre1; 
 
-// la variable nombre1 va stocker la valuer de la variable nombre2, soit 3. Donc nombre1 = 3
+// la variable nombre1 va stocker la valeur de la variable nombre2, soit 3. Donc nombre1 = 3
 nombre1 = nombre2;
 
 // la variable nombre2 va stocker la valeur de la variable tmp, soit 5. Donc nombre2 = 5
