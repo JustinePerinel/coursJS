@@ -1,0 +1,88 @@
+<!DOCTYPE html> <!-- Fait par Audrey SAULNIER -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Exo CONVERSION</title>
+    <style> 
+        /* Style de ma page */
+        body {
+            background-color:  rgb(219, 185, 230);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        main {
+            background-color:#fff;
+            width: 1200px;
+            min-width: auto;
+            border-radius: 20px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            width: 800px;
+            height: auto;
+            background-color: lightblue;
+            padding: 20px;
+            font-size: 3em;
+            text-align: center;
+            min-width: auto;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .orange {
+            background-color: rgb(221, 162, 53);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .exemple {
+        color: orange;
+        width: 45%;
+        border-bottom:4px solid orange;
+        padding: 20px;
+        }
+
+        p {
+            padding: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+    </style>
+    <!-- lien vers ma page JS -->
+    <script src="04-conversion.js" async></script>
+</head>
+<body>
+    <main> <!-- Début de main -->
+        <h1>Conversion de degré Celsius en degré Fahrenheit</h1>
+        <p>Ecrivez un programme qui fait saisir une température en degrés celsius, puis qui affiche le résultat de sa conversion en degrés fahrenheit. </p>
+
+        <p class="orange">C'est un physicien allemand Daniel Gabriel Fahrenheit que l'on doit l'invention des thermomètres en graduation Fahrenheit. <br> 
+        Au début, ses thermomètres sont à l'alcool (1709), mais il remplace rapidement l'alcool par du mercure (1715), permettant à ses outils de mesure de fournir des données comparables. <br>
+
+        En 1742, un autre physicien, le suédois Anders Celsius, propose une nouvelle graduation au thermomètre. <br>
+        La conversion entre les échelles est donnée par : <br>
+
+        [°F] = [°C] x 9/5 + 32</p>
+
+        <h2 class="exemple">Résultat programme de conversion</h2>
+
+        <ul>
+            <li id="l1"></li>
+            <li id="l2"></li>
+            <li id="l3"></li>
+            <li id="l4"></li>
+        </ul>
+
+    </main> <!-- </main> Fin de main -->
+
+</body>
+
+</html>
