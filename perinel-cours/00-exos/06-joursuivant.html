@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exo 05-permutation</title>
+
+      <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+      <main>
+            <h1><a href="../index.html">Retour vers l'index</a></h1>
+            <h2>Quel jour serons-nous demain ?</h2>
+
+            <p>Écrivez un programme de conditions joursuivant.js qui demande à l'utilisateur le jour de la semaine puis affiche le nom du jour suivant. <br>
+            Les erreurs de saisies (jour incorrect) doivent être gérées. 
+            </p>
+            <div class="notice">Effectuez d'abord l'exercice avec un <code>if else</code> puis avec un <code>switch</code>. </div>
+            <p id="p1"></p>
+            <code>
+                var jour = prompt('Quel jour sommes-nous aujourd\'hui ?'); <br>
+                
+                if( jour == 'lundi'){ <br>
+                    document.getElementById('p1').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc mardi.'; <br>
+                } else if( jour == 'mardi'){ <br>
+                    document.getElementById('p1').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc mercredi.'; <br>
+                }else if( jour == 'mercredi'){ <br>
+                    document.getElementById('p1').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc jeudi.'; <br>
+                }else if( jour == 'jeudi'){ <br>
+                    document.getElementById('p1').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc vendredi.'; <br>
+                }else if( jour == 'vendredi'){ <br>
+                    document.getElementById('p1').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc samedi.'; <br>
+                }else if( jour == 'samedi'){ <br>
+                    document.getElementById('p1').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc dimanche.'; <br>
+                }else if( jour == 'dimanche'){ <br>
+                    document.getElementById('p1').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc lundi.'; <br>
+                }else{ <br>
+                    document.getElementById('p1').innerHTML = 'Ceci n\'est pas un jour de la semaine.';
+                }</code>
+                <br><hr><br>
+            <p id="p2"></p>
+            <code>
+                var jour2 = prompt('Quel jour sommes-nous aujourd\'hui ?'); <br>
+
+                switch(jour2){  <br>
+                case 'lundi':  <br>
+                    document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour2 + ', demain nous serons donc mardi.'; <br> 
+                    break;   <br>
+                case 'mardi':  <br>
+                    document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc mercredi.'; <br>
+                    break;  <br>
+                case 'mercredi':  <br>
+                    document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc jeudi.'; <br>
+                    break;  <br>
+                case 'jeudi':  <br>
+                    document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc vendredi.'; <br>
+                    break;  <br>
+                case 'vendredi':  <br>
+                    document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc samedi.';  <br>
+                    break;  <br>
+                case 'samedi':  <br>
+                    document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc dimanche.'; <br>
+                    break;  <br>
+                case 'dimanche':  <br>
+                    document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc lundi.'; <br>
+                    break;  <br>
+                default:  <br>
+                    document.getElementById('p2').innerHTML =  'Ceci n\'est pas un jour de la semaine.'; <br>
+                    }
+            </code>
+            
+            <script src="06-joursuivant.js"></script>
+      </main>
+</body>
+</html>

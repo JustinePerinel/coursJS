@@ -21,6 +21,7 @@ body {
     background: linear-gradient(pink, var(--violet));
     font-size: 18px;
     line-height: normal;
+    margin-bottom: 150px; /* Margin bottom by footer height */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -67,7 +68,7 @@ nav .onglet {
     text-transform: uppercase;
     border-right: 1px solid var(--violet-vif);
     border-left: 1px solid var(--violet-vif);
-    width: 20%;
+    width: 16.6666%;
     height: 80px;
     display: flex;
     align-items: center;
@@ -347,6 +348,14 @@ footer {
     margin-top: 25px;
     height: 80px;
     text-align: center;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Set the fixed height of the footer here */
+    line-height: 100px; /* Vertically center the text there */
+    background-color: #f5f5f5;
 }
 
                             /* STYLES POUR LES COLONNES + CLASSE ROW
