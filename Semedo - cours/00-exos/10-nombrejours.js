@@ -12,6 +12,25 @@ console.log(numMois);
 
 // console.log(mois);
 
+// Solution Patrick --------
+
+if(isNaN(mois)){ // si ce n'est pas un number
+    document.getElementById('p1').innerHTML = 'Vous devez saisir un chiffre !' // fait ça
+}else{ // sinon c'est un nombre
+        if(mois === 2){ // un nombre égal à 2 etc.
+            // document.getElementById('p1').innerHTML = ' Le mois numéro ' + mois + ' de l\'année fait 28 jours.';
+            document.getElementById('p1').innerHTML = ' Le mois numéro ' + mois + ', ' + moisNom[mois - 1] + ', '+'fait 28 jours.'; 
+        }else if(mois === 4 || mois === 6 || mois === 9 || mois === 11){// ou à 4 ou à 6 etc.
+            // document.getElementById('p1').innerHTML = ' Le numéro ' + mois + ' de l\'année fait 30 jours.';
+            document.getElementById('p1').innerHTML = ' Le mois numéro ' + mois + ', ' + moisNom[mois - 1] + ', '+'fait 30 jours.'; 
+        }else if(mois === 1 || mois === 3 || mois === 5 || mois === 7 || mois === 8 || mois === 10 || mois === 12 ){// ou à 1 ou à 3 etc.
+            // document.getElementById('p1').innerHTML = ' Le numéro ' + mois + ' de l\'année fait 31 jours.';
+            document.getElementById('p1').innerHTML = ' Le mois numéro ' + mois + ', ' + moisNom[mois - 1] + ', '+'fait 31 jours.'; 
+        }else {
+            document.getElementById('p1').innerHTML = 'Votre choix de numéro, le ' + mois + ' , n\'est pas dans le calendrier !';
+        }     
+}// fin du if else principal
+
 // première solution ----------
 
 // if(!isNaN(mois)){ // est-ce bien un nombre ?
@@ -60,18 +79,3 @@ console.log(numMois);
 //     document.getElementById('p1').innerHTML = 'Il n\'y a que 12 mois dans l\'année !';
 // }
 
-// Solution Patrick --------
-
-// if(isNaN(mois)){ // si ce n'est pas un number
-//     document.getElementById('p1').innerHTML = 'Vous devez saisir un chiffre !' // fait ça
-// }else{ // sinon c'est un nombre
-//         if(mois === 2){ // un nombre égal à 2 etc.
-//             document.getElementById('p1').innerHTML = ' Le mois numéro ' + mois + ' de l\'année fait 28 jours.';
-//         }else if(mois === 4 || mois === 6 || mois === 9 || mois === 11){// ou à 4 ou à 6 etc.
-//             document.getElementById('p1').innerHTML = ' Le numéro ' + mois + ' de l\'année fait 30 jours.';
-//         }else if(mois === 1 || mois === 3 || mois === 5 || mois === 7 || mois === 8 || mois === 10 || mois === 12 ){// ou à 1 ou à 3 etc.
-//             document.getElementById('p1').innerHTML = ' Le numéro ' + mois + ' de l\'année fait 31 jours.';
-//         }else {
-//             document.getElementById('p1').innerHTML = 'Votre choix de numéro, le ' + mois + ' , n\'est pas dans le calendrier !';
-//         }     
-// }// fin du if else principal
