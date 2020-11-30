@@ -30,30 +30,31 @@
             </div> <!-- fin de col -->
 
             <div class="col-4 bg-success text-white" >
-                <p>paragraphe</p>
+                <p class="ma-classe">paragraphe</p>
             </div>
             <div class="col-4">
-                <p>paragraphe</p>
+                <p class="ma-classe">paragraphe</p>
             </div>
             <div class="col-4 bg-primary text-white">
-                <p>paragraphe</p>
+                <p class="ma-classe">paragraphe</p>
             </div> <!-- fin de col -->
         </div> <!-- fin de row -->
 
         <div class="row border border-warning my-4 p-2">
             <div class="col-6">
                 <h2 id="aChanger">2- Ce titre (#aChanger) va changer !!!</h2>
-                <p>paragraphe</p>
+                <p class="uneClasse">paragraphe</p>
             </div> <!-- fin de col -->
             <div class="col-6 bg-warning text-white">
-                <p>paragraphe</p>
+                <p class="uneClasse">paragraphe</p>
             </div> <!-- fin de col -->
         </div> <!-- fin de row -->
 
         <div class="row border border-primary">
             <div class="col-12">
                 <h2 id="titre2">3- Ce titre 2 (#titre2) va changer aussi</h2>
-                <p>paragraphe</p>
+                <p class="selectClasse">paragraphe</p>
+                <p class="selectClasse">paragraphe</p>
             </div> <!-- fin de col -->
         </div> <!-- fin de row -->
     </div> <!-- fin container -->
@@ -81,7 +82,7 @@
 
         // 4ème méthode : getElementByClassName
         // je cherche tous les éléments qui ont cette classe
-        var selectClass = document.getElementsByClassName('row');
+        var selectClass = document.getElementsByClassName('ma-classe');
         console.log(selectClass);
 
         // grâce à l'index des éléments qui ont la classe .ma-classe je peux en cibler un en particulier
@@ -89,9 +90,9 @@
 
         // .innerHTML cible ce qui se trouve dans l'élément, on dit qu'il définit le contenu
         // selectClass[2].innerHTML;
-        console.log(selectClass[2].innerHTML);
+        console.log(selectClass[2].innerHTML); // je vais le modifier
 
-        // selectClass[1].innerHTML = 'Et là je change le contenu : youpi'
+        selectClass[2].innerHTML = 'Et là je change le contenu : youpi'
 
         // MINI EXO modifier le contenu du h2  id #aChanger et changer par "3- Je change le titre yessss !"
 
@@ -99,6 +100,58 @@
        console.log(selectId);
 
        selectId.innerHTML = '3- Je change le titre yesss !';
+
+       // 5è méthode
+       // sélection d'un élément par son nom getElementsByTagName
+
+       var lesP = document.getElementsByTagName('p');
+       console.log(lesP);
+
+       //MINI EXO sélectionner le premier paragraphe
+       console.log(lesP[0]);
+
+       // modifictation d'un style de l'élément !
+       lesP[0].style.backgroundColor = 'pink'; // on change la couleur de fond
+       lesP[0].style.fontVariant = "small-caps"; // en petites capitales
+       lesP[0].style.borderRadius = '8px';
+       lesP[0].style.color = 'white';
+       lesP[0].style.padding = '5px';
+
+       //les mots-clés à appliquer avec .style 
+       //https://www.w3schools.com/jsref/dom_obj_style.asp
+
+       //si je veux maintenant changer tous les p
+
+       for(var i = 0; i < lesP.length; i++){
+           lesP[i].style.backgroundColor = 'goldenrod';
+           lesP[i].style.fontVariant = 'small-caps';
+       }
+
+       // 6ème méthode
+       // avec querySelector
+
+       let query1 = document.querySelector('#titre2');
+       console.log(query1);
+
+       // all, tous les éléments qui ont une classe .uneClasse
+       let query2 = document.querySelectorAll('.uneClasse');
+       console.log(query2);
+
+       let query3 = document.querySelectorAll('li');
+       console.log(query3);
+
+       //MINI EXO
+       // à certains paragraphes, mettez une classe .selectClasse
+       // changer le texte pour "je change le texte de ce paragraphe" passez le en fond 'lightblue' et texte blanc et en gras
+
+       let query4 = document.querySelectorAll('p.selectClasse');
+       console.log(query4);
+       console.log(query4[1].innerHTML);
+
+       query4[1].innerHTML = 'Bonjour, je crevée mais tout va bien !';
+       query4[1].style.backgroundColor = 'lightblue';
+       query4[1].style.color = 'white';
+       query4[1].style.fontWeight = 'bold';
 
 
     </script>
