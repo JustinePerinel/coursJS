@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exo 05-permutation</title>
+
+      <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+      <main>
+            <h1><a href="../index.html">Retour vers l'index</a></h1>
+            <h2>Valeurs finales</h2>
+            <h3>Examinez le propgramme valeurs.js ci-dessous :</h3>
+            <code>
+                var nb1 = Number(prompt('Entrez nb1 : ')); <br>
+                var nb2 = Number(prompt('Entrez nb2 : ')); <br>
+                var nb3 = Number(prompt('Entrez nb3 : ')); <br>
+                // prompts remplacés par des valeurs <br> <br>
+            </code>
+            <code>
+                if (nb1 > nb2) { <br>
+                    nb1 = nb3 * 2; <br>
+                } else { <br>
+                    nb1++; <br>
+                    if (nb2 > nb3){ <br>
+                        nb1 = nb1 + nb3 * 3; <br>
+                    } else { <br>
+                        nb1 = 0; <br>
+                        nb3 = nb3 * 2 + nb2; <br>
+                    } <br>
+                }
+            </code>
+            <p>Avant de l'exécuter, tentez de prévoir les valeurs finales des variables nb1, nb2 et nb3 en fonction de leurs valeurs initiales et complétez le tableau ci-dessous. </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valeurs initiales</th>
+                        <th>Valeur finale nb1</th>
+                        <th>Valeur finale nb2</th>
+                        <th>Valeur finale nb3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SI nb1, nb2, nb3 valent tous 7</td>
+                        <td id="tda1"></td>
+                        <td id="tda2"></td>
+                        <td id="tda3"></td>
+                    </tr>
+                    <tr>
+                        <td>SI nb1, nb2, nb3 valent tous 4</td>
+                        <td id="tdb1"></td>
+                        <td id="tdb2"></td>
+                        <td id="tdb3"></td>
+                    </tr>
+                    <tr>
+                        <td>SI nb1 = 4, nb2 = 3 et nb3 = 2</td>
+                        <td id="tdc1"></td>
+                        <td id="tdc2"></td>
+                        <td id="tdc3"></td>
+                    </tr>
+                    <tr>
+                        <td>SI nb1 = 2, nb2 = 4 et nb3 = 0</td>
+                        <td id="tdd1"></td>
+                        <td id="tdd2"></td>
+                        <td id="tdd3"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <script src="09-valeurs.js"></script>
+      </main>
+</body>
+</html>

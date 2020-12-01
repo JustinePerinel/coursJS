@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exo 05-permutation</title>
+
+      <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+      <main>
+            <h1><a href="../index.html">Retour vers l'index</a></h1>
+            <h2>Baccalauréat</h2>
+
+            <p>Écrivez un programme '08-baccalauret.js' qui fait saisir la moyenne d'un candidat puis affiche si ce candidat est :</p>
+            <ul>
+                <li>Recalé (myenne inférieure à 10)</li>
+                <li>Reçu sans mention (de 10 à 12)</li>
+                <li>Reçu avec mention assez-bien (12 à 14) </li>
+                <li>Mention bien (14 à 16)</li>
+                <li>Mention très bien (16 à 18)</li>
+                <li>Félicitations du Jury (18 à 20)</li>
+            </ul>
+            
+            <h3>Exemple</h3>
+            <p id="p1"></p>
+            <code>// page js pour baccalaureat.html <br><br>
+
+                var note = parseFloat(prompt('Quelle est votre note du Baccalauréat ?'));<br><br>
+                
+                if ((note > 0) && (note < 10)){<br>
+                    document.getElementById('p1').innerHTML = 'Votre note est '+note+', désolé mais vous êtes recalé.'<br>
+                }else if((note >= 10) && (note < 12)){<br>
+                    document.getElementById('p1').innerHTML = 'Votre note est '+note+', vous obtenez le Baccalauréat, sans mention.'<br>
+                }else if ((note >= 12) && (note < 14)){<br>
+                    document.getElementById('p1').innerHTML = 'Votre note est '+note+', vous obtenez le Baccalauréat, avec la mention assez bien !'<br>
+                }else if ((note >= 14) && (note < 16)){<br>
+                    document.getElementById('p1').innerHTML = 'Votre note est '+note+', vous obtenez le Baccalauréat, avec la mention bien !'<br>
+                }else if ((note >= 16) && (note < 18)){<br>
+                    document.getElementById('p1').innerHTML = 'Votre note est '+note+', vous obtenez le Baccalauréat, avec la mention très bien !'<br>
+                }else if ((note >= 18) && (note <= 20)){<br>
+                    document.getElementById('p1').innerHTML = 'Votre note est '+note+', vous obtenez le Baccalauréat, avec les félicitations du Jury !'<br>
+                }else {<br>
+                    document.getElementById('p1').innerHTML = 'Vous devez saisir une note entre 0 et 20'<br>
+                }</code>
+
+                <br><hr><br>
+
+                <p id="p2"></p>
+            <script src="08-baccalaureat.js"></script>
+      </main>
+</body>
+</html>
