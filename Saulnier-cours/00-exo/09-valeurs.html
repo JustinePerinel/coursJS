@@ -1,0 +1,168 @@
+<!DOCTYPE html> <!-- Fait par Audrey SAULNIER -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09- Valeurs finales</title>
+    <style> 
+        /* Style de ma page */
+        :root {
+            --rose : rgb(255, 214, 221);
+            --rose-vif : rgb(240, 70, 240);
+            --noir : #000;
+            --blanc : #fff;
+            --jaune : yellow;
+            --rouge : red;
+            --violet : rgba(211, 61, 211, 0.856);
+        }
+        
+        body {
+            background-color:  rgb(219, 185, 230);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 20px;
+        }
+
+        main {
+            background-color:#fff;
+            width: 60%;
+            min-width: auto;
+            border-radius: 20px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            width: auto;
+            height: auto;
+            background-color: lightblue;
+            padding: 20px;
+            font-size: 3em;
+            text-align: center;
+            min-width: auto;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .orange {
+            background-color: rgb(221, 162, 53);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .exemple {
+        color: orange;
+        width: 45%;
+        border-bottom:4px solid orange;
+        padding: 20px;
+        }
+
+        table {
+            border: 2px solid var(--rose);
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        table th {
+            background-color: var(--rose-vif);
+            color: var(--blanc);
+            padding: 10px 0;
+        }
+
+        table, th, td {
+            border: 3px solid var(--noir);
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 10px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        table tr:nth-of-type(even) {
+            background-color: var(--rose);
+        }
+
+        .centrer {
+         padding-left: 75px;
+        }
+
+    </style>
+    <!-- lien vers ma page JS -->
+    <script src="09-valeurs.js" async></script>
+</head>
+<body>
+    <main> <!-- Début de main -->
+        <h1>Valeurs finales</h1>
+        <h2 class="exemple">Examinez le programme valeurs.js ci-dessous:</h2>
+        <p>var nb1 = Number(prompt("Entrez nb1 :"));</p>
+        <p>var nb2 = Number(prompt("Entrez nb2:"));</p>
+        <p>var nb3 = Number(prompt("Entrez nb3:"));</p>
+        <br>
+        <code>
+            if (nb1 > nb2) { <br>
+              nb1 = nb3 *2 ; <br>
+            } else { <br>
+                nb1++;<br>
+                if (nb2>nb3) { <br>
+                nb1 = nb1 + nb3 *3; <br>
+                } else {
+                    nb1 = 0; <br>
+                    nb3 = nb3 * 2 + nb2; <br>
+            } <br>
+        }
+        </code>
+        <br>
+        <p>Avant de l'exécuter, tentez de prévoir les valeurs finales des variables nb1, nb2 et nb3 en fonction de leur valeur initiale et compléter le tableau ci dessous.</p>
+
+        <a href="02-valeur.js">Lien vers le format JS de l'exercice</a>
+        <br>
+        <br>
+        <table>
+            <tr>
+                <th>valeurs initiales</th>
+                <th>valeur finale nb1</th>
+                <th>valeur finale nb2</th>
+                <th>valeur finale nb3</th>
+            </tr>
+            <tr>
+                <td>Ex. si nb1, nb2 & nb3 valent tous 7</td>
+                <td id="n1" class="centrer"></td>
+                <td id="n2" class="centrer"></td>
+                <td id="n3" class="centrer"></td>
+            </tr>
+            <tr>
+                <td>Si nb1, nb2 & nb3 valent tous 4</td>
+                <td id="n4" class="centrer"></td>
+                <td id="n5" class="centrer"></td>
+                <td id="n6" class="centrer"></td>
+            </tr>
+            <tr>
+                <td>Si nb1 = 4, nb2 = 3, nb3=2</td>
+                <td id="n7"  class="centrer"></td>
+                <td id="n8" class="centrer"></td>
+                <td id="n9" class="centrer"></td>
+            </tr>
+            <tr>
+                <td>Si nb1 = 2, nb2=4, nb3=0</td>
+                <td id="n10"  class="centrer"></td>
+                <td id="n11" class="centrer"></td>
+                <td id="n12"  class="centrer"></td>
+            </tr>
+        </table>
+
+        <h2 class="exemple">Résultat :</h2>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+       
+      
+    </main>
+    <!-- </main> Fin de main -->
+
+</body>
+
+</html> 

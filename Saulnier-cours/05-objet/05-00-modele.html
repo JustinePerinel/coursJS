@@ -17,6 +17,33 @@
     
     <!-- script en externe -->
     <script src="modele.js" async></script>
+    <style>
+        /* Sticky footer styles
+-------------------------------------------------- */
+        html {
+        position: relative;
+        min-height: 100%;
+        }
+        body {
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+        }
+        .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: auto;
+        line-height: 60px; /* Vertically center the text there */
+        background-color: #f5f5f5;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+
+    </style>
     
 </head>
 <body>
@@ -72,7 +99,7 @@
                         };
                     </code>
                 </div> <!--col 7 end-->
-                <div class="col-12">
+                <div class="col-12 border border-black my-10">
                     <h2>TITRE 2</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aliquam est illum magni nobis, deserunt molestias aut quas iusto corporis delectus, doloribus repudiandae reprehenderit beatae voluptatibus vel! Fugiat, repellat exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam qui aut rem expedita dicta voluptas, quidem quam reprehenderit officiis consequatur porro libero assumenda debitis asperiores enim quo tempora? Adipisci, iusto! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, repellat. Libero minus tempora minima voluptatem nobis veritatis molestias totam sit? Delectus harum esse quo, minus totam fuga nulla cum quisquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta aut illo earum quos eligendi eveniet laboriosam temporibus cumque nemo quia, nesciunt sequi natus! Voluptatem fugit minima labore ut amet nobis.</p>
                 </div><!--fin de col 12-->
@@ -81,13 +108,14 @@
         
         </div> <!--fin de container-->
     </div>
-
+    <br>
+    <br>
     <footer class="footer bg-danger">
         <div class="container">
             <!-- text-muted -->
-          <span class="text-white"> FOOTER Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia assumenda, doloribus quam praesentium dolores nostrum exercitationem necessitatibus sunt odit blanditiis repellendus delectus commodi. Obcaecati voluptatibus cum error reiciendis vel?</span>
+            <p class="text-muted"> FOOTER Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         </div>
-      </footer>
+    </footer>
 
     <!-- En 1er JQuery, puis Popper.js et le JS de Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

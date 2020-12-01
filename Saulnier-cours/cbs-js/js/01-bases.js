@@ -209,11 +209,42 @@ console.log('consultation de score après décrémentation par valeur de 7', sco
 //  active ou inactive dans nos programmes
 // En JS :  Boolean 
 
-// Le nom est tiré de George Boole (1815-1864)
+// Le nom est tiré de George Boole, mathématicien anglais (1815-1864)
+
 let estVivant = true
-console.log("Affichage d\'un booléen", estVivant)
+console.log('Affichage du contenu du boolean estVivant : ', estVivant)
 
 // EGALITE
 // On utilise le double égale ou == pour tester l'égalité d'une variable
+// On va pouvoir calculer si quelque chose est égal à une valeur; par exemple, un nombre :
 console.log('test de la variable nbDeVie sur la valeur 5 ', nbDeVie == 5)// apparait false
 console.log('test de la variable nbDeVie sur la valeur 6 ', nbDeVie == 6)// apparait true
+
+// ATTENTION : une mauvaise pratique
+
+
+
+// INTERACTION
+// DEMANDE D'UNE VALIDATION OU D'UNE CONFIRMATION
+// On peut demander une confirmation ou une validation à l'utilisateur
+// avec la fonction confirm() ,
+// ATTENTION l'éxecution en attente d'une réponse est suspendue
+
+// il est possible de placer une chaine dans les parenthèses pour expliquer la demande
+
+// La valeur répondue peut être enregistrée dans une variable:
+// console.log('valeur répondue : ', reponseUtilisateur);
+
+// VALEUR NON-DEFINIE undefined
+// Par défaut, une varibale créée va contenir undefined
+let inutilisee
+console.log('contenu de variable non-assignée', inutilisee);
+// ATTENTION : ne jamais assigner undefined, ce qui serait une contradiction
+// ATTENTION : une mauvaise pratique
+
+
+// VALEUR null
+// null est une valeur neutre qui est assignée lorsqu'on souhaite attribuer une valeur par défaut
+// let parDefaut = null
+let parDefaut = null
+console.log('valeur neutre : ', parDefaut);
