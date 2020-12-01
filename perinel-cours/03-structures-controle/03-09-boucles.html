@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript III. 08</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="boucles.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+        <!-- début de la nav -->
+        <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="../02-variables-constantes/02-01-introduction.html">Les variables</a>
+                        <a href="../02-variables-constantes/02-02-afficher.html">Exemples de variables</a>
+                        <a href="../02-variables-constantes/02-03-type.html">Les types de données</a>
+                        <a href="../02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                        <a href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a>
+                        <a href="../02-variables-constantes/02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="03-01-introduction.html">Introduction</a>
+                        <a href="03-02-if.html">If...</a>
+                        <a href="03-03-if-else.html">If... else...</a>
+                        <a href="03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="03-06-precedence.html">Précédence</a>
+                        <a href="03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="03-08-switch.html">Switch</a>
+                        <a href="03-09-boucles.html" class="active">Les boucles</a>
+                        <a href="03-10-for.html">La boucle for</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2> <a href="03-09-boucles.html">III. 09 Les boucles</a></h2>
+        <h3>1 - Présentation des boucles</h3>
+        <p>Les boucles vont nous permettre d'exécuter plusieurs fois un bloc de code. C'est-à-dire, d'exécuter un code en boucle tant qu'une condition donnée est vérifiée. Utiliser une boucle nous permet de n'écrire le code que l'on doit exécuter qu'une seule fois. </p>
+        <p>Il existe 6 boucles en JS :</p>
+        <ul class="avec-puces p-40">
+            <li>La boucle <strong>while</strong> : "tant que"</li>
+            <li>La boucle <strong>do... while</strong> : "faire... tant que"</li>
+            <li>La boucle <strong>for</strong> : "pour"</li>
+            <li>La boucle <strong>for... in</strong> : "pour... dans"</li>
+            <li>La boucle <strong>for... of</strong> : "pour... parmi"</li>
+            <li>La boucle <strong>for... await... of</strong> : "pour... (en ettente de...) parmi"</li>
+        </ul>
+        <p>Le fonctionnement général des boucles est toujours le même : on pose une condition qui sera généralement liée à la valeur d'une variable et on exécute le code de la boucle « en  boucle » tant que la condition est vérifiée.<br>
+        Pour éviter de rester bloqué à l'infini dans une boucle, vous pouvez donc déjà noter qu'il  faudra que la condition donnée soit fausse à un moment donné (pour pouvoir sortir de la  boucle).<br>
+        Pour que notre condition devienne fausse à un moment, on pourra par exemple incrémenter ou décrémenter la valeur de notre variable à chaque nouveau passage dans la boucle (ou modifier la valeur de notre variable selon un certain schéma).</p>
+        <p>Les boucles vont donc être essentiellement composées de trois choses :</p>
+        <ul class="avec-puces p-40">
+            <li>Une valeur de départ qui sert à initialiser la boucle et qui servira de compteur.</li>
+            <li>Un test ou une condition de sortie qui précise le critère de sortie de la boucle. </li>
+            <li>Un "itérateur" qui va modifier la valeur de départ de la boucle à chaque passage de celle-ci. JUsqu'à ce que la condition de sortie soit vérifiée. Pour cela, on devra "incrémenter" la valeur de départ.</li>
+        </ul>
+
+        <h3>2 - Les opérateurs d'incrémentation et de décrémentation</h3>
+        <dl>
+            <dt>Incrémenter</dt>
+            <dd>Ajouter 1 à une valeur</dd>
+            <dt>Décrémenter</dt>
+            <dd>Enlever 1 à une valeur</dd>
+        </dl>
+        <hr><hr>
+
+        <table>
+            <caption>Les opérateurs d'incrémentation et de décrémentation</caption>
+            <thead>
+                <tr>
+                    <th>Exemple</th>
+                    <th>Résultat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>++x</code></td>
+                    <td>Pré-incrémentation : incrémente la valeur contenue dans la variable x, puis retourne la valeur incrémentée</td>
+                </tr>
+                <tr>
+                    <td><code>x++</code></td>
+                    <td>Post-incrémentation : retourne la valeur contenue dans x avant incrémentation, puis incrémente la valeur de $x</td>
+                </tr>
+                <tr>
+                    <td><code>--x</code></td>
+                    <td>Pré-décrémentation : décrémente la valeur contenue dans la
+                        variable x, puis retourne la valeur décrémentée</td>
+                </tr>
+                <tr>
+                    <td><code>x--</code></td>
+                    <td>Post-décrémentation : retourne la valeur contenue dans x avant décrémentation, puis décrémente la valeur de $x</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Exemple : incrémentation et décrémentation</h4>
+
+        <h5>Post-incrémentation</h5>
+        <p id="p1" class="js-integre"></p>
+        <h5>Pré-incrémentation</h5>
+        <p id="p2" class="js-integre"></p>
+        <h5>Post-décrémentation</h5>
+        <p id="p3" class="js-integre"></p>
+        <h5>Pré-décrémentation</h5>
+        <p id="p4" class="js-integre"></p>
+        <p id="p5" class="js-integre"></p>
+        <hr>
+        <h3>3 - La boucle while</h3>
+        <h4>Exemple de boucle</h4>
+        <p>Ici, on boucle tant que la valeur n'a pas atteint 5. Le code est le suivant : <br>
+        <code>let w1 = 0;<br>
+
+            while(w1 < 5){  <br>
+                document.getElementById('while1').innerHTML += 'w1 contient la valeur '+w1+'.&lt;br>'; <br>
+                w1++;<br>
+            } </code></p>
+        <p id="while1" class="js-integre"></p>
+        <p>La boucle <code>while</code>, "tant que" en français, va nous pemettre de répéter une série d'instructions tant qu'une condition donnée est vraie, c'est-à-dire tant que la condition de sortie n'est pas vérifiée. </p>
+        <p id="while2" class="js-integre"></p>
+        <h3>4 - La boucle do... while</h3>
+        <p>La boucle do... while est relativement semblable à while, la seule différence réside dans l'ordre dans lequel vont se faire les opérations ; on effectuera un premier passage dans une boucle do... while même si la condition de sortie n'est pas vérifiée donc le code sera exécuté au moins une fois. </p>
+        <p>Avec cette boucle, le code s'exécute car le navigateur n'a pas encore vu que la condition est fausse car le code est dans l'ordre suivant : <br>
+            <code>do{ <br>
+                document.getElementById('while3').innerHTML +=
+                'Voyez, w3 contient la valeur '+w3+'.&lt;br>'; <br>
+                w3++;<br>
+            } <br>
+            while (w3 < 10)</code>
+        <p id="while3" class="js-integre"></p>
+        </p>
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

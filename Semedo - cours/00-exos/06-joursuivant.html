@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 06 Jours suivant</title>
+    <!-- html de Katia -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lavender;
+        }
+        main {
+            background-color: #fff;
+            width: 70%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 10px 15px;
+            overflow: hidden;
+        }
+
+        .titre {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: rebeccapurple;
+
+            position: relative;
+            top: -60px;
+            left: -50px;
+        }
+
+        h1 {
+            color: white;
+            /* font-family: serif; */
+            font-weight: 300;
+            letter-spacing: 2px;
+            
+            line-height: 40px;
+            text-align: center;
+            padding-left: 30px;
+            padding-top: 75px;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+
+        .bulle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(230, 230, 250, 0.7);
+
+            float: left;
+
+            position: relative;
+            right: -120px;
+            top: -50px;
+
+        }
+
+        /* #p1, #p2 {
+            color: purple;
+            text-align: center;
+            position: relative;
+            top: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 40px;
+        } */
+
+        .consignes {
+            float: left;
+            width: 65%;
+            padding-left: 20px;
+        }
+
+        .encadre {
+            background-color: lavenderblush;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .programme {
+            padding-left: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="titre">
+            <h1>Quel jour demain ?</h1>
+        </div>
+
+        <div class="consignes">
+            <h3>Consignes</h3>
+            <p>Écrivez un programme '06-joursuivant.js' qui demande le jour de la semaine à l'utilisateur, puis affiche le nom du jour suivant. </p>
+            <p>Les erreurs de saisie (jour incorrect) doivent êtres gérées.</p>
+            
+            <p class="encadre">Effectuez l'exercice avec des if/else if puis avec un switch.</p>
+        </div>
+
+        <div class="bulle"></div>
+
+        <div class="clear"></div>
+       
+        <div class="programme">
+            <p id="p1"></p>
+            <p>******</p>
+            <p id="p2"></p>
+        </div>
+           
+        
+    </main>
+    <script src="06-joursuivant.js"></script>
+</body>
+</html>

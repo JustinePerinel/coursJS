@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background-color: pink;
+        }
+    </style>
+    <script>
+        document.write('<h1> 01 Entraînement JS </h1>');
+
+        document.write('<h2 style="background: orange;width: 75%;color: #fff;">1 - Affichage</h2>');
+
+        var maBoite;
+        maBoite = 10;
+
+        let monAge= 12;
+
+        document.write(maBoite);
+
+        document.write('<p>Dans la variable maBoite, il y a ' + maBoite + '</p>');
+
+        console.log(maBoite, monAge);
+        console.log('Ceci est une chaîne de caractère dans le log.');
+
+        // ceci est une info, un petit pictogramme est placé devant le string dans la console 
+        console.info('une info envoyée dans la console.');
+
+        // alert() message d'alerte 
+        // alert('Cesi est un message d\'alerte');
+
+        // nouvelle boîte ; permet de confirmer au niveau du client
+        // confirm('Confirmez-vous ?');
+
+        // let sonChien = prompt('Quel est le prénom de votre chien ? '); 
+        // let humeur = prompt('Comment ça va ?');
+
+        // document.write('<p>Le nom de votre chien est ' + sonChien + '.</p>')
+        // document.write('<p>Alors, ça va ?' + humeur +'.</p>')
+
+        // portée locale ou globale de la variable 
+        // var a une portée globale et pas locale, contrairement à let
+
+        /*avec var on pourra déclarer la variable dans le bloc de code  */
+        if(true){
+            var nombre = 9;
+        }
+        console.log(nombre);
+
+        /* avec let on devra déclarer la variable avant le bloc de code  */
+        let nombre2;
+
+        if(true){
+            nombre2 = 18;
+        }
+
+        console.log(nombre2)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

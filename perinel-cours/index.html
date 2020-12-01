@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Index</title>
+    <!-- un reset en externe  -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- ma feuille de style en externe -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <h1><a href="index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+                   <!-- début de la nav -->
+        <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="02-variables-constantes/02-01-introduction.html">Les variables</a>
+                        <a href="02-variables-constantes/02-02-afficher.html">Exemples de variables</a>
+                        <a href="02-variables-constantes/02-03-type.html">Les types de données</a>
+                        <a href="02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                        <a href="02-variables-constantes/02-05-concatenation.html">La concaténation</a>
+                        <a href="02-variables-constantes/02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="03-structures-controle/03-01-introduction.html">Introduction</a>
+                        <a href="03-structures-controle/03-02-if.html">If...</a>
+                        <a href="03-structures-controle/03-03-if-else.html">If... else...</a>
+                        <a href="03-structures-controle/03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="03-structures-controle/03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="03-structures-controle/03-06-precedence.html">Précédence</a>
+                        <a href="03-structures-controle/03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="03-structures-controle/03-08-switch.html">Switch</a>
+                        <a href="03-structures-controle/03-09-boucles.html">Les boucles</a>
+                        <a href="03-structures-controle/03-10-for.html">La boucle for</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="04-fonctions/04-01-introduction.html" class="active">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="10-video-js/video.html">Les vidéos</a>
+                        <a href="10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+
+        <h2><a href="index.html">Introduction</a></h2>
+        
+        <ol class="avec-puces p-40">
+            <li>Le Java Script est un langage dynamique</li>
+            <li>Le Java Script est un langage principalement côté client</li>
+            <li>Le Java Script est un langage interprété</li>
+            <li>Le Java Script est un langage orienté objet (A VOIR)</li>
+        </ol>
+
+        <h3>I. Un langage dynamique</h3>
+        <p>Ce langage va nous permettre de manipuler des contenus HTML ou des styles CSS et de les modifier en fonction de divers évènements ou variables. Un évènement peut être par exemple un clic d’un utilisateur à un certain endroit de la page tandis qu’une variable peut être l’heure de la journée.</p>
+
+        <h3>II. Un langage principalement côté client</h3>
+        <p>La chose importante à retenir ici est que le JavaScript est un langage principalement utilisé côté client, mais qui va également pouvoir s’utiliser côté serveur à condition qu’on mette en place un environnement favorable (en utilisant Node.js par exemple).</p>
+
+        <h3>III. Un langage interprété</h3>
+        <p>Le JavaScript est un langage interprété. Cela signifie qu'il va pouvoir être exécuté directement sous réserve qu'on possède le logiciel interpréteur. Pas de panique ici : tous les navigateurs connus possèdent leur interpréteur JavaScript.</p>
+
+        <div class="notice">
+            JavaScript versus Java !!!! Attention
+            <p>Encore aujourd’hui, certaines personnes ont tendance à confondre les deux langages «Java » et « JavaScript ». Retenez ici que ces deux langages, bien que syntaxiquement assez proches à la base, reposent sur des concepts fondamentaux complètement différents et servent à effectuer des tâches totalement différentes.</p>
+        </div>
+        <div>
+            <p>Lorsqu'un élément est <span class="stabilo">surligné en jaune</span>, l'information est importante.</p>
+            <p>Lorsqu'un élément est <span class="js-integre">surligné en rose</span>, l'information est directement intégrée d'une page de JavaScript.</p>
+        </div>
+        <div>
+            <h3>Les tableaux</h3>
+            <ul class="avec-puces p-40">
+                <li>
+                    <a href="02-variables-constantes/02-04-operateurs.html">Le tableau sur les opérateurs arithmétiques</a>
+                    <p><code>'+' '-' '*' '/' etc.</code></p>
+                </li>
+                <li>
+                    <a href="02-variables-constantes/02-04-operateurs.html">Le tableau sur les opérateurs d'affectation</a>
+                    <p><code>'+=' '-=' '*=' etc.</code></p>
+                </li>
+                <li>   
+                    <a href="03-structures-controle/03-01-introduction.html">Le tableau sur les opérateurs de comparaison</a>
+                    <p><code>'==' '>' '&lt;'</code></p>
+                </li>
+                <li>
+                    <a href="03-structures-controle/03-05-operateurs-logiques.html">Le tableau sur les opérateurs logiques</a>
+                    <p><code>'&&' '||' et '!'</code></p>
+                </li>
+                <li>
+                    <a href="03-structures-controle/03-06-precedence.html">Le tableau sur les règles de précédences</a>
+                    <p>Tableau sur les règles de priorité pour les calculs</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

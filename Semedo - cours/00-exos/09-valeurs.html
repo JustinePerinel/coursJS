@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 09 Valeurs</title>
+    <!-- html de Katia -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lavender;
+        }
+        main {
+            background-color: #fff;
+            width: 70%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 10px 15px;
+            overflow: hidden;
+        }
+
+        .titre {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: rebeccapurple;
+
+            position: relative;
+            top: -60px;
+            left: -50px;
+        }
+
+        h1 {
+            color: white;
+            /* font-family: serif; */
+            font-weight: 300;
+            letter-spacing: 2px;
+            
+            line-height: 40px;
+            text-align: center;
+            padding-left: 30px;
+            padding-top: 75px;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+
+        .bulle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(230, 230, 250, 0.7);
+
+            float: left;
+
+            position: relative;
+            right: -120px;
+            top: -50px;
+
+        }
+
+        /* #p1, #p2 {
+            color: purple;
+            text-align: center;
+            position: relative;
+            top: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 40px;
+        } */
+
+        .consignes {
+            float: left;
+            width: 65%;
+            padding-left: 20px;
+        }
+
+        .encadre {
+            background-color: lavenderblush;
+            border-radius: 10px;
+            padding: 15px;
+            width: 200px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .programme {
+            padding-left: 20px;
+        }
+
+        table {
+            margin: 20px auto;
+        }
+
+        th {
+            padding: 15px;
+            border: 1px solid rebeccapurple;
+            background-color: lavender;
+        }
+
+        td {
+            border: 1px solid rebeccapurple;
+            padding: 10px;
+        }
+
+        tr:nth-of-type(even) {
+            background-color: rebeccapurple;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="titre">
+            <h1>Valeurs finales</h1>
+        </div>
+
+        <div class="consignes">
+            <h3>Consignes</h3>
+            <h4>Examinez le programme valeurs.js ci-dessous :</h4>
+            <p>var nb1 = Number(prompt('Entrez nb1:'));</p>
+            <p>var nb2 = Number(prompt('Entrez nb2:'));</p>
+            <p>var nb3 = Number(prompt('Entrez nb3:'));</p>
+            
+            <p id="p1" class="encadre">
+                <code>
+                    if (nb1 > nb2) { <br>
+                        <span style="padding-left: 20px;">nb1  = nb3 * 2;</span><br>
+                    }else { <br>
+                        <span style="padding-left: 20px;">nb1++;</span><br>
+                        <span style="padding-left: 20px;">if (nb2 > nb3){</span> <br>
+                            <span style="padding-left: 40px;">nb1 = nb1 + nb3 * 3;</span> <br>
+                        <span style="padding-left: 20px;">}else {</span> <br>
+                            <span style="padding-left: 40px;">nb1 = 0;</span> <br>
+                            <span style="padding-left: 40px;">nb3 = nb3 * 2 + nb2;</span><br>
+                        <span style="padding-left: 20px;">}</span> <br>
+                    }
+                </code>
+            </p>
+        </div>
+
+        <div class="bulle"></div>
+
+        <div class="clear"></div>
+
+        <p style="padding: 20px;">Avant de l'exécuter, tentez de prévoir les valeurs finales des variables nb1, nb2 et nb3 en fonction de leurs valeurs intiiales et complétez le tableau ci-dessous.</p>
+
+        <table>
+            <thead>
+                <th>valeurs initiales</th>
+                <th>valeur finale nb1</th>
+                <th>valeur finale nb2</th>
+                <th>valeur finale nb3</th>
+            </thead>
+            <tr>
+                <td>Ex. si nb1, nb2 & nb3 valent tous 7</td>
+                <td>0</td>
+                <td>7</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Si nb1, nb2 & nb3 valent tous 4</td>
+                <td>0</td>
+                <td>4</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Si nb1 = 4, nb2 = 3, nb3 = 2</td>
+                <td>4</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Si nb1 = 2, nb2 = 4, nb3 = 0</td>
+                <td>3</td>
+                <td>4</td>
+                <td>0</td>
+            </tr>
+        </table>
+
+        <div class="programme">
+            <h4>Résultat :</h4>
+            
+            <p id="nombre1"></p>
+            <p id="nombre2"></p>
+            <p id="nombre3"></p>
+        </div>
+           
+    </main>
+    <script src="09-valeurs.js"></script>
+</body>
+</html>

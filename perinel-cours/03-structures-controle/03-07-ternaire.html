@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript III. 07</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="ternaire.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+        <!-- début de la nav -->
+        <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="../02-variables-constantes/02-01-introduction.html">Les variables</a>
+                        <a href="../02-variables-constantes/02-02-afficher.html">Exemples de variables</a>
+                        <a href="../02-variables-constantes/02-03-type.html">Les types de données</a>
+                        <a href="../02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                        <a href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a>
+                        <a href="../02-variables-constantes/02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="03-01-introduction.html">Introduction</a>
+                        <a href="03-02-if.html">If...</a>
+                        <a href="03-03-if-else.html">If... else...</a>
+                        <a href="03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="03-06-precedence.html">Précédence</a>
+                        <a href="03-07-ternaire.html" class="active">L'opérateur ternaire</a>
+                        <a href="03-08-switch.html">Switch</a>
+                        <a href="03-09-boucles.html">Les boucles</a>
+                        <a href="03-10-for.html">La boucle for</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2> <a href="03-07-ternaire.html">III. 07 L'opérateur ternaire</a></h2>
+        <h3>Qu'est ce que l'opérateur ternaire ?</h3>
+        <p>Les structures conditionnelles ternaires (aussi appellées ternaires) sont une autre façon d'écrire les conditions en utilisant une syntaxe basée sur l'opérateur ternaire : "question<code>?</code>soit ça <code>: </code>soit ça". Cet opérateur va nous permettre d'éécrire la condition sur une seule ligne. Les ternaires se présentent sous la forme suivante : <code>test ? code à exécuter si true : code à exécuter si false</code>.</p>
+        
+        <h4>1 - Exemple d'utilisation</h4>
+        <ul class="avec-puces p-40">
+            <li>
+                <h5>Méthode if... else... pour let x = 15;</h5>
+                <code>if(x >= 10){ <br>
+                    document.getElementById('p2').innerHTML = 'x ('+x+') est supérieur à 10'; <br>
+                }else{ <br>
+                    document.getElementById('p2').innerHTML = 'x ('+x+') est inférieur à 10'; <br>
+                }</code>
+                <p id="p2" class="js-integre"></p>
+            </li>
+            <li>
+                <h5>Méthode ternaire pour let x = 15;</h5>
+                <code>document.getElementById('p1').innerHTML = <br>
+                    x >= 10 ? 'x ('+x+') est supérieur ou égal à 10' : 'x ('+x+') est strictement inférieur à 10';</code>
+                <p id="p1" class="js-integre"></p>
+            </li>
+            <li>
+                <h5>Méthode if... else... pour let y = -20;</h5>
+                <code>if(y > 10){ <br>
+                    document.getElementById('p3').innerHTML = 'y ('+y+') est supérieur ou égal à 10'; <br>
+                }else{ <br>
+                    document.getElementById('p3').innerHTML = 'y ('+y+') est inférieur à 10';<br>
+                }</code>
+                <p id="p3" class="js-integre"></p>
+            </li>
+            <li>
+                <h5>Méthode ternaire pour let y = -20;</h5>
+                <code>document.getElementById('p4').innerHTML = <br>
+                    y > 10 ? '<code>y ('+y+') est supérieur à 10</code>' : 'y ('+y+') est inférieur à 10';</code>
+                <p id="p4" class="js-integre"></p>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>

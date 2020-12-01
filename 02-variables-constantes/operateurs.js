@@ -51,12 +51,27 @@ let k = 2**3**2;
 console.log(k);
 
 // on calcule d'abord ce qu'il y entre parenthèses 
-let m = 1 - (2 * 3);
-console.log(m);
+// let m = 1 - (2 * 3);
+// console.log(m);
 
 // alert('j contient : ' + j +
 //     '\nk contient : ' + k +
 //     '\nl contient : ' + l +
 //     '\nm contient : ' + m
 // );
+
+
+// operateur d'affactation
+
+
+// let chiffre1 = 5;
+// console.log(chiffre1)
+
+let m = 20;
+let o = 50;
+
+m += 15;
+o *= 5;
+
+console.log(m, o)
 

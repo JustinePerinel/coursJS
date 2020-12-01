@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de JavaScript III. 08</title>
+    <!-- reset  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- mes styles en externe -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script en externe -->
+    <script src="switch.js" async></script>
+</head>
+<body>
+    <main>
+
+        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a> </h1>
+        
+        <!-- début de la nav -->
+        <nav>
+            <ul class="row">
+                <li class="onglet">Introduction
+                    <div class="dropdown-content">
+                        <a href="../01-introduction/01-01-introduction.html">Du JS dans l'en-tête</a>
+                        <a href="../01-introduction/01-02-introduction.html">Du JS dans la balise ouvrante</a>
+                        <a href="../01-introduction/01-03-introduction.html">Du JS dans body</a>
+                        <a href="../01-introduction/01-04-introduction.html">Du JS une feuille externe</a>
+                    </div>
+                </li>
+                <li class="onglet">Variables et constantes
+                    <div class="dropdown-content">
+                        <a href="../02-variables-constantes/02-01-introduction.html">Les variables</a>
+                        <a href="../02-variables-constantes/02-02-afficher.html">Exemples de variables</a>
+                        <a href="../02-variables-constantes/02-03-type.html">Les types de données</a>
+                        <a href="../02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a>
+                        <a href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a>
+                        <a href="../02-variables-constantes/02-06-constantes.html">Les constantes</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les structures de contrôle
+                    <div class="dropdown-content">
+                        <a href="03-01-introduction.html">Introduction</a>
+                        <a href="03-02-if.html">If...</a>
+                        <a href="03-03-if-else.html">If... else...</a>
+                        <a href="03-04-if-else-if-else.html">If... else if... else...</a>
+                        <a href="03-05-operateurs-logiques.html">Les opérateurs logiques</a>
+                        <a href="03-06-precedence.html">Précédence</a>
+                        <a href="03-07-ternaire.html">L'opérateur ternaire</a>
+                        <a href="03-08-switch.html" class="active">Switch</a>
+                        <a href="03-09-boucles.html">Les boucles</a>
+                        <a href="03-10-for.html">La boucle for</a>
+                    </div>
+                </li>
+                <li class="onglet"> Les fonctions
+                    <div class="dropdown-content">
+                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
+                        <a href="#">Un autre onglet</a>
+                    </div>
+                </li>
+                <li class="onglet"> Cours de JS de Régis
+                    <div class="dropdown-content">
+                        <a href="../10-video-js/video.html">Les vidéos</a>
+                        <a href="../10-video-js/index.html">Index pour le JS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- fin de la nav  -->
+
+        <h2> <a href="03-08-switch.html">III. 08 Switch</a></h2>
+        <h3>Qu'est ce que "switch" ?</h3>
+        <p>Avec switch, on va tester autant de cas ou de situations que l'on souhaite. C'est une alternative au <code>if... else...</code>. On l'utilise rarement.</p>
+        <p class="notice">Attention, switch ne supporte pas les opérateurs de supériorité ou d'infériorité.</p>
+        <p>Cette structure est parfois plus claire qu'un <code>if... else if... else</code> contenant des dizaines de "else if". Mais il est préférable de bien comprendre les conditions en "if... else..." avant.</p>
+        
+        <h4>1 - Exemple d'utilisation</h4>
+        <p>Ici, le code va permettre de vérifier chacune de ses propositions jusqu'à ce qu'une soit vraie, moment où le code doit alors s'arrêter grâce à la mention break. Dans le cas où aucun des cas n'est vrai, le navigateur doit alors lancer le cas par défaut. C'est ce qui se passe ici.</p>
+        <code>let x = 48; <br>
+            switch(x){ <br>
+            case 2: <br>
+                document.getElementById('p1').innerHTML = 'x contient la valeur 2'; <br>
+                break;  <br>
+            case 5: <br>
+                document.getElementById('p1').innerHTML = 'x contient la valeur 5'; <br>
+                break; <br>
+            case 8: <br>
+                document.getElementById('p1').innerHTML = 'x contient la valeur 8'; <br>
+                break; <br>
+            case 13: <br>
+                document.getElementById('p1').innerHTML = 'x contient la valeur 13'; <br>
+                break; <br>
+            case 15: <br>
+                document.getElementById('p1').innerHTML = 'x contient la valeur 15'; <br>
+                break; <br>
+            case 18: <br>
+                document.getElementById('p1').innerHTML = 'x contient la valeur 18'; <br>
+                break; <br>
+            default: <br>
+                document.getElementById('p1').innerHTML = 'x ne contient ni 2, ni 5, ni 8, ni 13, ni 15, ni 18.'; <br>
+        }</code><br>
+        
+        <p id="p1" class="js-integre"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+    </main>
+    <footer>
+        COURS JS &copy; JPERINEL
+    </footer>
+</body>
+</html>
