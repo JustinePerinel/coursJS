@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>JS VII Evenements</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <script src="selecteur.js"></script> -->
+    <!-- Styles perso  -->
+    <style>
+        #rouge {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            line-height: 150px;
+            font-size: 2em;
+            text-align: center;
+            color: white;
+        }
+        #rose {
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            line-height: 150px;
+            font-size: 2em;
+            text-align: center;
+            color: white;
+        }
+        #orange {
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            line-height: 150px;
+            font-size: 2em;
+            text-align: center;
+            color: white;
+        }
+        #bleue {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            line-height: 150px;
+            font-size: 2em;
+            text-align: center;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+        <div class="jumbotron">
+            <h1 id="titreNiveau1" class="display-4">JS- VII 01- Les écouteurs d'évènements</h1>
+            <p class="lead">Les évènements en JS</p>
+        </div>
+        <!-- Fin de jumbotron  -->
+            <div class="container border border-primary p-4">
+              <div class="row border border-danger">
+                  <div class="col-8 bg-primary">
+                    <h2>addEventListener(), exemples</h2>
+                    <p>Un simple clic sur la div #rouge >>>>.</p>
+                    <p id="p1">Cliquez sur le paragraphe</p>
+                </div>
+                <!-- fin div col-8  -->
+                <div class="col-4">
+                    <div id="rouge">#rouge</div>
+                </div>
+                <!-- fin div col-4  -->
+                </div>
+                <!-- fin div class row  -->
+                <div class="row border border-success m-2 p-2">
+                    <div class="col-8">
+                        <h2>Autres exemples</h2>
+                        <p>Un double-clique sur la div #rose >>></p>
+                        <p id="p2">Un double clique sur le p</p>
+                    </div>
+                    <!-- fin col  -->
+                    <div class="col-4">
+                        <div id="rose">#rose</div>
+                    </div>
+                </div>
+                <!-- fin col  -->
+                <div class="row border border-info m-2 p-2">
+                    <div class="col-8">
+                        <h2>Exemple suite ...</h2>
+                        <p></p>
+                        <p>Survolez la div #orange</p>
+                    </div>
+                    <!-- fin col  -->
+                    <div class="col-4">
+                        <div id="orange">#orange</div>
+                    </div>
+                    <!-- fin col  -->
+                </div>
+                <!-- fin row  -->
+                <div class="row border border-primary m-2 p-2">
+                    <div class="col-8">
+                        <h2>Exemple suite ...</h2>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <!-- fin col  -->
+                    <div class="col-4">
+                        <div id="bleue">#bleu</div>
+                    </div>
+                    <!-- fin col  -->
+                </div>
+                <!-- fin div -->
+                <div class="row border border-primary m-2 p-2">
+                    <div class="col-4">
+                        <h2>Formulaire...</h2>
+                        <p>Nous avons pris le formulaire sur cette <a href="https://getbootstrap.com/docs/4.5/components/forms/">page</a></p>
+                    </div>
+                    <!-- fin col  -->
+                    <div class="col-8">
+                        <form class="form-inline my-4" action="#" method="POST">
+
+                            <label class="sr-only" for="password">Mot de passe</label>
+                            <input type="password" class="form-control mb-2 mr-sm-2" name="password" id="password" placeholder="Mot de passe">
+
+                            <label class="sr-only" for="email">Email</label>
+                            <div class="input-group mb-2 mr-sm-2">
+                              <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                              </div>
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Votre email">
+                            </div>
+                            <button type="submit" id="submit" class="btn btn-primary mb-2">Se connecter</button>
+                          </form>
+                    </div><!-- fin de div  -->
+                </div><!-- fin col-8 -->
+            </div><!-- fin de row -->
+                    </div>
+                    <!-- fin col  -->
+                </div>
+             </div>
+            <!-- fin div container  -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <scrip src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></scrip>
+    <scrip src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></scrip>
+    <scrip src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></scrip>
+    <!-- Mes scripts  -->
+    <script>
+        //1- Evènements avec une fonction
+        // Je selectionne la #rouge par son id et j'ajoute un " ecouteur d'evenement" qui s'excécutera au moment de l'évènement 
+        // addEventListener() a besoin de 2 arguments ('1- Le mot clef correspondant, ici le click, 2- Le nom de la fonction')
+        document.querySelector('#rouge').addEventListener('click',fDivRouge);
+        // Puis on crée la fonction
+        function fDivRouge() {
+            alert('Vous avez cliqué sur la div #rouge');
+            this.style.background = "pink";
+        }
+        // Autre exemple
+        //Avec une fonction anonyme est le 2eme argument de addEventlistener()
+        document.querySelector('#p1').addEventListener('click', function(){
+            alert('Vous avez cliqué sur le paragraphe avec une function anonyme');
+            this.style.background = "red";
+            this.style.color = "white";
+        });
+        // 2- Une version avec une variable
+        let maDivRose = document.querySelector('#rose');
+        // console.log(typeof maDivRose, maDivRose);
+        maDivRose.addEventListener('dblclick', fDivRose);
+        function fDivRose() {
+            alert('Vous avez double-cliqué sur la div #rose'); // ici le mot clef est dblclick 'double clique'
+        }
+        // Avec unr fonction anonyme
+        document.querySelector('#p2').addEventListener('dblclick', function() {
+            alert('Vous avez double-cliqué sur le paragraphe p2');
+            this.style.background = "gold";
+        });
+        // 3- Nouveau mot clef "mouseover" au survol de la souris
+        document.querySelector('#orange').addEventListener('mouseover', fDivOrange);
+        function fDivOrange() {
+            // alert('Vous avez survolé la div #orange');
+            // this.innerHTML = 'mouseover'; //injection d'un nouveau contenu
+            // this.style.fontSize = "1.5em";
+            this.style.display = "none"; // pour faire disparaître la case orange
+        }
+        //4- nouveau mot clef "mouseout"
+        document.querySelector('#bleue').addEventListener('mouseout', fDivBleue);
+        function fDivBleue() {
+            alert('Vous êtes passé sur la div #bleue');
+            this.innerHTML = " mouseout"; // injection d'un nouveau contenu
+            this.style.fontSize = "1.5em";
+        }
+        // 5- Formulaire
+        // Traitement du formaulaire côté client
+        // Ecouteur d'évènement sur sur l'input email avec focus
+        document.querySelector('#email').addEventListener('focus', inputEmailFocus);
+        function inputEmailFocus() {
+            // alert('focus dans le champs email');
+            this.classList.add('bg-success');
+            this.classList.add('text-white');
+        }
+        // Ecouteurs d'évènement sur l'input password avec blur
+        document.querySelector('#password').addEventListener('blur', inputPasswordBlur);
+        function inputPasswordBlur() {
+            alert('champs blur');
+            this.style.background = 'red';
+            this.style.color = 'white';
+        }
+        // Ecouteur d'évènement sur le bouton avec click
+        document.querySelector('#submit').addEventListener('click', inputBtnSubmit);
+        function inputBtnSubmit(event) { // Attention, on ajoute event en argument à cette fonction
+            event.preventDefault(); // cette fonction preventDefault () neutralise le formulaire pour la démo ou si on récupère les infos en développement
+            alert('Nous avons bien reçu vos informations');
+            this.classList.add('bg-success');
+            this.innerHTML ="Connecté";
+        }
+    </script>
+  </body>
+</html>
