@@ -1,0 +1,104 @@
+<!DOCTYPE html> <!-- Fait par Audrey SAULNIER -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 - Parité</title>
+    <style> 
+        /* Style de ma page */
+        :root {
+            --rose : rgb(255, 214, 221);
+            --rose-vif : rgb(240, 70, 240);
+            --noir : #000;
+            --blanc : #fff;
+            --jaune : yellow;
+            --rouge : red;
+            --violet : rgba(211, 61, 211, 0.856);
+        }
+        
+        body {
+            background-color:  rgb(219, 185, 230);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 20px;
+        }
+
+        main {
+            background-color:#fff;
+            width: 60%;
+            min-width: auto;
+            border-radius: 20px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            width: auto;
+            height: auto;
+            background-color: lightblue;
+            padding: 20px;
+            font-size: 3em;
+            text-align: center;
+            min-width: auto;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .orange {
+            background-color: rgb(221, 162, 53);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .exemple {
+        color: orange;
+        width: 55%;
+        border-bottom:4px solid orange;
+        padding: 20px;
+        }
+
+
+        .centrer {
+         padding-left: 75px;
+        }
+
+        .stabilo {
+            background-color: yellow;
+            text-align: center;
+        }
+
+    </style>
+    <!-- lien vers ma page JS -->
+    <script src="13-parite.js" async></script>
+</head>
+<body>
+    <main> <!-- Début de main -->
+        <h1>Exo 13 - Parité</h1>
+        <p>Soit la boucle for dans le .js 13-parité.js; ce programme affiche les nombres pairs jusqu'à 10 dans la console. Tapez le et examinez le résultat dans votre console.</p>
+      <code>
+          for (var i = 1; i <=10; i++) { <br>
+           <blockquote>  if ( i % 2 === 0 ) { <br>
+            <blockquote> console.log(i + ' est pair');</blockquote>
+           </blockquote> 
+          } <br>
+        }
+      </code>
+
+      <p>Ce programme utilise le modulo (reste de la division est égal à 0) pour trouver les nombres pairs en dessous de 10.</p>
+
+      <p class="orange">Des exemples pour l'utlisation du modulo</p>
+        <ul>
+            <li id="l1"></li>
+            <br>
+            <li id="l2"></li>
+           
+        </ul>
+        <hr>
+        
+    </main>
+    <!-- </main> Fin de main -->
+
+</body>
+
+</html> 

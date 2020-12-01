@@ -14,7 +14,7 @@ if (pointDeVie == 100) {
     console.log('on afficherait içi une image de vaisseau intact')
 }
 
-if (pointDeVie = 0 ) {
+if (pointDeVie == 0 ) {
     console.log('on afficherait içi une image de vaisseau mort')
 
 }

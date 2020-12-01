@@ -1,0 +1,123 @@
+<!DOCTYPE html> <!-- Fait par Audrey SAULNIER -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10- nombre de jours dans un mois</title>
+    <style> 
+        /* Style de ma page */
+        :root {
+            --rose : rgb(255, 214, 221);
+            --rose-vif : rgb(240, 70, 240);
+            --noir : #000;
+            --blanc : #fff;
+            --jaune : yellow;
+            --rouge : red;
+            --violet : rgba(211, 61, 211, 0.856);
+        }
+        
+        body {
+            background-color:  rgb(219, 185, 230);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 20px;
+        }
+
+        main {
+            background-color:#fff;
+            width: 60%;
+            min-width: auto;
+            border-radius: 20px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            width: auto;
+            height: auto;
+            background-color: lightblue;
+            padding: 20px;
+            font-size: 3em;
+            text-align: center;
+            min-width: auto;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .orange {
+            background-color: rgb(221, 162, 53);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .exemple {
+        color: orange;
+        width: 45%;
+        border-bottom:4px solid orange;
+        padding: 20px;
+        }
+
+        table {
+            border: 2px solid var(--rose);
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        table th {
+            background-color: var(--rose-vif);
+            color: var(--blanc);
+            padding: 10px 0;
+        }
+
+        table, th, td {
+            border: 3px solid var(--noir);
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 10px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        table tr:nth-of-type(even) {
+            background-color: var(--rose);
+        }
+
+        .centrer {
+         padding-left: 75px;
+        }
+
+        .stabilo {
+            background-color: yellow;
+            text-align: center;
+        }
+
+    </style>
+    <!-- lien vers ma page JS -->
+    <script src="10-nombrejours.js" async></script>
+</head>
+<body>
+    <main> <!-- Début de main -->
+        <h1>Nombre de jours dans un mois</h1>
+        <p>Ecrivez un programme 'nombrejours.js' qui fait saisir le numéro d'un mois (nombre donc entre 1 et 12) puis affiche le nombre de jours de ce mois.
+        </p>
+
+        <blockquote class="stabilo">Ne tenez pas compte des années bissextiles, et les erreurs de saisie doivent être gérées.</blockquote>
+
+        <p class="orange">Bonus : détecter, dès le début du programme si la saisie n'est pas un nombre.</p>
+
+        <h2 class="exemple">Résultat</h2>
+
+        <p id="p1"></p>
+
+       
+      
+    </main>
+    <!-- </main> Fin de main -->
+
+</body>
+
+</html> 

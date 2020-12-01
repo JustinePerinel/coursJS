@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <!-- ajouter la ligne pour boodstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>VI - Selecteur</title>
+        <!-- reset  -->
+        <!-- <link rel="stylesheet" href="../css/reset.css"> -->
+        <!-- mes styles en externe -->
+        <!-- <link rel="stylesheet" href="../css/style.css"> -->
+        <style>
+
+            div.container {
+                width: 1200px;
+            }
+
+        </style>
+        <!--async permet de charger le html en premier et adapter le script, ce qui permet de trouver les identifiants du html p1,p2,.. et lancer le script JS une fois le html lu-->
+
+        <!-- Ajouter le CSS boodstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        
+        <!-- script en externe -->
+        <!-- <script src="selecteur.js"></script> -->
+        
+    </head>
+    <body class=" bg-secondary">
+        <section class="jumbotron">
+            <h1 id="titreNiveau1" class="display-4">JS - VI 01 - Sélecteurs</h1>
+            <p>Les sélecteurs en JS</p>   
+            <!-- jumbotron / container / row/ col -->
+        </section> 
+
+        <div class="container">
+            <div class="row border border-sucess m-4 p-2" >
+                <div class="col-12">
+                    <h2 id="titreNiveau2"> 1- Ce titre (#titreNiveau2) sera sélectionné dans la console</h2>
+                    <p>Dans la console nous voyons les différentes méthodes de sélectionner cet élément dont l'id est <code>tireNiveau1</code></p>
+                    <ol>
+                        <li>Dans une variable qui se trouve dans <code>windox.onLoad()</code> /// <code>var select1 = titreNiveau1</code></li>
+                        <li>Dans une variable simple <code>var select2 = titreNiveau1;</code></li>
+                        <li>Avec getElementById directement dans le document <code>document.getElementById('titre Niveau1';</code></li>
+                        <li>Avec getElementByClassName je récupère un ensemble une collection de class <code>getElementByClassName('maClass1');</code></li>
+                        <li>Avec getElementByTagName je récupère un ensemble d'élément par leur nom</li>
+                    </ol>
+                </div> <!--fin de col12-->
+                    <div class="col-4 bg-success p-4">
+                        <p class='selectClass'>paragraphe</p>
+                    </div> <!--fin de col 4-->
+                    <div class="col-4 p-4">
+                        <p>Paragraphe</p>
+                    </div><!--fin de col 4-->
+                    <div class="col-4 bg-primary p-4">
+                        <p class="uneClasse">Paragraphe</p>
+                    </div><!--fin de col 4-->
+            </div> <!--fin de row-->
+        
+            <div class="row border border-warning m-4 p-2">
+                <div class="col-5">
+                    <h2 id="aChanger">2- Ce titre 2 (#aChanger) va changer !!!!</h2>
+                    <p class="selectClass">Paragraphe</p>
+        
+                </div> <!--fin col 5-->
+                <div class="col-7 bg-warning text-white">
+                    <p class="uneClasse">Paragraphe</p>
+                </div> <!--col 7 end-->
+            </div> <!--fin de row-->
+        
+            <div class="row m-4 p-2">
+                <div class="col-12 border border-info">
+                    <h2 id="titre2">Ce titre 2 (#titre2) va changer aussi</h2>
+                    <p class="maClass2 selectClass">Paragraphe</p>
+                </div><!--fin de col 12-->
+            </div>
+
+        </div> <!--fin de container-->
+    
+
+
+        <!-- En 1er JQuery, puis Popper.js et le JS de Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+        <!-- Mes scripts !!! -->
+
+        <script>
+            // Test pour vérifier que tout marche bien
+            // alert('coucou');
+
+            // 2nd méthode pour sélectionner un élément
+            // méthode désuette, on peut la retrouver mais elle ne se pratique plus
+            // sélection naturelle
+            var select2 = titreNiveau1;
+            console.log(select2);
+
+            // 3ème méthode avec le selecteur getElementById
+            var select3 = document.getElementById('titreNiveau1');
+            console.log(select3);
+
+            // 4ème méthode : getElementsByClassName
+            // permet de selectionner plusieurs classes identiques
+            var selectClass = document.getElementsByClassName ('col-4');
+            console.log(selectClass);
+            // ça utilise le meme principe d'appel quel les tableaux, cette méthode crée un index pour mieux cibler
+
+            // grace à l'index des éléments qui ont la class selectClass, je peux en cibler un en particulier
+            console.log(selectClass[1]);
+
+            //innerHTML cible ce qui se trouve dans l'élément, on dit qu'il définit le contenu
+            // selectClass[2].innerHTML;
+            console.log(selectClass[2]);
+
+            selectClass[1].innerHTML = 'Et là je change le contenu, cool !!!';
+
+            // var moi =prompt('Mais oui je peux changer la phrase');
+            // selectClass[1].innerHTML = moi;
+
+
+        // MINI EXO modifier le contenu du h2 id #aChanger par 3 - Je change le titre yesss!!!
+
+            var select4 = document.getElementById('aChanger');
+            select4.innerHTML = '2 - Je change le titre yess !';
+            
+        
+            // 5ème méthode
+            // Sélection d'éléments par son nom getElementByTagName
+
+            var lesP = document.getElementsByTagName('p'); //on trouve tous les paragraphes de a page
+            console.log(lesP);
+            // selection d'un paragraphe en particulier
+            lesP[2].innerHTML = 'J\'ai enfin accroché le wagon, vive le lundi !';
+            lesP[4].innerHTML = 'Je change ce sacré paragraphe oui!';
+            console.log(lesP[4]);
+            // je change le style d'un élement
+            lesP[0].style.backgroundColor = "red";// on change  la couleur de fond
+            lesP[0].style.fontVariant = "small-caps"; //en petite capitale
+            lesP[0].style.borderRadius = "12px";
+            lesP[0].style.textAlign = "center";
+            lesP[0].style.color = "white";
+
+            // si je veux changer tous les p 
+            // la boucle est obligatoire pour changer le style ou autre d'une liste d'un objet précis tel que les p , ou les li
+            for (var i = 0 ; i < lesP.length; i++){
+                lesP[i].style.backgroundColor = "lightgrey";
+                lesP[i].style.color = "black";
+                lesP[i].style.fontVariant = "small-caps"; //en petite capitale
+                lesP[i].style.margin = "5px";
+                lesP[i].style.padding = "8px";
+                lesP[i].style.letterSpacing = "2px";
+                lesP[i].style.border = "solid black";
+            }
+
+            // 6ème méthode
+            // avec querySelector
+
+            let query1 = document.querySelector('#titre2');
+            console.log(query1);
+
+            // si je veux selectionner toutes les classe .uneClasse
+            let query2 = document.querySelectorAll('.uneClasse');
+            console.log(query2);
+
+            // pour cibler un changement
+            let query3 = document.querySelectorAll('li');//création de la variable contenant tous les li
+            console.log(query3);//liste des li de la page
+            console.log(query3[2]);// pour en selectionner un en particulier
+            query3[2].style.color = "white";
+
+            // Mini EXo à certains paragraphe mettre .selectClass
+            // changer le texte du numéro 3 pour 'je change le texte de ce paragraphe" passer le en fond lightblue et texte blanc et gras'
+
+            let query4 = document.querySelectorAll('p.selectClass');
+            console.log(query4);
+            console.log(query4[2].innerHTML);
+
+            query4[2].style.backgroundColor = "lightblue";
+            query4[2].style.color = "white";
+            query4[2].style.fontWeight = "bold";
+
+
+
+            // Les mots cléfs à appliquer avec .style (voir w3school)
+            // https://www.w3schools.com/jsref/dom_obj_style.asp
+
+
+        </script>
+
+    </body>
+</html>     

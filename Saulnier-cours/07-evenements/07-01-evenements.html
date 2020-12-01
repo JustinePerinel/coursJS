@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <!-- ajouter la ligne pour boodstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>VII - Les évènements</title>
+        <!-- reset  -->
+        <!-- <link rel="stylesheet" href="../css/reset.css"> -->
+        <!-- mes styles en externe -->
+        <!-- <link rel="stylesheet" href="../css/style.css"> -->
+      <!-- style interne si besoin -->
+        <style>
+            #rouge {
+                width: 150px;
+                height: 150px;
+                border-radius: 100px;
+                background-color: red;
+                line-height: 150px;
+                font-size: 2em;
+                text-align: center;
+                color: white;
+                margin: auto;
+            }
+
+            #rose {
+                width: 150px;
+                height: 150px;
+                border-radius: 100px;
+                background-color: pink;
+                line-height: 150px;
+                font-size: 2em;
+                text-align: center;
+                color: white;
+                margin: auto;
+            }
+
+            #orange {
+                width: 150px;
+                height: 150px;
+                border-radius: 100px;
+                background-color: orange;
+                line-height: 150px;
+                font-size: 2em;
+                text-align: center;
+                color: white;
+                margin: auto;
+            }
+
+            #bleue {
+                width: 150px;
+                height: 150px;
+                border-radius: 100px;
+                background-color: rgb(108, 108, 236);
+                line-height: 150px;
+                font-size: 2em;
+                text-align: center;
+                color: white;
+                margin: auto;
+            }
+
+
+        </style>
+        <!--async permet de charger le html en premier et adapter le script, ce qui permet de trouver les identifiants du html p1,p2,.. et lancer le script JS une fois le html lu-->
+
+        <!-- Ajouter le CSS boodstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        
+        <!-- script en externe -->
+        <!-- <script src="selecteur.js"></script> -->
+        
+    </head>
+    <body class="jumbotron">
+        <div class="jumbotron border border-secondary">
+            <h1 id="titreNiveau1" class="display-4">JS - VII 01 - Les évènements</h1>
+            <p class ="lead">Les évènements en JS</p>   
+            <!-- jumbotron / container / row/ col -->
+        </div>  <!--fin jumbotron-->
+
+        <div class="container border border-warning p-5">
+
+            <div class="row border border-info my-3 p-3">
+
+                <div class="col-8 ">
+                    <h2 class="p-2">addEventListener(), exemple</h2>
+                    <p>Un simple clique sur le cercle #rouge.</p>
+                    <p id="p1">Un simple clic sur ce paragraphe svp</p>
+                </div> <!--fin col-8-->
+
+                <div class="col-4 my-2 p-2">
+                    <!-- pour faire mon carré voir le css -->
+                    <div id="rouge">#rouge</div>
+                </div> <!--fin col-4-->
+            </div> <!--fin row-->
+
+            <div class="row border border-info my-3 p-3">
+
+                <div class="col-8">
+                    <h2 class="p-2">addEventListener(), autre exemple</h2>
+                    <p>Un double clique sur le cercle #rose.</p>
+                    <p id="p2">Un double clic sur ce paragraphe svp</p>
+                </div> <!--fin col-8-->
+
+                <div class="col-4 my-2 p-2">
+                    <div id="rose">#rose</div>
+                </div> <!--fin col-4-->
+
+            </div> <!--fin row-->
+
+            <div class="row border border-info my-3 p-3">
+
+                <div class="col-8">
+                    <h2 class="p-2">addEventListener(), exemple suite...</h2>
+                    <p>Un survol sur le cercle #orange.</p>
+                    <p id="p3">Survolez ce paragraphe svp</p>
+                </div> <!--fin col-8-->
+
+                <div class="col-4 my-2 p-2">
+                    <div id="orange">#orange</div>
+                </div> <!--fin col-4-->
+
+            </div> <!--fin row-->
+
+            <div class="row border border-info my-3 p-3">
+
+                <div class="col-8">
+                    <h2 class="p-2">addEventListener(), encore un exemple...</h2>
+                    <p>Un survol avec une sortie sur le cercle #bleue.</p>
+                    <p id="p4">Survolez ce paragraphe svp</p>
+                </div> <!--fin col-8-->
+
+                <div class="col-4 my-2 p-2">
+                    <div id="bleue">#bleue</div>
+                </div> <!--fin col-4-->
+
+            </div> <!--fin row-->
+
+            <div class="row border border-dark my-3 p-3">
+
+                <div class="col-4">
+                    <h2 class="p-2">Formulaire</h2>
+                    <p>Nous avons pris le formulaire sur cette <a href="https://getbootstrap.com/docs/4.1/components/forms/" target="_blanck">page</a>.</p>
+                    <!-- <p id="p4">Survolez ce paragraphe svp</p> -->
+                </div> <!--fin col-4-->
+
+                <div class="col-8 my-2 p-2">
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Adresse email</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer email">
+                          <!-- texte muted conseil sous la capsule de mail -->
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Mot de passe</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="mot de passe">
+                        </div>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Valider</button>
+                    </form>
+                    <!-- 2ème sorte de formulaire -->
+                    
+                    <hr>
+
+                      <!-- formulaire de Patrick -->
+
+                    <form class="form-inline" action="#" method="POST"> <!--action et methode sont a rajouter pour recupérer les informations, au programme pour le mois de mars-->
+                         
+                        <label class="sr-only" for="email">email</label>
+                        <div class="input-group mb-2 mr-sm-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="email" required>
+                        </div>
+                        <label class="sr-only" for="password">Mot de passe</label>
+                        <input type="password" class="form-control mb-2 mr-sm-2" id="password" placeholder="Mot de passe">
+                        <button type="submit" id="submit" class="btn btn-primary mb-2">Valider</button>
+                        <div class="form-check mb-2 mr-sm-2">
+                            <input class="form-check-input" type="checkbox" id="inlineFormCheck" required>
+                            <label class="form-check-label" for="inlineFormCheck"> Se souvenir de moi</label>
+                        </div>
+                      
+                    </form>
+                </div> <!--fin col-8-->
+
+            </div> <!--fin row-->
+
+
+        </div> <!--fin de container-->
+
+
+        <!-- En 1er JQuery, puis Popper.js et le JS de Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+        <!-- Mes scripts !!! -->
+
+        <script>
+            // 1 - evenement avec une fonction
+            // Je selectionne la #rouge par son id et j'ajoute un "écouteur d'évènement" qui s'exécutera au moment de l'évènement
+            // addEventListener() a besoin de 2 arguments ('1- le mot-clef corresponsant (ici la click', 2- le nom de la fonction)
+            document.querySelector('#rouge').addEventListener('click',fDivRouge);
+            // Puis on créé la fonction
+            function fDivRouge() {
+                alert('Vous avez cliquez sur la div #rouge');
+                this.style.background = "lightgrey";
+            }
+
+            //autre exemple
+            // avec une function anonyme
+            // La fonction anonyme est le second argument de addEventListener()
+
+            document.querySelector('#p1').addEventListener('click', function() {
+                alert(' vous avez cliquez sur le paragraphe de fonction anonyme');
+                this.style.background = "red";
+                this.style.color = "white";
+            });
+
+            //  2 - Une version avec une variable
+            let maDivRose = document.querySelector('#rose');
+            console.log(typeof maDivRose, maDivRose);
+
+            maDivRose.addEventListener('dblclick', fDivRose); // ici le mot clef est dblclick
+
+            function fDivRose() {
+                alert('Vous avez double-cliqué sur la div #rose');
+                this.style.background = "black";
+                this.style.color = "white";
+            }
+            
+            // avec une fonction anonyme
+            document.querySelector('#p2').addEventListener('dblclick', function () {
+                alert('Vous avez double-cliqué sur le paragraphe #p2');
+                this.style.background = "pink";
+                this.style.color = "white";
+            });
+
+
+            // 3 - nouveau mot clef "mouseover"
+
+            document.querySelector('#orange').addEventListener('mouseover', fDivOrange);
+
+            function fDivOrange() {
+                // alert('Vous avez survolé la div #orange');
+                this.innerHTML= 'mouseover';
+                this.style.fontSize = "1.5em";
+                this.style.border = "solid";
+                this.style.background = "white";
+                this.style.color = "orange";
+                // this.style.display = "none";
+            }
+
+            // avec une fonction anonyme
+            document.querySelector('#p3').addEventListener('mouseover', function(){
+                this.innerHTML= 'Et voici le paragraphe qui change';
+                this.style.background = "orange";
+                this.style.color = "white";
+            });
+
+            // 4 - nouveau mot clef "mouseout"
+            document.querySelector('#bleue').addEventListener('mouseout',fDivBleue);
+
+            function fDivBleue() {
+                alert('Vous êtes passé et sorti sur la div #bleue');
+                this.innerHTML= 'BINGO';
+            }
+
+            // avec une fonction anonyme
+               document.querySelector('#p4').addEventListener('mouseout', function(){
+                this.innerHTML= 'Vive le JS et Vive le travail en équipe';
+                this.style.background = " rgb(108, 108, 236)";
+                this.style.fontSize = "2.5em";
+                this.style.color = "white";
+            });
+
+            // 5 - FORMULAIRE
+            // traitement du formulaire côté client
+
+            // écouteur d'évènement sur l'input email
+            document.querySelector('#email').addEventListener('focus', inputEmailFocus); //nouveau mot clef, focus
+
+            function inputEmailFocus() {
+                this.classList.add('bg-warning');
+                this.classList.add('text-white');
+            }
+
+            // écouteur d'évènement sur l'input password avec blur
+
+            document.querySelector('#password').addEventListener ('blur', inputPasswordBlur);
+
+            function inputPasswordBlur() {
+                //alert('champ blur');
+                this.style.background = 'pink';
+                this.style.color = 'white';
+            }
+ 
+            // écouteur d'évènement sur le bouton avec click
+                document.querySelector('#submit').addEventListener('click', inputBtnSubmit);
+
+                function inputBtnSubmit(event) { //attention on ajoute event en argument à cette fonction
+                    event.preventDefault(); // cette fonction preventDefault() neutralise le formulaire (en autre l'attribue "required") pour la démo ou si on récupère les informations en développement.
+                    alert('Nous avons reçu vos informations');
+                    this.classList.add('bg-success');
+                    this.innerHTML = "Connecté";
+                }
+
+        </script>
+
+
+    </body>
+</html>     
