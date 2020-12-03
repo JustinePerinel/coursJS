@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>VII - 01 Les événements</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- mes styles -->
+    <style>
+        #rouge {
+            width: 150px;
+            height: 150px;
+            background: rgb(206, 0, 0);
+            line-height: 150px;
+            font-size: 2em;
+            text-align: center;
+            color: #fff;
+            margin: auto;
+        }
+        #p1 {
+            padding: 10px;
+            height: 50px;
+            background-color: rgb(206, 0, 0);
+        }
+        #orange {
+            width: 150px;
+            height: 150px;
+            background: orange;
+            line-height: 150px;
+            font-size: 2em;
+            text-align: center;
+            color: #fff;
+            margin: auto;
+        }
+        #p2 {
+            padding: 10px;
+            height: 50px;
+            background-color: orange;
+        }
+        #jaune {
+            width: 150px;
+            height: 150px;
+            background: yellow;
+            line-height: 150px;
+            font-size: 2em;
+            text-align: center;
+            color: #fff;
+            margin: auto;
+        }
+        #verte {
+            width: 150px;
+            height: 150px;
+            background: greenyellow;
+            line-height: 150px;
+            font-size: 2em;
+            text-align: center;
+            color: #fff;
+            margin: auto;
+        }
+        #submit {
+            background-color:  rgb(47, 255, 193);
+        }
+        .focus {
+            background-color:  rgb(47, 255, 193);
+        }
+    </style>
+  </head>
+  <body>
+        <div class="jumbotron">
+            <h1 id="titreNiveau1" class="display-3"><a href="../index.html">Retour vers l'index</a></h1>
+            <p class="lead">07 - 01 Événements</p>
+        </div> <!-- fin jumbotron -->
+
+        <div class="container p-4">
+            
+            <div class="row border border-danger p-4 rounded-lg">
+                <div class="col-8">
+                    <h2 class="text-danger">addEventListener(), exemples</h2>
+                    <p>Un simple clic sur la div #rouge.</p>
+                    <p id="p1" class="rounded-pill">Un simple clic sur ce paragraphe.</p>
+                </div> <!-- fin de la col-8 -->
+                <div class="col-4">
+                    <div id="rouge"> #rouge</div>
+                </div><!-- fin de la col-4 -->
+            </div> <!-- fin de la row 1 -->
+
+            <div class="row border border-warning p-4 rounded-lg my-4">
+                <div class="col-8">
+                    <h2 class="text-warning">Autres exemples</h2>
+                    <p>Un double clic sur la div #orange.</p>
+                    <p id="p2" class="rounded-pill">Un double-clic sur ce paragraphe.</p>
+                </div> <!-- fin de la col-8 -->
+                <div class="col-4">
+                    <div id="orange">#orange</div>
+                </div><!-- fin de la col-4 -->
+            </div> <!-- fin de la row 2 -->
+
+            <div class="row p-4 rounded-lg my-4" style="border: 1px solid yellow;">
+                <div class="col-8">
+                    <h2 style="color: yellow;">Exemples, suite...</h2>
+                    <p>Un survol sur la div #jaune.</p>
+                    <!-- <p id="p3" class="rounded-pill">Un double-clic sur ce paragraphe.</p> -->
+                </div> <!-- fin de la col-8 -->
+                <div class="col-4">
+                    <div id="jaune">#jaune</div>
+                </div><!-- fin de la col-4 -->
+            </div> <!-- fin de la row 3 -->
+
+            <div class="row p-4 rounded-lg my-4" style="border: 1px solid greenyellow;">
+                <div class="col-8">
+                    <h2 style="color: greenyellow;">Exemples, suite...</h2>
+                    <p>Survolez puis partir de la div #verte.</p>
+                    <!-- <p id="p3" class="rounded-pill">Un double-clic sur ce paragraphe.</p> -->
+                </div> <!-- fin de la col-8 -->
+                <div class="col-4">
+                    <div id="verte">#verte</div>
+                </div><!-- fin de la col-4 -->
+            </div> <!-- fin de la row 4 -->
+
+            <div class="row p-4 rounded-lg my-4" style="border: 1px solid rgb(47, 255, 193);">
+                <div class="col-5">
+                    <h2 style="color: rgb(47, 255, 193);">Formulaire</h2>
+                    <p>Nous avons pris le formulaire sur cette <a href="https://getbootstrap.com/docs/4.5/components/forms/#inline-forms" target="_blank">page.</a></p>
+                    <!-- <p id="p3" class="rounded-pill">Un double-clic sur ce paragraphe.</p> -->
+                </div> <!-- fin de la col-8 -->
+                <div class="col-7">
+                    <form class="form-inline" action="#" method="POST">
+                       
+                        <label class="sr-only" for="email">Email</label>
+                        <div class="input-group mb-2 mr-sm-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        </div>
+
+                        <label class="sr-only" for="password">Mot de passe</label>
+                        <input type="password" class="form-control mb-2 mr-sm-2" name="password" id="password" placeholder="Mot de passe" required>
+                      
+                        <button type="submit" id="submit" class="mb-2 btn">Se connecter</button>
+                    </form>
+                </div><!-- fin de la col-8 -->
+            </div> <!-- fin de la row 4 -->
+
+        </div> <!-- fin container -->
+        
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- mes scripts  -->
+    <script>
+       /* 
+                1 - Événement avec une fonction
+       */
+        
+        document.querySelector('#rouge').addEventListener('click',fDivRouge); // je selectionne la div par son id et j'ajoute un écouteur d'événement qui s'exécutera au moment de l'événement : addEventListener() a beosin de deux arguments : ('1- le mot clef correspondant , ici click', 2- le nom de la fonction)
+        document.querySelector('#rouge').style.cursor = "pointer";
+        function fDivRouge() {
+            alert('Vous avez cliqué sur la div #rouge');
+            this.style.background = "gold";
+            this.innerHTML = 'gold';
+            this.style.borderRadius = "50%"
+            this.style.textTransform = "uppercase";
+        }
+
+        //autre exemple
+        // avec une fonction anonyme 
+        document.querySelector('#p1').style.cursor = "pointer";
+
+        document.querySelector('#p1').addEventListener('click', function(){ // click : clique
+            alert('Vous avez cliqué sur le paragraphe avec une fonction anonyme.');
+            this.style.background = "gold";
+            this.innerHTML = 'Je suis devenu doré !';
+            this.style.textAlign = "center";
+        });
+
+        /* 
+                2 - Version avec une variable
+        */
+        var maDivOrange = document.querySelector('#orange');
+        console.log(typeof maDivROrange, maDivOrange);
+        
+
+        document.querySelector('#orange').style.cursor = "pointer";
+        maDivOrange.addEventListener('dblclick', fDivOrange); // dblclick : doucle-clique
+        function fDivOrange(){
+            alert('Vous avez double-cliqué sur la divOrange');
+            this.style.background = "gold";
+            this.innerHTML = 'gold';
+            this.style.borderRadius = "50%";
+            this.style.color = "#fff";
+            this.style.textTransform = "uppercase";
+        }
+
+        // avec une fonction anonyme 
+        document.querySelector('#p2').addEventListener('dblclick', function(){
+            alert('Vous avez doucle-cliqué sur le paragraphe !');
+            this.innerHTML = 'Je suis devenu doré !';
+            this.style.textAlign = "center";
+            this.style.background = "gold";
+        });
+
+        /* 
+                3 - Nouveau mot clef "mouseover"
+        */
+
+        document.getElementById('jaune').addEventListener('mouseover', fDivJaune); // mouseover : au survol
+        function fDivJaune(){
+            // alert('Vous avez survolé la div #verte !');
+            // alert('Vous avez double-cliqué sur la divOrange');
+            this.style.background = "gold";
+            this.innerHTML = 'gold';
+            this.style.borderRadius = "50%";
+            this.style.color = "#fff";
+            this.style.textTransform = "uppercase";
+            // this.style.display = "none";
+        }
+        /* 
+                4 - nouveau mot clef : mouseout
+        */
+        document.getElementById('verte').addEventListener('mouseout', fDivVerte); // mouseover : au survol
+        function fDivVerte(){
+            // alert('Vous êtes passé sur la div #verte')
+            this.style.background = "../img", "center";
+            this.style.borderRadius = "50%";
+            this.style.color = "#fff";
+            this.style.textTransform = "uppercase";
+            this.innerHTML = 'gold';
+        }
+
+        /* 
+                5 - Formulaire
+        */
+
+        //traiement du formulaire côté client 
+
+        //écouteur d'événement sur l'input email avec focus
+        document.querySelector('#email').addEventListener('focus', inputEmailFocus);
+
+        function inputEmailFocus() {
+            // this.classList.add('bg-warning')
+            this.style.background = "rgb(47, 255, 193)";
+            // this.classList.add('focus')
+        }
+
+        // écouteur d'événement sur l'input password avec blur
+        document.querySelector('#password').addEventListener('blur', inputPasswordBlur);
+
+        function inputPasswordBlur(){
+            this.style.background = "rgb(47, 255, 193)";
+        }
+
+
+        // écouteur d'événement sur le bouton
+        document.querySelector('#submit').addEventListener('click', btnSubmit);
+
+        function btnSubmit(event) { // attention on ajoute event en argument de cette fonction
+            event.preventDefault(); // preventDefault neutralise le formulaire pour la démo (attribut required) ou si on récupère les infos en développement 
+            alert('Nous avons bien reçu vos informations !');
+            this.classList.add('bg-success');
+            this.innerHTML = "Connecté.e !"
+        }
+    </script>
+
+  </body>
+</html>

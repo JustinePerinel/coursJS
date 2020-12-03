@@ -2,10 +2,10 @@
 
 let utilisateur = {
     // nom, âge et email sont des propriétés de l'objet utilisateur 
-    nom : ['Victor Hugo'],
+    nom : ['Victor', 'Marie', 'Hugo'],
     age : 80,
     email : 'totor@hugo.com',
     bonjour: function(){
-        alert('Mon nom est ' + this.nom[0] + ', j\'ai '+ this.age + 'ans.')}
+        alert('Mon prénom est ' + this.nom[0] + ', mon nom de famille est '+ this.nom[2] + ' et j\'ai '+ this.age + ' ans.')}
 } 
 utilisateur.bonjour();
