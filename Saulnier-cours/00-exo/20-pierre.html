@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!-- Fait par Audrey SAULNIER -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 - Pierre Feuille Ciseaux</title>
+    <style> 
+        /* Style de ma page */
+        :root {
+            --rose : rgb(255, 214, 221);
+            --rose-vif : rgb(240, 70, 240);
+            --noir : #000;
+            --blanc : #fff;
+            --jaune : yellow;
+            --rouge : red;
+            --violet : rgba(211, 61, 211, 0.856);
+        }
+        
+        body {
+            background-color:  rgb(219, 185, 230);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 20px;
+        }
+
+        main {
+            background-color:#fff;
+            width: 60%;
+            min-width: auto;
+            border-radius: 20px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            width: auto;
+            height: auto;
+            background-color: lightblue;
+            padding: 20px;
+            font-size: 3em;
+            text-align: center;
+            min-width: auto;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .orange {
+            background-color:rgb(221, 162, 53) ;
+            border-radius: 20px;
+            padding: 20px;
+            
+        }
+
+        .exemple {
+        border-color: orange;
+        color: rgb(221, 162, 53);
+        width: 80%;
+        border-bottom:4px solid orange;
+        padding: 10px;
+        }
+
+        .centrer {
+         padding-left: 75px;
+        }
+
+        .stabilo {
+            background-color: yellow;
+            text-align: center;
+        }
+
+    </style>
+    <!-- lien vers ma page JS -->
+    <script src="20-pierre.js" async></script>
+</head>
+<body>
+    <main> <!-- Début de main -->
+        <h1>Exo 20 - Pierre, feuille, ciseaux</h1>
+        
+        <p>L'utlisateur choisit dans un prompt du navigateur pierre, feuille ou ciseau, l'ordinateur choisit aléatoirement l'une des trois possibilités, et la partie commence !</p>
+        
+        <h2 class="exemple"> Remarques</h2>
+
+        <ul>
+            <li>On doit pouvoir indifféremment saisir le mot en minuscules comme en majuscules.</li>
+            <li>le ciseau est écrasé par la pierre.</li>
+            <li>la feuille est découpée par le ciseau.</li>
+            <li>la pierre est enveloppée par la feuille.</li>
+            <li>Si le joueur et l'ordinateur font le même choix on obtient une égalité.</li>
+        </ul>
+
+        <p>Le choix de l'ordinateur est pierre, le votre est pierre. <br>
+        Egalité
+        </p>
+
+        <button onclick="PFC()">Commencer le jeu</button>
+
+        <p id="p1"></p>
+        <p id="p1"></p>
+
+
+    </main>
+    <!-- </main> Fin de main -->
+
+</body>
+
+</html> 
