@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- Compléter la ligne 6 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JS VIII. 01 Diaporama</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- mon JS  -->
+    
+</head>
+<body>
+    <section class="jumbotron bg-light">
+        <h1 id="titreNiveau1" class="display-4">JS - VIII 01 - Les diaporama</h1>
+        <p class="lead">Les diaporamas en JS</p>
+    </section> <!-- fin en-tête jumbotron -->
+
+    <div class="container p-4">
+
+        <div class="row p-4 bg-light rounded-lg">
+            <div class="col-6">
+                <h2>1- Un 1er diaporama, avec des photos de plages...</h2>
+                <p>1ère façon de faire, sur les images directement je mets un onclick...</p>
+                <p>Dans la balise <code>img</code>, je mets cet attribut : <code>onclick="this.src='img/e.jpg';this.alt='une autre plage';"</code></p>
+            </div><!-- fin col -->
+
+            <div class="col-6">
+                <div id="diaporama1">
+                    <img src="img/d.jpg" alt="la plage" class="img-fluid" onclick="this.src='img/e.jpg';this.alt='une autre plage';">
+                </div> <!-- fin diaporama 1 -->
+            </div><!-- fin col -->
+        </div><!-- fin row -->
+
+        <div class="row p-4 bg-light rounded-lg">
+            <div class="col-6">
+                <div id="diaporama2">
+                    <img src="img/1.jpg" alt="une piscine" class="img-fluid" id="imgDiapo2">
+                </div> <!-- fin diaporama -->
+                <div class="row justify-content-md-center">
+                    <button type="button" class="btn btn-outline-info mt-4" id="btnDiapo2">Changer d'image</button>
+                </div><!-- fin diaporama 2 -->
+            </div><!-- fin col -->
+
+            <div class="col-6">
+                <h2>2- Un 2nd diaporama...</h2>
+                <p>Ce second diaporama est fait avec une fonction anonyme dans un écouteur d'événement, dans les scripts en bas de page.</p>
+                <blockquote>
+                    <code>
+                        document.getElementById('btnDiapo2').addEventListener('click', function() { <br>
+                        document.getElementById('imgDiapo2').src = 'img/e.jpg';<br>
+                        document.getElementById('imgDiapo2').alt = 'la piscine est belle';<br>
+                        })
+                    </code>
+                </blockquote>
+            </div><!-- fin col -->
+
+        </div><!-- fin row -->
+
+        <div class="row p-4 bg-light rounded-lg">
+            <div class="col-6">
+                <h2>3- Un 3eme diaporama...</h2>
+                <p></p>
+                <p></p>
+            </div><!-- fin col -->
+
+            <div class="col-6">
+                <div id="diaporama3">
+                    <img src="img/c.jpg" alt="une plage" class="img-fluid" id="imgDiapo3">
+                </div> <!-- fin diaporama -->
+                <div class="row justify-content-md-center">
+                    <button type="button" class="btn btn-outline-warning mt-4" id="btnDiapo3">Changer d'image</button>
+                </div><!-- fin diaporama 3 -->
+            </div><!-- fin col -->
+
+        </div><!-- fin row -->
+
+        <div class="row p-4 bg-light rounded-lg">
+            <div class="col-6">
+                <div id="diaporama4">
+                    <img src="img/3.jpg" alt="un paysage" class="img-fluid" id="imgDiapo4" onclick="tourneImages();">
+                </div> <!-- fin diaporama -->
+                <div class="row justify-content-md-center">
+                    <button type="button" class="btn btn-outline-primary mt-4" id="btnDiapo4">Changer d'image</button>
+                </div> <!-- fin diaporama 4 -->
+            </div><!-- fin col -->
+
+            <div class="col-6">
+                <h2>4- Un 4eme diaporama...</h2>
+                <p>Une boucle switch dans une fonction.</p>
+                <blockquote>
+                    <code>
+                        function tourneImages() { <br>
+                            var getImage = document.getElementById('imgDiapo4').getAttribute('src')<br>
+                            console.log(getImage); <br><br>
+                
+                            switch(getImage) {<br>
+                                case 'img/3.jpg': <br>
+                                    document.getElementById('imgDiapo4').src = 'img/4.jpg'<br>
+                                    break;<br>
+                            }<br><br>
+                
+                            switch(getImage) {<br>
+                                case 'img/4.jpg': <br>
+                                    document.getElementById('imgDiapo4').src = 'img/5.jpg'<br>
+                                    break;<br>
+                            }<br><br>
+                
+                            switch(getImage) {<br>
+                                case 'img/5.jpg': <br>
+                                    document.getElementById('imgDiapo4').src = 'img/6.jpg'<br>
+                                    break;<br>
+                            }<br><br>
+                
+                            switch(getImage) {<br>
+                                case 'img/6.jpg': <br>
+                                    document.getElementById('imgDiapo4').src = 'img/3.jpg'<br>
+                                    break;<br>
+                            }<br>
+                       }<br>
+                    </code>
+                </blockquote>
+            </div><!-- fin col -->
+
+        </div><!-- fin row -->
+        
+    </div> <!-- fin container -->
+
+    
+
+    <!-- et les scripts utiles à Bootstrap JQuery, popper.js et le JS de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+    <!-- Mes scripts -->
+    <script>
+       // DIAPORAMA 2
+
+       // une fonction anonyme pour le diaporama 2
+       document.getElementById('btnDiapo2').addEventListener('click', function() { // je sélectionne le bouton et je lui attribue au clique une fonction pour changer d'image et changer le contenu de alt
+            document.getElementById('imgDiapo2').src = 'img/e.jpg';
+            document.getElementById('imgDiapo2').alt = 'la piscine est belle';
+       })
+
+       // une fonction pour le diaporama 3
+       document.querySelector('#btnDiapo3').addEventListener('click', fDiapo3);
+       
+       function fDiapo3(){
+            document.getElementById('imgDiapo3').src = 'img/6.jpg';
+            document.getElementById('imgDiapo3').alt = 'une autre plage';
+       }
+
+       // DIAPORAMA 4
+
+       function tourneImages() {
+            var getImage = document.getElementById('imgDiapo4').getAttribute('src')
+            console.log(getImage); // le console.log ne s'affiche qu'au clique
+
+            switch(getImage) {
+                case 'img/3.jpg': // si j'ai récupéré le contenu de "src et qu'il contient le case"
+                    document.getElementById('imgDiapo4').src = 'img/4.jpg' //remplace le par cette nouvelle src
+                    break;
+            }
+
+            switch(getImage) {
+                case 'img/4.jpg': 
+                    document.getElementById('imgDiapo4').src = 'img/5.jpg'
+                    break;
+            }
+
+            switch(getImage) {
+                case 'img/5.jpg': 
+                    document.getElementById('imgDiapo4').src = 'img/6.jpg'
+                    break;
+            }
+
+            switch(getImage) {
+                case 'img/6.jpg': 
+                    document.getElementById('imgDiapo4').src = 'img/3.jpg'
+                    break;
+            }
+       } //fin tourneImages
+
+
+    </script>
+   
+</body>
+</html>
