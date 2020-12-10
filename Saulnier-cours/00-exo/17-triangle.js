@@ -11,6 +11,7 @@ for (let i = 1 ; i <= 7 ; i++) {
 // autre solution boucle for
 
 for(i=0; i <=7; i++){
+    // La méthode repeat() construit et renvoie une nouvelle chaine de caractères qui contient le nombre de copie demandée de la chaine de caractères sur laquelle la méthode a été appelée, concaténées les unes aux autres.
     console.log("#".repeat(i));
 }
 
@@ -22,9 +23,22 @@ for(i=0; i <=7; i++){
     let diese2 = '';
     let w1 = 1;
 
+// 1ere méthode
+
+//     while ( w1 <= 10 ){ 
+//     diese2 += '#';
+//     console.log(diese2);
+//     w1++ ; //incrémente la valeur de la variable de départ
+// }
+
+// fonctionne aussi commme ça
+
     while ( w1 <= 10 ){ 
-    w1++ ; //incrémente la valeur de la variable de départ
-    diese2 += '#';
+    // diese2 += '#';
+    diese2 = diese2 + '0';
     console.log(diese2);
+    w1++ ; //incrémente la valeur de la variable de départ
 }
+
+
 

@@ -44,13 +44,14 @@
                     <div id="diaporama1">
                         <!-- class="img-fluid" pour que l'image soit adapté au parent et responsive -->
                         <!-- onclick=" code javascript " dans cet exemple, on change l'image au click -->
-                        <img src="img/plage1.jpg" alt="la plage" class="img-fluid" onclick="this.src='img/plage2.jpg';this.alt='une autre plage';">
+                        <img src="img/plage1.jpg" alt="la plage" class="img-fluid" onclick="this.src = 'img/plage2.jpg';this.alt = 'une autre plage';">
 
                     </div>
                 </div> <!--fin col-6-->
             </div> <!--fin row-->
 
             <div class="row border border-info my-3 p-3">
+
                 <!-- 2nd diaporama -->
                 <div class="col-6 my-2 p-2">
                     <div id="diaporama1">
@@ -58,7 +59,9 @@
                         <img src="img/piscine-bois.jpg" alt="la piscine" class="img-fluid" id="imgDiapo2">
                     </div> <!--fin col diaporama-->
 
-                    <button id="btnDiapo2" type="button" class="btn btn-outline-success m-2">Changer d'image</button>
+                    <div class="row mt-0 ">
+                        <button id="btnDiapo2" type="button" class="btn btn-outline-success m-2">Changer d'image</button>
+                    </div>
                 </div> <!--fin col-6-->
 
                 <div class="col-6 ">
@@ -75,11 +78,17 @@
             </div> <!--fin row-->
 
             <div class="row border border-info my-3 p-3">
-                <!-- 3eme diaporama -->
+                <!-- diaporama avec fonction nomnée -->
                 <div class="col-6 ">
-                    <h2 class="p-2">3 - Un 3ème diaporama avec une fonction nommée</h2>
+                    <h2 class="p-2"> - Un diaporama avec une fonction nommée</h2>
                     <p></p>
-                    <p></p>
+                    <p><code>
+                        document.getElementById('btnDiapo3').addEventListener('click', imgDiapo3); <br>
+                        function imgDiapo3() { <br>
+                        document.getElementById('imgDiapo3').src = 'img/tortue.jpg';<br>
+                        document.getElementById('imgDiapo3').alt = 'la tortue';<br>
+        }
+                    </code></p>
                 </div> <!--fin col-6-->
 
                 <div class="col-6 my-2 p-2">
@@ -91,6 +100,46 @@
 
                     </div>
                 </div> <!--fin col-6-->
+            </div> <!--fin row-->
+
+            <div class="row border border-info my-3 p-3">
+                <!-- 3me diaporama -->
+                <div class="col-6 my-2 p-2">
+                    <div id="diaporama1">
+                        <!-- class="img-fluid" pour que l'image soit adapté au parent et responsive -->
+                        <!-- onclick, attention " () ;" -->
+                        <img src="img/falaise.jpg" alt="Une falaise" class="img-fluid" id="imgDiapo4" onclick="tourneImages();">
+                    </div> <!--fin col diaporama-->
+
+                </div> <!--fin col-6-->
+
+                <div class="col-6 ">
+                    <h2 class="p-2">3 - Un 3ème diaporama</h2>
+                    <p>avec un switch dans une fonction...</p>
+                    <p><code>
+                        function tourneImages() { <br>
+                            var getImage = document.getElementById('imgDiapo4').getAttribute('src') <br>
+                            console.log(getImage); <br>
+                            <br>
+                            switch(getImage) {<br>
+                                case 'img/falaise.jpg':<br>
+                                    document.getElementById('imgDiapo4').src = 'img/plage1.jpg'<br>
+                                    break;<br>
+                            }<br>
+                            switch(getImage) {<br>
+                                case 'img/plage1.jpg':<br>
+                                    document.getElementById('imgDiapo4').src = 'img/pluie1.jpg'<br>
+                                    break;<br>
+                            }<br>
+                            switch(getImage) {<br>
+                                case 'img/pluie1.jpg':<br>
+                                    document.getElementById('imgDiapo4').src = 'img/falaise.jpg'<br>
+                                    break;<br>
+                            }<br>
+                        } 
+                    </code></p>
+                </div> <!--fin col-6-->
+                
             </div> <!--fin row-->
 
             
@@ -115,11 +164,43 @@
             document.getElementById('imgDiapo2').alt = 'la vue est belle';
         })
 
-        // DIAPORAMA 3
 
-        // un diaporama avec une fonction
-    
+        // un diaporama avec une fonction nomnée
 
+        document.getElementById('btnDiapo3').addEventListener('click', imgDiapo3);
+        function imgDiapo3() { 
+            document.getElementById('imgDiapo3').src = 'img/tortue.jpg';
+            document.getElementById('imgDiapo3').alt = 'la tortue';
+        }
+
+            // DIAPORAMA 3
+
+            // on va faire une fonction
+
+            function tourneImages() {
+                // 'src' recupère tous les attributs de src
+                var getImage = document.getElementById('imgDiapo4').getAttribute('src')
+                console.log(getImage); //le console log
+
+                switch(getImage) {
+                    case 'img/falaise.jpg':
+                        document.getElementById('imgDiapo4').src = 'img/plage1.jpg'
+                        break;
+                }
+                switch(getImage) {
+                    case 'img/plage1.jpg':
+                        document.getElementById('imgDiapo4').src = 'img/pluie1.jpg'
+                        break;
+                }
+                // nouvelle boucle switch pour revenir à la premiere condition, la première image et la boucle repart
+                switch(getImage) {
+                    case 'img/pluie1.jpg':
+                        document.getElementById('imgDiapo4').src = 'img/falaise.jpg'
+                        break;
+                }
+
+
+            } //fin tourneImage
 
         </script>
 

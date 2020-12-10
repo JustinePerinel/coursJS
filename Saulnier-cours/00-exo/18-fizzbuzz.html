@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!-- Fait par Audrey SAULNIER -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 - FizzBuzz</title>
+    <style> 
+        /* Style de ma page */
+        :root {
+            --rose : rgb(255, 214, 221);
+            --rose-vif : rgb(240, 70, 240);
+            --noir : #000;
+            --blanc : #fff;
+            --jaune : yellow;
+            --rouge : red;
+            --violet : rgba(211, 61, 211, 0.856);
+        }
+        
+        body {
+            background-color:  rgb(219, 185, 230);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 20px;
+        }
+
+        main {
+            background-color:#fff;
+            width: 60%;
+            min-width: auto;
+            border-radius: 20px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            width: auto;
+            height: auto;
+            background-color: lightblue;
+            padding: 20px;
+            font-size: 3em;
+            text-align: center;
+            min-width: auto;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .orange {
+            background-color:rgb(221, 162, 53) ;
+            border-radius: 20px;
+            padding: 20px;
+            
+        }
+
+        .exemple {
+        border-color: orange;
+        color: rgb(221, 162, 53);
+        width: 80%;
+        border-bottom:4px solid orange;
+        padding: 10px;
+        }
+
+        .centrer {
+         padding-left: 75px;
+        }
+
+        .stabilo {
+            background-color: yellow;
+            text-align: center;
+        }
+
+    </style>
+    <!-- lien vers ma page JS -->
+    <script src="18-fizzbuzz.js" async></script>
+</head>
+<body>
+    <main> <!-- Début de main -->
+        <h1>Exo 18 - FizzBuzz</h1>
+        <p>Ecrivez un programme fizzbuzz.js qui affiche tous les nombres entre 1 et 100 avec  les exceptions suivantes :</p>
+
+        <ul>
+            <li>Il affiche "Fizz" à la place du nombre si celui-ci est divisible par 3</li>
+            <li>Il affiche "Buzz" à la place des nombre si celui-ci est divisible par 5 et non par 3</li>
+            <li>Ensuite, améliorer votre programme pour qu'il affiche "FizzBuzz" à la place des nombres divisibles par 3 et par 5</li>
+        </ul>
+
+        <p class="exemple"> Cet exercice a de nombreuses solutions possibles et constitue un test d'entretien d'embauche classique</p>   
+        
+        <p id="p1"></p>
+
+    </main>
+    <!-- </main> Fin de main -->
+
+</body>
+
+</html> 
