@@ -4,28 +4,23 @@
     <meta charset="UTF-8">
     <!-- Compléter la ligne 6 -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>JS VIII. 03 Jeu avec keydown</title>
+    <title>JS VIII. 05 Toggle</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- mon JS  -->
     <!-- <script src="setinterval.js" async></script> -->
 
     <!-- feuille de style spécifique à la navbar -->
     <link rel="stylesheet" href="../css/navbar.css">
+
     <style>
-        #move{
-            width: 100px;
-            height: 100px;
-            background-color: pink;
-            border: 2px solid red;
-            line-height: 100px;
-            text-align: center;
-            position: relative;
-        }
+
+      /* classe pour l'image */
+      .cache{
+        display: none;
+      }
     </style>
-    
 </head>
 <body>
-
     <!-- Navbar bootstrap expand at md -->
     <!-- Ne pas oublier de vérifier si un style css accompagne le code bootstrap pour que le comportement du code soit le même que sur la doc -->
     <nav class="navbar navbar-expand-md navbar-dark bg-primary">
@@ -46,7 +41,7 @@
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Lien désactivé</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="08-03-keydown.html">keydown</a>
+                <a class="nav-link active" href="08-05-toggle.html">Toggle</a>
               </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">08 Manipulations</a>
@@ -66,21 +61,22 @@
       </nav> <!-- fin Navbar-->
 
     <section class="jumbotron bg-light">
-        <h1 id="titreNiveau1" class="display-4">JS - VIII. 03 Jeu avec keydown</h1>
-        <p class="lead">keydown</p>
+        <h1 id="titreNiveau1" class="display-4">JS - VIII. 05 Toggle</h1>
+        <p class="lead">08-05-toggle.html</p>
     </section> <!-- fin en-tête jumbotron -->
 
     <div class="container p-4">
 
+        <div class="row p-4 justify-content-center bg-light rounded-lg">
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-block btn-outline-primary" id="cacheImage">Afficher l'image</button>
+            </div><!-- fin col -->
+        </div><!-- fin row -->
+        
         <div class="row p-4 bg-light rounded-lg">
-            <div class="col-6">
-                <h2>1- keydown</h2>
-            </div><!-- fin col -->
-
-            <div class="col-6">
-                <div id="move">#move</div>
-            </div><!-- fin col -->
-
+          <div class="col-12">
+            <img src="img/paris-1225923_1280.jpg" alt="Paris" class="img-fluid cache">
+          </div><!-- fin col -->
         </div><!-- fin row -->
         
     </div> <!-- fin container -->
@@ -92,25 +88,36 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
+    <!-- Mes scripts -->
     <script>
 
-        // document.addEventListener('keydown', clavier);
-        document.onkeydown = clavier;
+       let bouton = document.getElementById('cacheImage');
+      //  console.log(bouton);
+      //  let bouton2 = document.querySelector('#cacheImage');
 
-        console.log(document.getElementById('move'));
-        
-        function clavier(e){
-            var carre = document.getElementById('move');
-            if(e.keyCode == '38'){ // 38 flèche du haut
-                carre.style.top = (carre.offsetTop - 20) + 'px';
-            }else if (e.keyCode == '39'){ // 39 flèche de droite
-                carre.style.left = (carre.offsetLeft + 20) + 'px';
-            }else if (e.keyCode == '40'){ // 40 flèche du bas
-                carre.style.top = (carre.offsetTop + 20) + 'px';
-            }else if (e.keyCode == '37'){ // 37 flèche de gauche
-                carre.style.left = (carre.offsetLeft - 50) +'px';
-            }
-        } // fin fonction clavier
+      // let photo2 = document.getElementsByClassName('cache');
+      let photo = document.querySelector('.cache');
+      // console.log(photo2);
+
+      function cliqueBouton(){
+        photo.classList.toggle('cache');
+      }
+
+      bouton.addEventListener('click', cliqueBouton);
+
+      // if (prenom.length < 2) {
+      //               // classList représente toutes les classes de l'élément e.target
+      //               // add ajoute une classe
+      //               e.target.prenom.classList.add("error");
+      //               // remove pour supprimer
+      //               e.target.prenom.classList.remove("valide");
+      //           } else {
+      //               // toggle va eviter d'écrire les deux lignes pour error et valide
+      //               e.target.prenom.classList.toggle("valide", "error");
+      //               // e.target.prenom.classList.remove("error");
+      //               // // remove pour supprimer
+      //               // e.target.prenom.classList.add("valide");
+      //           }
 
     </script>
 </body>

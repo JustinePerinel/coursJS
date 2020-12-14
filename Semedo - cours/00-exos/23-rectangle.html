@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 23 - Gestion de la souris</title>
+    <!-- html de Katia -->
+    <style>
+        /* style général de la page */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lavender;
+        }
+        main {
+            background-color: #fff;
+            width: 70%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 10px 15px;
+            overflow: hidden;
+        }
+
+        .titre {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: rebeccapurple;
+
+            position: relative;
+            top: -60px;
+            left: -50px;
+        }
+
+        h1 {
+            color: white;
+            /* font-family: serif; */
+            font-weight: 300;
+            letter-spacing: 2px;
+            
+            line-height: 40px;
+            text-align: center;
+            padding-left: 30px;
+            padding-top: 75px;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+
+        .bulle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(230, 230, 250, 0.7);
+
+            float: left;
+
+            position: relative;
+            right: -150px;
+            top: -50px;
+
+        }
+
+        /* #p1, #p2 {
+            color: purple;
+            text-align: center;
+            position: relative;
+            top: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 40px;
+        } */
+
+        .consignes {
+            float: left;
+            width: 65%;
+            padding-left: 20px;
+        }
+
+        .encadre {
+            background-color: lavenderblush;
+            border-radius: 10px;
+            padding: 15px;
+            width: auto;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .programme {
+            padding-left: 20px;
+        }
+
+        /* style du rectangle */
+
+        .rectangle {
+            background-color: royalblue;
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        /* style pour le changement de couleur après un double clique */
+
+        .good {
+            background-color: limegreen;
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        /* style pour le changement de couleur au survol */
+
+        .important {
+            background-color: firebrick;
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        /* style pour masquer le rectangle */
+
+        .cache {          
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="titre">
+            <h1>Rectangle</h1>
+        </div>
+
+        <div class="consignes">
+            <h3>Consignes</h3>
+            <p>Construire un programme affichant un rectangle de couleur qui réagit à différentes interactions avec la souris de l'utilisateur.</p>
+
+            <h3>HTML</h3>
+            <ul>
+                <li>Dans l'en-tête de la page :Ajouter un titre au programme: "Gestion de la souris".</li>
+                <li>Créer un bouton (id: #toggle-rectangle) ayant pour intitulé "Cacher / Afficher le rectangle".</li>
+                <li>Dans la partie principale de la page :</li>
+                <li>Ajouter des paragraphes de texte expliquant ce que le programme peut faire (lire ci-dessous les interactions).</li>
+                <li>Créer une balise **div** vide (class:rectangle) pour le rectangle.</li>
+            </ul>
+
+            <h3>CSS</h3>
+            <ul>
+                <li>Le rectangle est bleu ('royalblue'), de taille 400x300 pixels et possède des coins arrondis.</li>
+                <li>Lorsqu'on applique la classe "good" en plus au rectangle, il devient vert ('limegreen').</li>
+                <li>Lorsqu'on applique la classe "important" en plus au rectangle, il devient rouge ("firebrick").</li>
+                <li>Le changement de couleur du rectangle doit s'animer.</li>
+                <li>Ajouter le CSS nécessaire restant pour que le programme fonctionne.</li>
+            </ul>
+
+            <h3>Interaction</h3>
+            <ul>
+                <li>Quand on clique sur le bouton "toggle-rectangle", cela cache ou affiche le rectangle.</li>
+                <li>Quand la souris se déplace à l'intérieur du rectangle il devient rouge; il reprend sa couleur originale quand la souris n'est plus dedans.</li>
+                <li>Quand on double-clique sur le rectangle il devient vert.</li>
+            </ul>
+
+            <h3>Remarques</h3>
+            <ul>
+                <li>Organiser le code en trois parties : les variables, les fonctions et enfin le code principal.</li>
+                <li>Nommer correctement les gestionnaires d'évènements pour qu'il aient un sens.</li>
+            </ul>
+        </div>
+
+        <div class="bulle"></div>
+        <div class="clear"></div>
+
+        <button type="button" id="toggle-rectangle">Cacher / Afficher le rectangle</button>
+
+        <hr>
+        
+        <p id="p1" class="encadre">Survolez à la souris le rectangle ci-dessous pour qu'il change de couleur !</p>
+        <p id="p2" class="encadre">Ou double-cliquez dessus...:-)</p>
+
+        <div class="rectangle cache"></div>
+
+    </main>
+    <script src="23-rectangle.js"></script>
+</body>
+</html>
