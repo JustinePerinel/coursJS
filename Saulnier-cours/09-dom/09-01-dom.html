@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <!-- ajouter la ligne pour boodstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>VIII - 05 - toggle</title>
+    <title>IX - 01 - DOM</title>
     <!-- reset  -->
     <!-- <link rel="stylesheet" href="../css/reset.css"> -->
     <!-- mes styles en externe -->
@@ -63,23 +63,24 @@
                     <a class="nav-link disabled " href="#" tabindex="-1" aria-disabled="true">Lien désactivé</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="08-05-toggle.html">Toggle</a>
+                    <a class="nav-link active" href="09-01-dom.html">Le DOM</a>
                 </li>
                 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">08 Manipulation</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown03">
-                        <a class="dropdown-item" href="08-01-diaporama.html">Diaporama</a>
-                        <a class="dropdown-item" href="08-02-setInterval.html">setInterval()</a>
-                        <a class="dropdown-item" href="08-03-keydown.html">Keydown</a>
-                        <a class="dropdown-item" href="08-04-formulaire.html">Formulaire</a>
-                        <a class="dropdown-item" href="08-05-toggle.html">Toggle</a>
+                        <a class="dropdown-item" href="../08-manipulations/08-01-diaporama.html">Diaporama</a>
+                        <a class="dropdown-item" href="../08-manipulations/08-02-setInterval.html">setInterval()</a>
+                        <a class="dropdown-item" href="../08-manipulations/08-03-keydown.html">Keydown</a>
+                        <a class="dropdown-item" href="../08-manipulations/08-04-formulaire.html">Formulaire</a>
+                        <a class="dropdown-item" href="../08-manipulations/08-05-toggle.html">Toggle</a>
                     </div>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">09 DOM</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown03">
-                        <a class="dropdown-item" href="../09-dom/09-01-dom.html">DOM</a>
+                        <a class="dropdown-item" href="09-01-dom.html">DOM</a>
                         
                     </div>
                 </li>
@@ -95,29 +96,57 @@
 
     <!-- jumbotron / container / row/ col -->
     <div class="jumbotron ">
-        <h1 id="titreNiveau1" class="display-4">JS - VIII 05 - Toggle</h1>
-        <p class="lead">08-05-toggle.html</p>
+        <h1 id="titreNiveau1" class="display-4">JS - IX - 01 - Le DOM</h1>
+        <p class="lead">Le DOM : Document Object Model</p>
     </div>
     <!--fin jumbotron-->
     
     <!-- Début de container -->
     <div class="container border border-info p-5">
         
+        <div class="row  my-3">
+            <div class="col-5">
+                <h2 class="font-weight-bold">Définition</h2>
+                <p>1 - Le DOM est une interface de programmation pour des documents HTML ou XML qui représente le document (la page web actuelle) sous une forme qui permet aux langages de script comme le JavaScript d'y accéder et d'en manipuler le contenu et les styles.</p>
 
-        <div class="row border border-info my-3 p-3 justify-content-center ">
-            <div class="col-6 text-center">
-                <button type="button" class="btn btn-primary btn-block" id="cacheImage">Afficher/cacher l'image</button> 
+            </div>
+            
+            <div class="col-7">
+                <p>Voici le code suivant :</p>
+                <figure class="bg-info p-2">
+                    <img src="img/page-exemple.png" alt="exemple en code" class="img-fluid">
+                    <figcaption class="text-center bg-light"><a href="#">Voir la page dont nous affichons ci-dessous le DOM</a> </figcaption>
+                </figure>
+
             </div>
             <!--fin col-12-->
         </div>
         <!--fin row-->
 
         <div class="row">
-            <div class="col-12 ">
-                <img src="img/paris-panoramique.jpg" alt="Paris en panoramique" class="img-fluid cache">
+            <div class="col-7">
+                <figure class="bg-info p-2">
+                    <img src="img/dom.png" alt="le dom" class="img-fluid">
+                    <figcaption class="text-center bg-light">Le DOM d'une page </figcaption>
+                </figure>
+
             </div>
+            <div class="col-5">
+                <p>2 - Les objets node ou les noeuds du DOM</p>
+                <p>Le terme noeud est un terme générique qui sert à désigner tous les objets contenus dans le DOM.</p>
+                <p>A partir du noeud racine <code>html</code>, on voit que 2 branches se forment.</p>
+                <p>3 - Alors que JavaScript est le langage de programmation qui permet d'opérer sur les objets DOM et de les manipuler, le DOM fournira les méthodes et les propriétés nécessaires pour lire, modifier, mettre à jour et supprimer des éléments du document examiné. Par exemple, vous pouvez récupérer la valeur d'un champ texte HTML dans une chaîne à l'aide du DOM.</p>
 
-
+                <p>Exemple : </p>
+                <ul>
+                    <li><code>getElementByTagName("balise")</code> </li>
+                    <li><code>getElementById("id")</code> </li>
+                    <li><code>getElementByName("nom")</code> </li>
+                    <li><code></code> </li>
+                    <li><code></code> </li>
+                    <li><code></code> </li>
+                </ul>
+            </div>
         </div> <!--fin row-->
 
     </div>
@@ -137,27 +166,7 @@
 
     <!-- Mes scripts !!! -->
 
-    <script>
-
-        // let bouton = document.getElementById('cacheImage');
-        // 2eme façon d'appeler pour vérifier le bouton
-        let bouton2 = document.querySelector('#cacheImage');
-        // console.log(bouton2);
-
-        // let photo = document.getElementsByClassName('cache');
-        // console.log(photo);
-
-        let photo2 = document.querySelector('.cache');
-        // console.log(photo2);
-
-        function cliqueBouton() {
-            photo2.classList.toggle('cache');
-        }
-
-        bouton2.addEventListener('click', cliqueBouton);
-
-
-    </script>
+ 
 
 
 </body>
