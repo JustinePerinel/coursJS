@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+body {
+    font-family: 'Black Ops One', cursive;
+}
+
+body>div {
+    height: 100vh;
+    font-size: 5em;
+}
+
+.fixWidth {
+    min-width: 150px;
+}
+
+#separation {
+    animation: blind 1s infinite linear;
+}
+
+@keyframes blind {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
