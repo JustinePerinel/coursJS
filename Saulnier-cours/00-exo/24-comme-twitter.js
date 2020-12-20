@@ -1,0 +1,1 @@
+// page JS pour l'exo 242 comme twitter
