@@ -11,7 +11,14 @@
         .container {
             padding-top: 10px;
         }
-        
+        /* style de la navbar */
+        /* body {
+            padding: 20px;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        } */
 
     </style>
     
@@ -26,8 +33,8 @@
                 <span class="text-muted">Un exo avec Boodstrap 4 et JS</span>
               </div>
             </div>
-            <nav class="navbar navbar-dark bg-dark">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar navbar-dark bg-dark ">
+              <button class="navbar-toggler border border-light" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
             </nav>
@@ -92,10 +99,24 @@
                 
                 </div> <!--fin de col-6-->
             
-                <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 my-4 mx-auto">
+                <!-- <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 my-4 mx-auto">
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> 
                     <label for="exampleFormControlTextarea1" class=" col-12 bg-warning text-center">140 caractères</label>
-                </div>
+                </div> -->
+
+                <div class="row justify-content-center p-4 mx-auto">
+                    <div class="col-sm-12 col-md-8">
+                        <form action="24-comme-twitter.html" method="POST" id="commeTwitter">
+                            <div class="form-group">
+                                <label for="tweet"class="border border-info p-2 sr-only">Tweet</label>
+                                <textarea name="tweet" id="tweetContenu" cols="50" rows="5" class="form-control"></textarea>
+                                <!-- le maxlenght dans la class sert à limiter le nombre de saisie de caractères -->
+                                <!-- <textarea name="tweet" id="tweetContenu" cols="50" rows="5" class="form-control" maxlength="140"></textarea> -->
+                            </div>
+                        </form>
+                        <p id="compteur" class="lead text-center bg-warning"></p>
+                    </div><!-- fin col -->
+                </div><!-- fin row -->
 
         
 </div> <!--fin de row-->
