@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>DOM</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-info">
+      <a class="navbar-brand" href="#">Cous Java Script</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Accueil<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../01-introduction/01-01-introduction.html">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../02-variables-constantes/02-01-introduction.html">Variables et constantes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../03-structures-controle/03-01-introduction.html">Les structures de contrôle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../04-fonctions/04-01-introduction.html">Les fonctions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../05-objet/05-01-introduction.html">L'objet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../06-selecteurs/06-01-selecteurs.html">Les sélecteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../07-evenements/07-01-evenement.html">Les évènements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../08-manipulations/08-01-diaporama.html">Les manipulations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="09-dom/09-01-dom.html">Le DOM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="09-01-dom.html">Diapos</a>
+          </li>
+        </ul>
+      </div>
+    </nav> <!-- fin de la nav -->
+
+    <div class="jumbotron">
+        <h1 class="display-3">JS - IX 01 Le DOM</h1>
+        <p class="lead">Document Object Model</p>
+    </div> <!-- fin du jumbotron -->
+
+    <div class="container border border-primary">
+
+      <div class="row my-4">
+        <div class="col-12 p-3">
+          <h2>Définition</h2>    
+        </div>
+        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 p-3">
+          <p>1 - Le DOM est une interface de programmation pour des documents HTML ou XML qui représente le document (la page web actuelle) sous une forme qui permet aux langages de script comme le JavaScript d'y accéder et d'en manipuler le contenu et les styles. </p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 p-3">
+          <p>Voici le code</p>
+              <figure class="bg-info p-2">
+                <img src="img/page-exemple.png" alt="du code" class="img-fluid">
+                <figcaption class="bg-light text-center"><a href="09-01-dom.html">Voir la page dont nous affichons si dessous le DOM</a></figcaption>
+              </figure>
+        </div>
+      </div> <!-- fin de la row  -->
+
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <figure class="bg-info p-2">
+            <img src="img/dom.png" alt="du code" class="img-fluid">
+            <figcaption class="bg-light text-center">Le DOM d'une page</figcaption>
+          </figure>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <p>2 - Les objets node ou les noeuds du DOM</p>
+          <p>Le terme noeud est un terme générique qui sert à désigner tous les objets contenus dans le DOM.</p>
+          <p>A partir du noeud racine <code>html</code>, on voir que deux branches se forment.</p>
+          <p>3 - Alors que JavaScript est un langage de programmation qui permet d'opérer sur les objets DOM et de les manipuler, le DOM fournira les méthodes et les propriétés nécessaires pour lire, modifier mettre à jour et supprimer des éléments du document examiné. Par exemple, vous pouvez récupérer la valeur d'un champ texte HTML dans une chaîne à l'aide du DOM.</p>
+          <p>Exemples : </p>
+          <ul>
+            <li><code>getElementbyId('coucou')</code> </li>
+            <li><code>getElementsbyClassName('hello')</code></li>
+            <li><code>getElementsbyTagName('p')</code></li>
+            <li><code>querySelector('#diapo')</code></li>
+          </ul>
+        </div>
+      </div> <!-- fin de la row  -->
+
+    </div> <!--  fin du container  -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

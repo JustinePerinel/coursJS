@@ -1,21 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Exo 03-tva</title>
-      <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-      <main>
-            <h1><a href="../index.html">Retour vers l'index</a></h1>
-            <h2>TVA</h2>
-            <p>Écrivez un programme JS qui fait saisir un prix HT (hors taxes) à l'utilisateur, puis qui affiche le prix TTC correspondant en se basant sur un taux de TVA à 20%. </p>
-            <p>Affichez ce résultat dans un paragraphe depuis le JS.</p>
-            <p class="notice">Indice : Multiplier le prix HT par 1,20 pour obtenir le prix TTC.</p>
-            <p id="p1" class="js-integre"></p>
-            
-            <script src="03-tva.js"></script>
-      </main>
-</body>
+  <head>
+    <title>Exo 03</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Accueil des exos</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                  aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exos I</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                              <a class="dropdown-item" href="01-bonjour.html">Bonjour</a>
+                              <a class="dropdown-item" href="02-valeurs.html">Valeurs</a>
+                              <a class="dropdown-item" href="03-tva.html">Calcul TVA</a>
+                              <a class="dropdown-item" href="04-conversion.html">Conversion</a>
+                              <a class="dropdown-item" href="05-permutation.html">Permutation</a>
+                        </div>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exos II</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                              <a class="dropdown-item" href="06-joursuivant.html">Jour Suivant</a>
+                              <a class="dropdown-item" href="07-comparaison.html">Comparer °C et °F</a>
+                              <a class="dropdown-item" href="08-baccalaureat.html">Baccalauréat</a>
+                              <a class="dropdown-item" href="09-valeurs.html">Valeurs</a>
+                              <a class="dropdown-item" href="10-nombrejours.html">Nombre de jours par mois</a>
+                        </div>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exos III</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                              <a class="dropdown-item" href="11-heuresuivante.html">Affiche l'heure qu'il est +1sec</a>
+                              <a class="dropdown-item" href="12-tourner-manege.html">Exécute le nombre de tours demandé</a>
+                              <a class="dropdown-item" href="13-parite.html">Parité</a>
+                              <a class="dropdown-item" href="14-saisie.html">Saisie</a>
+                              <a class="dropdown-item" href="15-multiplication.html">Multiplication</a>
+                        </div>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exos IV</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                              <a class="dropdown-item" href="16-jeu.html">Ni oui ni non !</a>
+                              <a class="dropdown-item" href="17-triangle.html">Fabrique un triangle</a>
+                              <a class="dropdown-item" href="17-bis-triangle.html">Fabrique un triangle 2</a>
+                              <a class="dropdown-item" href="18-fizzbuzz.html">FizzBuzz</a>
+                              <a class="dropdown-item" href="19-devinette.html">Devinez ce numéro !</a>
+                              <a class="dropdown-item" href="20-pierre.html">Pierre, feuille, ciseaux</a>
+                        </div>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exos V</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                              <a class="dropdown-item" href="21-saisie-obligatoire.html">Saisie obligatoire</a>
+                              <a class="dropdown-item" href="#"> ?? </a>
+                              <a class="dropdown-item" href="23-rectangle.html">Rectangle : bleu vert ou rouge ?</a>
+                              <a class="dropdown-item" href="24-comme-twitter.html">140 caractères</a>
+                              <a class="dropdown-item" href="25-chrono.html">Chrono sur la page</a>
+                        </div>
+                        </li>
+                        <!-- <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                              <a class="dropdown-item" href="#">Action 1</a>
+                              <a class="dropdown-item" href="#">Action 2</a>
+                              <a class="dropdown-item" href="#">Action 2</a>
+                              <a class="dropdown-item" href="#">Action 2</a>
+                              <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
+                        </li> -->
+                  </ul>
+            </div>
+      </nav> <!-- fin de la nav -->            
+
+<div class="container">
+
+      <div class="jumbotron">
+            <h1 class="display-3">Les exos JS</h1>
+            <p class="lead">Exo 03 - TVA</p>
+            <hr class="my-2">
+            <p>prompts(), multiplication et concaténation</p>
+            <p class="lead">
+                  <a class="btn btn-outline-secondary btn-lg" href="../index.html" role="button">Index du cours</a>
+            </p>
+      </div> <!-- fin du jumbotron -->
+
+            <div class="row my-4 p-2">
+                  <div class="col-12 p-2">
+                        <p>Écrivez un programme JS qui fait saisir un prix HT (hors taxes) à l'utilisateur, puis qui affiche le prix TTC correspondant en se basant sur un taux de TVA à 20%. </p>
+                        <p>Affichez ce résultat dans un paragraphe depuis le JS.</p>
+                        <p class="alert alert-primary text-center">Multiplier le prix HT par 1,20 pour obtenir le prix TTC.</p>
+                        <div class="alert alert-success">
+                              <h2 class="alert-heading">Résultat : </h2>
+                              <p id="p1"></p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- mes scripts  -->
+      <script src="03-tva.js"></script>
+  </body>
 </html>

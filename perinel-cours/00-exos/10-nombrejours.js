@@ -1,6 +1,6 @@
 // page js pour pour page 10-nombrejours.html
 
-var mois = parseInt(prompt('Choisissez un mois : ', 'saisir un numéro entre 1 et 12'));
+
 
 // if (mois >= 1 && mois <= 12){
 //     if(mois == 1) {
@@ -61,6 +61,8 @@ var mois = parseInt(prompt('Choisissez un mois : ', 'saisir un numéro entre 1 e
 // }else {
 //     document.getElementById('p1').innerHTML = 'Il n\'y a que 12 mois dans l\'année !';
 // }
+
+var mois = parseInt(prompt('Choisissez un mois : ', 'saisir un numéro entre 1 et 12'));
 
 var moisNom = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
 console.log(moisNom[4]);
