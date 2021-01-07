@@ -1,0 +1,68 @@
+/* css pour 98 entrainement personnel */
+
+* {
+    border-radius: 30px;
+    padding: 8px;
+    text-align: center;
+}
+
+body {
+    min-height: 100vh;
+    transition: .1s;
+}
+
+img {
+    margin: 0 auto;
+    height: 200px;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.show {
+    visibility: visible;
+}
+
+.mouseEvent {
+    border: 6px solid pink;
+    width: 220px;
+    position: absolute;
+    left: 20%;
+    transform: translateX(-50%);
+    padding: 10px; 
+}
+
+.themeContainer {
+    position: fixed;
+    top: 0;
+}
+
+.theme {
+    height: 30px;
+    width: 30px;
+    /* pour montrer que c'est cliquable */
+    cursor: pointer; 
+}
+
+#dark {
+    background: black;
+}
+#salmon {
+    background: salmon;
+}
+#yellow {
+    background: yellow;
+}
+
+.darkTheme {
+    background: black;
+    color: white;
+}
+
+.salmonTheme {
+    background: salmon;
+    color: white;
+}
+
+.yellowTheme {
+    background: yellow;
+}

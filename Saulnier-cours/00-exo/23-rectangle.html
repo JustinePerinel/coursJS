@@ -1,0 +1,156 @@
+<!DOCTYPE html> <!-- Fait par Audrey SAULNIER -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23 - rectangle - Gestion de la souris</title>
+    <style> 
+        /* Style de ma page */
+        :root {
+            --rose : rgb(255, 214, 221);
+            --rose-vif : rgb(240, 70, 240);
+            --noir : #000;
+            --blanc : #fff;
+            --jaune : yellow;
+            --rouge : red;
+            --violet : rgba(211, 61, 211, 0.856);
+        }
+        
+        body {
+            background-color:  rgb(219, 185, 230);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 20px;
+        }
+
+        main {
+            background-color:#fff;
+            width: 60%;
+            min-width: auto;
+            border-radius: 20px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            width: auto;
+            height: auto;
+            background-color: lightblue;
+            padding: 20px;
+            font-size: 3em;
+            text-align: center;
+            min-width: auto;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        li {
+            line-height: 25px;
+        }
+
+        .orange {
+            color: orange;
+            padding: 20px;
+        }
+
+        .exemple {
+        border-color: orange;
+        width: 80%;
+        border-bottom:4px solid orange;
+        padding: 10px;
+        }
+
+        .centrer {
+         padding-left: 75px;
+        }
+
+        .stabilo {
+            background-color: yellow;
+            text-align: center;
+        }
+
+        .rectangle {
+            width: 400px;
+            height: 300px;
+            background-color: royalblue;
+            border-radius: 10px;
+        }
+
+        .good {
+            background-color: limegreen;
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .important {
+            background-color: firebrick;
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <main> <!-- Début de main -->
+        <h1>Exo 23 - rectangle</h1>
+        <h2 class="exemple">Enoncé</h2>
+        <p>Construire un programme affichant un rectangle de couleur qui réagit à différentes intéractions avec le souris de l'utilisateur.</p>
+
+        <h2 class=" orange exemple">HTML</h2>
+        <blockquote>Dans l'en-tête de la page : Ajouter un titre au programme : "Gestion de la Souris".</blockquote>
+        <ul>
+            <li>Créer un bouton (id:#toggle-rectangle) ayant pour intitulé "cacher/ afficher le rectangle".</li>
+            <li>Dans la partie principale de la page :</li>
+            <li>Ajouter des paragraphes de texte expliquant ce que le programme peut faire (lire ci-dessous les interactions).</li>
+            <li>Créer une balise **div** vide(class:.rectangle) pour le rectangle.</li>
+        </ul>
+
+        <h2 class="orange exemple">CSS</h2>
+        <ul>
+            <li>Le rectangle est bleu (*royalblue*), de taille 400x300 pixels et possède des coins arrondis.</li>
+            <li>Lorsqu'on applique la classe "good" en plus au rectangle, il devient vert (*limegreen*).</li>
+            <li>Lorsqu'on applique la classe *important* en plus au rectangle, il devient rouge (*firebrick*).</li>
+            <li>Le changement de couleur du rectangle doit s'animer.</li>
+            <li>Ajouter le CSS nécessaire restant pour que le programme fonctionne.</li>
+        </ul>
+
+        <h2 class="orange exemple">Interactions</h2>
+
+        <ul>
+            <li>Quand on clique sur le bouton "toggle-rectangle" : cela cache ou affiche le rectangle.</li>
+            <li>Quand la souris se déplace à l'intérieur du rectangle : il devient rouge. Il reprend sa coleur originale quand la souris n'est plus dans le rectangle.</li>
+            <li>Quand on double-clique sur le rectangle : il devient vert.</li>
+        </ul>
+
+        <h2 class="orange exemple">Remarques</h2>
+        <ul>
+            <li>Oragniser le code en trois parties: 
+                <ul>
+                    <li>Les variables</li>
+                    <li>Les fonctions</li>
+                    <li>Le code principal</li>
+                </ul>
+            </li>            
+            <li>Nommer correctement les gestionnaires d'évènements pour qu'ils aient un sens.</li>
+        </ul>
+
+        <button type="button" id="toggleRectangle">Cacher / Afficher le rectangle</button>
+        <hr>
+        <p>Survolez à la souris le rectangle ci-dessous pour qu'il change de couleur !</p>
+        <p>Ou double-cliquez dessus .... :)</p>
+
+        <div class="rectangle cache"></div>
+        <!-- <div class="rectangle good" id="rectangleVert"></div>
+        <div class="rectangle important" id="rectangleRouge"></div> -->
+
+    </main>
+    <!-- </main> Fin de main -->
+<!-- lien vers ma page JS -->
+    <script src="23-rectangle.js"></script>
+</body>
+
+</html> 

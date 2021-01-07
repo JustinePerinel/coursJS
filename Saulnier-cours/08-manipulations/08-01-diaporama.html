@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <!-- ajouter la ligne pour boodstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>VIII - 01 - Les diaporamas</title>
+        <!-- reset  -->
+        <!-- <link rel="stylesheet" href="../css/reset.css"> -->
+        <!-- mes styles en externe -->
+        <!-- <link rel="stylesheet" href="../css/style.css"> -->
+      
+        <!--async permet de charger le html en premier et adapter le script, ce qui permet de trouver les identifiants du html p1,p2,.. et lancer le script JS une fois le html lu-->
+
+        <!-- Ajouter le CSS boodstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        
+        <!-- script en externe -->
+        <!-- <script src="selecteur.js"></script> -->
+        <!-- style interne si besoin -->
+        <style>
+            /* style pour la navbar */
+            body {
+                padding-bottom: 20px;
+            }
+
+            .navbar {
+                margin-bottom: 20px;
+            }
+
+            </style>
+    </head>
+    <body>
+        <!-- Navbar bootstrap -->
+    <!-- navbar-light pour écrire en noir et nabvar-dark pour écrire en blanc // bg pour background -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+        <a class="navbar-brand" href="#">Expand at sm</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lien</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled " href="#" tabindex="-1" aria-disabled="true">Lien désactivé</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="08-01-diaporama.html">Diaporama</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">08 Manipulation</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown03">
+                        <a class="dropdown-item" href="08-01-diaporama.html">Diaporama</a>
+                        <a class="dropdown-item" href="08-02-setInterval.html">setInterval()</a>
+                        <a class="dropdown-item" href="08-03-keydown.html">Keydown</a>
+                        <a class="dropdown-item" href="08-04-formulaire.html">Formulaire</a>
+                        <a class="dropdown-item" href="08-05-toggle.html">Toggle</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">09 DOM</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown03">
+                        <a class="dropdown-item" href="../09-dom/09-01-dom.html">DOM</a>
+                        
+                    </div>
+                </li>
+               
+            </ul> <!--fin ul-->
+
+            <form class="form-inline my-2 my-md-0">
+                <input class="form-control" type="text" placeholder="Recherche">
+            </form> <!--fin de form-->
+
+        </div>
+      </nav> <!--fin de navbar-->
+        <!-- jumbotron / container / row/ col -->
+        <div class="jumbotron ">
+            <h1 id="titreNiveau1" class="display-4">JS - VIII 01 - Les diaporamas</h1>
+            <p class ="lead">3 diaporamas en JS</p>   
+        </div>  <!--fin jumbotron-->
+
+        <div class="container border border-info p-5">
+
+            <div class="row border border-info my-3 p-3">
+                <!-- 1er diaporama -->
+                <div class="col-6 ">
+                    <h2 class="p-2">1 - Un 1er diaporama, avec des photos de plages...</h2>
+                    <p>1ère façon de faire, sur les images directement je mets un onclick...</p>
+                    <p>Dans la balise <code>img</code>, je mets cet attribut : <code>onclick="this.src='img/plage2.jpg';this.alt='une autre plage';</code></p>
+                </div> <!--fin col-6-->
+
+                <div class="col-6 my-2 p-2">
+                    <div id="diaporama1">
+                        <!-- class="img-fluid" pour que l'image soit adapté au parent et responsive -->
+                        <!-- onclick=" code javascript " dans cet exemple, on change l'image au click -->
+                        <img src="img/plage1.jpg" alt="la plage" class="img-fluid" onclick="this.src = 'img/plage2.jpg';this.alt = 'une autre plage';">
+
+                    </div>
+                </div> <!--fin col-6-->
+            </div> <!--fin row-->
+
+            <div class="row border border-info my-3 p-3">
+
+                <!-- 2nd diaporama -->
+                <div class="col-6 my-2 p-2">
+                    <div id="diaporama1">
+                        <!-- class="img-fluid" pour que l'image soit adapté au parent et responsive -->
+                        <img src="img/piscine-bois.jpg" alt="la piscine" class="img-fluid" id="imgDiapo2">
+                    </div> <!--fin col diaporama-->
+
+                    <div class="row mt-0 ">
+                        <button id="btnDiapo2" type="button" class="btn btn-outline-success m-2">Changer d'image</button>
+                    </div>
+                </div> <!--fin col-6-->
+
+                <div class="col-6 ">
+                    <h2 class="p-2">2 - Un 2nd diaporama...</h2>
+                    <p> Ce second diaporama est fait avec une fonction anonyme dans un écouteur d'évènement, dans les scripts en bas de page</p>
+                    <p><code>
+                        document.getElementById('btnDiapo2').addEventListener('click', function() { <br>
+                        document.getElementById('imgDiapo2').src = 'img/ile-perdue.jpg'; <br>
+                        document.getElementById('imgDiapo2').alt = 'la vue est belle'; <br>
+                        })
+                    </code></p>
+                </div> <!--fin col-6-->
+                
+            </div> <!--fin row-->
+
+            <div class="row border border-info my-3 p-3">
+                <!-- diaporama avec fonction nomnée -->
+                <div class="col-6 ">
+                    <h2 class="p-2"> - Un diaporama avec une fonction nommée</h2>
+                    <p></p>
+                    <p><code>
+                        document.getElementById('btnDiapo3').addEventListener('click', imgDiapo3); <br>
+                        function imgDiapo3() { <br>
+                        document.getElementById('imgDiapo3').src = 'img/tortue.jpg';<br>
+                        document.getElementById('imgDiapo3').alt = 'la tortue';<br>
+        }
+                    </code></p>
+                </div> <!--fin col-6-->
+
+                <div class="col-6 my-2 p-2">
+                    <div id="diaporama1">
+                        <!-- class="img-fluid" pour que l'image soit adapté au parent et responsive -->
+                        <!-- onclick=" code javascript " dans cet exemple, on change l'image au click -->
+                        <img src="img/chat.jpg" alt="Le chat" class="img-fluid" id="imgDiapo3">
+                        <button id="btnDiapo3" type="button" class="btn btn-outline-info m-2">Changer d'image</button>
+
+                    </div>
+                </div> <!--fin col-6-->
+            </div> <!--fin row-->
+
+            <div class="row border border-info my-3 p-3">
+                <!-- 3me diaporama -->
+                <div class="col-6 my-2 p-2">
+                    <div id="diaporama1">
+                        <!-- class="img-fluid" pour que l'image soit adapté au parent et responsive -->
+                        <!-- onclick, attention " () ;" -->
+                        <img src="img/falaise.jpg" alt="Une falaise" class="img-fluid" id="imgDiapo4" onclick="tourneImages();">
+                    </div> <!--fin col diaporama-->
+
+                </div> <!--fin col-6-->
+
+                <div class="col-6 ">
+                    <h2 class="p-2">3 - Un 3ème diaporama</h2>
+                    <p>avec un switch dans une fonction...</p>
+                    <p><code>
+                        function tourneImages() { <br>
+                            var getImage = document.getElementById('imgDiapo4').getAttribute('src') <br>
+                            console.log(getImage); <br>
+                            <br>
+                            switch(getImage) {<br>
+                                case 'img/falaise.jpg':<br>
+                                    document.getElementById('imgDiapo4').src = 'img/plage1.jpg'<br>
+                                    break;<br>
+                            }<br>
+                            switch(getImage) {<br>
+                                case 'img/plage1.jpg':<br>
+                                    document.getElementById('imgDiapo4').src = 'img/pluie1.jpg'<br>
+                                    break;<br>
+                            }<br>
+                            switch(getImage) {<br>
+                                case 'img/pluie1.jpg':<br>
+                                    document.getElementById('imgDiapo4').src = 'img/falaise.jpg'<br>
+                                    break;<br>
+                            }<br>
+                        } 
+                    </code></p>
+                </div> <!--fin col-6-->
+                
+            </div> <!--fin row-->
+
+            
+
+        </div> <!--fin de container-->
+
+
+        <!-- En 1er JQuery, puis Popper.js et le JS de Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+        <!-- Mes scripts !!! -->
+
+        <script>
+        //    DIAPORAMA 2
+
+        // Une fonction anonyme pour le diaporama 2
+        
+        document.getElementById('btnDiapo2').addEventListener('click',function() { // je selectionne le bouton et je lui attribue une fonction pour changer l'image et le alt, les deux sont importants.
+            document.getElementById('imgDiapo2').src = 'img/ile-perdue.jpg';
+            document.getElementById('imgDiapo2').alt = 'la vue est belle';
+        })
+
+
+        // un diaporama avec une fonction nomnée
+
+        document.getElementById('btnDiapo3').addEventListener('click', imgDiapo3);
+        function imgDiapo3() { 
+            document.getElementById('imgDiapo3').src = 'img/tortue.jpg';
+            document.getElementById('imgDiapo3').alt = 'la tortue';
+        }
+
+            // DIAPORAMA 3
+
+            // on va faire une fonction
+
+            function tourneImages() {
+                // 'src' recupère tous les attributs de src
+                var getImage = document.getElementById('imgDiapo4').getAttribute('src')
+                console.log(getImage); //le console log
+
+                switch(getImage) {
+                    case 'img/falaise.jpg':
+                        document.getElementById('imgDiapo4').src = 'img/plage1.jpg'
+                        break;
+                }
+                switch(getImage) {
+                    case 'img/plage1.jpg':
+                        document.getElementById('imgDiapo4').src = 'img/pluie1.jpg'
+                        break;
+                }
+                // nouvelle boucle switch pour revenir à la premiere condition, la première image et la boucle repart
+                switch(getImage) {
+                    case 'img/pluie1.jpg':
+                        document.getElementById('imgDiapo4').src = 'img/falaise.jpg'
+                        break;
+                }
+
+
+            } //fin tourneImage
+
+        </script>
+
+
+    </body>
+</html>     

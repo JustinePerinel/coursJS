@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- Compléter la ligne 6 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JS VIII. 04 Formulaire</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- mon JS  -->
+    <!-- <script src="setinterval.js" async></script> -->
+
+    <!-- feuille de style spécifique à la navbar -->
+    <link rel="stylesheet" href="../css/navbar.css">
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+
+        .valid {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar bootstrap expand at md -->
+    <!-- Ne pas oublier de vérifier si un style css accompagne le code bootstrap pour que le comportement du code soit le même que sur la doc -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Cours JavaScript</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lien</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Lien désactivé</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="08-04-formulaire.html">Formulaire</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">08 Manipulations</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="08-01-diaporamas.html">Diaporamas</a>
+                <a class="dropdown-item" href="08-02-setinterval.html">setInterval()</a>
+                <a class="dropdown-item" href="08-03-keydown.html">keydown</a>
+                <a class="dropdown-item" href="08-04-formulaire.html">Formulaire</a>
+                <a class="dropdown-item" href="08-05-toggle.html">Toggle</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search">
+          </form>
+        </div>
+      </nav> <!-- fin Navbar-->
+
+    <section class="jumbotron bg-light">
+        <h1 id="titreNiveau1" class="display-4">JS - VIII. 04 Formulaire</h1>
+        <p class="lead">Un Formulaire</p>
+    </section> <!-- fin en-tête jumbotron -->
+
+    <div class="container p-4">
+
+        <div class="row p-4 bg-light rounded-lg">
+            <div class="col-6">
+                <h2>Fonction controleForm()</h2>
+                <p>On voit ici de nouvelles classes Bootstrap :</p>
+                    <ul>
+                        <li><code>form-inline</code> permet d'avoir le formulaire sur la même ligne.</li>
+                        <li><code>form-group</code> entoure des éléments label et input d'un formulaire qui vont ensemble.</li>
+                        <li><code>form-control</code> permet de styler les inputs grâce à Bootstrap.</li>
+                        <li><code>sr-only</code> permet de cacher l'intitulé du label (toujours le mettre !)</li>
+                    </ul>
+            </div><!-- fin col -->
+
+            <div class="col-6">
+                <form action="formulaire" method="GET" name="formulaire" class="form-inline">
+
+                    <div class="form-group m-1"> <!-- form-group permet de grouper les éléments d'un formulaire et ainsi remplacer le <br> -->
+                        <label for="pseudo" class="sr-only">Pseudo</label> <!-- sr-only = on masque le label tout en le conservant dans le code pour le référencement -->
+                        <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" class="form-control">
+                    </div>
+                    
+                    <div class="form-group m-1">
+                        <label for="mdp" class="sr-only">Mot de passe</label>
+                        <input type="password" name="mdp" id="mdp" placeholder="Mot de passe" class="form-control">
+                    </div>
+
+                    <button type="submit" id="submit" value="ok" class="btn btn-primary" onclick="controleForm()">Envoyer</button>
+                </form>
+            </div><!-- fin col -->
+        </div><!-- fin row -->
+
+        <div class="row p-4 my-4 bg-light rounded-lg">
+            <div class="col-7">
+                <h2>Nouvelle fonction inscriptionForm()</h2>
+            </div><!-- fin col -->
+
+            <div class="col-5">
+                <form action="inscription" method="GET" name="inscription" class="border border-secondary p-4" id="form_inscription">
+                    <div class="form-group">
+                        <label for="prenom">Prénom*</label>
+                        <input type="text" name="prenom" id="prenom" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nom">Nom*</label>
+                        <input type="text" name="nom" id="nom" class="form-control" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mdp">Choisissez un mot de passe*</label>
+                        <input type="password" name="mdp_2" id="mdp_2" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confmdp">Confirmez votre mot de passe*</label>
+                        <input type="password" name="confmdp" id="confmdp" class="form-control">
+                    </div>
+
+                    <button type="submit" id="submit_2" value="inscription" class="btn btn-primary">S'inscrire</button>
+
+                    <!-- <button type="reset" class="btn btn-warning">Effacer</button> OU : -->
+                    <button id="reset_form" class="btn btn-warning">Effacer</button>
+                </form>
+            </div><!-- fin col -->
+        </div><!-- fin row -->
+        
+    </div> <!-- fin container -->
+
+    
+
+    <!-- et les scripts utiles à Bootstrap JQuery, popper.js et le JS de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+    <script>
+        // contrôle du formulaire avec une fonction
+        
+        function controleForm(){
+            event.preventDefault(); // pour empêcher l'envoi du formulaire ; à enlever en prod !
+            if(document.formulaire.pseudo.value.length < 5 || document.formulaire.pseudo.value.length > 15){
+                console.log(document.formulaire.pseudo.value.length);
+                alert('Le pseudo doit être compris entre 5 et 15 caractères');
+            }
+            if(document.formulaire.mdp.value.length < 3 || document.formulaire.mdp.value.length > 12){
+                console.log(document.formulaire.mdp.value);
+                alert('Le mot de passe doit être compris entre 5 et 12 caractères');
+            }
+        }
+
+        // contrôle du formulaire d'inscription avec la fonction
+        
+        let formInscrip = document.getElementById('form_inscription');
+        // console.log(formInscrip);
+
+        // récupération du formulaire par son id
+        formInscrip.addEventListener('submit', inscriptionForm);
+        // écoute l'envoie du formulaire (avec Touche Entrée du coup ou submit)
+
+        //fonction pour traiter le formulaire
+        function inscriptionForm(event){ //ou e pour event. A harmoniser avec e.preventDefault() 
+            event.preventDefault(); // utiliser e si il est en argument de la fonction. Sinon, event.
+            // console.log(event.target.prenom);
+
+           // https://regex101.com/
+           // expression regulière pour valider les emails
+            let regex = /([a-z0-9](\.?|\_|\-))*@([a-z0-9]{2,})(\.[a-z]{2,}){1,}/;
+
+            // OU let regex = new RegExp('([a-z0-9](\.?|\_|\-))*@([a-z0-9]{2,})(\.[a-z]{2,}){1,}');
+
+            // récupération du contenu des champs dans des variables
+            let prenom  = event.target.prenom.value,
+                nom     = event.target.nom.value,
+                email   = event.target.email.value,
+                mdp_2     = event.target.mdp_2.value,
+                confmdp = event.target.confmdp.value;
+
+            console.log(prenom, nom, email, mdp, confmdp);
+
+            if ( prenom !== ''|| nom !== ''){ // on vérifie qu'il n'y a pas d'input vide
+                if (prenom.length < 2){
+                    event.target.prenom.classList.remove('valid')
+                    event.target.prenom.classList.add('error');
+                }else {
+                    // on enleve la classe error avant de lui assigner la classe valid
+                    event.target.prenom.classList.remove('error');
+                    event.target.prenom.classList.add('valid');
+                }
+                if (nom.length < 2){
+                    event.target.nom.classList.remove('valid')
+                    event.target.nom.classList.add('error'); 
+                } else {
+                    event.target.nom.classList.remove('error');
+                    event.target.nom.classList.add('valid');
+                }
+            }
+
+            if (mdp_2.length > 6 && mdp_2.length <= 12) {
+                event.target.mdp_2.classList.remove('error');
+                event.target.mdp_2.classList.add('valid');
+            }else {
+                event.target.mdp_2.classList.remove('valid');
+                event.target.mdp_2.classList.add('error');
+            }
+            if (confmdp !== mdp_2) {
+                event.target.confmdp.classList.remove('valid')
+                event.target.confmdp.classList.add('error');
+            }else {
+                event.target.confmdp.classList.remove('error');
+                event.target.confmdp.classList.add('valid');
+            }
+        
+            
+            // if ( prenom !== ''|| nom !== ''){
+            //     if (prenom.length < 2){
+            //         event.target.prenom.classList.add('error');
+            //         event.target.prenom.classList.remove('valid');
+            //     }else {
+            //         event.target.prenom.classList.add('valid');
+            //         event.target.prenom.classList.remove('error');
+            //     }
+            //     if (nom.length < 4){
+            //         event.target.nom.classList.add('error'); 
+            //         event.target.prenom.classList.remove('valid');
+            //     } else {
+            //         event.target.nom.classList.add('valid');
+            //         event.target.prenom.classList.remove('error');
+            //     }
+            // } // fin condition prénom nom
+
+            // // nouvelle condition les mots de passe sont-ils identiques
+            // if(confmdp !== mdp_2) {
+            //     event.target.mdp_2.classList.add('error');
+            //     event.target.mdp_2.classList.remove('valid');
+            //     event.target.confmdp.classList.add('error');
+            //     event.target.confmdp.classList.remove('valid');
+            // }else if(mdp_2.length < 5 || mdp_2.length > 12){// longueur entre 5 et 12
+            //     event.target.mdp_2.classList.add('error');
+            //     event.target.mdp_2.classList.remove('valid');
+            //     event.target.confmdp.classList.add('error');
+            //     event.target.confmdp.classList.remove('valid');
+            // }else{ //tout est bon
+            //     event.target.mdp_2.classList.add('valid');
+            //     event.target.mdp_2.classList.remove('error');
+            //     event.target.confmdp.classList.add('valid');
+            //     event.target.confmdp.classList.remove('error');
+            // }// fin condition
+
+            // console.log(regex.test(email));
+
+            if(regex.test(email) === false){
+            // if(!regex.test(email)){}
+                event.target.email.classList.add('error');
+                event.target.email.classList.remove('valid');
+            }else{
+                event.target.email.classList.remove('error');
+                event.target.email.classList.add('valid');
+            }
+        } // fin fonction
+
+        //document.getElementById('reset_form').addEventListener('click', (e) => {}) 
+        document.getElementById('reset_form').addEventListener('click', function(event) {
+            // console.log(event.target.form);
+            event.target.form.prenom.value = '';
+            event.target.form.nom.value = '';
+            event.target.form.email.value = '';
+            event.target.form.mdp_2.value = '';
+            event.target.form.confmdp.value = '';
+        });
+    </script>
+</body>
+</html>
