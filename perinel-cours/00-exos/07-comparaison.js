@@ -1,7 +1,7 @@
 //page du JS pour 07-comparaison.html
 
-var nbr1 = parseInt(prompt('Saisissez un premier nombre !'));
-var nbr2 = parseInt(prompt('Et un deuxième ?'));
+var nbr1 = parseFloat(prompt('Saisissez un premier nombre !'));
+var nbr2 = parseFloat(prompt('Et un deuxième ?'));
 // permet de s'assurer que nous avons bien récupérer un nombre
 
 // console.log(nbr1,nbr2);

@@ -20,23 +20,23 @@ if ((note < 10) && (note > 0)){
     document.getElementById('p1').innerHTML = 'Vous devez saisir une note entre 0 et 20';
 }
 
-let moy = parseFloat(prompt('Quelle est ta moyenne au bac ? ')); // le parsefloat permet d'assurer que la réponse sera considéré comme un "number", dans le cas d'un nombre décimal
+// let moy = parseFloat(prompt('Quelle est ta moyenne au bac ? ')); // le parsefloat permet d'assurer que la réponse sera considéré comme un "number", dans le cas d'un nombre décimal
 
-console.log(typeof(moy));
+// console.log(typeof(moy));
 
-function baccalaureat(moy){
-    if ( (!isNaN(moy))) { // est bien un nombre ??
-        if(moy >= 0 && moy <= 10 ){
-            document.getElementById('p2').innerHTML = 'Désolé, tu es recalé !';
-        }else if(moy >= 10 && moy <= 12){
-            document.getElementById('p2').innerHTML = 'Bravo, tu passes !';
-        }else if(moy > 12 && moy <= 20){
-            document.getElementById('p2').innerHTML = 'Tu passes et avec une mention, félicitations ! :) ' ;
-        }else {
-            document.getElementById('p2').innerHTML = 'Votre nombre doit être compris entre 0 et 20! :) '; 
-        }
-    }else{
-        return document.getElementById('p2').innerHTML = 'On a dit un nombre ! ' ;
-    }
-}
-baccalaureat(moy)
+// function baccalaureat(moy){
+//     if ( (!isNaN(moy))) { // est bien un nombre ??
+//         if(moy >= 0 && moy <= 10 ){
+//             document.getElementById('p2').innerHTML = 'Désolé, tu es recalé !';
+//         }else if(moy >= 10 && moy <= 12){
+//             document.getElementById('p2').innerHTML = 'Bravo, tu passes !';
+//         }else if(moy > 12 && moy <= 20){
+//             document.getElementById('p2').innerHTML = 'Tu passes et avec une mention, félicitations ! :) ' ;
+//         }else {
+//             document.getElementById('p2').innerHTML = 'Votre nombre doit être compris entre 0 et 20! :) '; 
+//         }
+//     }else{
+//         return document.getElementById('p2').innerHTML = 'On a dit un nombre ! ' ;
+//     }
+// }
+// baccalaureat(moy)

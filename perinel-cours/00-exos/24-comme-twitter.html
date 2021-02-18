@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>24 - Comme Twitter</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .container {
+            padding-top: 20px;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+    </style>
+    
+  </head>
+  <body class="bg-info">
+    
+    <div id="navigation">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h5 class="text-white h4">Comme Twitter</h5>
+            <span class="text-muted">Exo avec Bootstrap 4.5 et JS.</span>
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div><!--  fin de la nav -->
+
+      <div class="container bg-white">
+         <div class="jumbotron">
+             <h1 class="display-3">Comme Twitter - <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+              </svg></h1>
+             <p class="lead">Un script qui contrôle que nous avons écrit 140 caractères et pas plus</p>
+         </div> <!-- fin du jumbotron -->
+
+        <div class="row my-4 p-3">
+            <div class="col-sm-12 bg-info p-2"> 
+                <h2>Consignes</h2>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-2">
+                <h3>1</h3>
+                <p>L'utilisateur peut saisir un texte de 140 caractères dans un textarea <code>#tweetContenu</code>.</p>
+                <p>Un paragraphe <code>#compteur</code> affiche les caractères restants.</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-2">
+                <h3>2</h3>
+                <ol>
+                    <li>Détecter l'événement à chaque fois que l'utilisateur presse une touche</li>
+                    <li>Dans la fonction lancée lorsque l'"event" est détecté, calculer le nombre de caractères restants et l'afficher dans le compteur</li>
+                </ol>
+            </div>
+        </div> <!-- fin de la row 1 -->
+
+        <div class="row my-4 p-3">
+            <div class="col-sm-12 p-2"> 
+                <h2>Indications</h2>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 border border-info p-2">
+                <ul>
+                    <li>Utiliser l'event <code>keyup</code> (cherchez à quoi il peut bien servir).</li>
+                    <li>Utiliser la propriété <code>elt.value</code> (elt = élément) pour récupérer la valeur d'un input ou d'un textarea.</li>
+                    <li>Utiliser <code>.length</code> pour compter le nombre de caractèresd'une chîne de caractères.</li>
+                    <li>Utiliser <code>elt.textContent='';</code> pour remplacer le contenu d'un élément HTML.</li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bg-light p-2">
+                <ul>
+                    <li>La sélection d'un élément avec <code>querySelector - getElementbyId</code></li>
+                    <li>Le gestionnaire d'événements avec <code>addEventListener</code></li>
+                    <li>La manipulation du DOM avec innerHTML - classList</li>
+                </ul>
+            </div>
+        </div> <!-- fin de la row 2 -->
+
+        <div class="row my-4 p-3 justify-content-center">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 py-2">
+               <form action="#" method="POST" id="commeTwitter">
+                   <label for="tweet" class="sr-only">Tweet</label>
+                   <textarea name="tweetContenu" id="tweetContenu" rows="10" class="form-control"></textarea>
+                   <!--  maxlength="140" => attribut qui permet de limiter le nombre de caractères a entrer à 140 -->
+               </form>
+                <div class="col-12 my-2">
+                    <p id="compteur" class="text-center bg-warning py-2 px-4"><!-- apparaît en JS --></p>
+                </div>
+            </div>
+        </div> <!-- fin de la row 3 -->
+
+        </div> <!-- fin de container -->
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="24-comme-twitter.js"></script>
+  </body>
+</html>

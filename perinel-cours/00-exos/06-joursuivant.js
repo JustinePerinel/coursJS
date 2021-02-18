@@ -31,22 +31,22 @@ var jour2 = prompt('Quel jour sommes-nous aujourd\'hui ?');
         document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour2 + ', demain nous serons donc mardi.'; 
         break;  
     case 'mardi': 
-        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc mercredi.';
+        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour2 + ', demain nous serons donc mercredi.';
         break; 
     case 'mercredi': 
-        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc jeudi.';
+        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour2 + ', demain nous serons donc jeudi.';
         break; 
     case 'jeudi': 
-        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc vendredi.';
+        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour2 + ', demain nous serons donc vendredi.';
         break; 
     case 'vendredi': 
-        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc samedi.'; 
+        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour2 + ', demain nous serons donc samedi.'; 
         break; 
     case 'samedi': 
-        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc dimanche.';
+        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour2 + ', demain nous serons donc dimanche.';
         break; 
     case 'dimanche': 
-        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour + ', demain nous serons donc lundi.';
+        document.getElementById('p2').innerHTML = 'Aujourd\'hui nous sommes ' + jour2 + ', demain nous serons donc lundi.';
         break; 
     default: 
         document.getElementById('p2').innerHTML =  'Ceci n\'est pas un jour de la semaine.';

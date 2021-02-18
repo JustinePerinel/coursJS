@@ -1,14 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cours de JavaScript I. 01</title>
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <!-- script js dans l'en-tête -->
-    <!-- ce code récupère l'heure actuelle et l'actualise toutes les secondes d'une part et nous permet de cacher , d'afficher l'heure via un bouton  -->
-    <!-- la console F12 de mon navigateur permet de voir les erreurs dans mon navigateur -->
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script>
         window.addEventListener('load',horloge);
             function horloge(){
@@ -30,83 +29,98 @@
             }
         });
     </script>
-</head>
-<body>
-    <main>
-       
-        <h1><a href="../index.html">Java Script - Index - du cours et des exos</a></h1>
-
-        <!-- début de la nav -->
-        <nav>
-            <ul class="row">
-                <li class="onglet">Introduction
-                    <div class="dropdown-content">
-                        <a href="01-01-introduction.html" class="active">Du JS dans l'en-tête</a>
-                        <a href="01-02-introduction.html">Du JS dans la balise ouvrante</a>
-                        <a href="01-03-introduction.html">Du JS dans body</a>
-                        <a href="01-04-introduction.html">Du JS une feuille externe</a>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-info">
+        <a class="navbar-brand" href="#">Cous Java Script</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Accueil<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Introduction</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="01-01-introduction.html">Le diaporama</a>
+                        <a class="dropdown-item" href="01-02-introduction.html">setInterval()</a>
+                        <a class="dropdown-item" href="01-03-introduction.html">onkeydown</a>
+                        <a class="dropdown-item" href="01-04-introduction.html">Des formulaires</a>
                     </div>
-                </li>
-                <li class="onglet">Variables et constantes
-                    <div class="dropdown-content">
-                        <a href="../02-variables-constantes/02-01-introduction.html">Les variables</a>
-                        <a href="../02-variables-constantes/02-02-afficher.html">Exemples de variables</a>
-                        <a href="../02-variables-constantes/02-03-type.html">Les types de données</a>
-                        <a href="../02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a>
-                        <a href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a>
-                        <a href="../02-variables-constantes/02-06-constantes.html">Les constantes</a>
-                    </div>
-                </li>
-                <li class="onglet"> Les structures de contrôle
-                    <div class="dropdown-content">
-                        <a href="../03-structures-controle/03-01-introduction.html">Introduction</a>
-                        <a href="../03-structures-controle/03-02-if.html">If...</a>
-                        <a href="../03-structures-controle/03-03-if-else.html">If... else...</a>
-                        <a href="../03-structures-controle/03-04-if-else-if-else.html">If... else if... else...</a>
-                        <a href="../03-structures-controle/03-05-operateurs-logiques.html">Les opérateurs logiques</a>
-                        <a href="../03-structures-controle/03-06-precedence.html">Précédence</a>
-                        <a href="../03-structures-controle/03-07-ternaire.html">L'opérateur ternaire</a>
-                        <a href="../03-structures-controle/03-08-switch.html">Switch</a>
-                    </div>
-                </li>
-                <li class="onglet"> Les fonctions
-                    <div class="dropdown-content">
-                        <a href="../04-fonctions/04-01-introduction.html">Introduction</a>
-                        <a href="#">Un autre onglet</a>
-                    </div>
-                </li>
-                <li class="onglet"> Cours de JS de Régis
-                    <div class="dropdown-content">
-                        <a href="../10-video-js/video.html">Les vidéos</a>
-                        <a href="../10-video-js/index.html">Index pour le JS</a>
-                    </div>
-                </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../02-variables-constantes/02-01-introduction.html">Variables et constantes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../03-structures-controle/03-01-introduction.html">Les structures de contrôle</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../04-fonctions/04-01-introduction.html">Les fonctions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../05-objet/05-01-introduction.html">L'objet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../06-selecteurs/06-01-selecteurs.html">Les sélecteurs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../07-evenements/07-01-evenement.html">Les évènements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../08-manipulations/08-01-diaporama.html">Les manipulations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../09-dom/09-01-dom.html">Le DOM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="09-01-dom.html">Diapos</a>
+              </li>
             </ul>
-        </nav>
-        <!-- fin de la nav  -->
+          </div>
+    </nav> <!-- fin de la nav -->
 
-        <h2> <a href="01-01-introduction.html">I. 01 - Du JS dans l'en-tête</a> </h2>
+    <div class="jumbotron">
+        <h1 class="display-3">VIII 05 - Toggle</h1>
+        <p class="lead">08-05-toggle.html</p>
+    </div> <!-- fin jumbotron -->
 
-        <p id="tog" class="stabilo">Il est actuellement <span id="heure"></span></p>
-        <button id="bouton">Cacher / Afficher l'heure</button>
-        <br>
-
-        <h3>Placement et action du JS</h3>
-
-
-        <p>Sur cette page, on voit du JavaScript dans la partie <code>&lt;head></code> de notre code HTML et se place normalement après les liens des feuilles de style. Il se trouve dans une balise <code>&lt;script></code>. Ici, le langage permet d'afficher une horloge qui reste à la bonne heure et un bouton permettant d'afficher ou de cacher l'horloge.</p>
-        <p>Dans cette page on voit également que l'on peut appliquer du CSS à notre élément JS comme dans l'exemple qui suit : </p>
-        <code>function cacheHorloge(){ <br>
-            let para = document.getElementById('tog'); <br>
-            if(para.style.display == 'block'){ <br>
-                para.style.display = 'none'; <br>
-            }else{ <br>
-                para.style.display = 'block'; <br>
-        }</code>
-        <p>Ce code qui permet de cacher ou d'afficher l'horloge grâce à un bouton utilise le css et les conditions. VOIR dans l'onglet<span class="stabilo"> les structures de contrôle</span>, la partie <span class="stabilo">if... else...</span>.</p>
-    </main>
-    <footer>
-        COURS JS &copy; JPERINEL
-    </footer>
-</body>
+    <div class="container">
+        <div class="row my-4 p-3">
+            <div class="col-12 p-2"><p id="tog" class="stabilo">Il est actuellement <span id="heure"></span></p>
+                <button id="bouton">Cacher / Afficher l'heure</button>
+                <br>
+        
+                <h3>Placement et action du JS</h3>
+        
+        
+                <p>Sur cette page, on voit du JavaScript dans la partie <code>&lt;head></code> de notre code HTML et se place normalement après les liens des feuilles de style. Il se trouve dans une balise <code>&lt;script></code>. Ici, le langage permet d'afficher une horloge qui reste à la bonne heure et un bouton permettant d'afficher ou de cacher l'horloge.</p>
+                <p>Dans cette page on voit également que l'on peut appliquer du CSS à notre élément JS comme dans l'exemple qui suit : </p>
+                <code>function cacheHorloge(){ <br>
+                    let para = document.getElementById('tog'); <br>
+                    if(para.style.display == 'block'){ <br>
+                        para.style.display = 'none'; <br>
+                    }else{ <br>
+                        para.style.display = 'block'; <br>
+                }</code>
+                <p>Ce code qui permet de cacher ou d'afficher l'horloge grâce à un bouton utilise le css et les conditions. VOIR dans l'onglet<span class="stabilo"> les structures de contrôle</span>, la partie <span class="stabilo">if... else...</span>.</p>
+            </main>
+            <footer>
+                COURS JS &copy; JPERINEL
+            </footer></div>
+        </div>
+        <div class="row my-4 p-3">
+            <div class="col-12 p-2"></div>
+        </div>
+        <div class="row my-4 p-3">
+            <div class="col-12 p-2"></div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>

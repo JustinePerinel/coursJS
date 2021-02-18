@@ -1,9 +1,9 @@
 // page js pour 02-valeurs.html 
 
-var a =2;
+var a = 2;
 document.getElementById('td1').innerHTML = 'a = '+a;
 
-a = a-1;
+a = a - 1;
 console.log('a-1 = ', a)
 document.getElementById('td2').innerHTML = '2 - 1 = '+a;
 
