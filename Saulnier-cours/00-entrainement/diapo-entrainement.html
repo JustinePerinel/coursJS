@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diaporama en JS</title>
+    <!-- css bootsrapp -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Mes styles css  -->
+<!-- 
+    <style>
+      
+
+        
+    </style> -->
+
+
+</head>
+<body class="p-5">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Rechercher</button>
+          </form>
+        </div>
+      </nav> <!--fin de navbar-->
+
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+          <h1 class="display-4">Diaporama en JS</h1>
+          <p class="lead">Faire un diaporama en JavaScript</p>
+        </div>
+      </div> <!--fin de jumbotron-->
+
+    <!-- debut du diaporama -->
+    <div class="container border border-dark">
+        <div class="row">
+            <div class="col-6">
+                <h2>Un diaporama au click</h2>
+                <div id="diaporama">
+                    <img src="img/1.jpg" alt="Petit chat doux blanc" class="img-fluid" id="imgDiapo" title="Petit chat tout doux" onclick="changeImage();">
+                </div>
+
+            </div> <!--fin de col6-->
+            
+            <div class="col-6 ">
+                <h2>Un autre diaporama au timer</h2>
+                <div class="row border border-info">
+                    <div id="diaporama1">
+                        <img src="img/1.jpg" alt="Un chat blanc" title="Un chat tout doux" class="img-fluid" id="imgDiapo2">
+                    </div>
+                </div>
+                
+            
+            </div> <!--fin de col 6-->
+        </div>
+
+
+    </div> <!--fin de container-->
+
+    <div class="container">
+        <div class="row">
+          <input type="number" value="Saisir un nombre">
+          <input type="radio" value="..">
+          <input type="number" value="Saisir un nombre">
+        </div>
+    </div>
+
+    <!-- script bootstrapp jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- mes scripts -->
+    <!-- 1er diapo en fonction nomnée -->
+    <script>
+        function changeImage() {
+            var getImage = document.getElementById('imgDiapo').getAttribute('src')
+            // console.log(getImage);
+
+            switch(getImage) {
+            case 'img/1.jpg':
+            document.getElementById('imgDiapo').src = 'img/2.jpg'
+            break;
+            }
+            switch(getImage) {
+            case 'img/2.jpg':
+            document.getElementById('imgDiapo').src = 'img/3.jpg'
+            break;
+            }
+            switch(getImage) {
+            case 'img/3.jpg':
+            document.getElementById('imgDiapo').src = 'img/1.jpg'
+            break;
+        }
+        } 
+
+        // 2eme diapo en fonction et setInterval
+
+        let varImg = 0; //on commence par initaliser à zero le compteur car la premiere image s'appelle 1
+        console.log(typeof varImg, varImg);
+
+        // let testGet = imgDiapo.getAttribute('src');
+        // console.log(testGet);
+
+        function monDiaporama() {
+            varImg += 1; //on affecte 1 pour incrémenter , additionne et affecte +=
+            imgDiapo2.setAttribute('src', 'img/' + varImg + '.jpg');
+            // console.log(varImg);
+            if(varImg == 10) { //car j'ai 10 images appelée de 1 à 10 dans le dossier /img
+                clearInterval(timer); //permet de stopper dès que la variable est à égale à 10 dans ce cas
+            }
+        } //fin de fonction monDiaporama
+
+        // cette ligne appelle la fonction et intègre un interval (grace à setInterval) en milliseconde de lecture (toujours appeler une fonction)
+        let timer = window.setInterval('monDiaporama()', 2000);
+
+    </script>
+</body>
+</html>
