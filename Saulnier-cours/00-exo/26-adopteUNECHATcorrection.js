@@ -27,7 +27,7 @@ $(function(){
         }
 
         if(erreurs === false){
-            $(this).replaceWith('<div class="alert alert-succes">Bien envoyé !<div>');
+            $(this).replaceWith('<div class="alert alert-success">Bien envoyé !<div>');
         }
     });
     // on retire les classes dès que les champs changent 
